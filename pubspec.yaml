@@ -81,6 +81,18 @@ flutter:
   generate: true
   uses-material-design: true
 
+  assets:
+    - assets/images/
+  #   - assets/svg/
+  #   - assets/svg/icons/
+  #   - assets/svg/vectors/
+  #   - assets/lottie/
+
+  fonts:
+    - family: arabicFont
+      fonts:
+        - asset: assets/fonts/NotoKufiArabic.ttf
+          weight: 600
 flutter_launcher_icons:
   android: true
   ios: true

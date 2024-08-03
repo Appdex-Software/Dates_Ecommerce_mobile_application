@@ -22,15 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "additionalInformation":
+            MessageLookupByLibrary.simpleMessage("معلومات اضافية"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "afterReceivingYourApplicationWeWillNotifyYouWhenYourApplicationToJoinUsIsAccepted":
+            MessageLookupByLibrary.simpleMessage(
+                "بعد استقبال الطلب الخاص بكم سوف نقوم باشعاركم في حين قبول طلب الانضمام الينا"),
         "alert": MessageLookupByLibrary.simpleMessage("تنبيه"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),
+        "email": MessageLookupByLibrary.simpleMessage("الايميل"),
         "en": MessageLookupByLibrary.simpleMessage("إنجليزي"),
+        "enter": MessageLookupByLibrary.simpleMessage("دخول"),
+        "forgotYourPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الدخول إلى الحساب الحالي"),
+        "nameAssociationName":
+            MessageLookupByLibrary.simpleMessage("الاسم/اسم الجمعية"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
+        "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+        "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "registerNewAccount":
+            MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "submit": MessageLookupByLibrary.simpleMessage("تقديم"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

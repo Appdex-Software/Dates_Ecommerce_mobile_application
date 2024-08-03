@@ -9,5 +9,20 @@
     "no":"لا",
 
     "skip":"تخطي",
-    "next":"التالي"
+    "next":"التالي",
+    "email":"الايميل",
+    "password":"الباسورد",
+    "forgotYourPassword" : "نسيت كلمة المرور؟",
+    "registerNewAccount":"انشاء حساب جديد",
+    "enter":"دخول",
+    "afterReceivingYourApplicationWeWillNotifyYouWhenYourApplicationToJoinUsIsAccepted":"بعد استقبال الطلب الخاص بكم سوف نقوم باشعاركم في حين قبول طلب الانضمام الينا",
+    "nameAssociationName" : "الاسم/اسم الجمعية",
+    "address":"العنوان",
+    "phoneNumber":"رقم الهاتف",
+    "additionalInformation":"معلومات اضافية",
+    "optional":"اختياري",
+    "submit" : "تقديم",
+    "logIntoExistingAccount":"تسجيل الدخول إلى الحساب الحالي"
+    
+
 }

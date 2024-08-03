@@ -23,7 +23,7 @@ class CustomSearchBar extends StatelessWidget {
         boxShadow:  [
           BoxShadow(
             color: FlutterFlowTheme.of(context).grey,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
             blurRadius: 8,
           )
         ],

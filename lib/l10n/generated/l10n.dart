@@ -139,6 +139,138 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot your password?`
+  String get forgotYourPassword {
+    return Intl.message(
+      'Forgot your password?',
+      name: 'forgotYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register new account`
+  String get registerNewAccount {
+    return Intl.message(
+      'Register new account',
+      name: 'registerNewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter`
+  String get enter {
+    return Intl.message(
+      'Enter',
+      name: 'enter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `After receiving your application, we will notify you when your application to join us is accepted.`
+  String
+      get afterReceivingYourApplicationWeWillNotifyYouWhenYourApplicationToJoinUsIsAccepted {
+    return Intl.message(
+      'After receiving your application, we will notify you when your application to join us is accepted.',
+      name:
+          'afterReceivingYourApplicationWeWillNotifyYouWhenYourApplicationToJoinUsIsAccepted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name/Association Name`
+  String get nameAssociationName {
+    return Intl.message(
+      'Name/Association Name',
+      name: 'nameAssociationName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional information`
+  String get additionalInformation {
+    return Intl.message(
+      'Additional information',
+      name: 'additionalInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Optional`
+  String get optional {
+    return Intl.message(
+      'Optional',
+      name: 'optional',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message(
+      'Submit',
+      name: 'submit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `log into existing account`
+  String get logIntoExistingAccount {
+    return Intl.message(
+      'log into existing account',
+      name: 'logIntoExistingAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

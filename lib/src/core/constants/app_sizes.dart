@@ -27,6 +27,7 @@ class AppSizes {
 
   static const p32 = 32.0;
   static const p38 = 38.0;
+  static const p40 = 40.0;
   static const p48 = 48.0;
   static const p64 = 64.0;
   static const p80 = 80.0;
@@ -52,6 +53,12 @@ class AppSizes {
 
   static const radius16 = Radius.circular(AppSizes.p16);
   static final borderRadius16 = BorderRadius.circular(AppSizes.p16);
+
+  static const radius20 = Radius.circular(AppSizes.p20);
+  static final borderRadius20 = BorderRadius.circular(AppSizes.p20);
+
+  static const radius40 = Radius.circular(AppSizes.p40);
+  static final borderRadius40 = BorderRadius.circular(AppSizes.p40);
 
   static const radius32 = Radius.circular(AppSizes.p32);
   static final borderRadius32 = BorderRadius.circular(AppSizes.p32);

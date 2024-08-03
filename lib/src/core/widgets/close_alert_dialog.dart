@@ -18,7 +18,7 @@ class CloseAlertDialog extends StatelessWidget {
       ),
       actions: [
         TextButton(
-            onPressed: () => context.router.pop(false),
+            onPressed: () => context.router.maybePop(false),
             child: Text(
               l10n.no,
             )),
