@@ -1,0 +1,13 @@
+{
+    "language":"Language",
+    "en":"EN",
+    "ar":"AR",
+
+    "alert":"Alert",
+    "doUWantToExitTheApp":"Do you want to exit the app?",
+    "yes":"Yes",
+    "no":"No",
+
+    "skip":"Skip",
+    "next":"Next"
+}
