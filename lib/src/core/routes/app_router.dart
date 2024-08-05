@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:date_farm/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/screens.dart';
@@ -14,6 +15,12 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(page: LoginRoute.page),
         AutoRoute(page: RegisterRoute.page),
+        AutoRoute(page: DashboardLayoutRoute.page,
+        children: [
+          AutoRoute(page: HomeUserNavigationRoute.page,children: [
+            AutoRoute(page: HomeUserRoute.page)
+          ])
+        ]),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {

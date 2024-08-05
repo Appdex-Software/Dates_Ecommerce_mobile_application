@@ -271,6 +271,140 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Store`
+  String get store {
+    return Intl.message(
+      'Store',
+      name: 'store',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vision And Mission`
+  String get visionAndMission {
+    return Intl.message(
+      'Vision And Mission',
+      name: 'visionAndMission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vision`
+  String get vision {
+    return Intl.message(
+      'Vision',
+      name: 'vision',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To be the pioneers in providing high-quality dates to pilgrims and charities in the Kingdom of Saudi Arabia, and to promote the spirit of giving and social solidarity.`
+  String get visionBody {
+    return Intl.message(
+      'To be the pioneers in providing high-quality dates to pilgrims and charities in the Kingdom of Saudi Arabia, and to promote the spirit of giving and social solidarity.',
+      name: 'visionBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get mission {
+    return Intl.message(
+      'Message',
+      name: 'mission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency.`
+  String get missionBody {
+    return Intl.message(
+      'nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency.',
+      name: 'missionBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News`
+  String get news {
+    return Intl.message(
+      'News',
+      name: 'news',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An agreement has been established with the "Al-Bir" Association to distribute dates to pilgrims for the 2025 season.`
+  String
+      get anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason {
+    return Intl.message(
+      'An agreement has been established with the "Al-Bir" Association to distribute dates to pilgrims for the 2025 season.',
+      name:
+          'anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `30 new trees were planted in a new area.`
+  String get thirtyNewTreesWerePlantedInANewArea {
+    return Intl.message(
+      '30 new trees were planted in a new area.',
+      name: 'thirtyNewTreesWerePlantedInANewArea',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025.`
+  String
+      get anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan {
+    return Intl.message(
+      'An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025.',
+      name:
+          'anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

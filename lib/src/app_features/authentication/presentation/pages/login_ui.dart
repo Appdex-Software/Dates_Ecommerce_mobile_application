@@ -44,6 +44,9 @@ class _LoginUiState extends State<LoginUi> {
              gapH16,
              Center(child: CustomButton(
               title: l10n.enter,
+              onPressed: () {
+                context.router.replace(const HomeUserRoute());
+              },
              ))
           ],
         ),

@@ -15,6 +15,24 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    DashboardLayoutRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DashboardLayoutPage(),
+      );
+    },
+    HomeUserNavigationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeUserNavigationPage(),
+      );
+    },
+    HomeUserRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeUserPage(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -34,6 +52,48 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [DashboardLayoutPage]
+class DashboardLayoutRoute extends PageRouteInfo<void> {
+  const DashboardLayoutRoute({List<PageRouteInfo>? children})
+      : super(
+          DashboardLayoutRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DashboardLayoutRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HomeUserNavigationPage]
+class HomeUserNavigationRoute extends PageRouteInfo<void> {
+  const HomeUserNavigationRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeUserNavigationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeUserNavigationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HomeUserPage]
+class HomeUserRoute extends PageRouteInfo<void> {
+  const HomeUserRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeUserRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeUserRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

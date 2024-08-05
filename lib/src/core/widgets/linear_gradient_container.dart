@@ -15,7 +15,7 @@ class LinearGradientContainer extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        gradient: LinearGradient(colors: _listOfColors,begin: Alignment.topCenter,end: Alignment.bottomCenter,stops: [0.0,0.8]),
+        gradient: LinearGradient(colors: _listOfColors,begin: Alignment.topCenter,end: Alignment.bottomCenter,stops: const [0.0,0.8]),
         border: border,
         borderRadius: borderRadius ?? BorderRadius.circular(10)
       ),

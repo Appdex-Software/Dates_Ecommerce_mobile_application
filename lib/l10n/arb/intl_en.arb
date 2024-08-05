@@ -22,5 +22,19 @@
     "additionalInformation":"Additional information",
     "optional":"Optional",
     "submit":"Submit",
-    "logIntoExistingAccount":"log into existing account"
+    "logIntoExistingAccount":"log into existing account",
+    "home" : "Home",
+    "store" : "Store",
+    "settings" : "Settings",
+    "cart" : "Cart",
+    "visionAndMission" : "Vision And Mission",
+    "vision":"Vision",
+    "visionBody" : "To be the pioneers in providing high-quality dates to pilgrims and charities in the Kingdom of Saudi Arabia, and to promote the spirit of giving and social solidarity.",
+    "mission":"Message",
+    "missionBody":"nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency.",
+    "news":"News",
+    "anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason":"An agreement has been established with the \"Al-Bir\" Association to distribute dates to pilgrims for the 2025 season.",
+    "thirtyNewTreesWerePlantedInANewArea":"30 new trees were planted in a new area.",
+    "anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan":"An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."
+
 }

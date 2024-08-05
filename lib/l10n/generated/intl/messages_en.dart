@@ -29,7 +29,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "After receiving your application, we will notify you when your application to join us is accepted."),
         "alert": MessageLookupByLibrary.simpleMessage("Alert"),
+        "anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason":
+            MessageLookupByLibrary.simpleMessage(
+                "An agreement has been established with the \"Al-Bir\" Association to distribute dates to pilgrims for the 2025 season."),
+        "anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan":
+            MessageLookupByLibrary.simpleMessage(
+                "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
+        "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
             "Do you want to exit the app?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -37,11 +44,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "logIntoExistingAccount":
             MessageLookupByLibrary.simpleMessage("log into existing account"),
+        "mission": MessageLookupByLibrary.simpleMessage("Message"),
+        "missionBody": MessageLookupByLibrary.simpleMessage(
+            "nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency."),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("Name/Association Name"),
+        "news": MessageLookupByLibrary.simpleMessage("News"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "optional": MessageLookupByLibrary.simpleMessage("Optional"),
@@ -49,8 +61,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "store": MessageLookupByLibrary.simpleMessage("Store"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
+        "thirtyNewTreesWerePlantedInANewArea":
+            MessageLookupByLibrary.simpleMessage(
+                "30 new trees were planted in a new area."),
+        "vision": MessageLookupByLibrary.simpleMessage("Vision"),
+        "visionAndMission":
+            MessageLookupByLibrary.simpleMessage("Vision And Mission"),
+        "visionBody": MessageLookupByLibrary.simpleMessage(
+            "To be the pioneers in providing high-quality dates to pilgrims and charities in the Kingdom of Saudi Arabia, and to promote the spirit of giving and social solidarity."),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -29,7 +29,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "بعد استقبال الطلب الخاص بكم سوف نقوم باشعاركم في حين قبول طلب الانضمام الينا"),
         "alert": MessageLookupByLibrary.simpleMessage("تنبيه"),
+        "anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason":
+            MessageLookupByLibrary.simpleMessage(
+                "تم انشاء اتفاقية مع جمعية \"البر\" لتوزيع التمر علي الحجاج موسم 2025 "),
+        "anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan":
+            MessageLookupByLibrary.simpleMessage(
+                "تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
+        "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),
         "email": MessageLookupByLibrary.simpleMessage("الايميل"),
@@ -37,11 +44,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول إلى الحساب الحالي"),
+        "mission": MessageLookupByLibrary.simpleMessage("الرسالة"),
+        "missionBody": MessageLookupByLibrary.simpleMessage(
+            "نسعى من خلال توزيع التمور على الحجاج والجمعيات الخيرية إلى تقديم خدمة متميزة تلبي احتياجات ضيوف الرحمن والفئات المحتاجة، وتعكس قيم العطاء والخير التي تتميز بها مملكتنا، مع الالتزام بأعلى معايير الجودة والشفافية."),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("الاسم/اسم الجمعية"),
+        "news": MessageLookupByLibrary.simpleMessage("الاخبار"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
@@ -49,8 +61,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
+        "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "store": MessageLookupByLibrary.simpleMessage("المتجر"),
         "submit": MessageLookupByLibrary.simpleMessage("تقديم"),
+        "thirtyNewTreesWerePlantedInANewArea":
+            MessageLookupByLibrary.simpleMessage(
+                "تم زراعة 30 شجرة جديدة في منطقة جديدة "),
+        "vision": MessageLookupByLibrary.simpleMessage("الرؤية"),
+        "visionAndMission":
+            MessageLookupByLibrary.simpleMessage("الرؤية والرسالة"),
+        "visionBody": MessageLookupByLibrary.simpleMessage(
+            "أن نكون الرائدين في تقديم التمور عالية الجودة للحجاج والجمعيات الخيرية في المملكة العربية السعودية، وتعزيز روح العطاء والتكافل الاجتماعي."),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }
