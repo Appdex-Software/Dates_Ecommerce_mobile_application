@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:date_farm/src/core/helpers/helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/routes/app_router.dart';
 
@@ -29,11 +31,11 @@ class _SplashUiState extends State<SplashUi> {
 
   @override
   Widget build(BuildContext context) {
-    return const Stack(
+    return Stack(
       children: [
         
         Center(
-          child: FlutterLogo()
+          child: Image.asset(AssetsHelper.logoImagePng,width: 50.sw,)
         ),
       ],
     );

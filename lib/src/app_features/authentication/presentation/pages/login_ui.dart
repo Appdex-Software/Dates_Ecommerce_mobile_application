@@ -26,7 +26,7 @@ class _LoginUiState extends State<LoginUi> {
             Center(
               child: Padding(
                 padding: EdgeInsets.only(top: 5.sh),
-                child: Image.asset(AssetsHelper.logoImage,height: 50.sw,),
+                child: Image.asset(AssetsHelper.logoImagePng,height: 50.sw,),
               ),
             ),
             gapH80,
