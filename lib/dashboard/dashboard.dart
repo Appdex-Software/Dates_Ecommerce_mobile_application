@@ -38,7 +38,7 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
           routes: const [
             HomeUserRoute(),
             DateStoreRoute(),
-            HomeUserRoute(),
+            CartRoute(),
             HomeUserRoute(),
           ],
           animationCurve: Curves.fastLinearToSlowEaseIn,
@@ -84,16 +84,16 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
                         },
                       ),
                       BottomBars(
-                        icon: Icons.settings,
-                        title: l10n.settings,
+                        icon: Icons.shopping_cart,
+                        title: l10n.cart,
                         isActive: tabsRouter.activeIndex == 2,
                         onTap: () {
                           tabsRouter.setActiveIndex(2);
                         },
                       ),
                       BottomBars(
-                        icon: Icons.shopping_cart,
-                        title: l10n.cart,
+                        icon: Icons.settings,
+                        title: l10n.settings,
                         isActive: tabsRouter.activeIndex == 3,
                         onTap: () {
                           tabsRouter.setActiveIndex(3);

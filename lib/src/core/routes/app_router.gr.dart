@@ -15,10 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    CartRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CartPage(),
+      );
+    },
     DashboardLayoutRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const DashboardLayoutPage(),
+      );
+    },
+    DateDetailsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DateDetailsPage(),
       );
     },
     DateStoreRoute.name: (routeData) {
@@ -61,6 +73,20 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
+/// [CartPage]
+class CartRoute extends PageRouteInfo<void> {
+  const CartRoute({List<PageRouteInfo>? children})
+      : super(
+          CartRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CartRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [DashboardLayoutPage]
 class DashboardLayoutRoute extends PageRouteInfo<void> {
   const DashboardLayoutRoute({List<PageRouteInfo>? children})
@@ -70,6 +96,20 @@ class DashboardLayoutRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DashboardLayoutRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DateDetailsPage]
+class DateDetailsRoute extends PageRouteInfo<void> {
+  const DateDetailsRoute({List<PageRouteInfo>? children})
+      : super(
+          DateDetailsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DateDetailsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/core/helpers/helpers.dart';
+import 'package:date_farm/src/core/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -37,18 +39,23 @@ class _DateStoreUiState extends State<DateStoreUi> {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,crossAxisSpacing: 3.sw,childAspectRatio: 0.8),
                   itemCount: 9,
                   itemBuilder: (context, index) {
-                    return LinearGradientContainer(
-                      listOfColors: [theme.greenChalk.withOpacity(0.7),theme.white],
-                      child: Padding(
-                        padding: EdgeInsets.all(2.sw),
-                        child: Column(
-                          children: [
-                          Image.asset(AssetsHelper.date,width: 20.sw,),
-                          gapH12,
-                          Text(l10n.greenDates,style: theme.bodySmall,)  
-                        ],),
-                      )
-                      );
+                    return GestureDetector(
+                      onTap: () {
+                        context.router.push(const DateDetailsRoute());
+                      },
+                      child: LinearGradientContainer(
+                        listOfColors: [theme.greenChalk.withOpacity(0.7),theme.white],
+                        child: Padding(
+                          padding: EdgeInsets.all(2.sw),
+                          child: Column(
+                            children: [
+                            Image.asset(AssetsHelper.date,width: 20.sw,),
+                            gapH12,
+                            Text(l10n.greenDates,style: theme.bodySmall,)  
+                          ],),
+                        )
+                        ),
+                    );
                   },
                 )
               ],

@@ -19,9 +19,11 @@ class AppRouter extends _$AppRouter {
         children: [
           AutoRoute(page: HomeUserNavigationRoute.page,children: [
             AutoRoute(page: HomeUserRoute.page),
-            AutoRoute(page: DateStoreRoute.page),
-          ])
+          ]),
+          AutoRoute(page: DateStoreRoute.page),
+          AutoRoute(page: CartRoute.page),
         ]),
+          AutoRoute(page: DateDetailsRoute.page),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {
