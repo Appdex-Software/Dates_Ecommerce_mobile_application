@@ -18,7 +18,8 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: DashboardLayoutRoute.page,
         children: [
           AutoRoute(page: HomeUserNavigationRoute.page,children: [
-            AutoRoute(page: HomeUserRoute.page)
+            AutoRoute(page: HomeUserRoute.page),
+            AutoRoute(page: DateStoreRoute.page),
           ])
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),

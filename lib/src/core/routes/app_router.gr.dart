@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const DashboardLayoutPage(),
       );
     },
+    DateStoreRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DateStorePage(),
+      );
+    },
     HomeUserNavigationRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -64,6 +70,20 @@ class DashboardLayoutRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DashboardLayoutRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DateStorePage]
+class DateStoreRoute extends PageRouteInfo<void> {
+  const DateStoreRoute({List<PageRouteInfo>? children})
+      : super(
+          DateStoreRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DateStoreRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

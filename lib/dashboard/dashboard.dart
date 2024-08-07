@@ -37,7 +37,7 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
           
           routes: const [
             HomeUserRoute(),
-            HomeUserRoute(),
+            DateStoreRoute(),
             HomeUserRoute(),
             HomeUserRoute(),
           ],

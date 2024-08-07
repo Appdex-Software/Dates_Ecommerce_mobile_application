@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),
         "email": MessageLookupByLibrary.simpleMessage("الايميل"),
@@ -44,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(

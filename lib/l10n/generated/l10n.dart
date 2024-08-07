@@ -405,6 +405,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Dates Products`
+  String get datesProducts {
+    return Intl.message(
+      'Dates Products',
+      name: 'datesProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Green dates`
+  String get greenDates {
+    return Intl.message(
+      'Green dates',
+      name: 'greenDates',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

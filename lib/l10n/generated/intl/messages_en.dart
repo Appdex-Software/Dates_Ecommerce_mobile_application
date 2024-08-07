@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
             "Do you want to exit the app?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -44,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
+        "greenDates": MessageLookupByLibrary.simpleMessage("Green dates"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "logIntoExistingAccount":
