@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants/app_sizes.dart';
 
 class DateItemQuantityCounter extends StatefulWidget {
-  const DateItemQuantityCounter({super.key});
+  const DateItemQuantityCounter({super.key, this.buttonAspectRatio});
 
+  final double? buttonAspectRatio;
   @override
   State<DateItemQuantityCounter> createState() => _DateItemQuantityCounterState();
 }
@@ -27,7 +28,7 @@ class _DateItemQuantityCounterState extends State<DateItemQuantityCounter> {
                 
                 foregroundColor: theme.black,
                 activeForegroundColor: theme.black,
-                buttonAspectRatio: 2,
+                buttonAspectRatio: widget.buttonAspectRatio ?? 1,
                 textStyle: theme.bodyMedium,
                 shape: BoxShape.rectangle,
                 radius: AppSizes.radius4),

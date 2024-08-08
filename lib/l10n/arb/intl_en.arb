@@ -38,7 +38,9 @@
     "anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan":"An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025.",
     "datesProducts" : "Dates Products",
     "greenDates" : "Green dates",
-    "add" : "add"
+    "add" : "add",
+    "confirmOrder" : "Confirm order",
+    "addMore" : "Add more"
 
 
 }

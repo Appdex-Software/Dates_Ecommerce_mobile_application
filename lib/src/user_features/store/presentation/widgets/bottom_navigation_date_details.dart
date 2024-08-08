@@ -22,13 +22,15 @@ class _BottomNavigationDateDetailsState extends State<BottomNavigationDateDetail
       child: SizedBox(
       height: 20.sh,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomButton(
             title: l10n.add,
             onPressed: () {},
           ),
-          const Spacer(),
-          const DateItemQuantityCounter()
+          const DateItemQuantityCounter(
+            buttonAspectRatio: 1.5,
+          )
         ],
       ),
     ),

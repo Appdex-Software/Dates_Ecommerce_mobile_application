@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "add": MessageLookupByLibrary.simpleMessage("اضافة"),
+        "addMore": MessageLookupByLibrary.simpleMessage("اضافة المزيد"),
         "additionalInformation":
             MessageLookupByLibrary.simpleMessage("معلومات اضافية"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
@@ -38,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "confirmOrder": MessageLookupByLibrary.simpleMessage("تاكيد الطلب"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),

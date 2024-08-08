@@ -38,7 +38,9 @@
     "anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan":"تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025",
     "datesProducts":"منتجات التمور",
     "greenDates" : "تمر خضري",
-    "add" : "اضافة"
+    "add" : "اضافة",
+    "confirmOrder" : "تاكيد الطلب",
+    "addMore" : "اضافة المزيد"
 
 
 }

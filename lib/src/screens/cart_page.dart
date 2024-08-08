@@ -15,6 +15,7 @@ class CartPage extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: const TransparentAppBar(
         color: Colors.transparent,
+        backButton: SizedBox(),
       ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(

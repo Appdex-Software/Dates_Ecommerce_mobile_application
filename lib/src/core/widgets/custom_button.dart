@@ -76,6 +76,7 @@ class CustomButton extends StatelessWidget {
       shape: _shape,
       elevation: elevation,
       shadowColor: theme.black,
+      
       child: InkWell(
         splashColor: _splashColor,
         onTap: isDisabled || loading ? null : onPressed,
