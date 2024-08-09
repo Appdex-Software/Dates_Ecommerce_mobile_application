@@ -22,6 +22,7 @@ class AppRouter extends _$AppRouter {
           ]),
           AutoRoute(page: DateStoreRoute.page),
           AutoRoute(page: CartRoute.page),
+          AutoRoute(page: SettingsRoute.page),
         ]),
           AutoRoute(page: DateDetailsRoute.page),
         RedirectRoute(path: '*', redirectTo: '/'),

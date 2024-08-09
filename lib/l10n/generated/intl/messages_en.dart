@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm order"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
             "Do you want to exit the app?"),
@@ -62,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "optional": MessageLookupByLibrary.simpleMessage("Optional"),
+        "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
         "registerNewAccount":

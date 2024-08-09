@@ -40,7 +40,9 @@
     "greenDates" : "Green dates",
     "add" : "add",
     "confirmOrder" : "Confirm order",
-    "addMore" : "Add more"
+    "addMore" : "Add more",
+    "orders" : "Orders",
+    "contactUs" : "Contact Us"
 
 
 }

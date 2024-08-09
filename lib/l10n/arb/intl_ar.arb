@@ -40,7 +40,9 @@
     "greenDates" : "تمر خضري",
     "add" : "اضافة",
     "confirmOrder" : "تاكيد الطلب",
-    "addMore" : "اضافة المزيد"
+    "addMore" : "اضافة المزيد",
+    "orders" : "الطلبات",
+    "contactUs" : "تواصل معنا"
 
 
 }

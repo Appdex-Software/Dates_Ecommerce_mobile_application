@@ -39,7 +39,7 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
             HomeUserRoute(),
             DateStoreRoute(),
             CartRoute(),
-            HomeUserRoute(),
+            SettingsRoute(),
           ],
           animationCurve: Curves.fastLinearToSlowEaseIn,
           bottomNavigationBuilder: (_, tabsRouter) {

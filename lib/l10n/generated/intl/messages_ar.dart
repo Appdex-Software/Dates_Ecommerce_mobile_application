@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("تاكيد الطلب"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),
@@ -62,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+        "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "registerNewAccount":
