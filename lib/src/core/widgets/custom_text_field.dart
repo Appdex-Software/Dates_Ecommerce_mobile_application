@@ -70,7 +70,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         enabled: widget.isEnabled ?? true,
         keyboardType: widget.keyboardType,
         style:  TextStyle(
-          color: FlutterFlowTheme.of(context).darkText,
+          color: FlutterFlowTheme.of(context).black,
           fontWeight: FontWeight.w500,
         ),
         maxLines: widget.maxLines ?? 1,
@@ -107,13 +107,25 @@ class _CustomTextFieldState extends State<CustomTextField> {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide:  BorderSide(
-              color: FlutterFlowTheme.of(context).darkText,
+              color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.2),
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide:  BorderSide(
+              color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.2),
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide:  BorderSide(
+              color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.2),
             ),
           ),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(
-              color: FlutterFlowTheme.of(context).darkText.withOpacity(0.4),
+              color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.4),
             ),
           ),
         ),

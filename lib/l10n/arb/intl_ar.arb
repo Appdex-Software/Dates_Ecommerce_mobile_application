@@ -9,5 +9,44 @@
     "no":"لا",
 
     "skip":"تخطي",
-    "next":"التالي"
+    "next":"التالي",
+    "email":"الايميل",
+    "password":"الباسورد",
+    "forgotYourPassword" : "نسيت كلمة المرور؟",
+    "registerNewAccount":"انشاء حساب جديد",
+    "enter":"دخول",
+    "afterReceivingYourApplicationWeWillNotifyYouWhenYourApplicationToJoinUsIsAccepted":"بعد استقبال الطلب الخاص بكم سوف نقوم باشعاركم في حين قبول طلب الانضمام الينا",
+    "nameAssociationName" : "الاسم/اسم الجمعية",
+    "address":"العنوان",
+    "phoneNumber":"رقم الهاتف",
+    "additionalInformation":"معلومات اضافية",
+    "optional":"اختياري",
+    "submit" : "تقديم",
+    "logIntoExistingAccount":"تسجيل الدخول إلى الحساب الحالي",
+    "home" : "الرئيسية",
+    "store" : "المتجر",
+    "settings" : "الاعدادات",
+    "cart" : "عربة التسوق",
+    "visionAndMission" : "الرؤية والرسالة",
+    "vision":"الرؤية",
+    "visionBody" : "أن نكون الرائدين في تقديم التمور عالية الجودة للحجاج والجمعيات الخيرية في المملكة العربية السعودية، وتعزيز روح العطاء والتكافل الاجتماعي.",
+    "mission":"الرسالة",
+    "missionBody":"نسعى من خلال توزيع التمور على الحجاج والجمعيات الخيرية إلى تقديم خدمة متميزة تلبي احتياجات ضيوف الرحمن والفئات المحتاجة، وتعكس قيم العطاء والخير التي تتميز بها مملكتنا، مع الالتزام بأعلى معايير الجودة والشفافية.",
+    "news":"الاخبار",
+    "anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason":"تم انشاء اتفاقية مع جمعية \"البر\" لتوزيع التمر علي الحجاج موسم 2025 ",
+    "thirtyNewTreesWerePlantedInANewArea":"تم زراعة 30 شجرة جديدة في منطقة جديدة ",
+    "anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan":"تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025",
+    "datesProducts":"منتجات التمور",
+    "greenDates" : "تمر خضري",
+    "add" : "اضافة",
+    "confirmOrder" : "تاكيد الطلب",
+    "addMore" : "اضافة المزيد",
+    "orders" : "الطلبات",
+    "contactUs" : "تواصل معنا",
+    "newDetails" : "تفاصيل الخبر",
+    "phone" : "هاتفيا"
+
+
+
+
 }

@@ -69,6 +69,7 @@ abstract class FlutterFlowTheme {
   late final Color white;
   late final Color blueLight;
   late final Color cultured;
+  late final Color greenChalk;
   late final Color underProgress;
 
   late final Color redApple;
@@ -80,7 +81,7 @@ abstract class FlutterFlowTheme {
   late final Color turquoise;
   late final Color gunmetal;
   late final Color grayIcon;
-  late final Color darkText;
+  late final Color black;
   late final Color grayButton;
   late final Color dark600;
   late final Color gray600;
@@ -135,6 +136,7 @@ abstract class FlutterFlowTheme {
 
   String get displayLargeFamily => typography.displayLargeFamily;
   TextStyle get displayLarge => typography.displayLarge;
+  TextStyle get displayButton => typography.displayButton;
   TextStyle get displayLargeSecondary => typography.displayLargeSecondary;
   String get displayMediumFamily => typography.displayMediumFamily;
   TextStyle get displayMedium => typography.displayMedium;
@@ -210,7 +212,7 @@ class LightModeTheme extends FlutterFlowTheme {
   @override
   final Color primaryText = const Color(0xff1B1F25);
   @override
-  final Color secondaryText = const Color(0xff79797A);
+  final Color secondaryText = const Color(0xff1E2429);
   @override
   final Color primaryBackground = const Color(0xffF1F4F8);
   @override
@@ -241,11 +243,13 @@ class LightModeTheme extends FlutterFlowTheme {
   final Color info = const Color(0xFF1C4494);
 
   @override
-  final Color borderColor = const Color(0xFFE4D9D9);
+  final Color borderColor = const Color(0xFF191919);
 
   @override
   final Color white = Colors.white;
 
+  @override
+  final Color greenChalk = const Color(0xFFbde18d);
   @override
   final Color underProgress = const Color(0xFFE98C00);
   @override
@@ -269,7 +273,7 @@ class LightModeTheme extends FlutterFlowTheme {
   @override
   final Color grayButton = const Color(0xFF95A1AC);
   @override
-  final Color darkText = const Color(0xFF1E2429);
+  final Color black = const Color(0xFF1E2429);
   @override
   final Color lightBlue = const Color(0xffEDF5FF);
   @override
@@ -320,6 +324,7 @@ class LightModeTheme extends FlutterFlowTheme {
 abstract class Typography {
   String get displayLargeFamily;
   TextStyle get displayLarge;
+  TextStyle get displayButton;
   TextStyle get displayLargeSecondary;
   String get displayMediumFamily;
   TextStyle get displayMedium;
@@ -370,6 +375,13 @@ class ThemeTypography extends Typography {
   ThemeTypography(this.theme);
 
   final FlutterFlowTheme theme;
+
+  @override
+  TextStyle get displayButton => TextStyle(
+        color: theme.greenChalk,
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+      );
 
   @override
   String get displayLargeFamily => 'Readex Pro';
@@ -650,10 +662,12 @@ class DarkModeTheme extends FlutterFlowTheme {
   final Color info = const Color(0xFF1C4494);
 
   @override
-  final Color borderColor = const Color(0xFFE4D9D9);
+  final Color borderColor = const Color(0xFF191919);
 
   @override
   final Color white = Colors.white;
+  @override
+  final Color greenChalk = const Color(0xFFbde18d);
   @override
   final Color underProgress = const Color(0xFFE98C00);
   @override
@@ -677,7 +691,7 @@ class DarkModeTheme extends FlutterFlowTheme {
   @override
   final Color grayButton = const Color(0xFF95A1AC);
   @override
-  final Color darkText = const Color(0xFFFFFFFF);
+  final Color black = const Color(0xFFFFFFFF);
 
   @override
   final Color dark600 = const Color(0xFF14181B);

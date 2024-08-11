@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:date_farm/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
+import '../../screens/screens.dart';
 import '../constants/constants.dart';
 part 'app_router.gr.dart';
 
@@ -10,9 +12,27 @@ part 'app_router.gr.dart';
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
-        
-            
-            
+        AutoRoute(page: SplashRoute.page, initial: true),
+        AutoRoute(page: LoginRoute.page),
+        AutoRoute(page: RegisterRoute.page),
+        AutoRoute(page: DashboardLayoutRoute.page, children: [
+          AutoRoute(page: HomeUserNavigationRoute.page, children: [
+            AutoRoute(page: HomeUserRoute.page,initial: true,maintainState: true),
+          ]),
+          AutoRoute(page: SettingUserNavigationRoute.page, children: [
+            AutoRoute(page: SettingsRoute.page,initial: true,maintainState: true),
+            AutoRoute(page: UserOrderRoute.page,maintainState: true),
+            AutoRoute(page: NewsRoute.page,maintainState: true),
+            AutoRoute(page: NewsDetailsRoute.page,maintainState: true),
+            AutoRoute(page: ContactUsRoute.page,maintainState: true),
+          ]),
+          AutoRoute(page: DateStoreRoute.page),
+          AutoRoute(page: CartRoute.page),
+          AutoRoute(
+            page: UserOrderRoute.page,
+          ),
+        ]),
+        AutoRoute(page: DateDetailsRoute.page),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {

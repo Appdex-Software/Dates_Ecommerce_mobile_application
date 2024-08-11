@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../themes/app_themes.dart';
+import '../constants/app_sizes.dart';
 
 class CustomButton extends StatelessWidget {
   /// [title] argument is required
@@ -9,12 +9,12 @@ class CustomButton extends StatelessWidget {
     this.title,
     this.onPressed,
     this.titleStyle,
-    this.backgroundColor = const Color(0xff1A53A5),
+    this.backgroundColor = const Color(0xf1bde18d),
     this.shape,
     this.width = 190,
     this.height = 48,
     this.loading = false,
-    this.isDisabled = true,
+    this.isDisabled = false,
     this.icon,
     this.elevation = 0,
     this.gap = 17,
@@ -53,6 +53,9 @@ class CustomButton extends StatelessWidget {
 
   final Color? splashColor;
 
+  TextStyle get _titleStyle =>
+      titleStyle ?? const TextStyle(color: Colors.white, fontSize: 16,fontWeight: FontWeight.bold);
+
   ShapeBorder get _shape =>
       shape ?? RoundedRectangleBorder(borderRadius: BorderRadius.circular(8));
 
@@ -64,13 +67,16 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final (theme, _) = appSettingsRecord(context);
+
     return Material(
       type: MaterialType.card,
       clipBehavior: Clip.antiAlias,
-      color: isDisabled ? FlutterFlowTheme.of(context).darkText : backgroundColor,
+      color: isDisabled ? theme.black : backgroundColor,
       shape: _shape,
       elevation: elevation,
-      shadowColor: FlutterFlowTheme.of(context).darkText,
+      shadowColor: theme.black,
+      
       child: InkWell(
         splashColor: _splashColor,
         onTap: isDisabled || loading ? null : onPressed,
@@ -79,7 +85,7 @@ class CustomButton extends StatelessWidget {
           child: Ink(
             decoration: ShapeDecoration(
               shape: _shape,
-              color: isDisabled ? FlutterFlowTheme.of(context).gray600 : backgroundColor,
+              color: isDisabled ? theme.gray600 : backgroundColor,
             ),
             child: loading
                 ? Center(
@@ -87,10 +93,10 @@ class CustomButton extends StatelessWidget {
                       width: 24,
                       height: 24,
                       child: CircularProgressIndicator(
-                        color: backgroundColor == FlutterFlowTheme.of(context).whiteColor ||
+                        color: backgroundColor == theme.whiteColor ||
                                 backgroundColor == Colors.transparent
-                            ? FlutterFlowTheme.of(context).darkText
-                            : FlutterFlowTheme.of(context).whiteColor,
+                            ? theme.black
+                            : theme.whiteColor,
                         strokeWidth: 2,
                       ),
                     ),
@@ -106,7 +112,7 @@ class CustomButton extends StatelessWidget {
                       if (title != null)
                         Text(
                           title!,
-                          style: titleStyle,
+                          style: _titleStyle,
                         ),
                     ],
                   ),

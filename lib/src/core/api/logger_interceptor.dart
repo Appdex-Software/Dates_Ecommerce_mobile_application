@@ -6,7 +6,6 @@ class LoggerInterceptor extends Interceptor {
     // Customize the printer
     printer: PrettyPrinter(
       methodCount: 0,
-      printTime: false,
     ),
   );
 
