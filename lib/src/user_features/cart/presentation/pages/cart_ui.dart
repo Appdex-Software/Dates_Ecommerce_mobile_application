@@ -21,7 +21,7 @@ class _CartUiState extends State<CartUi> {
     return LinearGradientContainer(
       listOfColors: [theme.greenChalk, theme.white],
       child: Padding(
-        padding: EdgeInsets.only(left: 15.sw, right: 15.sw,bottom: 8.sh),
+        padding: EdgeInsets.only(left: 12.sw, right: 12.sw,bottom: 8.sh),
         child: Column(
           children: [
             ListView.separated(

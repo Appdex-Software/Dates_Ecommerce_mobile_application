@@ -4,7 +4,8 @@ import '../constants/app_sizes.dart';
 import '../helpers/helpers.dart';
 
 class CustomSilverAppBar extends StatefulWidget {
-  const CustomSilverAppBar({super.key});
+  const CustomSilverAppBar({super.key, this.backButton});
+  final Widget? backButton;
 
   @override
   State<CustomSilverAppBar> createState() => _CustomSilverAppBarState();
@@ -35,15 +36,7 @@ class _CustomSilverAppBarState extends State<CustomSilverAppBar> {
             ),
           ),
         ),
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {},
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.notifications_active),
-            onPressed: () {},
-          ),
-        ]);
+        automaticallyImplyLeading: false,
+        );
   }
 }

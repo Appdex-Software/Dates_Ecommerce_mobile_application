@@ -475,6 +475,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `New Details`
+  String get newDetails {
+    return Intl.message(
+      'New Details',
+      name: 'newDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

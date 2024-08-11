@@ -15,16 +15,24 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(page: LoginRoute.page),
         AutoRoute(page: RegisterRoute.page),
-        AutoRoute(page: DashboardLayoutRoute.page,
-        children: [
-          AutoRoute(page: HomeUserNavigationRoute.page,children: [
-            AutoRoute(page: HomeUserRoute.page),
+        AutoRoute(page: DashboardLayoutRoute.page, children: [
+          AutoRoute(page: HomeUserNavigationRoute.page, children: [
+            AutoRoute(page: HomeUserRoute.page,initial: true,maintainState: true),
+          ]),
+          AutoRoute(page: SettingUserNavigationRoute.page, children: [
+            AutoRoute(page: SettingsRoute.page,initial: true,maintainState: true),
+            AutoRoute(page: UserOrderRoute.page,maintainState: true),
+            AutoRoute(page: NewsRoute.page,maintainState: true),
+            AutoRoute(page: NewsDetailsRoute.page,maintainState: true),
+            AutoRoute(page: ContactUsRoute.page,maintainState: true),
           ]),
           AutoRoute(page: DateStoreRoute.page),
           AutoRoute(page: CartRoute.page),
-          AutoRoute(page: SettingsRoute.page),
+          AutoRoute(
+            page: UserOrderRoute.page,
+          ),
         ]),
-          AutoRoute(page: DateDetailsRoute.page),
+        AutoRoute(page: DateDetailsRoute.page),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {

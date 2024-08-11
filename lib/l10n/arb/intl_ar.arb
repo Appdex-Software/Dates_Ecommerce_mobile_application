@@ -42,7 +42,11 @@
     "confirmOrder" : "تاكيد الطلب",
     "addMore" : "اضافة المزيد",
     "orders" : "الطلبات",
-    "contactUs" : "تواصل معنا"
+    "contactUs" : "تواصل معنا",
+    "newDetails" : "تفاصيل الخبر",
+    "phone" : "هاتفيا"
+
+
 
 
 }

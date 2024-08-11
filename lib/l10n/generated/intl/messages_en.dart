@@ -59,12 +59,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency."),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("Name/Association Name"),
+        "newDetails": MessageLookupByLibrary.simpleMessage("New Details"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "optional": MessageLookupByLibrary.simpleMessage("Optional"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),

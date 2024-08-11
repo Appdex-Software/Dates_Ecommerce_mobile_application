@@ -59,12 +59,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "نسعى من خلال توزيع التمور على الحجاج والجمعيات الخيرية إلى تقديم خدمة متميزة تلبي احتياجات ضيوف الرحمن والفئات المحتاجة، وتعكس قيم العطاء والخير التي تتميز بها مملكتنا، مع الالتزام بأعلى معايير الجودة والشفافية."),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("الاسم/اسم الجمعية"),
+        "newDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الخبر"),
         "news": MessageLookupByLibrary.simpleMessage("الاخبار"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
+        "phone": MessageLookupByLibrary.simpleMessage("هاتفيا"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),

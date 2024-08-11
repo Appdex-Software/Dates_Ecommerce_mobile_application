@@ -42,7 +42,9 @@
     "confirmOrder" : "Confirm order",
     "addMore" : "Add more",
     "orders" : "Orders",
-    "contactUs" : "Contact Us"
+    "contactUs" : "Contact Us",
+    "newDetails" : "New Details",
+    "phone" : "Phone" 
 
 
 }
