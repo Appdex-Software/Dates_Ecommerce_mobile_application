@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accept": MessageLookupByLibrary.simpleMessage("Accept"),
         "add": MessageLookupByLibrary.simpleMessage("add"),
         "addMore": MessageLookupByLibrary.simpleMessage("Add more"),
         "additionalInformation":
@@ -42,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm order"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
+        "decline": MessageLookupByLibrary.simpleMessage("Decline"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
             "Do you want to exit the app?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -51,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
         "greenDates": MessageLookupByLibrary.simpleMessage("Green dates"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "inventory": MessageLookupByLibrary.simpleMessage("inventory"),
+        "joinRequests": MessageLookupByLibrary.simpleMessage("Join Requests"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "logIntoExistingAccount":
             MessageLookupByLibrary.simpleMessage("log into existing account"),
@@ -60,11 +64,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("Name/Association Name"),
         "newDetails": MessageLookupByLibrary.simpleMessage("New Details"),
+        "newPost": MessageLookupByLibrary.simpleMessage("New post"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "optional": MessageLookupByLibrary.simpleMessage("Optional"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
+        "ordersInProgress":
+            MessageLookupByLibrary.simpleMessage("Orders in progress"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),

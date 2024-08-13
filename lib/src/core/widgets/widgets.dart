@@ -12,3 +12,4 @@ export 'transparent_appbar.dart';
 export 'linear_gradient_container.dart';
 export 'app_startup_widget.dart';
 export 'custom_silver_app_bar.dart';
+export 'custom_drawer.dart';

@@ -45,6 +45,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const DateStorePage(),
       );
     },
+    HomeAdminNavigationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeAdminNavigationPage(),
+      );
+    },
+    HomeAdminRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeAdminPage(),
+      );
+    },
     HomeUserNavigationRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -73,6 +85,12 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const NewsPage(),
+      );
+    },
+    OrdersAdminRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const OrdersAdminPage(),
       );
     },
     RegisterRoute.name: (routeData) {
@@ -179,6 +197,34 @@ class DateStoreRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [HomeAdminNavigationPage]
+class HomeAdminNavigationRoute extends PageRouteInfo<void> {
+  const HomeAdminNavigationRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeAdminNavigationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeAdminNavigationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [HomeAdminPage]
+class HomeAdminRoute extends PageRouteInfo<void> {
+  const HomeAdminRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeAdminRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeAdminRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [HomeUserNavigationPage]
 class HomeUserNavigationRoute extends PageRouteInfo<void> {
   const HomeUserNavigationRoute({List<PageRouteInfo>? children})
@@ -244,6 +290,20 @@ class NewsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'NewsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [OrdersAdminPage]
+class OrdersAdminRoute extends PageRouteInfo<void> {
+  const OrdersAdminRoute({List<PageRouteInfo>? children})
+      : super(
+          OrdersAdminRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'OrdersAdminRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

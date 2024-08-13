@@ -45,7 +45,7 @@ class _LoginUiState extends State<LoginUi> {
              Center(child: CustomButton(
               title: l10n.enter,
               onPressed: () {
-                context.router.replace(const HomeUserRoute());
+                context.router.replace(const HomeAdminRoute());
               },
              ))
           ],

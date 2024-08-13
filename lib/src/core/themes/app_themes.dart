@@ -71,6 +71,7 @@ abstract class FlutterFlowTheme {
   late final Color cultured;
   late final Color greenChalk;
   late final Color underProgress;
+  late final Color decline;
 
   late final Color redApple;
   late final Color darkRed;
@@ -252,6 +253,8 @@ class LightModeTheme extends FlutterFlowTheme {
   final Color greenChalk = const Color(0xFFbde18d);
   @override
   final Color underProgress = const Color(0xFFE98C00);
+  @override
+  final Color decline = const Color(0xFFe3530d);
   @override
   final Color blueLight = const Color(0xFF8FAAD0);
   @override
@@ -670,6 +673,8 @@ class DarkModeTheme extends FlutterFlowTheme {
   final Color greenChalk = const Color(0xFFbde18d);
   @override
   final Color underProgress = const Color(0xFFE98C00);
+  @override
+  final Color decline = const Color(0xFFe3530d);
   @override
   final Color blueLight = const Color(0XFF8FAAD0);
   @override

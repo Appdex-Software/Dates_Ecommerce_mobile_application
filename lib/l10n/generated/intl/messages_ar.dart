@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accept": MessageLookupByLibrary.simpleMessage("قبول"),
         "add": MessageLookupByLibrary.simpleMessage("اضافة"),
         "addMore": MessageLookupByLibrary.simpleMessage("اضافة المزيد"),
         "additionalInformation":
@@ -42,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmOrder": MessageLookupByLibrary.simpleMessage("تاكيد الطلب"),
         "contactUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
+        "decline": MessageLookupByLibrary.simpleMessage("رفض"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),
         "email": MessageLookupByLibrary.simpleMessage("الايميل"),
@@ -51,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "inventory": MessageLookupByLibrary.simpleMessage("المخزون"),
+        "joinRequests": MessageLookupByLibrary.simpleMessage("طلب انضمام"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول إلى الحساب الحالي"),
@@ -60,11 +64,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("الاسم/اسم الجمعية"),
         "newDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الخبر"),
+        "newPost": MessageLookupByLibrary.simpleMessage("منشور جديد"),
         "news": MessageLookupByLibrary.simpleMessage("الاخبار"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
+        "ordersInProgress": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
         "phone": MessageLookupByLibrary.simpleMessage("هاتفيا"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),

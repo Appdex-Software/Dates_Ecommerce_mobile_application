@@ -44,7 +44,11 @@
     "orders" : "Orders",
     "contactUs" : "Contact Us",
     "newDetails" : "New Details",
-    "phone" : "Phone" 
-
-
+    "phone" : "Phone",
+    "inventory" : "inventory",
+    "ordersInProgress":"Orders in progress",
+    "joinRequests" : "Join Requests",
+    "newPost" : "New post",
+    "accept" : "Accept",
+    "decline" : "Decline"
 }
