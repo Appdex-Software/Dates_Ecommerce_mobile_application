@@ -229,7 +229,7 @@ class LightModeTheme extends FlutterFlowTheme {
   @override
   final Color accent2 = const Color(0xFF757575);
   @override
-  final Color accent3 = const Color(0xFFE0E0E0);
+  final Color accent3 = const Color(0xFFd0e30d);
   @override
   final Color accent4 = const Color(0xFFEEEEEE);
   @override
@@ -650,7 +650,7 @@ class DarkModeTheme extends FlutterFlowTheme {
   @override
   final Color accent2 = const Color(0xFFE0E0E0);
   @override
-  final Color accent3 = const Color(0xFF757575);
+  final Color accent3 = const Color(0xFFd0e30d);
   @override
   final Color accent4 = const Color(0xFF616161);
   @override

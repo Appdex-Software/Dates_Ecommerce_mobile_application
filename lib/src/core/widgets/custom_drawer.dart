@@ -34,7 +34,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.group_add),
               title:  Text(l10n.joinRequests),
-              onTap: () {},
+              onTap: () {
+                context.router.push(const JoinRequestRoute());
+              },
             ),
             ListTile(
               leading: const Icon(Icons.post_add),

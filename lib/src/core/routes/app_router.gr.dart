@@ -69,6 +69,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomeUserPage(),
       );
     },
+    JoinRequestRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const JoinRequestPage(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -248,6 +254,20 @@ class HomeUserRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeUserRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [JoinRequestPage]
+class JoinRequestRoute extends PageRouteInfo<void> {
+  const JoinRequestRoute({List<PageRouteInfo>? children})
+      : super(
+          JoinRequestRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'JoinRequestRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -15,3 +15,4 @@ export 'contact_us_page.dart';
 export 'home_admin_navigation_page.dart';
 export 'home_admin_page.dart';
 export 'orders_admin_page.dart';
+export 'join_request_page.dart';

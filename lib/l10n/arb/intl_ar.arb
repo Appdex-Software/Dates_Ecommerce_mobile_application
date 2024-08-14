@@ -46,9 +46,10 @@
     "newDetails" : "تفاصيل الخبر",
     "phone" : "هاتفيا",
     "inventory" : "المخزون",
-    "ordersInProgress":"الطلبات",
+    "ordersInProgress":"قيد التحضير",
     "joinRequests" : "طلب انضمام",
     "newPost" : "منشور جديد",
     "accept" : "قبول",
-    "decline" : "رفض"
+    "decline" : "رفض",
+    "review" : "مراجعة"
 }

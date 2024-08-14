@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),
+        "review": MessageLookupByLibrary.simpleMessage("Review"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "store": MessageLookupByLibrary.simpleMessage("Store"),

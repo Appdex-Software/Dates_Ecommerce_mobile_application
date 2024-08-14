@@ -36,6 +36,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: HomeAdminNavigationRoute.page,children: [
           AutoRoute(page: HomeAdminRoute.page,initial: true),
           AutoRoute(page: OrdersAdminRoute.page,),
+          AutoRoute(page: JoinRequestRoute.page,),
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];

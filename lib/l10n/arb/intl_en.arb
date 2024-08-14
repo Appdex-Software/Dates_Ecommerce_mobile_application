@@ -50,5 +50,6 @@
     "joinRequests" : "Join Requests",
     "newPost" : "New post",
     "accept" : "Accept",
-    "decline" : "Decline"
+    "decline" : "Decline",
+    "review" : "Review"
 }
