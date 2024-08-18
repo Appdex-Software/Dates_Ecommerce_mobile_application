@@ -565,6 +565,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Available`
+  String get available {
+    return Intl.message(
+      'Available',
+      name: 'available',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unavailable`
+  String get unavailable {
+    return Intl.message(
+      'Unavailable',
+      name: 'unavailable',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

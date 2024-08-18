@@ -51,5 +51,7 @@
     "newPost" : "منشور جديد",
     "accept" : "قبول",
     "decline" : "رفض",
-    "review" : "مراجعة"
+    "review" : "مراجعة",
+    "available" : "المتاح",
+    "unavailable" : "غير المتاح"
 }

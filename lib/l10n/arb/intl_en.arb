@@ -51,5 +51,7 @@
     "newPost" : "New post",
     "accept" : "Accept",
     "decline" : "Decline",
-    "review" : "Review"
+    "review" : "Review",
+    "available" : "Available",
+    "unavailable" : "Unavailable"
 }
