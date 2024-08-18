@@ -1,4 +1,7 @@
+import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_data.dart';
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_entity.dart';
+import 'package:date_farm/src/core/constants/app_constants.dart';
+import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../domain/repositories/authentication_repository.dart';
 part 'auth_ui_service.g.dart';
@@ -8,8 +11,8 @@ part 'auth_ui_service.g.dart';
 ])
 class AuthUiService extends _$AuthUiService {
   @override
-  FutureOr<UserEntity?> build() {
-    return getUserEntity();
+  FutureOr<UserData?> build() {
+    return fetchSavedPatientInfo();
   }
 
   bool? _isVerified;
@@ -21,6 +24,8 @@ class AuthUiService extends _$AuthUiService {
 
   UserEntity? _userEntity;
   UserEntity? getUserEntity() => _userEntity;
+  UserData? _userData;
+  UserData? getUserData() => _userData;
 
   // String _patientGender = 'm';
   // String getPatientGender() {
@@ -36,6 +41,11 @@ class AuthUiService extends _$AuthUiService {
   //     RequiredRegisterationPatientInfo registerPatientInfo) {
   //   _registeredPatientInfo = registerPatientInfo;
   // }
+  UserData? fetchSavedPatientInfo() {
+    _userData =
+        ref.read(authenticationRepositoryProvider.notifier).getUserEntity()?.data;
+    return _userData;
+  }
 
   Future<UserEntity?> loginUser({String? email,String? password}) async {
     try {
@@ -43,8 +53,16 @@ class AuthUiService extends _$AuthUiService {
       _userEntity = await ref
           .watch(authenticationRepositoryProvider.notifier)
           .loginUser(email: email,password: password);
-
-      state = AsyncData(_userEntity);
+      if(_userEntity?.statusCode == 200) {
+        bool exists = Hive.isBoxOpen(userInfoBox);
+      if (!exists) {
+        await Hive.openBox(userInfoBox);
+      }
+      var patientBox = Hive.box(userInfoBox);
+      patientBox.add(_userEntity?.data);
+      }
+      _userData = _userEntity?.data;
+      state = AsyncData(_userData);
       return _userEntity;
     } catch (e) {
       throw e.toString();
@@ -153,6 +171,16 @@ class AuthUiService extends _$AuthUiService {
 
   //   state = const AsyncData(null);
   // }
+
+    logout() async {
+    var patientBox = Hive.box(userInfoBox);
+    _userEntity = null;
+    patientBox.clear();
+    patientBox.close();
+    ref.invalidateSelf();
+
+    state = const AsyncData(null);
+  }
 
   // resetAll() {
   //   _userPhoneNumber = null;

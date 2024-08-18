@@ -20,8 +20,10 @@ UserData _$UserDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserData {
+  @HiveField(0)
   @JsonKey(name: 'access_token')
   String? get accessToken => throw _privateConstructorUsedError;
+  @HiveField(1)
   User? get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +37,9 @@ abstract class $UserDataCopyWith<$Res> {
   factory $UserDataCopyWith(UserData value, $Res Function(UserData) then) =
       _$UserDataCopyWithImpl<$Res, UserData>;
   @useResult
-  $Res call({@JsonKey(name: 'access_token') String? accessToken, User? user});
+  $Res call(
+      {@HiveField(0) @JsonKey(name: 'access_token') String? accessToken,
+      @HiveField(1) User? user});
 
   $UserCopyWith<$Res>? get user;
 }
@@ -88,7 +92,9 @@ abstract class _$$DataImplCopyWith<$Res> implements $UserDataCopyWith<$Res> {
       __$$DataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'access_token') String? accessToken, User? user});
+  $Res call(
+      {@HiveField(0) @JsonKey(name: 'access_token') String? accessToken,
+      @HiveField(1) User? user});
 
   @override
   $UserCopyWith<$Res>? get user;
@@ -123,15 +129,19 @@ class __$$DataImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$DataImpl implements _Data {
-  _$DataImpl({@JsonKey(name: 'access_token') this.accessToken, this.user});
+  _$DataImpl(
+      {@HiveField(0) @JsonKey(name: 'access_token') this.accessToken,
+      @HiveField(1) this.user});
 
   factory _$DataImpl.fromJson(Map<String, dynamic> json) =>
       _$$DataImplFromJson(json);
 
   @override
+  @HiveField(0)
   @JsonKey(name: 'access_token')
   final String? accessToken;
   @override
+  @HiveField(1)
   final User? user;
 
   @override
@@ -169,15 +179,17 @@ class _$DataImpl implements _Data {
 
 abstract class _Data implements UserData {
   factory _Data(
-      {@JsonKey(name: 'access_token') final String? accessToken,
-      final User? user}) = _$DataImpl;
+      {@HiveField(0) @JsonKey(name: 'access_token') final String? accessToken,
+      @HiveField(1) final User? user}) = _$DataImpl;
 
   factory _Data.fromJson(Map<String, dynamic> json) = _$DataImpl.fromJson;
 
   @override
+  @HiveField(0)
   @JsonKey(name: 'access_token')
   String? get accessToken;
   @override
+  @HiveField(1)
   User? get user;
   @override
   @JsonKey(ignore: true)

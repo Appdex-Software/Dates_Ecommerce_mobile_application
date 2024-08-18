@@ -20,40 +20,62 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(2)
   @JsonKey(name: 'last_login')
   DateTime? get lastLogin => throw _privateConstructorUsedError;
+  @HiveField(3)
   @JsonKey(name: 'is_superuser')
   bool? get isSuperuser => throw _privateConstructorUsedError;
+  @HiveField(4)
   String? get username => throw _privateConstructorUsedError;
+  @HiveField(5)
   @JsonKey(name: 'first_name')
   String? get firstName => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: 'last_name')
   String? get lastName => throw _privateConstructorUsedError;
+  @HiveField(7)
   @JsonKey(name: 'is_staff')
   bool? get isStaff => throw _privateConstructorUsedError;
+  @HiveField(8)
   @JsonKey(name: 'is_active')
   bool? get isActive => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'date_joined')
   DateTime? get dateJoined => throw _privateConstructorUsedError;
+  @HiveField(10)
   @JsonKey(name: 'registration_status')
   String? get registrationStatus => throw _privateConstructorUsedError;
+  @HiveField(11)
   @JsonKey(name: 'registration_datetime')
   dynamic get registrationDatetime => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: 'reject_comment')
   dynamic get rejectComment => throw _privateConstructorUsedError;
+  @HiveField(13)
   dynamic get country => throw _privateConstructorUsedError;
+  @HiveField(14)
   dynamic get city => throw _privateConstructorUsedError;
+  @HiveField(15)
   dynamic get street => throw _privateConstructorUsedError;
+  @HiveField(16)
   @JsonKey(name: 'zip_code')
   dynamic get zipCode => throw _privateConstructorUsedError;
+  @HiveField(17)
   String? get role => throw _privateConstructorUsedError;
+  @HiveField(18)
   @JsonKey(name: 'customer_type')
   dynamic get customerType => throw _privateConstructorUsedError;
+  @HiveField(19)
   String? get email => throw _privateConstructorUsedError;
+  @HiveField(20)
   @JsonKey(name: 'phone_number')
   dynamic get phoneNumber => throw _privateConstructorUsedError;
+  @HiveField(21)
   dynamic get picture => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -67,28 +89,32 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
-      {String? id,
-      String? name,
-      @JsonKey(name: 'last_login') DateTime? lastLogin,
-      @JsonKey(name: 'is_superuser') bool? isSuperuser,
-      String? username,
-      @JsonKey(name: 'first_name') String? firstName,
-      @JsonKey(name: 'last_name') String? lastName,
-      @JsonKey(name: 'is_staff') bool? isStaff,
-      @JsonKey(name: 'is_active') bool? isActive,
-      @JsonKey(name: 'date_joined') DateTime? dateJoined,
-      @JsonKey(name: 'registration_status') String? registrationStatus,
-      @JsonKey(name: 'registration_datetime') dynamic registrationDatetime,
-      @JsonKey(name: 'reject_comment') dynamic rejectComment,
-      dynamic country,
-      dynamic city,
-      dynamic street,
-      @JsonKey(name: 'zip_code') dynamic zipCode,
-      String? role,
-      @JsonKey(name: 'customer_type') dynamic customerType,
-      String? email,
-      @JsonKey(name: 'phone_number') dynamic phoneNumber,
-      dynamic picture});
+      {@HiveField(0) String? id,
+      @HiveField(1) String? name,
+      @HiveField(2) @JsonKey(name: 'last_login') DateTime? lastLogin,
+      @HiveField(3) @JsonKey(name: 'is_superuser') bool? isSuperuser,
+      @HiveField(4) String? username,
+      @HiveField(5) @JsonKey(name: 'first_name') String? firstName,
+      @HiveField(6) @JsonKey(name: 'last_name') String? lastName,
+      @HiveField(7) @JsonKey(name: 'is_staff') bool? isStaff,
+      @HiveField(8) @JsonKey(name: 'is_active') bool? isActive,
+      @HiveField(9) @JsonKey(name: 'date_joined') DateTime? dateJoined,
+      @HiveField(10)
+      @JsonKey(name: 'registration_status')
+      String? registrationStatus,
+      @HiveField(11)
+      @JsonKey(name: 'registration_datetime')
+      dynamic registrationDatetime,
+      @HiveField(12) @JsonKey(name: 'reject_comment') dynamic rejectComment,
+      @HiveField(13) dynamic country,
+      @HiveField(14) dynamic city,
+      @HiveField(15) dynamic street,
+      @HiveField(16) @JsonKey(name: 'zip_code') dynamic zipCode,
+      @HiveField(17) String? role,
+      @HiveField(18) @JsonKey(name: 'customer_type') dynamic customerType,
+      @HiveField(19) String? email,
+      @HiveField(20) @JsonKey(name: 'phone_number') dynamic phoneNumber,
+      @HiveField(21) dynamic picture});
 }
 
 /// @nodoc
@@ -228,28 +254,32 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? id,
-      String? name,
-      @JsonKey(name: 'last_login') DateTime? lastLogin,
-      @JsonKey(name: 'is_superuser') bool? isSuperuser,
-      String? username,
-      @JsonKey(name: 'first_name') String? firstName,
-      @JsonKey(name: 'last_name') String? lastName,
-      @JsonKey(name: 'is_staff') bool? isStaff,
-      @JsonKey(name: 'is_active') bool? isActive,
-      @JsonKey(name: 'date_joined') DateTime? dateJoined,
-      @JsonKey(name: 'registration_status') String? registrationStatus,
-      @JsonKey(name: 'registration_datetime') dynamic registrationDatetime,
-      @JsonKey(name: 'reject_comment') dynamic rejectComment,
-      dynamic country,
-      dynamic city,
-      dynamic street,
-      @JsonKey(name: 'zip_code') dynamic zipCode,
-      String? role,
-      @JsonKey(name: 'customer_type') dynamic customerType,
-      String? email,
-      @JsonKey(name: 'phone_number') dynamic phoneNumber,
-      dynamic picture});
+      {@HiveField(0) String? id,
+      @HiveField(1) String? name,
+      @HiveField(2) @JsonKey(name: 'last_login') DateTime? lastLogin,
+      @HiveField(3) @JsonKey(name: 'is_superuser') bool? isSuperuser,
+      @HiveField(4) String? username,
+      @HiveField(5) @JsonKey(name: 'first_name') String? firstName,
+      @HiveField(6) @JsonKey(name: 'last_name') String? lastName,
+      @HiveField(7) @JsonKey(name: 'is_staff') bool? isStaff,
+      @HiveField(8) @JsonKey(name: 'is_active') bool? isActive,
+      @HiveField(9) @JsonKey(name: 'date_joined') DateTime? dateJoined,
+      @HiveField(10)
+      @JsonKey(name: 'registration_status')
+      String? registrationStatus,
+      @HiveField(11)
+      @JsonKey(name: 'registration_datetime')
+      dynamic registrationDatetime,
+      @HiveField(12) @JsonKey(name: 'reject_comment') dynamic rejectComment,
+      @HiveField(13) dynamic country,
+      @HiveField(14) dynamic city,
+      @HiveField(15) dynamic street,
+      @HiveField(16) @JsonKey(name: 'zip_code') dynamic zipCode,
+      @HiveField(17) String? role,
+      @HiveField(18) @JsonKey(name: 'customer_type') dynamic customerType,
+      @HiveField(19) String? email,
+      @HiveField(20) @JsonKey(name: 'phone_number') dynamic phoneNumber,
+      @HiveField(21) dynamic picture});
 }
 
 /// @nodoc
@@ -382,88 +412,114 @@ class __$$UserImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UserImpl implements _User {
   _$UserImpl(
-      {this.id,
-      this.name,
-      @JsonKey(name: 'last_login') this.lastLogin,
-      @JsonKey(name: 'is_superuser') this.isSuperuser,
-      this.username,
-      @JsonKey(name: 'first_name') this.firstName,
-      @JsonKey(name: 'last_name') this.lastName,
-      @JsonKey(name: 'is_staff') this.isStaff,
-      @JsonKey(name: 'is_active') this.isActive,
-      @JsonKey(name: 'date_joined') this.dateJoined,
-      @JsonKey(name: 'registration_status') this.registrationStatus,
-      @JsonKey(name: 'registration_datetime') this.registrationDatetime,
-      @JsonKey(name: 'reject_comment') this.rejectComment,
-      this.country,
-      this.city,
-      this.street,
-      @JsonKey(name: 'zip_code') this.zipCode,
-      this.role,
-      @JsonKey(name: 'customer_type') this.customerType,
-      this.email,
-      @JsonKey(name: 'phone_number') this.phoneNumber,
-      this.picture});
+      {@HiveField(0) this.id,
+      @HiveField(1) this.name,
+      @HiveField(2) @JsonKey(name: 'last_login') this.lastLogin,
+      @HiveField(3) @JsonKey(name: 'is_superuser') this.isSuperuser,
+      @HiveField(4) this.username,
+      @HiveField(5) @JsonKey(name: 'first_name') this.firstName,
+      @HiveField(6) @JsonKey(name: 'last_name') this.lastName,
+      @HiveField(7) @JsonKey(name: 'is_staff') this.isStaff,
+      @HiveField(8) @JsonKey(name: 'is_active') this.isActive,
+      @HiveField(9) @JsonKey(name: 'date_joined') this.dateJoined,
+      @HiveField(10)
+      @JsonKey(name: 'registration_status')
+      this.registrationStatus,
+      @HiveField(11)
+      @JsonKey(name: 'registration_datetime')
+      this.registrationDatetime,
+      @HiveField(12) @JsonKey(name: 'reject_comment') this.rejectComment,
+      @HiveField(13) this.country,
+      @HiveField(14) this.city,
+      @HiveField(15) this.street,
+      @HiveField(16) @JsonKey(name: 'zip_code') this.zipCode,
+      @HiveField(17) this.role,
+      @HiveField(18) @JsonKey(name: 'customer_type') this.customerType,
+      @HiveField(19) this.email,
+      @HiveField(20) @JsonKey(name: 'phone_number') this.phoneNumber,
+      @HiveField(21) this.picture});
 
   factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserImplFromJson(json);
 
   @override
+  @HiveField(0)
   final String? id;
   @override
+  @HiveField(1)
   final String? name;
   @override
+  @HiveField(2)
   @JsonKey(name: 'last_login')
   final DateTime? lastLogin;
   @override
+  @HiveField(3)
   @JsonKey(name: 'is_superuser')
   final bool? isSuperuser;
   @override
+  @HiveField(4)
   final String? username;
   @override
+  @HiveField(5)
   @JsonKey(name: 'first_name')
   final String? firstName;
   @override
+  @HiveField(6)
   @JsonKey(name: 'last_name')
   final String? lastName;
   @override
+  @HiveField(7)
   @JsonKey(name: 'is_staff')
   final bool? isStaff;
   @override
+  @HiveField(8)
   @JsonKey(name: 'is_active')
   final bool? isActive;
   @override
+  @HiveField(9)
   @JsonKey(name: 'date_joined')
   final DateTime? dateJoined;
   @override
+  @HiveField(10)
   @JsonKey(name: 'registration_status')
   final String? registrationStatus;
   @override
+  @HiveField(11)
   @JsonKey(name: 'registration_datetime')
   final dynamic registrationDatetime;
   @override
+  @HiveField(12)
   @JsonKey(name: 'reject_comment')
   final dynamic rejectComment;
   @override
+  @HiveField(13)
   final dynamic country;
   @override
+  @HiveField(14)
   final dynamic city;
   @override
+  @HiveField(15)
   final dynamic street;
   @override
+  @HiveField(16)
   @JsonKey(name: 'zip_code')
   final dynamic zipCode;
   @override
+  @HiveField(17)
   final String? role;
   @override
+  @HiveField(18)
   @JsonKey(name: 'customer_type')
   final dynamic customerType;
   @override
+  @HiveField(19)
   final String? email;
   @override
+  @HiveField(20)
   @JsonKey(name: 'phone_number')
   final dynamic phoneNumber;
   @override
+  @HiveField(21)
   final dynamic picture;
 
   @override
@@ -556,88 +612,115 @@ class _$UserImpl implements _User {
 
 abstract class _User implements User {
   factory _User(
-      {final String? id,
-      final String? name,
-      @JsonKey(name: 'last_login') final DateTime? lastLogin,
-      @JsonKey(name: 'is_superuser') final bool? isSuperuser,
-      final String? username,
-      @JsonKey(name: 'first_name') final String? firstName,
-      @JsonKey(name: 'last_name') final String? lastName,
-      @JsonKey(name: 'is_staff') final bool? isStaff,
-      @JsonKey(name: 'is_active') final bool? isActive,
-      @JsonKey(name: 'date_joined') final DateTime? dateJoined,
-      @JsonKey(name: 'registration_status') final String? registrationStatus,
+      {@HiveField(0) final String? id,
+      @HiveField(1) final String? name,
+      @HiveField(2) @JsonKey(name: 'last_login') final DateTime? lastLogin,
+      @HiveField(3) @JsonKey(name: 'is_superuser') final bool? isSuperuser,
+      @HiveField(4) final String? username,
+      @HiveField(5) @JsonKey(name: 'first_name') final String? firstName,
+      @HiveField(6) @JsonKey(name: 'last_name') final String? lastName,
+      @HiveField(7) @JsonKey(name: 'is_staff') final bool? isStaff,
+      @HiveField(8) @JsonKey(name: 'is_active') final bool? isActive,
+      @HiveField(9) @JsonKey(name: 'date_joined') final DateTime? dateJoined,
+      @HiveField(10)
+      @JsonKey(name: 'registration_status')
+      final String? registrationStatus,
+      @HiveField(11)
       @JsonKey(name: 'registration_datetime')
       final dynamic registrationDatetime,
-      @JsonKey(name: 'reject_comment') final dynamic rejectComment,
-      final dynamic country,
-      final dynamic city,
-      final dynamic street,
-      @JsonKey(name: 'zip_code') final dynamic zipCode,
-      final String? role,
-      @JsonKey(name: 'customer_type') final dynamic customerType,
-      final String? email,
-      @JsonKey(name: 'phone_number') final dynamic phoneNumber,
-      final dynamic picture}) = _$UserImpl;
+      @HiveField(12)
+      @JsonKey(name: 'reject_comment')
+      final dynamic rejectComment,
+      @HiveField(13) final dynamic country,
+      @HiveField(14) final dynamic city,
+      @HiveField(15) final dynamic street,
+      @HiveField(16) @JsonKey(name: 'zip_code') final dynamic zipCode,
+      @HiveField(17) final String? role,
+      @HiveField(18) @JsonKey(name: 'customer_type') final dynamic customerType,
+      @HiveField(19) final String? email,
+      @HiveField(20) @JsonKey(name: 'phone_number') final dynamic phoneNumber,
+      @HiveField(21) final dynamic picture}) = _$UserImpl;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
 
   @override
+  @HiveField(0)
   String? get id;
   @override
+  @HiveField(1)
   String? get name;
   @override
+  @HiveField(2)
   @JsonKey(name: 'last_login')
   DateTime? get lastLogin;
   @override
+  @HiveField(3)
   @JsonKey(name: 'is_superuser')
   bool? get isSuperuser;
   @override
+  @HiveField(4)
   String? get username;
   @override
+  @HiveField(5)
   @JsonKey(name: 'first_name')
   String? get firstName;
   @override
+  @HiveField(6)
   @JsonKey(name: 'last_name')
   String? get lastName;
   @override
+  @HiveField(7)
   @JsonKey(name: 'is_staff')
   bool? get isStaff;
   @override
+  @HiveField(8)
   @JsonKey(name: 'is_active')
   bool? get isActive;
   @override
+  @HiveField(9)
   @JsonKey(name: 'date_joined')
   DateTime? get dateJoined;
   @override
+  @HiveField(10)
   @JsonKey(name: 'registration_status')
   String? get registrationStatus;
   @override
+  @HiveField(11)
   @JsonKey(name: 'registration_datetime')
   dynamic get registrationDatetime;
   @override
+  @HiveField(12)
   @JsonKey(name: 'reject_comment')
   dynamic get rejectComment;
   @override
+  @HiveField(13)
   dynamic get country;
   @override
+  @HiveField(14)
   dynamic get city;
   @override
+  @HiveField(15)
   dynamic get street;
   @override
+  @HiveField(16)
   @JsonKey(name: 'zip_code')
   dynamic get zipCode;
   @override
+  @HiveField(17)
   String? get role;
   @override
+  @HiveField(18)
   @JsonKey(name: 'customer_type')
   dynamic get customerType;
   @override
+  @HiveField(19)
   String? get email;
   @override
+  @HiveField(20)
   @JsonKey(name: 'phone_number')
   dynamic get phoneNumber;
   @override
+  @HiveField(21)
   dynamic get picture;
   @override
   @JsonKey(ignore: true)

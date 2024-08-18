@@ -42,3 +42,5 @@ Logger logger = Logger(
     ),
   ),
 );
+
+const userInfoBox = 'userInfoBox';

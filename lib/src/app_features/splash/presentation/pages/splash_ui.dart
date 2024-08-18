@@ -1,7 +1,10 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/core/helpers/helpers.dart';
+import 'package:date_farm/src/core/helpers/session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -18,7 +21,13 @@ class _SplashUiState extends State<SplashUi> {
   int chosenMedicalCenter = 0;
   _navigationTimer() async {
     Timer(const Duration(seconds: 2), () async {
+      final isLogin = await sessionManager.getLogin();
+      if (isLogin) {
+        context.router.replace(const HomeUserRoute());
+      } else {
       context.router.replace(const LoginRoute());
+
+      }
     });
   }
 

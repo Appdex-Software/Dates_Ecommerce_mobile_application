@@ -1,3 +1,7 @@
+
+import 'package:date_farm/src/core/constants/app_constants.dart';
+import 'package:hive_flutter/adapters.dart';
+
 import '../../../../core/errors/custom_error.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../data/repository_impl/authentication_repository_impl.dart';
@@ -23,18 +27,21 @@ class AuthenticationRepository extends _$AuthenticationRepository {
   //   return _patientInfo;
   // }
 
-  // Future<PatientInfo?> fetchSavedPatientInfo() async {
-  //   await Hive.openBox(patientInfoBox);
-  //   bool exists = Hive.isBoxOpen(patientInfoBox);
-  //   if (exists) {
-  //     var patientBox = Hive.box(patientInfoBox);
-  //     if (patientBox.isNotEmpty) {
-  //       _patientInfo = patientBox.getAt(0);
-  //       logger.d('patient info from hive${_patientInfo?.toJson()}');
-  //     }
-  //   }
-  //   return _patientInfo;
-  // }
+  Future<UserEntity?> fetchSavedUserInfo() async {
+    await Hive.openBox(userInfoBox);
+    bool exists = Hive.isBoxOpen(userInfoBox);
+    if (exists) {
+      var patientBox = Hive.box(userInfoBox);
+      if (patientBox.isNotEmpty) {
+        _userEntity = _userEntity?.copyWith(
+          statusCode: 200,
+          data: patientBox.getAt(0)
+        ) ;
+        logger.d('patient info from hive ${_userEntity?.data?.toJson()}');
+      }
+    }
+    return _userEntity;
+  }
 
   Future<UserEntity?> loginUser({String? email,String? password}) async {
     try {
@@ -80,11 +87,5 @@ class AuthenticationRepository extends _$AuthenticationRepository {
   //   }
   // }
 
-  // logout() async {
-  //   var patientBox = Hive.box(patientInfoBox);
-  //   _patientInfo = null;
-  //   patientBox.clear();
-  //   patientBox.close();
-  //   ref.invalidateSelf();
-  // }
+
 }
