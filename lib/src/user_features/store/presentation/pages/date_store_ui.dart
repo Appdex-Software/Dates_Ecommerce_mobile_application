@@ -23,7 +23,7 @@ class _DateStoreUiState extends State<DateStoreUi> {
         const CustomSilverAppBar(),
         SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 5.1.sw,vertical: 2.sh),
+            padding: EdgeInsets.symmetric(horizontal: 5.1.sw, vertical: 2.sh),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -36,7 +36,10 @@ class _DateStoreUiState extends State<DateStoreUi> {
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   padding: EdgeInsets.zero,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,crossAxisSpacing: 3.sw,childAspectRatio: 0.8),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 3.sw,
+                      childAspectRatio: 0.8),
                   itemCount: 9,
                   itemBuilder: (context, index) {
                     return GestureDetector(
@@ -44,17 +47,26 @@ class _DateStoreUiState extends State<DateStoreUi> {
                         context.router.push(const DateDetailsRoute());
                       },
                       child: LinearGradientContainer(
-                        listOfColors: [theme.greenChalk.withOpacity(0.7),theme.white],
-                        child: Padding(
-                          padding: EdgeInsets.all(2.sw),
-                          child: Column(
-                            children: [
-                            Image.asset(AssetsHelper.date,width: 20.sw,),
-                            gapH12,
-                            Text(l10n.greenDates,style: theme.bodySmall,)  
-                          ],),
-                        )
-                        ),
+                          listOfColors: [
+                            theme.greenChalk.withOpacity(0.7),
+                            theme.white
+                          ],
+                          child: Padding(
+                            padding: EdgeInsets.all(2.sw),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  AssetsHelper.date,
+                                  width: 20.sw,
+                                ),
+                                gapH12,
+                                Text(
+                                  l10n.greenDates,
+                                  style: theme.bodySmall,
+                                )
+                              ],
+                            ),
+                          )),
                     );
                   },
                 )

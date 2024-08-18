@@ -26,15 +26,27 @@ class _SettingsUiState extends State<SettingsUi> {
           shrinkWrap: true,
           padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
           children: [
-            SettingsItemContainer(icon: Icons.newspaper, title: l10n.news,onTap: () {
-              context.router.push(const NewsRoute());
-            },),
-            SettingsItemContainer(icon: Icons.phone, title: l10n.contactUs,onTap: () {
-              context.router.push(const ContactUsRoute());
-            },),
-            SettingsItemContainer(icon: Icons.store, title: l10n.orders,onTap: () {
-              context.router.push(const UserOrderRoute());
-            },),
+            SettingsItemContainer(
+              icon: Icons.newspaper,
+              title: l10n.news,
+              onTap: () {
+                context.router.push(const NewsRoute());
+              },
+            ),
+            SettingsItemContainer(
+              icon: Icons.phone,
+              title: l10n.contactUs,
+              onTap: () {
+                context.router.push(const ContactUsRoute());
+              },
+            ),
+            SettingsItemContainer(
+              icon: Icons.store,
+              title: l10n.orders,
+              onTap: () {
+                context.router.push(const UserOrderRoute());
+              },
+            ),
           ],
         ),
       ),

@@ -10,10 +10,10 @@ class NotificationWidget extends StatelessWidget {
     final (theme, _) = appSettingsRecord(context);
 
     return InkWell(
-      onTap: () {
-        // context.router.push(const NotificationRoute());
-      },
-      child: Icon(Icons.notifications_active,color: iconColor ?? theme.dark600)
-    );
+        onTap: () {
+          // context.router.push(const NotificationRoute());
+        },
+        child: Icon(Icons.notifications_active,
+            color: iconColor ?? theme.dark600));
   }
 }

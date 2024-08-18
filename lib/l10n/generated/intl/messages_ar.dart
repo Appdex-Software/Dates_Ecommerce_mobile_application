@@ -68,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
         "phone": MessageLookupByLibrary.simpleMessage("هاتفيا"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),

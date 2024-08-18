@@ -14,7 +14,6 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
-      
       appBar: const TransparentAppBar(
         color: Colors.transparent,
         backButton: SizedBox(),

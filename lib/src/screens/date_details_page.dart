@@ -12,7 +12,6 @@ class DateDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: const TransparentAppBar(

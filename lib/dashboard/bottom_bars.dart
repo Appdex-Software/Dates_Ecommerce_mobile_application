@@ -22,16 +22,17 @@ class BottomBars extends StatelessWidget {
     return Column(
       children: [
         IconButton(
-          icon: Icon(icon),
-          onPressed: onTap,
-          color:isActive ? theme.black : theme.secondaryText.withOpacity(0.5)
-        ),
+            icon: Icon(icon),
+            onPressed: onTap,
+            color:
+                isActive ? theme.black : theme.secondaryText.withOpacity(0.5)),
         InkWell(
           onTap: onTap,
           child: Text(
             title,
             style: theme.bodySmall.copyWith(
-              color: isActive ? theme.black : theme.secondaryText.withOpacity(0.5),
+              color:
+                  isActive ? theme.black : theme.secondaryText.withOpacity(0.5),
               fontWeight: FontWeight.w400,
             ),
           ),

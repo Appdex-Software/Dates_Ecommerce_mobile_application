@@ -21,7 +21,7 @@ class _UserOrderPageState extends State<UserOrderPage> {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar:  TransparentAppBar(
+      appBar: TransparentAppBar(
         title: Text(l10n.orders),
         centerTitle: true,
         color: Colors.transparent,

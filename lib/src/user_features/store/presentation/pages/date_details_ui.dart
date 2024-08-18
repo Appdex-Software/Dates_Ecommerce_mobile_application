@@ -18,17 +18,25 @@ class _DateDetailsUiState extends State<DateDetailsUi> {
     final (theme, l10n) = appSettingsRecord(context);
 
     return LinearGradientContainer(
-      listOfColors: [theme.greenChalk,theme.white],
+      listOfColors: [theme.greenChalk, theme.white],
       child: SingleChildScrollView(
-        padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw,top: 15.sh),
+        padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, top: 15.sh),
         child: Column(
           children: [
-            Image.asset(AssetsHelper.date,width: 40.sw,),
+            Image.asset(
+              AssetsHelper.date,
+              width: 40.sw,
+            ),
             gapH20,
-            Text(l10n.greenDates,style: theme.bodyLarge,),
+            Text(
+              l10n.greenDates,
+              style: theme.bodyLarge,
+            ),
             gapH20,
-            Text("خواص تمر الخضري: غني بالألياف: يساعد في تحسين عملية الهضم ويمنع الإمساك. مصدر جيد للطاقة: يحتوي على نسبة عالية من السكريات الطبيعية مثل الفركتوز والجلوكوز، مما يمنح طاقة سريعة للجسم. غني بالفيتامينات والمعادن: يحتوي على فيتامينات مثل فيتامين B6 و K، بالإضافة إلى معادن مثل البوتاسيوم والمغنيسيوم والحديد. مضادات الأكسدة: يحتوي على مضادات الأكسدة التي",style: theme.bodySmall,),
-            
+            Text(
+              "خواص تمر الخضري: غني بالألياف: يساعد في تحسين عملية الهضم ويمنع الإمساك. مصدر جيد للطاقة: يحتوي على نسبة عالية من السكريات الطبيعية مثل الفركتوز والجلوكوز، مما يمنح طاقة سريعة للجسم. غني بالفيتامينات والمعادن: يحتوي على فيتامينات مثل فيتامين B6 و K، بالإضافة إلى معادن مثل البوتاسيوم والمغنيسيوم والحديد. مضادات الأكسدة: يحتوي على مضادات الأكسدة التي",
+              style: theme.bodySmall,
+            ),
           ],
         ),
       ),

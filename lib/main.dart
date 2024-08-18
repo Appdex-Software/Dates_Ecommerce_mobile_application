@@ -11,7 +11,5 @@ void main() async {
   await await FlutterFlowTheme.initialize();
   final ProviderContainer container = ProviderContainer();
   await container.read(appStartupProvider.future);
-  runApp(UncontrolledProviderScope(
-    container: container,
-    child: const App()));
+  runApp(UncontrolledProviderScope(container: container, child: const App()));
 }

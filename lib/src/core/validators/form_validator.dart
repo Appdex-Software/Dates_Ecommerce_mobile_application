@@ -1,4 +1,3 @@
-
 class FormValidator {
   // static String? passwordValidator(String password, AppLocalizations l10n) {
   //   if (password.length == 0) {

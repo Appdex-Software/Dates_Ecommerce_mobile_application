@@ -21,18 +21,25 @@ class _NewsDetailsUiState extends State<NewsDetailsUi> {
         const CustomSilverAppBar(),
         SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw),
+            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 gapH12,
-                Text(l10n.newDetails,style: theme.bodySmall,),
+                Text(
+                  l10n.newDetails,
+                  style: theme.bodySmall,
+                ),
                 gapH20,
                 LinearGradientContainer(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 3.sw,right: 3.sw,bottom: 5.sh,top: 2.sh),
-                    child: Text("تم زراعة 30 شجرة جديدة في منطقة جديدة ",style: theme.bodySmall,),
-                  ))
+                    child: Padding(
+                  padding: EdgeInsets.only(
+                      left: 3.sw, right: 3.sw, bottom: 5.sh, top: 2.sh),
+                  child: Text(
+                    "تم زراعة 30 شجرة جديدة في منطقة جديدة ",
+                    style: theme.bodySmall,
+                  ),
+                ))
               ],
             ),
           ),

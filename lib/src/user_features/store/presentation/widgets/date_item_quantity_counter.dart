@@ -8,11 +8,12 @@ class DateItemQuantityCounter extends StatefulWidget {
 
   final double? buttonAspectRatio;
   @override
-  State<DateItemQuantityCounter> createState() => _DateItemQuantityCounterState();
+  State<DateItemQuantityCounter> createState() =>
+      _DateItemQuantityCounterState();
 }
 
 class _DateItemQuantityCounterState extends State<DateItemQuantityCounter> {
-    int counter = 1;
+  int counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -21,26 +22,23 @@ class _DateItemQuantityCounterState extends State<DateItemQuantityCounter> {
     return Theme(
       data: ThemeData(splashColor: Colors.transparent),
       child: CartStepperInt(
-            value: counter,
-            style: CartStepperTheme.of(context).copyWith(
-                backgroundColor: theme.white,
-                activeBackgroundColor: theme.white,
-                
-                foregroundColor: theme.black,
-                activeForegroundColor: theme.black,
-                buttonAspectRatio: widget.buttonAspectRatio ?? 1,
-                textStyle: theme.bodyMedium,
-                shape: BoxShape.rectangle,
-                radius: AppSizes.radius4),
-            didChangeCount: (value) {
-              if (value >= 1) {
-                counter = value;
-              }
-              setState(() {
-                
-              });
-            },
-          ),
+        value: counter,
+        style: CartStepperTheme.of(context).copyWith(
+            backgroundColor: theme.white,
+            activeBackgroundColor: theme.white,
+            foregroundColor: theme.black,
+            activeForegroundColor: theme.black,
+            buttonAspectRatio: widget.buttonAspectRatio ?? 1,
+            textStyle: theme.bodyMedium,
+            shape: BoxShape.rectangle,
+            radius: AppSizes.radius4),
+        didChangeCount: (value) {
+          if (value >= 1) {
+            counter = value;
+          }
+          setState(() {});
+        },
+      ),
     );
   }
 }

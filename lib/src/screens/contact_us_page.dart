@@ -15,7 +15,7 @@ class ContactUsPage extends StatelessWidget {
     final (_, l10n) = appSettingsRecord(context);
 
     return Scaffold(
-      appBar:  TransparentAppBar(
+      appBar: TransparentAppBar(
         color: Colors.transparent,
         title: Text(l10n.contactUs),
         centerTitle: true,

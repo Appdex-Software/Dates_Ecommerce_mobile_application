@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants/app_sizes.dart';
 
 showAppBottomSheet(BuildContext context, Widget child) {
-    final (theme, _) = appSettingsRecord(context);
+  final (theme, _) = appSettingsRecord(context);
 
   return showModalBottomSheet(
     backgroundColor: theme.whiteColor,

@@ -6,6 +6,7 @@ class LoggerInterceptor extends Interceptor {
     // Customize the printer
     printer: PrettyPrinter(
       methodCount: 0,
+      printTime: false,
     ),
   );
 
@@ -27,8 +28,8 @@ class LoggerInterceptor extends Interceptor {
       return handler.next(options);
     }
     final requestPath = '${options.baseUrl}${options.path}';
-    //TODO: Add dynamic token here
-    options.headers['Authorization'] = 'Bearer token';
+    options.headers['Authorization'] =
+        'Bearer QUhDU2VjcmV0S2V5OlpHRjBZVzlqWldGdVFESXdNakk9';
     //options.headers['app'] = 'fulfillment';
     options.headers['Accept'] = 'application/json';
     logger.i('${options.method} request => $requestPath'); // Info log

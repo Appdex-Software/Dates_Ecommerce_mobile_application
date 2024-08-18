@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import '../themes/app_themes.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({super.key, 
+  const CustomTextField({
+    super.key,
     this.onChanged,
     this.title,
     this.validator,
@@ -69,7 +70,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             widget.onDone != null ? widget.onDone as Function(String) : null,
         enabled: widget.isEnabled ?? true,
         keyboardType: widget.keyboardType,
-        style:  TextStyle(
+        style: TextStyle(
           color: FlutterFlowTheme.of(context).black,
           fontWeight: FontWeight.w500,
         ),
@@ -98,7 +99,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               : widget.suffix,
           prefixIcon: widget.prefix,
           errorMaxLines: 1,
-          errorBorder:  OutlineInputBorder(
+          errorBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: FlutterFlowTheme.of(context).redApple,
               style: BorderStyle.solid,
@@ -106,19 +107,19 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide:  BorderSide(
+            borderSide: BorderSide(
               color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.2),
             ),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide:  BorderSide(
+            borderSide: BorderSide(
               color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.2),
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide:  BorderSide(
+            borderSide: BorderSide(
               color: FlutterFlowTheme.of(context).borderColor.withOpacity(0.2),
             ),
           ),

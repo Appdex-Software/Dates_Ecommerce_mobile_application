@@ -22,7 +22,6 @@ class _SplashUiState extends State<SplashUi> {
     });
   }
 
-
   @override
   void initState() {
     super.initState();
@@ -33,10 +32,11 @@ class _SplashUiState extends State<SplashUi> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        
         Center(
-          child: Image.asset(AssetsHelper.logoImagePng,width: 50.sw,)
-        ),
+            child: Image.asset(
+          AssetsHelper.logoImagePng,
+          width: 50.sw,
+        )),
       ],
     );
   }

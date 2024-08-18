@@ -17,14 +17,16 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: RegisterRoute.page),
         AutoRoute(page: DashboardLayoutRoute.page, children: [
           AutoRoute(page: HomeUserNavigationRoute.page, children: [
-            AutoRoute(page: HomeUserRoute.page,initial: true,maintainState: true),
+            AutoRoute(
+                page: HomeUserRoute.page, initial: true, maintainState: true),
           ]),
           AutoRoute(page: SettingUserNavigationRoute.page, children: [
-            AutoRoute(page: SettingsRoute.page,initial: true,maintainState: true),
-            AutoRoute(page: UserOrderRoute.page,maintainState: true),
-            AutoRoute(page: NewsRoute.page,maintainState: true),
-            AutoRoute(page: NewsDetailsRoute.page,maintainState: true),
-            AutoRoute(page: ContactUsRoute.page,maintainState: true),
+            AutoRoute(
+                page: SettingsRoute.page, initial: true, maintainState: true),
+            AutoRoute(page: UserOrderRoute.page, maintainState: true),
+            AutoRoute(page: NewsRoute.page, maintainState: true),
+            AutoRoute(page: NewsDetailsRoute.page, maintainState: true),
+            AutoRoute(page: ContactUsRoute.page, maintainState: true),
           ]),
           AutoRoute(page: DateStoreRoute.page),
           AutoRoute(page: CartRoute.page),

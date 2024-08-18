@@ -23,9 +23,7 @@ class _UserOrderUiState extends State<UserOrderUi> {
         child: ListView(
           shrinkWrap: true,
           padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
-          children: const [
-            OrderItem()
-          ],
+          children: const [OrderItem()],
         ),
       ),
     );

@@ -21,7 +21,7 @@ class _CartUiState extends State<CartUi> {
     return LinearGradientContainer(
       listOfColors: [theme.greenChalk, theme.white],
       child: Padding(
-        padding: EdgeInsets.only(left: 12.sw, right: 12.sw,bottom: 8.sh),
+        padding: EdgeInsets.only(left: 12.sw, right: 12.sw, bottom: 8.sh),
         child: Column(
           children: [
             ListView.separated(
@@ -42,7 +42,7 @@ class _CartUiState extends State<CartUi> {
                         margin: EdgeInsets.symmetric(vertical: 1.sh),
                         width: 15.sw,
                         height: 15.sw,
-                        decoration:  BoxDecoration(
+                        decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: const DecorationImage(
                                 image: AssetImage(AssetsHelper.date))),
@@ -67,8 +67,6 @@ class _CartUiState extends State<CartUi> {
                     titleStyle: theme.titleSmall.copyWith(color: theme.white),
                   ),
                 ),
-                
-
               ],
             )
           ],
