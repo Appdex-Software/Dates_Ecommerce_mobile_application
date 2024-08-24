@@ -23,7 +23,7 @@ class _NewsUiState extends State<NewsUi> {
         const CustomSilverAppBar(),
         SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw),
+            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),
             child: Column(
               children: [
                 GestureDetector(
@@ -31,10 +31,14 @@ class _NewsUiState extends State<NewsUi> {
                     context.router.push(const NewsDetailsRoute());
                   },
                   child: LinearGradientContainer(
-                              child: Padding(
-                                padding: EdgeInsets.only(left: 3.sw,right: 3.sw,bottom: 5.sh,top: 2.sh),
-                                child: Text("تم زراعة 30 شجرة جديدة في منطقة جديدة ",style: theme.bodySmall,),
-                              )),
+                      child: Padding(
+                    padding: EdgeInsets.only(
+                        left: 3.sw, right: 3.sw, bottom: 5.sh, top: 2.sh),
+                    child: Text(
+                      "تم زراعة 30 شجرة جديدة في منطقة جديدة ",
+                      style: theme.bodySmall,
+                    ),
+                  )),
                 )
               ],
             ),

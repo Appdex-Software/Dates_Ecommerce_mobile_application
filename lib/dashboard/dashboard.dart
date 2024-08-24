@@ -34,7 +34,6 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
         return AutoTabsScaffold(
           backgroundColor: theme.whiteColor,
           resizeToAvoidBottomInset: false,
-          
           routes: const [
             HomeUserRoute(),
             DateStoreRoute(),

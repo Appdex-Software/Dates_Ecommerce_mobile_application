@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول إلى الحساب الحالي"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "mission": MessageLookupByLibrary.simpleMessage("الرسالة"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "نسعى من خلال توزيع التمور على الحجاج والجمعيات الخيرية إلى تقديم خدمة متميزة تلبي احتياجات ضيوف الرحمن والفئات المحتاجة، وتعكس قيم العطاء والخير التي تتميز بها مملكتنا، مع الالتزام بأعلى معايير الجودة والشفافية."),
@@ -68,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
         "phone": MessageLookupByLibrary.simpleMessage("هاتفيا"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),

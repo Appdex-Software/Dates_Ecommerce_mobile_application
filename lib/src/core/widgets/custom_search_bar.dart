@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../themes/app_themes.dart';
+
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar(
       {super.key,
@@ -20,7 +21,7 @@ class CustomSearchBar extends StatelessWidget {
         border: Border.all(
           color: FlutterFlowTheme.of(context).grey,
         ),
-        boxShadow:  [
+        boxShadow: [
           BoxShadow(
             color: FlutterFlowTheme.of(context).grey,
             offset: const Offset(0, 4),
@@ -41,7 +42,7 @@ class CustomSearchBar extends StatelessWidget {
           contentPadding: const EdgeInsets.only(left: 16),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide:  BorderSide(
+            borderSide: BorderSide(
               color: FlutterFlowTheme.of(context).grey,
             ),
           ),

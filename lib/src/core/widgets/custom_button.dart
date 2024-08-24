@@ -54,7 +54,9 @@ class CustomButton extends StatelessWidget {
   final Color? splashColor;
 
   TextStyle get _titleStyle =>
-      titleStyle ?? const TextStyle(color: Colors.white, fontSize: 16,fontWeight: FontWeight.bold);
+      titleStyle ??
+      const TextStyle(
+          color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold);
 
   ShapeBorder get _shape =>
       shape ?? RoundedRectangleBorder(borderRadius: BorderRadius.circular(8));
@@ -76,7 +78,6 @@ class CustomButton extends StatelessWidget {
       shape: _shape,
       elevation: elevation,
       shadowColor: theme.black,
-      
       child: InkWell(
         splashColor: _splashColor,
         onTap: isDisabled || loading ? null : onPressed,

@@ -9,31 +9,32 @@ class BottomNavigationDateDetails extends StatefulWidget {
   const BottomNavigationDateDetails({super.key});
 
   @override
-  State<BottomNavigationDateDetails> createState() => _BottomNavigationDateDetailsState();
+  State<BottomNavigationDateDetails> createState() =>
+      _BottomNavigationDateDetailsState();
 }
 
-class _BottomNavigationDateDetailsState extends State<BottomNavigationDateDetails> {
-
+class _BottomNavigationDateDetailsState
+    extends State<BottomNavigationDateDetails> {
   @override
   Widget build(BuildContext context) {
     final (theme, l10n) = appSettingsRecord(context);
     return BottomAppBar(
       color: theme.white,
       child: SizedBox(
-      height: 20.sh,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CustomButton(
-            title: l10n.add,
-            onPressed: () {},
-          ),
-          const DateItemQuantityCounter(
-            buttonAspectRatio: 1.5,
-          )
-        ],
+        height: 20.sh,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CustomButton(
+              title: l10n.add,
+              onPressed: () {},
+            ),
+            const DateItemQuantityCounter(
+              buttonAspectRatio: 1.5,
+            )
+          ],
+        ),
       ),
-    ),
     );
   }
 }

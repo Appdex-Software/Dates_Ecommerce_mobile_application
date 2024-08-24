@@ -34,9 +34,14 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     DateDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<DateDetailsRouteArgs>(
+          orElse: () => const DateDetailsRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const DateDetailsPage(),
+        child: DateDetailsPage(
+          key: args.key,
+          dateData: args.dataData,
+        ),
       );
     },
     DateStoreRoute.name: (routeData) {
@@ -152,16 +157,40 @@ class DashboardLayoutRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [DateDetailsPage]
-class DateDetailsRoute extends PageRouteInfo<void> {
-  const DateDetailsRoute({List<PageRouteInfo>? children})
-      : super(
+class DateDetailsRoute extends PageRouteInfo<DateDetailsRouteArgs> {
+  DateDetailsRoute({
+    Key? key,
+    DateData? dataData,
+    List<PageRouteInfo>? children,
+  }) : super(
           DateDetailsRoute.name,
+          args: DateDetailsRouteArgs(
+            key: key,
+            dataData: dataData,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'DateDetailsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<DateDetailsRouteArgs> page =
+      PageInfo<DateDetailsRouteArgs>(name);
+}
+
+class DateDetailsRouteArgs {
+  const DateDetailsRouteArgs({
+    this.key,
+    this.dataData,
+  });
+
+  final Key? key;
+
+  final DateData? dataData;
+
+  @override
+  String toString() {
+    return 'DateDetailsRouteArgs{key: $key, dataData: $dataData}';
+  }
 }
 
 /// generated route for

@@ -3,6 +3,7 @@ import 'package:date_farm/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/screens.dart';
+import '../../user_features/store/data/models/date_product_dto/date_data.dart';
 import '../constants/constants.dart';
 part 'app_router.gr.dart';
 
@@ -17,14 +18,16 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: RegisterRoute.page),
         AutoRoute(page: DashboardLayoutRoute.page, children: [
           AutoRoute(page: HomeUserNavigationRoute.page, children: [
-            AutoRoute(page: HomeUserRoute.page,initial: true,maintainState: true),
+            AutoRoute(
+                page: HomeUserRoute.page, initial: true, maintainState: true),
           ]),
           AutoRoute(page: SettingUserNavigationRoute.page, children: [
-            AutoRoute(page: SettingsRoute.page,initial: true,maintainState: true),
-            AutoRoute(page: UserOrderRoute.page,maintainState: true),
-            AutoRoute(page: NewsRoute.page,maintainState: true),
-            AutoRoute(page: NewsDetailsRoute.page,maintainState: true),
-            AutoRoute(page: ContactUsRoute.page,maintainState: true),
+            AutoRoute(
+                page: SettingsRoute.page, initial: true, maintainState: true),
+            AutoRoute(page: UserOrderRoute.page, maintainState: true),
+            AutoRoute(page: NewsRoute.page, maintainState: true),
+            AutoRoute(page: NewsDetailsRoute.page, maintainState: true),
+            AutoRoute(page: ContactUsRoute.page, maintainState: true),
           ]),
           AutoRoute(page: DateStoreRoute.page),
           AutoRoute(page: CartRoute.page),

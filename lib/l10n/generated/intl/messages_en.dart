@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "logIntoExistingAccount":
             MessageLookupByLibrary.simpleMessage("log into existing account"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "mission": MessageLookupByLibrary.simpleMessage("Message"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency."),
@@ -68,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
+            "Please enter your email and password"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),

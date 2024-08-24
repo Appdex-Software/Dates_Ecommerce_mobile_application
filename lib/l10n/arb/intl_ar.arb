@@ -44,7 +44,10 @@
     "orders" : "الطلبات",
     "contactUs" : "تواصل معنا",
     "newDetails" : "تفاصيل الخبر",
-    "phone" : "هاتفيا"
+    "phone" : "هاتفيا",
+    "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
+    "logout" : "تسجيل الخروج"
+
 
 
 
