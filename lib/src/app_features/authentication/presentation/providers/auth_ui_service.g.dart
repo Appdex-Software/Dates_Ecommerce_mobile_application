@@ -6,7 +6,7 @@ part of 'auth_ui_service.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$authUiServiceHash() => r'7442171efd76e78ed400afb00b6483a2d3e635e5';
+String _$authUiServiceHash() => r'341adaef70ae950b3c35a30924ade587da29a6bc';
 
 /// See also [AuthUiService].
 @ProviderFor(AuthUiService)

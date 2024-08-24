@@ -10,9 +10,9 @@ part 'user_entity.g.dart';
 @freezed
 class UserEntity with _$UserEntity {
   factory UserEntity({
-     @JsonKey(name: 'status_code') num? statusCode,
-     String? message,
-     UserData? data,
+    @JsonKey(name: 'status_code') num? statusCode,
+    String? message,
+    UserData? data,
   }) = _UserEntity;
 
   factory UserEntity.fromJson(Map<String, dynamic> json) =>

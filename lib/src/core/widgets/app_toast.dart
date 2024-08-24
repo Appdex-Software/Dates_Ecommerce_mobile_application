@@ -24,8 +24,7 @@ class AppToast {
         timeInSecForIosWeb: 1,
         backgroundColor: FlutterFlowTheme.of(context).redApple,
         textColor: FlutterFlowTheme.of(context).white,
-        fontSize: 16.0
-       );
+        fontSize: 16.0);
   }
 
   static infoToast(String msg, BuildContext context) {

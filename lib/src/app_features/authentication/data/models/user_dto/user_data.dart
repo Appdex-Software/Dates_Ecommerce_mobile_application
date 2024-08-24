@@ -7,6 +7,7 @@ import 'user.dart';
 
 part 'user_data.freezed.dart';
 part 'user_data.g.dart';
+
 @HiveType(typeId: 0, adapterName: 'UserDataAdapter')
 @freezed
 class UserData with _$UserData {
@@ -15,5 +16,6 @@ class UserData with _$UserData {
     @HiveField(1) User? user,
   }) = _Data;
 
-  factory UserData.fromJson(Map<String, dynamic> json) => _$UserDataFromJson(json);
+  factory UserData.fromJson(Map<String, dynamic> json) =>
+      _$UserDataFromJson(json);
 }

@@ -5,19 +5,18 @@ import '../../domain/entities/user_entity.dart';
 import '../datasource/authentication_datasoure.dart';
 
 abstract class BaseAuthenticationRepository {
-  Future<UserEntity> loginUser(
-      {String? email, String? password});
-
+  Future<UserEntity> loginUser({String? email, String? password});
 }
 
 class AuthenticationRepositoryImpl implements BaseAuthenticationRepository {
   final AuthenticationSourceImpl dataSource = AuthenticationSourceImpl();
 
   @override
-  Future<UserEntity> loginUser(
-      {String? email, String? password}) async {
+  Future<UserEntity> loginUser({String? email, String? password}) async {
     try {
-      return await dataSource.loginUser(email: email,password: password).then((value) {
+      return await dataSource
+          .loginUser(email: email, password: password)
+          .then((value) {
         return value.toEntity();
       });
     } catch (e, stack) {

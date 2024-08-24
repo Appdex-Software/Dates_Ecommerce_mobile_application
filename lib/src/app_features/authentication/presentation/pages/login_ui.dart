@@ -52,12 +52,11 @@ class _LoginUiState extends ConsumerState<LoginUi> {
               controller: passwordController,
               isPasswordField: isPasswordField,
               suffix: IconButton(
-                icon: Icon(isPasswordField ? Icons.visibility : Icons.visibility_off),
+                icon: Icon(
+                    isPasswordField ? Icons.visibility : Icons.visibility_off),
                 onPressed: () {
                   isPasswordField = !isPasswordField;
-                  setState(() {
-                    
-                  });
+                  setState(() {});
                 },
               ),
             ),

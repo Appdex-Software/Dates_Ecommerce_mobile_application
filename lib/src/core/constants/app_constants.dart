@@ -3,10 +3,11 @@ import 'package:logger/web.dart';
 class AppConstants {
   const AppConstants._();
 
-  static const String apiBaseUrl = 'https://waqfmohammedhail.org';
+  static const String apiBaseUrl = 'https://waqfmohammedhail.org/api/v1';
 
   static const String refreshToken = 'refresh-token';
-  static const String loginApiUrl = '/api/v1/iam/login';
+  static const String loginApiUrl = '/iam/login';
+  static const String getProductUrl = '/products/products';
   static const String expiryTime = 'expiry-time';
   static const String defaultLocale = 'default-locale';
   static const String userId = 'userId';

@@ -1,6 +1,7 @@
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_data.dart';
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_entity.dart';
 import 'package:date_farm/src/core/constants/app_constants.dart';
+import 'package:date_farm/src/core/helpers/session_manager.dart';
 import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../domain/repositories/authentication_repository.dart';
@@ -19,8 +20,6 @@ class AuthUiService extends _$AuthUiService {
   bool? getIsVerified() {
     return _isVerified;
   }
-
-
 
   UserEntity? _userEntity;
   UserEntity? getUserEntity() => _userEntity;
@@ -41,25 +40,27 @@ class AuthUiService extends _$AuthUiService {
   //     RequiredRegisterationPatientInfo registerPatientInfo) {
   //   _registeredPatientInfo = registerPatientInfo;
   // }
-  UserData? fetchSavedPatientInfo() {
-    _userData =
-        ref.read(authenticationRepositoryProvider.notifier).getUserEntity()?.data;
+  Future<UserData?> fetchSavedPatientInfo() async {
+    _userData = await ref
+        .read(authenticationRepositoryProvider.notifier)
+        .fetchSavedUserInfo();
     return _userData;
   }
 
-  Future<UserEntity?> loginUser({String? email,String? password}) async {
+  Future<UserEntity?> loginUser({String? email, String? password}) async {
     try {
       state = const AsyncLoading();
       _userEntity = await ref
           .watch(authenticationRepositoryProvider.notifier)
-          .loginUser(email: email,password: password);
-      if(_userEntity?.statusCode == 200) {
+          .loginUser(email: email, password: password);
+      if (_userEntity?.statusCode == 200) {
         bool exists = Hive.isBoxOpen(userInfoBox);
-      if (!exists) {
-        await Hive.openBox(userInfoBox);
-      }
-      var patientBox = Hive.box(userInfoBox);
-      patientBox.add(_userEntity?.data);
+        if (!exists) {
+          await Hive.openBox(userInfoBox);
+        }
+        await sessionManager.setAuthToken(tokenn: _userEntity?.data?.accessToken ?? '');
+        var patientBox = Hive.box(userInfoBox);
+        patientBox.add(_userEntity?.data);
       }
       _userData = _userEntity?.data;
       state = AsyncData(_userData);
@@ -172,7 +173,7 @@ class AuthUiService extends _$AuthUiService {
   //   state = const AsyncData(null);
   // }
 
-    logout() async {
+  logout() async {
     var patientBox = Hive.box(userInfoBox);
     _userEntity = null;
     patientBox.clear();

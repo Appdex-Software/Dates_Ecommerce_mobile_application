@@ -5,8 +5,8 @@ import 'package:hive/hive.dart';
 
 part 'user.freezed.dart';
 part 'user.g.dart';
-@HiveType(typeId: 1, adapterName: 'UserInfoAdapter')
 
+@HiveType(typeId: 1, adapterName: 'UserInfoAdapter')
 @freezed
 class User with _$User {
   factory User({
@@ -20,8 +20,12 @@ class User with _$User {
     @HiveField(7) @JsonKey(name: 'is_staff') bool? isStaff,
     @HiveField(8) @JsonKey(name: 'is_active') bool? isActive,
     @HiveField(9) @JsonKey(name: 'date_joined') DateTime? dateJoined,
-    @HiveField(10) @JsonKey(name: 'registration_status') String? registrationStatus,
-    @HiveField(11) @JsonKey(name: 'registration_datetime') dynamic registrationDatetime,
+    @HiveField(10)
+    @JsonKey(name: 'registration_status')
+    String? registrationStatus,
+    @HiveField(11)
+    @JsonKey(name: 'registration_datetime')
+    dynamic registrationDatetime,
     @HiveField(12) @JsonKey(name: 'reject_comment') dynamic rejectComment,
     @HiveField(13) dynamic country,
     @HiveField(14) dynamic city,

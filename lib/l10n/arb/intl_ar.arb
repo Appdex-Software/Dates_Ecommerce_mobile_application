@@ -45,7 +45,9 @@
     "contactUs" : "تواصل معنا",
     "newDetails" : "تفاصيل الخبر",
     "phone" : "هاتفيا",
-    "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"
+    "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
+    "logout" : "تسجيل الخروج"
+
 
 
 

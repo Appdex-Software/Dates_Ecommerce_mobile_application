@@ -1,3 +1,4 @@
+import 'package:date_farm/src/core/helpers/session_manager.dart';
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
@@ -27,9 +28,10 @@ class LoggerInterceptor extends Interceptor {
       options.headers.remove('Authorization'); //remove the auxiliary header
       return handler.next(options);
     }
+    final accessToken = await sessionManager.getAuthToken(); 
     final requestPath = '${options.baseUrl}${options.path}';
     options.headers['Authorization'] =
-        'Bearer QUhDU2VjcmV0S2V5OlpHRjBZVzlqWldGdVFESXdNakk9';
+        'Bearer $accessToken';
     //options.headers['app'] = 'fulfillment';
     options.headers['Accept'] = 'application/json';
     logger.i('${options.method} request => $requestPath'); // Info log

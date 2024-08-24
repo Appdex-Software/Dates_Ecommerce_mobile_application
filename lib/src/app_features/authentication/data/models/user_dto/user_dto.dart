@@ -21,9 +21,6 @@ class UserDto with _$UserDto {
 }
 
 extension UserDtoX on UserDto {
-  UserEntity toEntity() => UserEntity(
-        data: data,
-        message: message,
-        statusCode: statusCode
-      );
+  UserEntity toEntity() =>
+      UserEntity(data: data, message: message, statusCode: statusCode);
 }

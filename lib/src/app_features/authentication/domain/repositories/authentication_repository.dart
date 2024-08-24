@@ -1,9 +1,9 @@
-
 import 'package:date_farm/src/core/constants/app_constants.dart';
 import 'package:hive_flutter/adapters.dart';
 
 import '../../../../core/errors/custom_error.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import '../../data/models/user_dto/user_data.dart';
 import '../../data/repository_impl/authentication_repository_impl.dart';
 
 import '../entities/user_entity.dart';
@@ -12,13 +12,15 @@ part 'authentication_repository.g.dart';
 @Riverpod(keepAlive: true)
 class AuthenticationRepository extends _$AuthenticationRepository {
   @override
-  FutureOr<UserEntity?> build() async {
-    return getUserEntity();
+  FutureOr<UserData?> build() async {
+    return fetchSavedUserInfo();
   }
 
   final AuthenticationRepositoryImpl authenticationSourceImpl =
       AuthenticationRepositoryImpl();
 
+  UserData? _userData;
+  UserData? getUserData() => _userData;
   UserEntity? _userEntity;
   UserEntity? getUserEntity() => _userEntity;
 
@@ -27,26 +29,23 @@ class AuthenticationRepository extends _$AuthenticationRepository {
   //   return _patientInfo;
   // }
 
-  Future<UserEntity?> fetchSavedUserInfo() async {
+  Future<UserData?> fetchSavedUserInfo() async {
     await Hive.openBox(userInfoBox);
     bool exists = Hive.isBoxOpen(userInfoBox);
     if (exists) {
       var patientBox = Hive.box(userInfoBox);
       if (patientBox.isNotEmpty) {
-        _userEntity = _userEntity?.copyWith(
-          statusCode: 200,
-          data: patientBox.getAt(0)
-        ) ;
-        logger.d('patient info from hive ${_userEntity?.data?.toJson()}');
+        _userData = patientBox.getAt(0);
+        logger.d('patient info from hive ${_userData?.toJson()}');
       }
     }
-    return _userEntity;
+    return _userData;
   }
 
-  Future<UserEntity?> loginUser({String? email,String? password}) async {
+  Future<UserEntity?> loginUser({String? email, String? password}) async {
     try {
-      _userEntity =
-          await authenticationSourceImpl.loginUser(email: email,password: password);
+      _userEntity = await authenticationSourceImpl.loginUser(
+          email: email, password: password);
       return _userEntity;
     } catch (e, stack) {
       throw CustomError('Failed to login', err: e, stackTrace: stack);
@@ -86,6 +85,4 @@ class AuthenticationRepository extends _$AuthenticationRepository {
   //     throw CustomError('Failed to check balance', err: e, stackTrace: stack);
   //   }
   // }
-
-
 }

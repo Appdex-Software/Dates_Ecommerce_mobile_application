@@ -19,18 +19,17 @@ class _SessionManager {
     return center;
   }
 
-  Future<void> setAuthToken({int? tokenn}) async {
+  Future<void> setAuthToken({String? tokenn}) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setInt(authToken, tokenn!);
+    prefs.setString(authToken, tokenn!);
   }
 
-  Future<int> getAuthToken() async {
+  Future<String> getAuthToken() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    int tokenn;
-    tokenn = pref.getInt(authToken) ?? 0;
+    String tokenn;
+    tokenn = pref.getString(authToken) ?? '';
     return tokenn;
   }
-
 
   Future<void> setLogin({bool? statue}) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

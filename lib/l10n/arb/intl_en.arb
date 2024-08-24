@@ -45,7 +45,8 @@
     "contactUs" : "Contact Us",
     "newDetails" : "New Details",
     "phone" : "Phone",
-    "pleaseEnterYourEmailAndPassword" : "Please enter your email and password"
+    "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
+    "logout" : "Logout"
 
 
 }

@@ -47,6 +47,13 @@ class _SettingsUiState extends State<SettingsUi> {
                 context.router.push(const UserOrderRoute());
               },
             ),
+            SettingsItemContainer(
+              icon: Icons.logout,
+              title: l10n.logout,
+              onTap: () {
+                context.router.replace(const LoginRoute());
+              },
+            ),
           ],
         ),
       ),
