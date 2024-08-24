@@ -8,6 +8,7 @@ import '../../../../core/routes/app_router.dart';
 import '../../../../core/widgets/widgets.dart';
 import '../../domain/entities/date_product_entity.dart';
 import '../providers/store_provider.dart';
+import 'widgets.dart';
 
 class DateItemContainer extends ConsumerStatefulWidget {
   const DateItemContainer({super.key});
@@ -59,9 +60,9 @@ class _DateItemContainerState extends ConsumerState<DateItemContainer> {
                                 padding: EdgeInsets.all(2.sw),
                                 child: Column(
                                   children: [
-                                    Image.network(
-                                      dateProductEntity?.data?[index].image ?? '',
-                                      width: 20.sw,
+                                    ProductImage(
+                                      image: dateProductEntity?.data?[index].image ?? '',
+                                      size: 20.screenWidth,
                                     ),
                                     gapH12,
                                     Text(
