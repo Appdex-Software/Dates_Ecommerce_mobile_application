@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:date_farm/src/core/widgets/widgets.dart';
 import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
@@ -21,7 +20,6 @@ class _DateDetailsUiState extends ConsumerState<DateDetailsUi> {
   @override
   Widget build(BuildContext context) {
     final (theme, _) = appSettingsRecord(context);
-    log(widget.data?.toJson().toString() ?? '');
     return AsyncValueWidget(
       value: ref.watch(storeServiceProvider),
       data: (p0) {

@@ -1,61 +1,66 @@
-import 'package:date_farm/src/core/helpers/helpers.dart';
+import 'package:date_farm/src/user_features/cart/presentation/providers/cart_provider.dart';
+import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:date_farm/src/user_features/store/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/widgets.dart';
 
-class CartUi extends StatefulWidget {
+class CartUi extends ConsumerStatefulWidget {
   const CartUi({super.key});
 
   @override
-  State<CartUi> createState() => _CartUiState();
+  ConsumerState<CartUi> createState() => _CartUiState();
 }
 
-class _CartUiState extends State<CartUi> {
+class _CartUiState extends ConsumerState<CartUi> {
   @override
   Widget build(BuildContext context) {
     final (theme, l10n) = appSettingsRecord(context);
-
+    final cartService = ref.watch(cartServiceProvider.notifier);
     return LinearGradientContainer(
       listOfColors: [theme.greenChalk, theme.white],
       child: Padding(
         padding: EdgeInsets.only(left: 12.sw, right: 12.sw, bottom: 8.sh),
         child: Column(
           children: [
-            ListView.separated(
-              shrinkWrap: true,
-              itemCount: 2,
-              separatorBuilder: (context, index) {
-                return Divider(
-                  color: theme.dividerColor.withOpacity(0.5),
-                );
-              },
-              itemBuilder: (context, index) {
-                return SizedBox(
-                  width: double.infinity,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 1.sh),
-                        width: 15.sw,
-                        height: 15.sw,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(
-                                image: AssetImage(AssetsHelper.date))),
+            AsyncValueWidget(
+              value: ref.watch(cartServiceProvider),
+              data: (List<DateData> cartItem) {
+                return ListView.separated(
+                  shrinkWrap: true,
+                  itemCount: cartItem.length,
+                  separatorBuilder: (context, index) {
+                    return Divider(
+                      color: theme.dividerColor.withOpacity(0.5),
+                    );
+                  },
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      width: double.infinity,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 1.sh),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ProductImage(image: cartItem[index].image ?? '', size: 15.sw),
+                            Text(
+                              cartItem[index].name ?? '',
+                              style: theme.titleSmall,
+                            ),
+                            DateItemQuantityCounter(data: cartItem[index],),
+                            IconButton(onPressed: (){
+                              cartService.removeFromCart(index);
+                            }, icon: const Icon(Icons.close))
+                          ],
+                        ),
                       ),
-                      Text(
-                        l10n.greenDates,
-                        style: theme.titleSmall,
-                      ),
-                      const DateItemQuantityCounter()
-                    ],
-                  ),
+                    );
+                  },
                 );
-              },
+              }
             ),
             const Spacer(),
             Row(

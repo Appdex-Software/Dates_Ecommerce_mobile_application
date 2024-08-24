@@ -9,8 +9,8 @@ import '../user_features/store/presentation/widgets/widgets.dart';
 
 @RoutePage()
 class DateDetailsPage extends StatelessWidget {
-  const DateDetailsPage({super.key, this.dateData});
-  final DateData? dateData;
+  const DateDetailsPage({super.key, required this.dateData});
+  final DateData dateData;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class DateDetailsPage extends StatelessWidget {
       appBar: const TransparentAppBar(
         color: Colors.transparent,
       ),
-      bottomNavigationBar: const BottomNavigationDateDetails(),
+      bottomNavigationBar:  BottomNavigationDateDetails(dateData: dateData),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(
         mobile:  DateDetailsUi(data: dateData,),

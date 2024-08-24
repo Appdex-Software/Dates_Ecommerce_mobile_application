@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -49,7 +50,7 @@ class _DateItemContainerState extends ConsumerState<DateItemContainer> {
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {
-                            context.router.push( DateDetailsRoute(dataData: dateProductEntity?.data?[index]));
+                            context.router.push( DateDetailsRoute(dateData: dateProductEntity?.data?[index] ?? DateData()));
                           },
                           child: LinearGradientContainer(
                               listOfColors: [

@@ -77,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "store": MessageLookupByLibrary.simpleMessage("Store"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
+        "theItemHasBeenAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "The item has been added successfully"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),

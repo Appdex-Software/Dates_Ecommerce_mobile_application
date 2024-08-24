@@ -46,7 +46,9 @@
     "newDetails" : "تفاصيل الخبر",
     "phone" : "هاتفيا",
     "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
-    "logout" : "تسجيل الخروج"
+    "logout" : "تسجيل الخروج",
+    "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح"
+
 
 
 

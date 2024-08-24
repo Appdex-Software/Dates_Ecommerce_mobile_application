@@ -46,7 +46,8 @@
     "newDetails" : "New Details",
     "phone" : "Phone",
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
-    "logout" : "Logout"
+    "logout" : "Logout",
+    "theItemHasBeenAddedSuccessfully":"The item has been added successfully"
 
 
 }

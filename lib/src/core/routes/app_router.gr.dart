@@ -34,13 +34,12 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     DateDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<DateDetailsRouteArgs>(
-          orElse: () => const DateDetailsRouteArgs());
+      final args = routeData.argsAs<DateDetailsRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: DateDetailsPage(
           key: args.key,
-          dateData: args.dataData,
+          dateData: args.dateData,
         ),
       );
     },
@@ -160,13 +159,13 @@ class DashboardLayoutRoute extends PageRouteInfo<void> {
 class DateDetailsRoute extends PageRouteInfo<DateDetailsRouteArgs> {
   DateDetailsRoute({
     Key? key,
-    DateData? dataData,
+    required DateData dateData,
     List<PageRouteInfo>? children,
   }) : super(
           DateDetailsRoute.name,
           args: DateDetailsRouteArgs(
             key: key,
-            dataData: dataData,
+            dateData: dateData,
           ),
           initialChildren: children,
         );
@@ -180,16 +179,16 @@ class DateDetailsRoute extends PageRouteInfo<DateDetailsRouteArgs> {
 class DateDetailsRouteArgs {
   const DateDetailsRouteArgs({
     this.key,
-    this.dataData,
+    required this.dateData,
   });
 
   final Key? key;
 
-  final DateData? dataData;
+  final DateData dateData;
 
   @override
   String toString() {
-    return 'DateDetailsRouteArgs{key: $key, dataData: $dataData}';
+    return 'DateDetailsRouteArgs{key: $key, dateData: $dateData}';
   }
 }
 

@@ -1,5 +1,4 @@
 
-import 'dart:developer';
 
 import 'package:date_farm/src/app_features/authentication/presentation/providers/auth_ui_service.dart';
 import 'package:date_farm/src/user_features/store/data/repositories_impl/store_repository_impl.dart';
@@ -26,7 +25,6 @@ class StoreRepository extends _$StoreRepository {
   Future<DateProductEntity?> getProducts() async {
     try {
       final accessToken = ref.watch(authUiServiceProvider.notifier).getUserData()?.accessToken;
-      log(accessToken.toString());
 
       _dateProductEntity = await storeSourceImpl.getProducts(accessToken: accessToken);
       return _dateProductEntity;

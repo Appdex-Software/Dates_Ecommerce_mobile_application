@@ -515,6 +515,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `The item has been added successfully`
+  String get theItemHasBeenAddedSuccessfully {
+    return Intl.message(
+      'The item has been added successfully',
+      name: 'theItemHasBeenAddedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

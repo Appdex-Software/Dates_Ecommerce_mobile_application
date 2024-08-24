@@ -77,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "store": MessageLookupByLibrary.simpleMessage("المتجر"),
         "submit": MessageLookupByLibrary.simpleMessage("تقديم"),
+        "theItemHasBeenAddedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تمت إضافة العنصر بنجاح"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),

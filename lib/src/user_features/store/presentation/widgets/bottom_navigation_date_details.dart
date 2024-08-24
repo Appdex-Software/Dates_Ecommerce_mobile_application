@@ -1,38 +1,32 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/core/widgets/widgets.dart';
+import 'package:date_farm/src/user_features/cart/presentation/providers/cart_provider.dart';
+import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import 'widgets.dart';
 
-class BottomNavigationDateDetails extends StatefulWidget {
-  const BottomNavigationDateDetails({super.key});
-
+class BottomNavigationDateDetails extends ConsumerWidget {
+  const BottomNavigationDateDetails({required this.dateData, super.key});
+  final DateData dateData;
   @override
-  State<BottomNavigationDateDetails> createState() =>
-      _BottomNavigationDateDetailsState();
-}
-
-class _BottomNavigationDateDetailsState
-    extends State<BottomNavigationDateDetails> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final (theme, l10n) = appSettingsRecord(context);
     return BottomAppBar(
       color: theme.white,
       child: SizedBox(
         height: 20.sh,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CustomButton(
-              title: l10n.add,
-              onPressed: () {},
-            ),
-            const DateItemQuantityCounter(
-              buttonAspectRatio: 1.5,
-            )
-          ],
+        child: CustomButton(
+          title: l10n.add,
+          width: double.infinity,
+          onPressed: () {
+            ref.watch(cartServiceProvider.notifier).addToCart(dateData);
+            context.router.maybePop();
+            AppToast.successToast(
+                l10n.theItemHasBeenAddedSuccessfully, context);
+          },
         ),
       ),
     );

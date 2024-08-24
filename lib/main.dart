@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:path_provider/path_provider.dart';
 import 'app/view/app.dart';
+import 'src/user_features/store/data/models/date_product_dto/date_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +17,7 @@ void main() async {
     ..initFlutter(appDocumentDirectory.path)
     ..registerAdapter(UserDataAdapter());
   Hive.registerAdapter(UserInfoAdapter());
+  Hive.registerAdapter(DateCartItemyAdapter());
   AdaptiveUi.init();
   await await FlutterFlowTheme.initialize();
   final ProviderContainer container = ProviderContainer();

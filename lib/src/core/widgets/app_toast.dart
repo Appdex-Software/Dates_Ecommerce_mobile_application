@@ -10,9 +10,9 @@ class AppToast {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      backgroundColor: FlutterFlowTheme.of(context).white,
+      backgroundColor: FlutterFlowTheme.of(context).greenChalk,
       textColor: FlutterFlowTheme.of(context).whiteColor,
-      fontSize: 16.0,
+      fontSize: 20.0,
     );
   }
 
@@ -24,7 +24,7 @@ class AppToast {
         timeInSecForIosWeb: 1,
         backgroundColor: FlutterFlowTheme.of(context).redApple,
         textColor: FlutterFlowTheme.of(context).white,
-        fontSize: 16.0);
+        fontSize: 20.0);
   }
 
   static infoToast(String msg, BuildContext context) {
@@ -35,7 +35,7 @@ class AppToast {
       timeInSecForIosWeb: 1,
       backgroundColor: FlutterFlowTheme.of(context).white,
       textColor: FlutterFlowTheme.of(context).whiteColor,
-      fontSize: 16.0,
+      fontSize: 20.0,
     );
   }
 }
