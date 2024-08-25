@@ -525,6 +525,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Failed to login`
+  String get failedToLogin {
+    return Intl.message(
+      'Failed to login',
+      name: 'failedToLogin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -25,6 +25,10 @@ class DateProductDto with _$DateProductDto {
 }
 
 extension DateProductDtoX on DateProductDto {
-  DateProductEntity toEntity() =>
-      DateProductEntity(data: data, message: message, statusCode: statusCode,meta: meta,pagination: pagination);
+  DateProductEntity toEntity() => DateProductEntity(
+      data: data,
+      message: message,
+      statusCode: statusCode,
+      meta: meta,
+      pagination: pagination);
 }

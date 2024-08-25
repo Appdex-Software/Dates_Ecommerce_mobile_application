@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/core/widgets/widgets.dart';
 import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:date_farm/src/user_features/store/presentation/providers/store_provider.dart';
@@ -24,26 +23,26 @@ class _DateDetailsUiState extends ConsumerState<DateDetailsUi> {
       value: ref.watch(storeServiceProvider),
       data: (p0) {
         return LinearGradientContainer(
-        listOfColors: [theme.greenChalk, theme.white],
-        child: SingleChildScrollView(
-          padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, top: 15.sh),
-          child: Column(
-            children: [
-              ProductImage(image: widget.data?.image ?? '', size: 40.sw),
-              gapH20,
-              Text(
-                widget.data?.name ?? '',
-                style: theme.bodyLarge,
-              ),
-              gapH20,
-              Text(
-                widget.data?.description ?? '',
-                style: theme.bodySmall,
-              ),
-            ],
+          listOfColors: [theme.greenChalk, theme.white],
+          child: SingleChildScrollView(
+            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, top: 15.sh),
+            child: Column(
+              children: [
+                ProductImage(image: widget.data?.image ?? '', size: 40.sw),
+                gapH20,
+                Text(
+                  widget.data?.name ?? '',
+                  style: theme.bodyLarge,
+                ),
+                gapH20,
+                Text(
+                  widget.data?.description ?? '',
+                  style: theme.bodySmall,
+                ),
+              ],
+            ),
           ),
-        ),
-      );
+        );
       },
     );
   }

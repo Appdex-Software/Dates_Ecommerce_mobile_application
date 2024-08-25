@@ -18,12 +18,18 @@ class DateDetailsPage extends StatelessWidget {
       appBar: const TransparentAppBar(
         color: Colors.transparent,
       ),
-      bottomNavigationBar:  BottomNavigationDateDetails(dateData: dateData),
+      bottomNavigationBar: BottomNavigationDateDetails(dateData: dateData),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(
-        mobile:  DateDetailsUi(data: dateData,),
-        tablet:  DateDetailsUi(data: dateData,),
-        desktop:  DateDetailsUi(data: dateData,),
+        mobile: DateDetailsUi(
+          data: dateData,
+        ),
+        tablet: DateDetailsUi(
+          data: dateData,
+        ),
+        desktop: DateDetailsUi(
+          data: dateData,
+        ),
       ),
     );
   }

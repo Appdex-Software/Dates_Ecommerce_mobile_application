@@ -40,6 +40,7 @@
     "greenDates" : "تمر خضري",
     "add" : "اضافة",
     "confirmOrder" : "تاكيد الطلب",
+    "failedToLogin":"فشل في تسجيل الدخول",
     "addMore" : "اضافة المزيد",
     "orders" : "الطلبات",
     "contactUs" : "تواصل معنا",

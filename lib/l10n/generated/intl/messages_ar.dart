@@ -47,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("الايميل"),
         "en": MessageLookupByLibrary.simpleMessage("إنجليزي"),
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
+        "failedToLogin":
+            MessageLookupByLibrary.simpleMessage("فشل في تسجيل الدخول"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),

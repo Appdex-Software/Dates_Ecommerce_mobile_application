@@ -3,6 +3,7 @@ import 'package:date_farm/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/screens.dart';
+import '../../user_features/news/data/models/news_dto/news_data.dart';
 import '../../user_features/store/data/models/date_product_dto/date_data.dart';
 import '../constants/constants.dart';
 part 'app_router.gr.dart';

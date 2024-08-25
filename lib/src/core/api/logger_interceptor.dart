@@ -28,10 +28,9 @@ class LoggerInterceptor extends Interceptor {
       options.headers.remove('Authorization'); //remove the auxiliary header
       return handler.next(options);
     }
-    final accessToken = await sessionManager.getAuthToken(); 
+    final accessToken = await sessionManager.getAuthToken();
     final requestPath = '${options.baseUrl}${options.path}';
-    options.headers['Authorization'] =
-        'Bearer $accessToken';
+    options.headers['Authorization'] = 'Bearer $accessToken';
     //options.headers['app'] = 'fulfillment';
     options.headers['Accept'] = 'application/json';
     logger.i('${options.method} request => $requestPath'); // Info log

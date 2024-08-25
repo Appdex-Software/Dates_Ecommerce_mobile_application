@@ -239,7 +239,7 @@ class _$DateDataImpl extends _DateData {
       @HiveField(6) this.image,
       @HiveField(7) @JsonKey(name: 'total_quantity') this.totalQuantity,
       @HiveField(8) this.description,
-      @HiveField(9) this.quantity = 1})
+      @HiveField(9) this.quantity = 0})
       : super._();
 
   factory _$DateDataImpl.fromJson(Map<String, dynamic> json) =>

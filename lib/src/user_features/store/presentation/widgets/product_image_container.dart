@@ -21,7 +21,6 @@ class ProductImage extends StatelessWidget {
         height: size,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius4),
-          
           image: DecorationImage(
             image: NetworkImage(image),
             fit: BoxFit.cover,

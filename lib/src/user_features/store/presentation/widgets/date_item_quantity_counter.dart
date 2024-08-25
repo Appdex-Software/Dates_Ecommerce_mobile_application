@@ -1,5 +1,3 @@
-
-
 import 'package:cart_stepper/cart_stepper.dart';
 import 'package:date_farm/src/core/widgets/widgets.dart';
 import 'package:date_farm/src/user_features/cart/presentation/providers/cart_provider.dart';
@@ -18,46 +16,46 @@ class DateItemQuantityCounter extends ConsumerStatefulWidget {
       _DateItemQuantityCounterState();
 }
 
-class _DateItemQuantityCounterState extends ConsumerState<DateItemQuantityCounter> {
+class _DateItemQuantityCounterState
+    extends ConsumerState<DateItemQuantityCounter> {
   int counter = 1;
-
-
- 
 
   @override
   Widget build(BuildContext context) {
     final (theme, _) = appSettingsRecord(context);
     final cartService = ref.watch(cartServiceProvider.notifier);
-    counter =  ref.watch(cartServiceProvider.notifier).checkAddedToCart(widget.data ?? DateData()) ?? 1;
+    counter = ref
+            .watch(cartServiceProvider.notifier)
+            .checkAddedToCart(widget.data ?? DateData()) ??
+        1;
     return AsyncValueWidget(
-      value: ref.watch(cartServiceProvider),
-      data: (_) {
-        return Theme(
-          data: ThemeData(splashColor: Colors.transparent),
-          child: CartStepperInt(
-            value: counter,
-            style: CartStepperTheme.of(context).copyWith(
-                backgroundColor: theme.white,
-                activeBackgroundColor: theme.white,
-                foregroundColor: theme.black,
-                activeForegroundColor: theme.black,
-                buttonAspectRatio: widget.buttonAspectRatio ?? 1,
-                textStyle: theme.bodyMedium,
-                shape: BoxShape.rectangle,
-                radius: AppSizes.radius4),
-            didChangeCount: (value) {
-              if (value >= 1) {
-                if(counter - value == -1) {
-                  cartService.addToCart(widget.data ?? DateData());
-                } else {
-                  cartService.decrementQuantity(widget.data ?? DateData());
+        value: ref.watch(cartServiceProvider),
+        data: (_) {
+          return Theme(
+            data: ThemeData(splashColor: Colors.transparent),
+            child: CartStepperInt(
+              value: counter,
+              style: CartStepperTheme.of(context).copyWith(
+                  backgroundColor: theme.white,
+                  activeBackgroundColor: theme.white,
+                  foregroundColor: theme.black,
+                  activeForegroundColor: theme.black,
+                  buttonAspectRatio: widget.buttonAspectRatio ?? 1,
+                  textStyle: theme.bodyMedium,
+                  shape: BoxShape.rectangle,
+                  radius: AppSizes.radius4),
+              didChangeCount: (value) {
+                if (value >= 1) {
+                  if (counter - value == -1) {
+                    cartService.addToCart(widget.data ?? DateData());
+                  } else {
+                    cartService.decrementQuantity(widget.data ?? DateData());
+                  }
+                  counter = value;
                 }
-                counter = value;
-              }
-            },
-          ),
-        );
-      }
-    );
+              },
+            ),
+          );
+        });
   }
 }

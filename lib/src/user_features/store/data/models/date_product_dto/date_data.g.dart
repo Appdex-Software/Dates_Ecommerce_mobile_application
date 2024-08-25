@@ -82,7 +82,7 @@ _$DateDataImpl _$$DateDataImplFromJson(Map<String, dynamic> json) =>
       image: json['image'] as String?,
       totalQuantity: json['total_quantity'] as num?,
       description: json['description'] as String?,
-      quantity: (json['quantity'] as num?)?.toInt() ?? 1,
+      quantity: (json['quantity'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$DateDataImplToJson(_$DateDataImpl instance) =>

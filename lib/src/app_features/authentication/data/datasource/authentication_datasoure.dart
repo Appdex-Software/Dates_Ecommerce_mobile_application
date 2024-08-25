@@ -23,7 +23,7 @@ class AuthenticationSourceImpl implements AuthenticationSource {
       if (response.statusCode == 200) {
         return UserDto.fromJson(response.data);
       } else {
-        throw CustomError(response.statusMessage ?? 'Error in loginPatient');
+        return UserDto.fromJson(response.data);
       }
     } on CustomError catch (e) {
       throw e.errMassage;

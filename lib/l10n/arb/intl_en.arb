@@ -47,7 +47,8 @@
     "phone" : "Phone",
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
     "logout" : "Logout",
-    "theItemHasBeenAddedSuccessfully":"The item has been added successfully"
+    "theItemHasBeenAddedSuccessfully":"The item has been added successfully",
+    "failedToLogin":"Failed to login"
 
 
 }

@@ -1,6 +1,4 @@
 
-import 'dart:developer';
-
 import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/constants/constants.dart';
@@ -28,7 +26,6 @@ class CartService extends _$CartService {
       if (cartItemBox.isNotEmpty) {
         final cartItems = cartItemBox.getAt(0) as List;
         _cartList = cartItems.cast<DateData>().toList();
-       
       }
     }
     // sumTotalAmount();
@@ -41,9 +38,8 @@ class CartService extends _$CartService {
 
   incrementQuantity(int index) {
     final quantity = _cartList[index].quantity + 1;
-    _cartList[index] =
-        _cartList[index].copyWith(quantity: quantity);
-        state = AsyncValue.data(_cartList);
+    _cartList[index] = _cartList[index].copyWith(quantity: quantity);
+    state = AsyncValue.data(_cartList);
   }
 
   saveCartInLocal() async {
@@ -58,8 +54,7 @@ class CartService extends _$CartService {
   decrementQuantity(DateData cartItem) {
     int index = _cartList.indexOf(cartItem);
     final quantity = _cartList[index].quantity - 1;
-    _cartList[index] =
-        _cartList[index].copyWith(quantity: quantity);
+    _cartList[index] = _cartList[index].copyWith(quantity: quantity);
     saveCartInLocal();
 
     state = AsyncData(_cartList);
@@ -73,30 +68,27 @@ class CartService extends _$CartService {
   int? checkAddedToCart(DateData cartItem) {
     if (_cartList.contains(cartItem) == true) {
       int index = _cartList.indexOf(cartItem);
-      log(_cartList[index].quantity.toString());
       return _cartList[index].quantity;
-
     }
     return 0;
   }
 
   addToCart(DateData cartItem) {
     state = const AsyncValue.loading();
-      if (_cartList.contains(cartItem) == true) {
-        int index = _cartList.indexOf(cartItem);
-        incrementQuantity(index);
+    if (_cartList.contains(cartItem) == true) {
+      int index = _cartList.indexOf(cartItem);
+      incrementQuantity(index);
 
-        saveCartInLocal();
-      } else {
-        cartItem = cartItem.copyWith(quantity: 1);
-        _cartList.add(cartItem);
-        saveCartInLocal();
-      }
-     
-      // cartItem = cartItem.copyWith(quantity: cartItem.quantity + 1);
-      
-      state = AsyncValue.data(_cartList);
-    
+      saveCartInLocal();
+    } else {
+      cartItem = cartItem.copyWith(quantity: 1);
+      _cartList.add(cartItem);
+      saveCartInLocal();
+    }
+
+    // cartItem = cartItem.copyWith(quantity: cartItem.quantity + 1);
+
+    state = AsyncValue.data(_cartList);
   }
 
   // sumOfNumOfItemsCart() {
@@ -127,8 +119,6 @@ class CartService extends _$CartService {
   //   return _paymentMethod;
   // }
 
-
-
   // setPaymentMethod(int? paymentMethod) {
   //   _paymentMethod = paymentMethod;
   // }
@@ -139,5 +129,4 @@ class CartService extends _$CartService {
     await saveCartInLocal();
     state = AsyncValue.data(_cartList);
   }
-  
 }
