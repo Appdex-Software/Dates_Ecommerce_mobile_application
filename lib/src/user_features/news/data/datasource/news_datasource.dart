@@ -26,7 +26,7 @@ class NewsSourceImpl implements NewsSource {
       if (response.statusCode == 200) {
         return NewsDto.fromJson(response.data);
       } else {
-        throw CustomError(response.statusMessage ?? 'Error in news');
+        return NewsDto.fromJson(response.data);
       }
     } on CustomError catch (e) {
       throw e.errMassage;

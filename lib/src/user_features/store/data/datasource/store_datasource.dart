@@ -26,7 +26,7 @@ class StoreSourceImpl implements StoreSource {
       if (response.statusCode == 200) {
         return DateProductDto.fromJson(response.data);
       } else {
-        throw CustomError(response.statusMessage ?? 'Error in products');
+        return DateProductDto.fromJson(response.data);
       }
     } on CustomError catch (e) {
       throw e.errMassage;
