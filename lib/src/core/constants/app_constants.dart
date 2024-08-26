@@ -8,6 +8,7 @@ class AppConstants {
   static const String refreshToken = 'refresh-token';
   static const cartKey = 'cartKey';
   static const String loginApiUrl = '/iam/login';
+  static const String registerApiUrl = '/iam/users';
   static const String getProductUrl = '/products/products';
   static const String createOrderUrl = '/orders/orders';
   static const String getNewsUrl = '/products/news';

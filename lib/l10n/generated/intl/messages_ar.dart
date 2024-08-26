@@ -39,14 +39,18 @@ class MessageLookup extends MessageLookupByLibrary {
                 "تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "comment": MessageLookupByLibrary.simpleMessage("تعليق"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("تاكيد الطلب"),
         "contactUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+        "country": MessageLookupByLibrary.simpleMessage("الدولة"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
         "doUWantToExitTheApp":
             MessageLookupByLibrary.simpleMessage("هل تريد الخروج من التطبيق؟"),
         "email": MessageLookupByLibrary.simpleMessage("الايميل"),
+        "emptyValidationError": MessageLookupByLibrary.simpleMessage(
+            "هذا الحقل لا يمكن أن يكون فارغاً"),
         "en": MessageLookupByLibrary.simpleMessage("إنجليزي"),
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
         "failedToLogin":
@@ -62,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mission": MessageLookupByLibrary.simpleMessage("الرسالة"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "نسعى من خلال توزيع التمور على الحجاج والجمعيات الخيرية إلى تقديم خدمة متميزة تلبي احتياجات ضيوف الرحمن والفئات المحتاجة، وتعكس قيم العطاء والخير التي تتميز بها مملكتنا، مع الالتزام بأعلى معايير الجودة والشفافية."),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("الاسم/اسم الجمعية"),
         "newDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الخبر"),
@@ -73,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
         "phone": MessageLookupByLibrary.simpleMessage("هاتفيا"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "phoneNumberIsRequired":
+            MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"),
         "registerNewAccount":
@@ -80,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "store": MessageLookupByLibrary.simpleMessage("المتجر"),
+        "street": MessageLookupByLibrary.simpleMessage("شارع"),
         "submit": MessageLookupByLibrary.simpleMessage("تقديم"),
         "theItemHasBeenAddedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تمت إضافة العنصر بنجاح"),
@@ -90,12 +98,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),
+        "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "vision": MessageLookupByLibrary.simpleMessage("الرؤية"),
         "visionAndMission":
             MessageLookupByLibrary.simpleMessage("الرؤية والرسالة"),
         "visionBody": MessageLookupByLibrary.simpleMessage(
             "أن نكون الرائدين في تقديم التمور عالية الجودة للحجاج والجمعيات الخيرية في المملكة العربية السعودية، وتعزيز روح العطاء والتكافل الاجتماعي."),
         "yes": MessageLookupByLibrary.simpleMessage("نعم"),
-        "yourOrderNumberIs": MessageLookupByLibrary.simpleMessage("رقم طلبك هو")
+        "youHaveBeenRegisteredSuccessfully":
+            MessageLookupByLibrary.simpleMessage("لقد تم تسجيلك بنجاح"),
+        "youHaveToErrorInOneOfTheFollowingFields":
+            MessageLookupByLibrary.simpleMessage(
+                "يجب عليك الخطأ في أحد الحقول التالية"),
+        "yourOrderNumberIs":
+            MessageLookupByLibrary.simpleMessage("رقم طلبك هو"),
+        "zipCode": MessageLookupByLibrary.simpleMessage("الرمز البريدي")
       };
 }

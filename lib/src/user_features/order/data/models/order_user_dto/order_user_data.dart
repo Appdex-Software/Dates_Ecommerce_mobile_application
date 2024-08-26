@@ -20,5 +20,6 @@ class OrderUserData with _$OrderUserData {
     String? user,
   }) = _OrderUserData;
 
-  factory OrderUserData.fromJson(Map<String, dynamic> json) => _$OrderUserDataFromJson(json);
+  factory OrderUserData.fromJson(Map<String, dynamic> json) =>
+      _$OrderUserDataFromJson(json);
 }

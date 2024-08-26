@@ -39,14 +39,18 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
         "comment": MessageLookupByLibrary.simpleMessage("Comment"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm order"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "country": MessageLookupByLibrary.simpleMessage("Country"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
             "Do you want to exit the app?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emptyValidationError":
+            MessageLookupByLibrary.simpleMessage("This field cannot be empty"),
         "en": MessageLookupByLibrary.simpleMessage("EN"),
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
         "failedToLogin":
@@ -62,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mission": MessageLookupByLibrary.simpleMessage("Message"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency."),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("Name/Association Name"),
         "newDetails": MessageLookupByLibrary.simpleMessage("New Details"),
@@ -73,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "phoneNumberIsRequired":
+            MessageLookupByLibrary.simpleMessage("Phone number is required"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "Please enter your email and password"),
         "registerNewAccount":
@@ -80,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "store": MessageLookupByLibrary.simpleMessage("Store"),
+        "street": MessageLookupByLibrary.simpleMessage("Street"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "theItemHasBeenAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
             "The item has been added successfully"),
@@ -91,13 +99,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),
+        "username": MessageLookupByLibrary.simpleMessage("Username"),
         "vision": MessageLookupByLibrary.simpleMessage("Vision"),
         "visionAndMission":
             MessageLookupByLibrary.simpleMessage("Vision And Mission"),
         "visionBody": MessageLookupByLibrary.simpleMessage(
             "To be the pioneers in providing high-quality dates to pilgrims and charities in the Kingdom of Saudi Arabia, and to promote the spirit of giving and social solidarity."),
         "yes": MessageLookupByLibrary.simpleMessage("Yes"),
+        "youHaveBeenRegisteredSuccessfully":
+            MessageLookupByLibrary.simpleMessage(
+                "You have been registered successfully"),
+        "youHaveToErrorInOneOfTheFollowingFields":
+            MessageLookupByLibrary.simpleMessage(
+                "you have to error in one of the following fields"),
         "yourOrderNumberIs":
-            MessageLookupByLibrary.simpleMessage("Your order number is")
+            MessageLookupByLibrary.simpleMessage("Your order number is"),
+        "zipCode": MessageLookupByLibrary.simpleMessage("ZipCode")
       };
 }

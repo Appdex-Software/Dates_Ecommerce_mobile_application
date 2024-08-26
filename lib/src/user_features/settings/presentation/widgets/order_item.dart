@@ -35,7 +35,6 @@ class OrderItem extends StatelessWidget {
                 orderData?.orderNumber.toString() ?? '',
                 style: theme.bodyMedium,
               ),
-              
               Text(
                 orderDate ?? '',
                 style: theme.bodyMedium,
@@ -43,18 +42,20 @@ class OrderItem extends StatelessWidget {
             ],
           ),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(orderData?.productDetails?.length ?? 0, (index) {
-              return Text(
-                orderData?.productDetails?[index].productName ?? '',
-                style: theme.bodyMedium,
-              );
-            },)
-          ),
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(
+                orderData?.productDetails?.length ?? 0,
+                (index) {
+                  return Text(
+                    orderData?.productDetails?[index].productName ?? '',
+                    style: theme.bodyMedium,
+                  );
+                },
+              )),
           Text(
-                orderData?.status.toString() ?? '',
-                style: theme.bodyMedium,
-              ),
+            orderData?.status.toString() ?? '',
+            style: theme.bodyMedium,
+          ),
         ],
       ),
     );
