@@ -16,6 +16,7 @@ class CartUi extends ConsumerStatefulWidget {
 }
 
 class _CartUiState extends ConsumerState<CartUi> {
+  TextEditingController commentController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final (theme, l10n) = appSettingsRecord(context);
@@ -23,7 +24,10 @@ class _CartUiState extends ConsumerState<CartUi> {
     return LinearGradientContainer(
       listOfColors: [theme.greenChalk, theme.white],
       child: Padding(
-        padding: EdgeInsets.only(left: 12.sw, right: 12.sw, bottom: 8.sh),
+        padding: EdgeInsets.only(
+          left: 12.sw,
+          right: 12.sw,
+        ),
         child: Column(
           children: [
             AsyncValueWidget(
@@ -67,17 +71,48 @@ class _CartUiState extends ConsumerState<CartUi> {
                     },
                   );
                 }),
-            const Spacer(),
-            Row(
-              children: [
-                Expanded(
-                  child: CustomButton(
-                    elevation: 5,
-                    title: l10n.confirmOrder,
-                    titleStyle: theme.titleSmall.copyWith(color: theme.white),
+            const Spacer(
+              flex: 2,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    l10n.comment,
+                    style: theme.bodyMedium,
                   ),
-                ),
-              ],
+                  gapH8,
+                  CustomTextField(
+                    keyboardType: TextInputType.name,
+                    controller: commentController,
+                    hint: l10n.comment,
+                  ),
+                  gapH12,
+                  AsyncValueWidget(
+                    value: ref.watch(cartServiceProvider),
+                    data: (List<DateData> cartList) {
+                      return CustomButton(
+                        width: double.infinity,
+                        isDisabled: cartList.isEmpty ? true : false,
+                        elevation: 5,
+                        title: l10n.confirmOrder,
+                        titleStyle: theme.titleSmall.copyWith(color: theme.white),
+                        onPressed: () async {
+                          cartService.setCreateOrderBody(comment: commentController.text);
+                          cartService.createOrder();
+                          if(cartService.getCreateOrderResponseEntity()?.statusCode == 201) {
+                            commentController.text = '';
+                            showSuccessAlert(context,l10n.theOrderHasBeenCreatedSuccessfully);
+                          } else {
+                            AppToast.errorToast(l10n.theOrderHasFailed, context);
+                          }
+                        },
+                      );
+                    }
+                  ),
+                ],
+              ),
             )
           ],
         ),

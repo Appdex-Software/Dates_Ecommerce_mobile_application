@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "comment": MessageLookupByLibrary.simpleMessage("تعليق"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("تاكيد الطلب"),
         "contactUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
@@ -81,6 +83,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "submit": MessageLookupByLibrary.simpleMessage("تقديم"),
         "theItemHasBeenAddedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تمت إضافة العنصر بنجاح"),
+        "theOrderHasBeenCreatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم إنشاء الطلب بنجاح"),
+        "theOrderHasFailed":
+            MessageLookupByLibrary.simpleMessage("لقد فشل الطلب"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),

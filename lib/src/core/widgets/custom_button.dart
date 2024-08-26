@@ -76,7 +76,7 @@ class CustomButton extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       color: isDisabled ? theme.black : backgroundColor,
       shape: _shape,
-      elevation: elevation,
+      elevation: isDisabled ? 0 :elevation,
       shadowColor: theme.black,
       child: InkWell(
         splashColor: _splashColor,
@@ -86,7 +86,7 @@ class CustomButton extends StatelessWidget {
           child: Ink(
             decoration: ShapeDecoration(
               shape: _shape,
-              color: isDisabled ? theme.gray600 : backgroundColor,
+              color: isDisabled ? theme.white.withOpacity(0.7) : backgroundColor,
             ),
             child: loading
                 ? Center(

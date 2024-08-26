@@ -15,18 +15,18 @@ class NewsContainer extends StatelessWidget {
     final (theme, _) = appSettingsRecord(context);
 
     return GestureDetector(
-        onTap: () {
-          context.router.push(NewsDetailsRoute(newsData: data));
-        },
-        child: LinearGradientContainer(
-            child: Padding(
-          padding: EdgeInsets.only(
-              left: 3.sw, right: 3.sw, bottom: 5.sh, top: 2.sh),
-          child: Text(
-            data?.subject ?? '',
-            style: theme.bodySmall,
-          ),
-        )),
-      );
+      onTap: () {
+        context.router.push(NewsDetailsRoute(newsData: data));
+      },
+      child: LinearGradientContainer(
+          child: Padding(
+        padding:
+            EdgeInsets.only(left: 3.sw, right: 3.sw, bottom: 5.sh, top: 2.sh),
+        child: Text(
+          data?.subject ?? '',
+          style: theme.bodySmall,
+        ),
+      )),
+    );
   }
 }

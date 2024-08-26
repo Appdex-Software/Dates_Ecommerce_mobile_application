@@ -5,7 +5,8 @@ import '../constants/app_sizes.dart';
 import '../helpers/helpers.dart';
 
 class CustomSilverAppBar extends StatefulWidget {
-  const CustomSilverAppBar({super.key, this.backButton, this.image, this.iconColor});
+  const CustomSilverAppBar(
+      {super.key, this.backButton, this.image, this.iconColor});
   final Widget? backButton;
   final Widget? image;
   final Color? iconColor;
@@ -20,7 +21,6 @@ class _CustomSilverAppBarState extends State<CustomSilverAppBar> {
     final (theme, _) = appSettingsRecord(context);
 
     return SliverAppBar(
-      
       backgroundColor: theme.greenChalk,
       expandedHeight: 190,
       leading: widget.backButton ??
@@ -44,10 +44,11 @@ class _CustomSilverAppBarState extends State<CustomSilverAppBar> {
       flexibleSpace: FlexibleSpaceBar(
         background: Container(
           color: theme.white,
-          child: widget.image ?? Image.asset(
-            AssetsHelper.farmDataBackground,
-            fit: BoxFit.cover,
-          ),
+          child: widget.image ??
+              Image.asset(
+                AssetsHelper.farmDataBackground,
+                fit: BoxFit.cover,
+              ),
         ),
       ),
       automaticallyImplyLeading: false,

@@ -18,5 +18,6 @@ class NewsData with _$NewsData {
     @JsonKey(name: 'updated_by') String? updatedBy,
   }) = _NewsData;
 
-  factory NewsData.fromJson(Map<String, dynamic> json) => _$NewsDataFromJson(json);
+  factory NewsData.fromJson(Map<String, dynamic> json) =>
+      _$NewsDataFromJson(json);
 }

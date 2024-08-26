@@ -17,24 +17,26 @@ class NewsUi extends ConsumerStatefulWidget {
 class _NewsUiState extends ConsumerState<NewsUi> {
   @override
   Widget build(BuildContext context) {
-
     return CustomScrollView(
       slivers: [
         const CustomSilverAppBar(),
         SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),
-            child: AsyncValueWidget(
-              value: ref.watch(newsServiceProvider),
-              data: (NewsEntity? newsEntity) {
-                return Column(
-                  children: List.generate(newsEntity?.data?.length ?? 0, (index) {
-                    return NewsContainer(data: newsEntity?.data?[index],);
-                  },),
-                );
-              }
-            )
-          ),
+              padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),
+              child: AsyncValueWidget(
+                  value: ref.watch(newsServiceProvider),
+                  data: (NewsEntity? newsEntity) {
+                    return Column(
+                      children: List.generate(
+                        newsEntity?.data?.length ?? 0,
+                        (index) {
+                          return NewsContainer(
+                            data: newsEntity?.data?[index],
+                          );
+                        },
+                      ),
+                    );
+                  })),
         )
       ],
     );

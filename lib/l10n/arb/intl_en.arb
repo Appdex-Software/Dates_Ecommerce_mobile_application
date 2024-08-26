@@ -48,7 +48,10 @@
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
     "logout" : "Logout",
     "theItemHasBeenAddedSuccessfully":"The item has been added successfully",
-    "failedToLogin":"Failed to login"
-
+    "failedToLogin":"Failed to login",
+    "comment" : "Comment",
+    "theOrderHasBeenCreatedSuccessfully" : "The order has been created successfully",
+    "theOrderHasFailed" : "The order has failed",
+    "confirm" : "Confirm"
 
 }

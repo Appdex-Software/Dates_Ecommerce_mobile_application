@@ -20,8 +20,7 @@ class NewsRepository extends _$NewsRepository {
 
   Future<NewsEntity?> getNews() async {
     try {
-      _newsEntity =
-          await newsSourceImpl.getNews();
+      _newsEntity = await newsSourceImpl.getNews();
       return _newsEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get news', err: e, stackTrace: stack);

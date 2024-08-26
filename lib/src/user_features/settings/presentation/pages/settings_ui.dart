@@ -13,7 +13,7 @@ class SettingsUi extends ConsumerWidget {
   const SettingsUi({super.key});
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final (theme, l10n) = appSettingsRecord(context);
 
     return LinearGradientContainer(

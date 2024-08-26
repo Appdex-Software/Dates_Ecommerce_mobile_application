@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/user_features/news/data/models/news_dto/news_dto.dart';
 import 'package:date_farm/src/user_features/news/domain/entities/news_entity.dart';
 
@@ -15,14 +14,11 @@ class NewsRepositoryImpl implements BaseNewsRepository {
   @override
   Future<NewsEntity> getNews() async {
     try {
-      return await dataSource
-          .getNews()
-          .then((value) {
+      return await dataSource.getNews().then((value) {
         return value.toEntity();
       });
     } catch (e, stack) {
       throw CustomError('Failed to news', err: e, stackTrace: stack);
     }
   }
-
 }

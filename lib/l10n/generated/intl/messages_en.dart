@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "comment": MessageLookupByLibrary.simpleMessage("Comment"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm order"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
@@ -81,6 +83,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "theItemHasBeenAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
             "The item has been added successfully"),
+        "theOrderHasBeenCreatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage(
+                "The order has been created successfully"),
+        "theOrderHasFailed":
+            MessageLookupByLibrary.simpleMessage("The order has failed"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),

@@ -1,5 +1,6 @@
-import 'package:date_farm/src/app_features/authentication/presentation/providers/auth_ui_service.dart';
+import 'package:date_farm/src/user_features/store/data/models/create_order_body/create_order_body.dart';
 import 'package:date_farm/src/user_features/store/data/repositories_impl/store_repository_impl.dart';
+import 'package:date_farm/src/user_features/store/domain/entities/create_order_response_entity.dart';
 import 'package:date_farm/src/user_features/store/domain/entities/date_product_entity.dart';
 
 import '../../../../core/errors/custom_error.dart';
@@ -21,14 +22,24 @@ class StoreRepository extends _$StoreRepository {
 
   Future<DateProductEntity?> getProducts() async {
     try {
-      final accessToken =
-          ref.watch(authUiServiceProvider.notifier).getUserData()?.accessToken;
-
       _dateProductEntity =
-          await storeSourceImpl.getProducts(accessToken: accessToken);
+          await storeSourceImpl.getProducts();
       return _dateProductEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get products', err: e, stackTrace: stack);
+    }
+  }
+
+  CreateOrderResponseEntity? _createOrderResponseEntity;
+  CreateOrderResponseEntity? getCreateOrderResponseEntity() => _createOrderResponseEntity;
+
+  Future<CreateOrderResponseEntity?> createOrder({CreateOrderBody? orderBody}) async {
+    try {
+      _createOrderResponseEntity =
+          await storeSourceImpl.createOrder(order: orderBody);
+      return _createOrderResponseEntity;
+    } catch (e, stack) {
+      throw CustomError('Failed to create order', err: e, stackTrace: stack);
     }
   }
 }

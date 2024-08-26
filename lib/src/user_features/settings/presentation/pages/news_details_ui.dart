@@ -14,9 +14,11 @@ class NewsDetailsUi extends StatelessWidget {
 
     return CustomScrollView(
       slivers: [
-         CustomSilverAppBar(
-          image: newsData?.image == null ? null : Image.network(newsData?.image ?? ''),
-                 ),
+        CustomSilverAppBar(
+          image: newsData?.image == null
+              ? null
+              : Image.network(newsData?.image ?? ''),
+        ),
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),

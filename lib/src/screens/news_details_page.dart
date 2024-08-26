@@ -17,9 +17,11 @@ class NewsDetailsPage extends StatelessWidget {
       // ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(
-        mobile:  NewsDetailsUi(newsData: newsData,),
-        tablet:  NewsDetailsUi(newsData: newsData),
-        desktop:  NewsDetailsUi(newsData: newsData),
+        mobile: NewsDetailsUi(
+          newsData: newsData,
+        ),
+        tablet: NewsDetailsUi(newsData: newsData),
+        desktop: NewsDetailsUi(newsData: newsData),
       ),
     );
   }

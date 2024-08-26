@@ -15,10 +15,10 @@ class NewsSourceImpl implements NewsSource {
     try {
       final response = await DioClient().dio.get(
             options: Options(
-            validateStatus: (status) {
-              return status! < 500;
-            },
-            followRedirects: false,
+              validateStatus: (status) {
+                return status! < 500;
+              },
+              followRedirects: false,
             ),
             AppConstants.getNewsUrl,
           );

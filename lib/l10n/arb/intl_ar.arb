@@ -48,11 +48,11 @@
     "phone" : "هاتفيا",
     "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
     "logout" : "تسجيل الخروج",
-    "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح"
-
-
-
-
-
+    "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح",
+    "comment" : "تعليق",
+    "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
+    "theOrderHasFailed" : "لقد فشل الطلب",
+    "confirm" : "تأكيد"
+    
 
 }

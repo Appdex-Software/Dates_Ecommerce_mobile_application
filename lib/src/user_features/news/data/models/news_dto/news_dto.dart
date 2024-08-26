@@ -24,8 +24,11 @@ class NewsDto with _$NewsDto {
       _$NewsDtoFromJson(json);
 }
 
-
 extension NewsDtoX on NewsDto {
-  NewsEntity toEntity() =>
-      NewsEntity(data: data, message: message, statusCode: statusCode,meta: meta,pagination: pagination);
+  NewsEntity toEntity() => NewsEntity(
+      data: data,
+      message: message,
+      statusCode: statusCode,
+      meta: meta,
+      pagination: pagination);
 }
