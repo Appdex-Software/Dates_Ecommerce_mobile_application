@@ -575,6 +575,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Your order number is`
+  String get yourOrderNumberIs {
+    return Intl.message(
+      'Your order number is',
+      name: 'yourOrderNumberIs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

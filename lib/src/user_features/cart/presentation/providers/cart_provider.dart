@@ -95,30 +95,34 @@ class CartService extends _$CartService {
 
     state = AsyncValue.data(_cartList);
   }
-  
+
   CreateOrderResponseEntity? _createOrderResponseEntity;
-  CreateOrderResponseEntity? getCreateOrderResponseEntity() => _createOrderResponseEntity;
+  CreateOrderResponseEntity? getCreateOrderResponseEntity() =>
+      _createOrderResponseEntity;
 
   CreateOrderBody? _createOrderBody;
   CreateOrderBody? getCreateOrderBody() => _createOrderBody;
 
-   setCreateOrderBody({String? comment}){
-    final useriD = ref.watch(authUiServiceProvider.notifier).getUserData()?.user?.id;
+  setCreateOrderBody({String? comment}) {
+    final useriD =
+        ref.watch(authUiServiceProvider.notifier).getUserData()?.user?.id;
     _createOrderBody = CreateOrderBody(
       comment: comment,
-      products: List.generate(_cartList.length, (index) {
-        return Product(
-          product: _cartList[index].id,
-          quantity: _cartList[index].quantity
-        );
-      },),
+      products: List.generate(
+        _cartList.length,
+        (index) {
+          return Product(
+              product: _cartList[index].id,
+              quantity: _cartList[index].quantity);
+        },
+      ),
       quantity: totalQuantity(),
       status: 'pending approval',
       user: useriD,
     );
   }
 
-  int totalQuantity(){
+  int totalQuantity() {
     int totalQuantity = 0;
     for (var element in _cartList) {
       totalQuantity += element.quantity;
@@ -129,9 +133,10 @@ class CartService extends _$CartService {
   Future<CreateOrderResponseEntity?> createOrder() async {
     final storeService = ref.watch(storeRepositoryProvider.notifier);
     try {
-      _createOrderResponseEntity = await storeService.createOrder(orderBody: _createOrderBody);
-      if(_createOrderResponseEntity?.statusCode == 201) {
-        _cartList.clear();
+      _createOrderResponseEntity =
+          await storeService.createOrder(orderBody: _createOrderBody);
+      if (_createOrderResponseEntity?.statusCode == 201) {
+        clearCart();
         state = AsyncData(_cartList);
       }
       return _createOrderResponseEntity;

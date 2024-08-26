@@ -22,8 +22,8 @@ class CreateOrderResponseDto with _$CreateOrderResponseDto {
 
 extension CreateOrderResponseDtoX on CreateOrderResponseDto {
   CreateOrderResponseEntity toEntity() => CreateOrderResponseEntity(
-      data: data,
-      message: message,
-      statusCode: statusCode,
-  );
+        data: data,
+        message: message,
+        statusCode: statusCode,
+      );
 }
