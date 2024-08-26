@@ -40,7 +40,7 @@ class NewsDetailsUi extends StatelessWidget {
                     style: theme.bodySmall,
                   ),
                 )),
-                SizedBox(
+                const SizedBox(
                   height: 4000,
                 )
               ],

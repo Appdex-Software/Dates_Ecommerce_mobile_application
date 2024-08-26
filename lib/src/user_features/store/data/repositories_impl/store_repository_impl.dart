@@ -18,21 +18,19 @@ class StoreRepositoryImpl implements BaseStoreRepository {
   @override
   Future<DateProductEntity> getProducts() async {
     try {
-      return await dataSource
-          .getProducts()
-          .then((value) {
+      return await dataSource.getProducts().then((value) {
         return value.toEntity();
       });
     } catch (e, stack) {
       throw CustomError('Failed to products', err: e, stackTrace: stack);
     }
   }
+
   @override
-  Future<CreateOrderResponseEntity> createOrder({CreateOrderBody? order}) async {
+  Future<CreateOrderResponseEntity> createOrder(
+      {CreateOrderBody? order}) async {
     try {
-      return await dataSource
-          .createOrder(order: order)
-          .then((value) {
+      return await dataSource.createOrder(order: order).then((value) {
         return value.toEntity();
       });
     } catch (e, stack) {

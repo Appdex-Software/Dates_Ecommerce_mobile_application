@@ -52,7 +52,9 @@
     "comment" : "تعليق",
     "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
     "theOrderHasFailed" : "لقد فشل الطلب",
-    "confirm" : "تأكيد"
+    "confirm" : "تأكيد",
+    "yourOrderNumberIs" : "رقم طلبك هو"
+
     
 
 }

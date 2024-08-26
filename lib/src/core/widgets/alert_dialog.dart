@@ -19,7 +19,10 @@ showSuccessAlert(BuildContext context, String text) async {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(Icons.info_outline,size: 10.sw,),
+            Icon(
+              Icons.info_outline,
+              size: 10.sw,
+            ),
             Text(
               text,
               textAlign: TextAlign.center,

@@ -18,4 +18,3 @@ class CreateOrderResponseEntity with _$CreateOrderResponseEntity {
   factory CreateOrderResponseEntity.fromJson(Map<String, dynamic> json) =>
       _$CreateOrderResponseEntityFromJson(json);
 }
-

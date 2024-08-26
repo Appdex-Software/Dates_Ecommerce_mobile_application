@@ -22,8 +22,7 @@ class StoreRepository extends _$StoreRepository {
 
   Future<DateProductEntity?> getProducts() async {
     try {
-      _dateProductEntity =
-          await storeSourceImpl.getProducts();
+      _dateProductEntity = await storeSourceImpl.getProducts();
       return _dateProductEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get products', err: e, stackTrace: stack);
@@ -31,9 +30,11 @@ class StoreRepository extends _$StoreRepository {
   }
 
   CreateOrderResponseEntity? _createOrderResponseEntity;
-  CreateOrderResponseEntity? getCreateOrderResponseEntity() => _createOrderResponseEntity;
+  CreateOrderResponseEntity? getCreateOrderResponseEntity() =>
+      _createOrderResponseEntity;
 
-  Future<CreateOrderResponseEntity?> createOrder({CreateOrderBody? orderBody}) async {
+  Future<CreateOrderResponseEntity?> createOrder(
+      {CreateOrderBody? orderBody}) async {
     try {
       _createOrderResponseEntity =
           await storeSourceImpl.createOrder(order: orderBody);

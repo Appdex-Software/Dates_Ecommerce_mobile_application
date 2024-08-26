@@ -52,6 +52,7 @@
     "comment" : "Comment",
     "theOrderHasBeenCreatedSuccessfully" : "The order has been created successfully",
     "theOrderHasFailed" : "The order has failed",
-    "confirm" : "Confirm"
+    "confirm" : "Confirm",
+    "yourOrderNumberIs" : "Your order number is"
 
 }

@@ -1,6 +1,6 @@
 import 'package:date_farm/src/user_features/cart/presentation/providers/cart_provider.dart';
+import 'package:date_farm/src/user_features/cart/presentation/widgets/cart_item_container.dart';
 import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
-import 'package:date_farm/src/user_features/store/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -42,31 +42,9 @@ class _CartUiState extends ConsumerState<CartUi> {
                       );
                     },
                     itemBuilder: (context, index) {
-                      return SizedBox(
-                        width: double.infinity,
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(vertical: 1.sh),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ProductImage(
-                                  image: cartItem[index].image ?? '',
-                                  size: 15.sw),
-                              Text(
-                                cartItem[index].name ?? '',
-                                style: theme.titleSmall,
-                              ),
-                              DateItemQuantityCounter(
-                                data: cartItem[index],
-                              ),
-                              IconButton(
-                                  onPressed: () {
-                                    cartService.removeFromCart(index);
-                                  },
-                                  icon: const Icon(Icons.close))
-                            ],
-                          ),
-                        ),
+                      return CartItemContainer(
+                        index: index,
+                        dateData: cartItem[index],
                       );
                     },
                   );
@@ -90,27 +68,33 @@ class _CartUiState extends ConsumerState<CartUi> {
                   ),
                   gapH12,
                   AsyncValueWidget(
-                    value: ref.watch(cartServiceProvider),
-                    data: (List<DateData> cartList) {
-                      return CustomButton(
-                        width: double.infinity,
-                        isDisabled: cartList.isEmpty ? true : false,
-                        elevation: 5,
-                        title: l10n.confirmOrder,
-                        titleStyle: theme.titleSmall.copyWith(color: theme.white),
-                        onPressed: () async {
-                          cartService.setCreateOrderBody(comment: commentController.text);
-                          cartService.createOrder();
-                          if(cartService.getCreateOrderResponseEntity()?.statusCode == 201) {
-                            commentController.text = '';
-                            showSuccessAlert(context,l10n.theOrderHasBeenCreatedSuccessfully);
-                          } else {
-                            AppToast.errorToast(l10n.theOrderHasFailed, context);
-                          }
-                        },
-                      );
-                    }
-                  ),
+                      value: ref.watch(cartServiceProvider),
+                      data: (List<DateData> cartList) {
+                        return CustomButton(
+                          width: double.infinity,
+                          isDisabled: cartList.isEmpty ? true : false,
+                          elevation: 5,
+                          title: l10n.confirmOrder,
+                          titleStyle:
+                              theme.titleSmall.copyWith(color: theme.white),
+                          onPressed: () async {
+                            cartService.setCreateOrderBody(
+                                comment: commentController.text);
+                            cartService.createOrder();
+                            if (cartService
+                                    .getCreateOrderResponseEntity()
+                                    ?.statusCode ==
+                                201) {
+                              commentController.text = '';
+                              showSuccessAlert(context,
+                                  "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}");
+                            } else {
+                              AppToast.errorToast(
+                                  l10n.theOrderHasFailed, context);
+                            }
+                          },
+                        );
+                      }),
                 ],
               ),
             )

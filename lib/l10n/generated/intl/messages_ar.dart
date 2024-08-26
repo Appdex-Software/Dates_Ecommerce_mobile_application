@@ -95,6 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرؤية والرسالة"),
         "visionBody": MessageLookupByLibrary.simpleMessage(
             "أن نكون الرائدين في تقديم التمور عالية الجودة للحجاج والجمعيات الخيرية في المملكة العربية السعودية، وتعزيز روح العطاء والتكافل الاجتماعي."),
-        "yes": MessageLookupByLibrary.simpleMessage("نعم")
+        "yes": MessageLookupByLibrary.simpleMessage("نعم"),
+        "yourOrderNumberIs": MessageLookupByLibrary.simpleMessage("رقم طلبك هو")
       };
 }
