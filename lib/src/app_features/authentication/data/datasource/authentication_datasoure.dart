@@ -1,4 +1,7 @@
+import 'package:date_farm/src/app_features/authentication/data/models/register_body/register_body.dart';
+import 'package:date_farm/src/app_features/authentication/data/models/user_authentication_error_dto/user_authentication_error_dto.dart';
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_dto.dart';
+import 'package:dio/dio.dart';
 
 import '../../../../core/api/apis.dart';
 import '../../../../core/constants/app_strings.dart';
@@ -7,6 +10,7 @@ import '../../../../core/errors/custom_error.dart';
 
 abstract class AuthenticationSource {
   Future<UserDto> loginUser({String? email, String? password});
+  Future<UserAuthenticationErrorDto> registerUser({RegisterBody? body});
 }
 
 class AuthenticationSourceImpl implements AuthenticationSource {
@@ -24,6 +28,33 @@ class AuthenticationSourceImpl implements AuthenticationSource {
         return UserDto.fromJson(response.data);
       } else {
         return UserDto.fromJson(response.data);
+      }
+    } on CustomError catch (e) {
+      throw e.errMassage;
+    }
+  }
+
+  @override
+  Future<UserAuthenticationErrorDto> registerUser({RegisterBody? body}) async {
+    logger.d('registerUser body: $body');
+    try {
+      Dio dio = Dio();
+      final response = await dio.post(
+        options: Options(
+          contentType: "application/json",
+          followRedirects: false,
+          validateStatus: (status) {
+            return status! < 500;
+          },
+        ),
+        "${AppConstants.apiBaseUrl}${AppConstants.registerApiUrl}",
+        data: body,
+      );
+      logger.d('loginUser response: ${response.data}');
+      if (response.statusCode == 201) {
+        return UserAuthenticationErrorDto.fromJson(response.data);
+      } else {
+        return UserAuthenticationErrorDto.fromJson(response.data);
       }
     } on CustomError catch (e) {
       throw e.errMassage;

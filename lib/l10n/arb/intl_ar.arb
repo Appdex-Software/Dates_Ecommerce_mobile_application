@@ -53,7 +53,18 @@
     "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
     "theOrderHasFailed" : "لقد فشل الطلب",
     "confirm" : "تأكيد",
-    "yourOrderNumberIs" : "رقم طلبك هو"
+    "yourOrderNumberIs" : "رقم طلبك هو",
+    "name":"الاسم",
+    "country":"الدولة",
+    "city":"المدينة",
+    "street":"شارع",
+    "zipCode":"الرمز البريدي",
+    "username" : "اسم المستخدم",
+    "youHaveBeenRegisteredSuccessfully": "لقد تم تسجيلك بنجاح",
+    "youHaveToErrorInOneOfTheFollowingFields" : "يجب عليك الخطأ في أحد الحقول التالية",
+    "phoneNumberIsRequired" : "رقم الهاتف مطلوب",
+    "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً"
+
 
     
 

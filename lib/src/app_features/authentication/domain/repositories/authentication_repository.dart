@@ -1,3 +1,4 @@
+import 'package:date_farm/src/app_features/authentication/data/models/register_body/register_body.dart';
 import 'package:date_farm/src/core/constants/app_constants.dart';
 import 'package:hive_flutter/adapters.dart';
 
@@ -6,6 +7,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../data/models/user_dto/user_data.dart';
 import '../../data/repository_impl/authentication_repository_impl.dart';
 
+import '../entities/user_authentication_error_entity.dart';
 import '../entities/user_entity.dart';
 part 'authentication_repository.g.dart';
 
@@ -23,6 +25,8 @@ class AuthenticationRepository extends _$AuthenticationRepository {
   UserData? getUserData() => _userData;
   UserEntity? _userEntity;
   UserEntity? getUserEntity() => _userEntity;
+  UserAuthenticationErrorEntity? _userErrorEntity;
+  UserAuthenticationErrorEntity? getUserErrirEntity() => _userErrorEntity;
 
   // PatientInfo? _patientInfo;
   // PatientInfo? getPatientInfo() {
@@ -49,6 +53,17 @@ class AuthenticationRepository extends _$AuthenticationRepository {
       return _userEntity;
     } catch (e, stack) {
       throw CustomError('Failed to login', err: e, stackTrace: stack);
+    }
+  }
+
+  Future<UserAuthenticationErrorEntity?> registerUser(
+      {RegisterBody? body}) async {
+    try {
+      _userErrorEntity =
+          await authenticationSourceImpl.registerUser(body: body);
+      return _userErrorEntity;
+    } catch (e, stack) {
+      throw CustomError('Failed to register', err: e, stackTrace: stack);
     }
   }
 

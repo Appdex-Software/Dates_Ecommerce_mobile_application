@@ -1,4 +1,6 @@
+import 'package:date_farm/src/app_features/authentication/data/models/register_body/register_body.dart';
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_data.dart';
+import 'package:date_farm/src/app_features/authentication/domain/entities/user_authentication_error_entity.dart';
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_entity.dart';
 import 'package:date_farm/src/core/constants/app_constants.dart';
 import 'package:date_farm/src/core/helpers/session_manager.dart';
@@ -25,6 +27,14 @@ class AuthUiService extends _$AuthUiService {
   UserEntity? getUserEntity() => _userEntity;
   UserData? _userData;
   UserData? getUserData() => _userData;
+  String? _userPhoneNumber;
+  String? getPhoneNumber() {
+    return _userPhoneNumber;
+  }
+
+  void setPhoneNumber(String? phone) {
+    _userPhoneNumber = phone;
+  }
 
   // String _patientGender = 'm';
   // String getPatientGender() {
@@ -64,6 +74,27 @@ class AuthUiService extends _$AuthUiService {
         patientBox.add(_userEntity?.data);
       }
       _userData = _userEntity?.data;
+      state = AsyncData(_userData);
+      return _userEntity;
+    } on Exception catch (e) {
+      throw e.toString();
+    }
+  }
+
+  UserAuthenticationErrorEntity? _userErrorEntity;
+  UserAuthenticationErrorEntity? getUserErrorEntity() => _userErrorEntity;
+
+  registerUser({RegisterBody? registerBody}) async {
+    try {
+      state = const AsyncLoading();
+      final reponseData = await ref
+          .watch(authenticationRepositoryProvider.notifier)
+          .registerUser(body: registerBody);
+      if (reponseData?.statusCode == 201) {
+        _userErrorEntity = reponseData;
+      } else {
+        _userErrorEntity = reponseData;
+      }
       state = AsyncData(_userData);
       return _userEntity;
     } on Exception catch (e) {

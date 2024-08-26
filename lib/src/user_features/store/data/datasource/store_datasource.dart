@@ -50,7 +50,7 @@ class StoreSourceImpl implements StoreSource {
             AppConstants.createOrderUrl,
           );
       logger.d('createOrder response: ${response.data}');
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         return CreateOrderResponseDto.fromJson(response.data);
       } else {
         return CreateOrderResponseDto.fromJson(response.data);

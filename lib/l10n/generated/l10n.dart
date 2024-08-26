@@ -585,6 +585,106 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message(
+      'Country',
+      name: 'country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Street`
+  String get street {
+    return Intl.message(
+      'Street',
+      name: 'street',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ZipCode`
+  String get zipCode {
+    return Intl.message(
+      'ZipCode',
+      name: 'zipCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have been registered successfully`
+  String get youHaveBeenRegisteredSuccessfully {
+    return Intl.message(
+      'You have been registered successfully',
+      name: 'youHaveBeenRegisteredSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `you have to error in one of the following fields`
+  String get youHaveToErrorInOneOfTheFollowingFields {
+    return Intl.message(
+      'you have to error in one of the following fields',
+      name: 'youHaveToErrorInOneOfTheFollowingFields',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number is required`
+  String get phoneNumberIsRequired {
+    return Intl.message(
+      'Phone number is required',
+      name: 'phoneNumberIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field cannot be empty`
+  String get emptyValidationError {
+    return Intl.message(
+      'This field cannot be empty',
+      name: 'emptyValidationError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

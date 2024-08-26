@@ -6,8 +6,6 @@ import '../../data/models/order_user_dto/meta.dart';
 import '../../data/models/order_user_dto/order_user_data.dart';
 import '../../data/models/order_user_dto/pagination.dart';
 
-
-
 part 'order_user_entity.freezed.dart';
 part 'order_user_entity.g.dart';
 
