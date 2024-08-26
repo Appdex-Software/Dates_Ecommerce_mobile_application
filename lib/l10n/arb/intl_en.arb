@@ -46,7 +46,12 @@
     "newDetails" : "New Details",
     "phone" : "Phone",
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
-    "logout" : "Logout"
-
+    "logout" : "Logout",
+    "theItemHasBeenAddedSuccessfully":"The item has been added successfully",
+    "failedToLogin":"Failed to login",
+    "comment" : "Comment",
+    "theOrderHasBeenCreatedSuccessfully" : "The order has been created successfully",
+    "theOrderHasFailed" : "The order has failed",
+    "confirm" : "Confirm"
 
 }

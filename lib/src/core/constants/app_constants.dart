@@ -6,8 +6,11 @@ class AppConstants {
   static const String apiBaseUrl = 'https://waqfmohammedhail.org/api/v1';
 
   static const String refreshToken = 'refresh-token';
+  static const cartKey = 'cartKey';
   static const String loginApiUrl = '/iam/login';
   static const String getProductUrl = '/products/products';
+  static const String createOrderUrl = '/orders/orders';
+  static const String getNewsUrl = '/products/news';
   static const String expiryTime = 'expiry-time';
   static const String defaultLocale = 'default-locale';
   static const String userId = 'userId';
@@ -45,3 +48,4 @@ Logger logger = Logger(
 );
 
 const userInfoBox = 'userInfoBox';
+const dateCartItemBox = 'dateCartItemBox';

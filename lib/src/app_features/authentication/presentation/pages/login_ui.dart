@@ -96,6 +96,13 @@ class _LoginUiState extends ConsumerState<LoginUi> {
                             if (context.mounted) {
                               context.router.replace(const HomeUserRoute());
                             }
+                          } else {
+                            if (context.mounted) {
+                              AppToast.errorToast(
+                                  authService.getUserEntity()?.message ??
+                                      l10n.failedToLogin,
+                                  context);
+                            }
                           }
                         },
                       );

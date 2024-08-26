@@ -58,14 +58,15 @@ class AuthUiService extends _$AuthUiService {
         if (!exists) {
           await Hive.openBox(userInfoBox);
         }
-        await sessionManager.setAuthToken(tokenn: _userEntity?.data?.accessToken ?? '');
+        await sessionManager.setAuthToken(
+            tokenn: _userEntity?.data?.accessToken ?? '');
         var patientBox = Hive.box(userInfoBox);
         patientBox.add(_userEntity?.data);
       }
       _userData = _userEntity?.data;
       state = AsyncData(_userData);
       return _userEntity;
-    } catch (e) {
+    } on Exception catch (e) {
       throw e.toString();
     }
   }
@@ -175,11 +176,12 @@ class AuthUiService extends _$AuthUiService {
 
   logout() async {
     var patientBox = Hive.box(userInfoBox);
+    sessionManager.setLogin(statue: false);
+    sessionManager.setAuthToken(tokenn: '');
     _userEntity = null;
     patientBox.clear();
     patientBox.close();
     ref.invalidateSelf();
-
     state = const AsyncData(null);
   }
 

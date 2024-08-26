@@ -515,6 +515,66 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `The item has been added successfully`
+  String get theItemHasBeenAddedSuccessfully {
+    return Intl.message(
+      'The item has been added successfully',
+      name: 'theItemHasBeenAddedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to login`
+  String get failedToLogin {
+    return Intl.message(
+      'Failed to login',
+      name: 'failedToLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comment`
+  String get comment {
+    return Intl.message(
+      'Comment',
+      name: 'comment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The order has been created successfully`
+  String get theOrderHasBeenCreatedSuccessfully {
+    return Intl.message(
+      'The order has been created successfully',
+      name: 'theOrderHasBeenCreatedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The order has failed`
+  String get theOrderHasFailed {
+    return Intl.message(
+      'The order has failed',
+      name: 'theOrderHasFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

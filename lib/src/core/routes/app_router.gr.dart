@@ -34,13 +34,12 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     DateDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<DateDetailsRouteArgs>(
-          orElse: () => const DateDetailsRouteArgs());
+      final args = routeData.argsAs<DateDetailsRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: DateDetailsPage(
           key: args.key,
-          dateData: args.dataData,
+          dateData: args.dateData,
         ),
       );
     },
@@ -69,9 +68,14 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     NewsDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<NewsDetailsRouteArgs>(
+          orElse: () => const NewsDetailsRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const NewsDetailsPage(),
+        child: NewsDetailsPage(
+          key: args.key,
+          newsData: args.newsData,
+        ),
       );
     },
     NewsRoute.name: (routeData) {
@@ -160,13 +164,13 @@ class DashboardLayoutRoute extends PageRouteInfo<void> {
 class DateDetailsRoute extends PageRouteInfo<DateDetailsRouteArgs> {
   DateDetailsRoute({
     Key? key,
-    DateData? dataData,
+    required DateData dateData,
     List<PageRouteInfo>? children,
   }) : super(
           DateDetailsRoute.name,
           args: DateDetailsRouteArgs(
             key: key,
-            dataData: dataData,
+            dateData: dateData,
           ),
           initialChildren: children,
         );
@@ -180,16 +184,16 @@ class DateDetailsRoute extends PageRouteInfo<DateDetailsRouteArgs> {
 class DateDetailsRouteArgs {
   const DateDetailsRouteArgs({
     this.key,
-    this.dataData,
+    required this.dateData,
   });
 
   final Key? key;
 
-  final DateData? dataData;
+  final DateData dateData;
 
   @override
   String toString() {
-    return 'DateDetailsRouteArgs{key: $key, dataData: $dataData}';
+    return 'DateDetailsRouteArgs{key: $key, dateData: $dateData}';
   }
 }
 
@@ -251,16 +255,40 @@ class LoginRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [NewsDetailsPage]
-class NewsDetailsRoute extends PageRouteInfo<void> {
-  const NewsDetailsRoute({List<PageRouteInfo>? children})
-      : super(
+class NewsDetailsRoute extends PageRouteInfo<NewsDetailsRouteArgs> {
+  NewsDetailsRoute({
+    Key? key,
+    NewsData? newsData,
+    List<PageRouteInfo>? children,
+  }) : super(
           NewsDetailsRoute.name,
+          args: NewsDetailsRouteArgs(
+            key: key,
+            newsData: newsData,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'NewsDetailsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<NewsDetailsRouteArgs> page =
+      PageInfo<NewsDetailsRouteArgs>(name);
+}
+
+class NewsDetailsRouteArgs {
+  const NewsDetailsRouteArgs({
+    this.key,
+    this.newsData,
+  });
+
+  final Key? key;
+
+  final NewsData? newsData;
+
+  @override
+  String toString() {
+    return 'NewsDetailsRouteArgs{key: $key, newsData: $newsData}';
+  }
 }
 
 /// generated route for

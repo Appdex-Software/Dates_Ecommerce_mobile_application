@@ -40,16 +40,19 @@
     "greenDates" : "تمر خضري",
     "add" : "اضافة",
     "confirmOrder" : "تاكيد الطلب",
+    "failedToLogin":"فشل في تسجيل الدخول",
     "addMore" : "اضافة المزيد",
     "orders" : "الطلبات",
     "contactUs" : "تواصل معنا",
     "newDetails" : "تفاصيل الخبر",
     "phone" : "هاتفيا",
     "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
-    "logout" : "تسجيل الخروج"
-
-
-
-
+    "logout" : "تسجيل الخروج",
+    "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح",
+    "comment" : "تعليق",
+    "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
+    "theOrderHasFailed" : "لقد فشل الطلب",
+    "confirm" : "تأكيد"
+    
 
 }

@@ -20,19 +20,30 @@ DateData _$DateDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DateData {
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get category => throw _privateConstructorUsedError;
+  @HiveField(2)
   @JsonKey(name: 'families_quantity')
   num? get familiesQuantity => throw _privateConstructorUsedError;
+  @HiveField(3)
   @JsonKey(name: 'fasting_quantity')
   num? get fastingQuantity => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: 'charities_quantity')
   num? get charitiesQuantity => throw _privateConstructorUsedError;
+  @HiveField(5)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(6)
   String? get image => throw _privateConstructorUsedError;
+  @HiveField(7)
   @JsonKey(name: 'total_quantity')
   num? get totalQuantity => throw _privateConstructorUsedError;
+  @HiveField(8)
   String? get description => throw _privateConstructorUsedError;
+  @HiveField(9)
+  int get quantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,15 +57,16 @@ abstract class $DateDataCopyWith<$Res> {
       _$DateDataCopyWithImpl<$Res, DateData>;
   @useResult
   $Res call(
-      {String? id,
-      String? category,
-      @JsonKey(name: 'families_quantity') num? familiesQuantity,
-      @JsonKey(name: 'fasting_quantity') num? fastingQuantity,
-      @JsonKey(name: 'charities_quantity') num? charitiesQuantity,
-      String? name,
-      String? image,
-      @JsonKey(name: 'total_quantity') num? totalQuantity,
-      String? description});
+      {@HiveField(0) String? id,
+      @HiveField(1) String? category,
+      @HiveField(2) @JsonKey(name: 'families_quantity') num? familiesQuantity,
+      @HiveField(3) @JsonKey(name: 'fasting_quantity') num? fastingQuantity,
+      @HiveField(4) @JsonKey(name: 'charities_quantity') num? charitiesQuantity,
+      @HiveField(5) String? name,
+      @HiveField(6) String? image,
+      @HiveField(7) @JsonKey(name: 'total_quantity') num? totalQuantity,
+      @HiveField(8) String? description,
+      @HiveField(9) int quantity});
 }
 
 /// @nodoc
@@ -79,6 +91,7 @@ class _$DateDataCopyWithImpl<$Res, $Val extends DateData>
     Object? image = freezed,
     Object? totalQuantity = freezed,
     Object? description = freezed,
+    Object? quantity = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -117,6 +130,10 @@ class _$DateDataCopyWithImpl<$Res, $Val extends DateData>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -130,15 +147,16 @@ abstract class _$$DateDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      String? category,
-      @JsonKey(name: 'families_quantity') num? familiesQuantity,
-      @JsonKey(name: 'fasting_quantity') num? fastingQuantity,
-      @JsonKey(name: 'charities_quantity') num? charitiesQuantity,
-      String? name,
-      String? image,
-      @JsonKey(name: 'total_quantity') num? totalQuantity,
-      String? description});
+      {@HiveField(0) String? id,
+      @HiveField(1) String? category,
+      @HiveField(2) @JsonKey(name: 'families_quantity') num? familiesQuantity,
+      @HiveField(3) @JsonKey(name: 'fasting_quantity') num? fastingQuantity,
+      @HiveField(4) @JsonKey(name: 'charities_quantity') num? charitiesQuantity,
+      @HiveField(5) String? name,
+      @HiveField(6) String? image,
+      @HiveField(7) @JsonKey(name: 'total_quantity') num? totalQuantity,
+      @HiveField(8) String? description,
+      @HiveField(9) int quantity});
 }
 
 /// @nodoc
@@ -161,6 +179,7 @@ class __$$DateDataImplCopyWithImpl<$Res>
     Object? image = freezed,
     Object? totalQuantity = freezed,
     Object? description = freezed,
+    Object? quantity = null,
   }) {
     return _then(_$DateDataImpl(
       id: freezed == id
@@ -199,90 +218,68 @@ class __$$DateDataImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
+      quantity: null == quantity
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DateDataImpl implements _DateData {
+class _$DateDataImpl extends _DateData {
   _$DateDataImpl(
-      {this.id,
-      this.category,
-      @JsonKey(name: 'families_quantity') this.familiesQuantity,
-      @JsonKey(name: 'fasting_quantity') this.fastingQuantity,
-      @JsonKey(name: 'charities_quantity') this.charitiesQuantity,
-      this.name,
-      this.image,
-      @JsonKey(name: 'total_quantity') this.totalQuantity,
-      this.description});
+      {@HiveField(0) this.id,
+      @HiveField(1) this.category,
+      @HiveField(2) @JsonKey(name: 'families_quantity') this.familiesQuantity,
+      @HiveField(3) @JsonKey(name: 'fasting_quantity') this.fastingQuantity,
+      @HiveField(4) @JsonKey(name: 'charities_quantity') this.charitiesQuantity,
+      @HiveField(5) this.name,
+      @HiveField(6) this.image,
+      @HiveField(7) @JsonKey(name: 'total_quantity') this.totalQuantity,
+      @HiveField(8) this.description,
+      @HiveField(9) this.quantity = 0})
+      : super._();
 
   factory _$DateDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$DateDataImplFromJson(json);
 
   @override
+  @HiveField(0)
   final String? id;
   @override
+  @HiveField(1)
   final String? category;
   @override
+  @HiveField(2)
   @JsonKey(name: 'families_quantity')
   final num? familiesQuantity;
   @override
+  @HiveField(3)
   @JsonKey(name: 'fasting_quantity')
   final num? fastingQuantity;
   @override
+  @HiveField(4)
   @JsonKey(name: 'charities_quantity')
   final num? charitiesQuantity;
   @override
+  @HiveField(5)
   final String? name;
   @override
+  @HiveField(6)
   final String? image;
   @override
+  @HiveField(7)
   @JsonKey(name: 'total_quantity')
   final num? totalQuantity;
   @override
+  @HiveField(8)
   final String? description;
-
   @override
-  String toString() {
-    return 'DateData(id: $id, category: $category, familiesQuantity: $familiesQuantity, fastingQuantity: $fastingQuantity, charitiesQuantity: $charitiesQuantity, name: $name, image: $image, totalQuantity: $totalQuantity, description: $description)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DateDataImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
-            (identical(other.familiesQuantity, familiesQuantity) ||
-                other.familiesQuantity == familiesQuantity) &&
-            (identical(other.fastingQuantity, fastingQuantity) ||
-                other.fastingQuantity == fastingQuantity) &&
-            (identical(other.charitiesQuantity, charitiesQuantity) ||
-                other.charitiesQuantity == charitiesQuantity) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.image, image) || other.image == image) &&
-            (identical(other.totalQuantity, totalQuantity) ||
-                other.totalQuantity == totalQuantity) &&
-            (identical(other.description, description) ||
-                other.description == description));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      category,
-      familiesQuantity,
-      fastingQuantity,
-      charitiesQuantity,
-      name,
-      image,
-      totalQuantity,
-      description);
+  @JsonKey()
+  @HiveField(9)
+  final int quantity;
 
   @JsonKey(ignore: true)
   @override
@@ -298,43 +295,63 @@ class _$DateDataImpl implements _DateData {
   }
 }
 
-abstract class _DateData implements DateData {
+abstract class _DateData extends DateData {
   factory _DateData(
-      {final String? id,
-      final String? category,
-      @JsonKey(name: 'families_quantity') final num? familiesQuantity,
-      @JsonKey(name: 'fasting_quantity') final num? fastingQuantity,
-      @JsonKey(name: 'charities_quantity') final num? charitiesQuantity,
-      final String? name,
-      final String? image,
-      @JsonKey(name: 'total_quantity') final num? totalQuantity,
-      final String? description}) = _$DateDataImpl;
+      {@HiveField(0) final String? id,
+      @HiveField(1) final String? category,
+      @HiveField(2)
+      @JsonKey(name: 'families_quantity')
+      final num? familiesQuantity,
+      @HiveField(3)
+      @JsonKey(name: 'fasting_quantity')
+      final num? fastingQuantity,
+      @HiveField(4)
+      @JsonKey(name: 'charities_quantity')
+      final num? charitiesQuantity,
+      @HiveField(5) final String? name,
+      @HiveField(6) final String? image,
+      @HiveField(7) @JsonKey(name: 'total_quantity') final num? totalQuantity,
+      @HiveField(8) final String? description,
+      @HiveField(9) final int quantity}) = _$DateDataImpl;
+  _DateData._() : super._();
 
   factory _DateData.fromJson(Map<String, dynamic> json) =
       _$DateDataImpl.fromJson;
 
   @override
+  @HiveField(0)
   String? get id;
   @override
+  @HiveField(1)
   String? get category;
   @override
+  @HiveField(2)
   @JsonKey(name: 'families_quantity')
   num? get familiesQuantity;
   @override
+  @HiveField(3)
   @JsonKey(name: 'fasting_quantity')
   num? get fastingQuantity;
   @override
+  @HiveField(4)
   @JsonKey(name: 'charities_quantity')
   num? get charitiesQuantity;
   @override
+  @HiveField(5)
   String? get name;
   @override
+  @HiveField(6)
   String? get image;
   @override
+  @HiveField(7)
   @JsonKey(name: 'total_quantity')
   num? get totalQuantity;
   @override
+  @HiveField(8)
   String? get description;
+  @override
+  @HiveField(9)
+  int get quantity;
   @override
   @JsonKey(ignore: true)
   _$$DateDataImplCopyWith<_$DateDataImpl> get copyWith =>

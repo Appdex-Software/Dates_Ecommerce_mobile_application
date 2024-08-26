@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/user_features/store/domain/entities/date_product_entity.dart';
 import 'package:date_farm/src/user_features/store/domain/repositories/store_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -14,8 +13,7 @@ class StoreService extends _$StoreService {
   }
 
   DateProductEntity? _dateProductEntity;
-  DateProductEntity? getDateProductEntity() =>
-      _dateProductEntity;
+  DateProductEntity? getDateProductEntity() => _dateProductEntity;
 
   Future<DateProductEntity?> getProducts() async {
     final storeService = ref.watch(storeRepositoryProvider.notifier);
@@ -24,8 +22,7 @@ class StoreService extends _$StoreService {
       _dateProductEntity = await storeService.getProducts();
       return _dateProductEntity;
     } catch (e, stack) {
-      throw CustomError('Failed to get products',
-          err: e, stackTrace: stack);
+      throw CustomError('Failed to get products', err: e, stackTrace: stack);
     }
   }
 }

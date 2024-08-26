@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/user_features/store/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -19,7 +18,9 @@ class _DateStoreUiState extends State<DateStoreUi> {
     final (theme, l10n) = appSettingsRecord(context);
     return CustomScrollView(
       slivers: [
-        const CustomSilverAppBar(),
+        const CustomSilverAppBar(
+          backButton: SizedBox(),
+        ),
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 5.1.sw, vertical: 2.sh),
