@@ -16,10 +16,13 @@ class OrderService extends _$OrderService {
   OrderUserEntity? getOrderUserEntity() => _orderUserEntity;
 
   Future<OrderUserEntity?> getOrders() async {
+    state = const AsyncLoading();
     final orderService = ref.watch(orderRepositoryProvider.notifier);
 
     try {
       _orderUserEntity = await orderService.getOrders();
+    state = AsyncData(_orderUserEntity);
+
       return _orderUserEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get orders', err: e, stackTrace: stack);

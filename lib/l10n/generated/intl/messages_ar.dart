@@ -66,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mission": MessageLookupByLibrary.simpleMessage("الرسالة"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "نسعى من خلال توزيع التمور على الحجاج والجمعيات الخيرية إلى تقديم خدمة متميزة تلبي احتياجات ضيوف الرحمن والفئات المحتاجة، وتعكس قيم العطاء والخير التي تتميز بها مملكتنا، مع الالتزام بأعلى معايير الجودة والشفافية."),
+        "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("الاسم/اسم الجمعية"),
@@ -98,6 +99,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),
+        "thisItemHasBeenAddedAlready":
+            MessageLookupByLibrary.simpleMessage("تمت إضافة هذا العنصر بالفعل"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "vision": MessageLookupByLibrary.simpleMessage("الرؤية"),
         "visionAndMission":

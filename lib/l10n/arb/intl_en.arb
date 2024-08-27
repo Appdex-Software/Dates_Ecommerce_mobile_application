@@ -63,7 +63,9 @@
     "youHaveBeenRegisteredSuccessfully":"You have been registered successfully",
     "youHaveToErrorInOneOfTheFollowingFields" : "you have to error in one of the following fields",
     "phoneNumberIsRequired" : "Phone number is required",
-    "emptyValidationError": "This field cannot be empty"
+    "emptyValidationError": "This field cannot be empty",
+    "more":"More",
+    "thisItemHasBeenAddedAlready":"This item has been added already"
 
 
 
