@@ -19,6 +19,7 @@ class _ContactUsUiState extends State<ContactUsUi> {
     return SingleChildScrollView(
       padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             l10n.phone,
