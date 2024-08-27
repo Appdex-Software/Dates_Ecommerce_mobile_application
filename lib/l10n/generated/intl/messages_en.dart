@@ -66,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mission": MessageLookupByLibrary.simpleMessage("Message"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency."),
+        "more": MessageLookupByLibrary.simpleMessage("More"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nameAssociationName":
             MessageLookupByLibrary.simpleMessage("Name/Association Name"),
@@ -99,6 +100,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),
+        "thisItemHasBeenAddedAlready": MessageLookupByLibrary.simpleMessage(
+            "This item has been added already"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "vision": MessageLookupByLibrary.simpleMessage("Vision"),
         "visionAndMission":

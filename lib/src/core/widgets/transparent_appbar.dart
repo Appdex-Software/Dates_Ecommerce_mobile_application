@@ -30,6 +30,7 @@ class TransparentAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       systemOverlayStyle: systemOverlayStyle,
       //toolbarHeight: 100,
+      surfaceTintColor: Colors.transparent,
       leadingWidth: leadingWidth,
       leading: backButton ??
           IconButton(

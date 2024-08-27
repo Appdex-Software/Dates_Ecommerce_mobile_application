@@ -12,14 +12,14 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final (_, l10n) = appSettingsRecord(context);
+    final (theme, l10n) = appSettingsRecord(context);
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
       appBar: TransparentAppBar(
         centerTitle: true,
         title: Text(l10n.cart),
-        color: Colors.transparent,
+        elevation: 0,
+        color: theme.greenChalk,
         backButton: const SizedBox(),
       ),
       backgroundColor: Colors.white,

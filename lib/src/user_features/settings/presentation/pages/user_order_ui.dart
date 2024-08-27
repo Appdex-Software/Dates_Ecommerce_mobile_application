@@ -18,22 +18,27 @@ class UserOrderUi extends ConsumerWidget {
     return LinearGradientContainer(
       listOfColors: [theme.greenChalk, theme.white],
       child: SafeArea(
-        child: AsyncValueWidget(
-            value: ref.watch(orderServiceProvider),
-            data: (OrderUserEntity? orderEntity) {
-              return ListView(
-                shrinkWrap: true,
-                padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
-                children: List.generate(
-                  orderEntity?.data?.length ?? 0,
-                  (index) {
-                    return OrderItem(
-                      orderData: orderEntity?.data?[index],
-                    );
-                  },
-                ),
-              );
-            }),
+        child: RefreshIndicator(
+          onRefresh: () async {
+            await ref.watch(orderServiceProvider.notifier).getOrders();
+          },
+          color: theme.greenChalk,
+          child: AsyncValueWidget(
+              value: ref.watch(orderServiceProvider),
+              data: (OrderUserEntity? orderEntity) {
+                return ListView(
+                  padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
+                  children: List.generate(
+                    orderEntity?.data?.length ?? 0,
+                    (index) {
+                      return OrderItem(
+                        orderData: orderEntity?.data?[index],
+                      );
+                    },
+                  ),
+                );
+              }),
+        ),
       ),
     );
   }

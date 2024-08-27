@@ -22,6 +22,7 @@ class _CartUiState extends ConsumerState<CartUi> {
     final (theme, l10n) = appSettingsRecord(context);
     final cartService = ref.watch(cartServiceProvider.notifier);
     return LinearGradientContainer(
+      borderRadius: BorderRadius.zero,
       listOfColors: [theme.greenChalk, theme.white],
       child: Padding(
         padding: EdgeInsets.only(
@@ -33,69 +34,73 @@ class _CartUiState extends ConsumerState<CartUi> {
             AsyncValueWidget(
                 value: ref.watch(cartServiceProvider),
                 data: (List<DateData> cartItem) {
-                  return ListView.separated(
-                    shrinkWrap: true,
-                    itemCount: cartItem.length,
-                    separatorBuilder: (context, index) {
-                      return Divider(
-                        color: theme.dividerColor.withOpacity(0.5),
-                      );
-                    },
-                    itemBuilder: (context, index) {
-                      return CartItemContainer(
-                        index: index,
-                        dateData: cartItem[index],
-                      );
-                    },
+                  return SizedBox(
+                    height: 55.sh,
+                    child: ListView.separated(
+                      shrinkWrap: true,
+                      itemCount: cartItem.length,
+                      separatorBuilder: (context, index) {
+                        return Divider(
+                          color: theme.dividerColor.withOpacity(0.5),
+                        );
+                      },
+                      itemBuilder: (context, index) {
+                        return CartItemContainer(
+                          index: index,
+                          dateData: cartItem[index],
+                        );
+                      },
+                    ),
                   );
                 }),
-            const Spacer(
-              flex: 2,
-            ),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    l10n.comment,
-                    style: theme.bodyMedium,
-                  ),
-                  gapH8,
-                  CustomTextField(
-                    keyboardType: TextInputType.name,
-                    controller: commentController,
-                    hint: l10n.comment,
-                  ),
-                  gapH12,
-                  AsyncValueWidget(
-                      value: ref.watch(cartServiceProvider),
-                      data: (List<DateData> cartList) {
-                        return CustomButton(
-                          width: double.infinity,
-                          isDisabled: cartList.isEmpty ? true : false,
-                          elevation: 5,
-                          title: l10n.confirmOrder,
-                          titleStyle:
-                              theme.titleSmall.copyWith(color: theme.white),
-                          onPressed: () async {
-                            cartService.setCreateOrderBody(
-                                comment: commentController.text);
-                            cartService.createOrder();
-                            if (cartService
-                                    .getCreateOrderResponseEntity()
-                                    ?.statusCode ==
-                                201) {
-                              commentController.text = '';
-                              showSuccessAlert(context,
-                                  "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}");
-                            } else {
-                              AppToast.errorToast(
-                                  l10n.theOrderHasFailed, context);
-                            }
-                          },
-                        );
-                      }),
-                ],
+              child: Padding(
+                padding:  EdgeInsets.only(bottom: 2.sh),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      l10n.comment,
+                      style: theme.bodyMedium,
+                    ),
+                    gapH8,
+                    CustomTextField(
+                      keyboardType: TextInputType.name,
+                      controller: commentController,
+                      hint: l10n.comment,
+                    ),
+                    gapH12,
+                    AsyncValueWidget(
+                        value: ref.watch(cartServiceProvider),
+                        data: (List<DateData> cartList) {
+                          return CustomButton(
+                            width: double.infinity,
+                            isDisabled: cartList.isEmpty ? true : false,
+                            elevation: 5,
+                            title: l10n.confirmOrder,
+                            titleStyle:
+                                theme.titleSmall.copyWith(color: theme.white),
+                            onPressed: () async {
+                              cartService.setCreateOrderBody(
+                                  comment: commentController.text);
+                              await cartService.createOrder();
+                              if (cartService
+                                      .getCreateOrderResponseEntity()
+                                      ?.statusCode ==
+                                  201) {
+                                commentController.text = '';
+                                showSuccessAlert(context,
+                                    "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}");
+                              } else {
+                                AppToast.errorToast(
+                                    l10n.theOrderHasFailed, context);
+                              }
+                            },
+                          );
+                        }),
+                  ],
+                ),
               ),
             )
           ],

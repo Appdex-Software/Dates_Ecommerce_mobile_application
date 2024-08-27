@@ -685,6 +685,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `More`
+  String get more {
+    return Intl.message(
+      'More',
+      name: 'more',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This item has been added already`
+  String get thisItemHasBeenAddedAlready {
+    return Intl.message(
+      'This item has been added already',
+      name: 'thisItemHasBeenAddedAlready',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

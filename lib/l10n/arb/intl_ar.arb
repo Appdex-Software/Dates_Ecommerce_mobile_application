@@ -63,7 +63,10 @@
     "youHaveBeenRegisteredSuccessfully": "لقد تم تسجيلك بنجاح",
     "youHaveToErrorInOneOfTheFollowingFields" : "يجب عليك الخطأ في أحد الحقول التالية",
     "phoneNumberIsRequired" : "رقم الهاتف مطلوب",
-    "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً"
+    "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً",
+    "more": "المزيد",
+    "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل"
+
 
 
     
