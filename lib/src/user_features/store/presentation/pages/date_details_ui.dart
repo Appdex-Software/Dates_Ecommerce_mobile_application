@@ -28,7 +28,7 @@ class _DateDetailsUiState extends ConsumerState<DateDetailsUi> {
           borderRadius: BorderRadius.zero,
           listOfColors: [theme.greenChalk, theme.white],
           child: SingleChildScrollView(
-            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw,),
+            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw,bottom: 3.sh),
             child: Column(
               children: [
                 ProductImage(image: widget.data?.image ?? '', size: 40.sw),

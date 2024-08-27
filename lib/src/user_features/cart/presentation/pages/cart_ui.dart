@@ -1,6 +1,7 @@
 import 'package:date_farm/src/user_features/cart/presentation/providers/cart_provider.dart';
 import 'package:date_farm/src/user_features/cart/presentation/widgets/cart_item_container.dart';
 import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
+import 'package:date_farm/src/user_features/store/presentation/providers/store_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -21,6 +22,7 @@ class _CartUiState extends ConsumerState<CartUi> {
   Widget build(BuildContext context) {
     final (theme, l10n) = appSettingsRecord(context);
     final cartService = ref.watch(cartServiceProvider.notifier);
+    final storeService = ref.watch(storeServiceProvider.notifier);
     return LinearGradientContainer(
       borderRadius: BorderRadius.zero,
       listOfColors: [theme.greenChalk, theme.white],
@@ -90,11 +92,12 @@ class _CartUiState extends ConsumerState<CartUi> {
                                       ?.statusCode ==
                                   201) {
                                 commentController.text = '';
-                                showSuccessAlert(context,
-                                    "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}");
+                                await storeService.getProducts();
+                                context.mounted ? showSuccessAlert(context,
+                                    "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}") : null;
                               } else {
-                                AppToast.errorToast(
-                                    l10n.theOrderHasFailed, context);
+                                context.mounted ? AppToast.errorToast(
+                                    l10n.theOrderHasFailed, context) : null;
                               }
                             },
                           );
