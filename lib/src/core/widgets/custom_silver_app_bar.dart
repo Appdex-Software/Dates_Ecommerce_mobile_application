@@ -22,7 +22,7 @@ class _CustomSilverAppBarState extends State<CustomSilverAppBar> {
 
     return SliverAppBar(
       backgroundColor: theme.greenChalk,
-      expandedHeight: 190,
+      expandedHeight: 175,
       leading: widget.backButton ??
           IconButton(
             icon: Icon(
