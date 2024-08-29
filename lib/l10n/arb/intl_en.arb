@@ -65,8 +65,14 @@
     "phoneNumberIsRequired" : "Phone number is required",
     "emptyValidationError": "This field cannot be empty",
     "more":"More",
-    "thisItemHasBeenAddedAlready":"This item has been added already"
+    "thisItemHasBeenAddedAlready":"This item has been added already",
 
 
 
+    "inventory" : "inventory",
+    "ordersInProgress":"Orders in progress",
+    "joinRequests" : "Join Requests",
+    "newPost" : "New post",
+    "accept" : "Accept",
+    "decline" : "Decline"
 }

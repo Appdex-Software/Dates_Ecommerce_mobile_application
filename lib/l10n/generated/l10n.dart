@@ -705,6 +705,66 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `inventory`
+  String get inventory {
+    return Intl.message(
+      'inventory',
+      name: 'inventory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders in progress`
+  String get ordersInProgress {
+    return Intl.message(
+      'Orders in progress',
+      name: 'ordersInProgress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join Requests`
+  String get joinRequests {
+    return Intl.message(
+      'Join Requests',
+      name: 'joinRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New post`
+  String get newPost {
+    return Intl.message(
+      'New post',
+      name: 'newPost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accept`
+  String get accept {
+    return Intl.message(
+      'Accept',
+      name: 'accept',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Decline`
+  String get decline {
+    return Intl.message(
+      'Decline',
+      name: 'decline',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

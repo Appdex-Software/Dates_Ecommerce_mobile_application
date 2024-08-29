@@ -65,10 +65,16 @@
     "phoneNumberIsRequired" : "رقم الهاتف مطلوب",
     "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً",
     "more": "المزيد",
-    "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل"
+    "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل",
 
 
 
     
 
+    "inventory" : "المخزون",
+    "ordersInProgress":"الطلبات",
+    "joinRequests" : "طلب انضمام",
+    "newPost" : "منشور جديد",
+    "accept" : "قبول",
+    "decline" : "رفض"
 }

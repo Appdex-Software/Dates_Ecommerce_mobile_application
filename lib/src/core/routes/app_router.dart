@@ -37,6 +37,10 @@ class AppRouter extends _$AppRouter {
           ),
         ]),
         AutoRoute(page: DateDetailsRoute.page),
+        AutoRoute(page: HomeAdminNavigationRoute.page,children: [
+          AutoRoute(page: HomeAdminRoute.page,initial: true),
+          AutoRoute(page: OrdersAdminRoute.page,),
+        ]),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {

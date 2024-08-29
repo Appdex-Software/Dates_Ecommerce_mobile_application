@@ -16,7 +16,6 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  // final router = GetIt.instance<AppRouter>();
   final _appRouter = AppRouter();
 
   @override
