@@ -19,6 +19,7 @@ class _ContactUsUiState extends State<ContactUsUi> {
     return SingleChildScrollView(
       padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             l10n.phone,
@@ -27,7 +28,8 @@ class _ContactUsUiState extends State<ContactUsUi> {
           gapH12,
           LinearGradientContainer(
               child: Padding(
-            padding: EdgeInsets.only(left: 2.sw,right: 2.sw,top: 2.sh,bottom: 5.sh),
+            padding: EdgeInsets.only(
+                left: 2.sw, right: 2.sw, top: 2.sh, bottom: 5.sh),
             child: const Text("من داخل السعودية"
                 "\n01212541151515"
                 "\nمن خارج السعودية"
@@ -41,7 +43,8 @@ class _ContactUsUiState extends State<ContactUsUi> {
           gapH12,
           LinearGradientContainer(
               child: Padding(
-            padding: EdgeInsets.only(left: 2.sw,right: 2.sw,top: 2.sh,bottom: 5.sh),
+            padding: EdgeInsets.only(
+                left: 2.sw, right: 2.sw, top: 2.sh, bottom: 5.sh),
             child: const Text("5 شارع المدينة السعودية "),
           )),
           gapH12,
@@ -52,7 +55,8 @@ class _ContactUsUiState extends State<ContactUsUi> {
           gapH12,
           LinearGradientContainer(
               child: Padding(
-            padding: EdgeInsets.only(left: 2.sw,right: 2.sw,top: 2.sh,bottom: 5.sh),
+            padding: EdgeInsets.only(
+                left: 2.sw, right: 2.sw, top: 2.sh, bottom: 5.sh),
             child: const Text("zsdas@gmail.com"),
           )),
           gapH12,
