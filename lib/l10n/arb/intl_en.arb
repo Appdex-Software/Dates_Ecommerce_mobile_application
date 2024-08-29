@@ -66,9 +66,6 @@
     "emptyValidationError": "This field cannot be empty",
     "more":"More",
     "thisItemHasBeenAddedAlready":"This item has been added already",
-
-
-
     "inventory" : "inventory",
     "ordersInProgress":"Orders in progress",
     "joinRequests" : "Join Requests",

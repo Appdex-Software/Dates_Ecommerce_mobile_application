@@ -54,6 +54,7 @@ class _AppState extends State<App> {
                   return FlutterFlowTheme.of(context).whiteColor;
                 }
                 if (states.contains(WidgetState.hovered)) {
+
                   return FlutterFlowTheme.of(context).whiteColor;
                 }
                 return FlutterFlowTheme.of(context).whiteColor;

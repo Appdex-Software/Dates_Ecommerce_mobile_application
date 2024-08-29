@@ -66,11 +66,6 @@
     "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً",
     "more": "المزيد",
     "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل",
-
-
-
-    
-
     "inventory" : "المخزون",
     "ordersInProgress":"الطلبات",
     "joinRequests" : "طلب انضمام",
