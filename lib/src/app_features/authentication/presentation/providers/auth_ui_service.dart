@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:date_farm/src/app_features/authentication/data/models/register_body/register_body.dart';
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_data.dart';
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_authentication_error_entity.dart';
@@ -72,7 +74,10 @@ class AuthUiService extends _$AuthUiService {
             tokenn: _userEntity?.data?.accessToken ?? '');
         var patientBox = Hive.box(userInfoBox);
         patientBox.add(_userEntity?.data);
+        log((_userEntity?.data?.user?.role).toString());
+       
       }
+      
       _userData = _userEntity?.data;
       state = AsyncData(_userData);
       return _userEntity;
@@ -206,9 +211,11 @@ class AuthUiService extends _$AuthUiService {
   // }
 
   logout() async {
-    var userBox = Hive.box(userInfoBox);
+    try {
+      var userBox = Hive.box(userInfoBox);
     var cartBox = Hive.box(dateCartItemBox);
     sessionManager.setLogin(statue: false);
+    sessionManager.setAdminLogin(statue: false);
     sessionManager.setAuthToken(tokenn: '');
     _userEntity = null;
     userBox.clear();
@@ -217,6 +224,9 @@ class AuthUiService extends _$AuthUiService {
     cartBox.close();
     ref.invalidateSelf();
     state = const AsyncData(null);
+    } on Exception catch (e) {
+      throw e.toString();
+    }
   }
 
   // resetAll() {

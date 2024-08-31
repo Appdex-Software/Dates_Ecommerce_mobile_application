@@ -54,8 +54,7 @@
     "decline" : "رفض",
     "review" : "مراجعة",
     "available" : "المتاح",
-    "unavailable" : "غير المتاح"
-    "review" : "مراجعة"
+    "unavailable" : "غير المتاح",
 
     "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
     "logout" : "تسجيل الخروج",
