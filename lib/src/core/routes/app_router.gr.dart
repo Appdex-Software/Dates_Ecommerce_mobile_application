@@ -34,9 +34,13 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     DateDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<DateDetailsRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const DateDetailsPage(),
+        child: DateDetailsPage(
+          key: args.key,
+          dateData: args.dateData,
+        ),
       );
     },
     DateStoreRoute.name: (routeData) {
@@ -94,9 +98,14 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     NewsDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<NewsDetailsRouteArgs>(
+          orElse: () => const NewsDetailsRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const NewsDetailsPage(),
+        child: NewsDetailsPage(
+          key: args.key,
+          newsData: args.newsData,
+        ),
       );
     },
     NewsRoute.name: (routeData) {
@@ -188,16 +197,40 @@ class DashboardLayoutRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [DateDetailsPage]
-class DateDetailsRoute extends PageRouteInfo<void> {
-  const DateDetailsRoute({List<PageRouteInfo>? children})
-      : super(
+class DateDetailsRoute extends PageRouteInfo<DateDetailsRouteArgs> {
+  DateDetailsRoute({
+    Key? key,
+    required DateData dateData,
+    List<PageRouteInfo>? children,
+  }) : super(
           DateDetailsRoute.name,
+          args: DateDetailsRouteArgs(
+            key: key,
+            dateData: dateData,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'DateDetailsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<DateDetailsRouteArgs> page =
+      PageInfo<DateDetailsRouteArgs>(name);
+}
+
+class DateDetailsRouteArgs {
+  const DateDetailsRouteArgs({
+    this.key,
+    required this.dateData,
+  });
+
+  final Key? key;
+
+  final DateData dateData;
+
+  @override
+  String toString() {
+    return 'DateDetailsRouteArgs{key: $key, dateData: $dateData}';
+  }
 }
 
 /// generated route for
@@ -359,16 +392,40 @@ class LoginRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [NewsDetailsPage]
-class NewsDetailsRoute extends PageRouteInfo<void> {
-  const NewsDetailsRoute({List<PageRouteInfo>? children})
-      : super(
+class NewsDetailsRoute extends PageRouteInfo<NewsDetailsRouteArgs> {
+  NewsDetailsRoute({
+    Key? key,
+    NewsData? newsData,
+    List<PageRouteInfo>? children,
+  }) : super(
           NewsDetailsRoute.name,
+          args: NewsDetailsRouteArgs(
+            key: key,
+            newsData: newsData,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'NewsDetailsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<NewsDetailsRouteArgs> page =
+      PageInfo<NewsDetailsRouteArgs>(name);
+}
+
+class NewsDetailsRouteArgs {
+  const NewsDetailsRouteArgs({
+    this.key,
+    this.newsData,
+  });
+
+  final Key? key;
+
+  final NewsData? newsData;
+
+  @override
+  String toString() {
+    return 'NewsDetailsRouteArgs{key: $key, newsData: $newsData}';
+  }
 }
 
 /// generated route for
