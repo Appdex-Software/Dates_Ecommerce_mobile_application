@@ -94,10 +94,18 @@ class _LoginUiState extends ConsumerState<LoginUi> {
                               password: passwordController.text);
                           if (authService.getUserEntity() != null &&
                               authService.getUserEntity()?.statusCode == 200) {
-                            await sessionManager.setLogin(statue: true);
-                            if (context.mounted) {
-                              context.router.replace(const HomeUserRoute());
-                            }
+                                
+                                 if(authService.getUserEntity()?.data?.user?.role == "customer") {
+                                  await sessionManager.setLogin(statue: true);
+                                  if (context.mounted) {
+                                    context.router.replace(const HomeUserRoute());
+                                  }
+                                } else {
+                                    await sessionManager.setAdminLogin(statue: true);
+                                    context.mounted ? context.router.replace(HomeAdminRoute()) : null;
+
+                                }
+                            
                           } else {
                             if (context.mounted) {
                               AppToast.errorToast(

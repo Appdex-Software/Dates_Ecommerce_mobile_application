@@ -107,9 +107,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),
-        "unavailable": MessageLookupByLibrary.simpleMessage("غير المتاح"),
         "thisItemHasBeenAddedAlready":
             MessageLookupByLibrary.simpleMessage("تمت إضافة هذا العنصر بالفعل"),
+        "unavailable": MessageLookupByLibrary.simpleMessage("غير المتاح"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "vision": MessageLookupByLibrary.simpleMessage("الرؤية"),
         "visionAndMission":

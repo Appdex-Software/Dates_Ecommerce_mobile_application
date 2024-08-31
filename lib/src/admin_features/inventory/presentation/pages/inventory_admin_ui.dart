@@ -27,7 +27,7 @@ class _InventoryAdminUiState extends State<InventoryAdminUi> {
           gapH20,
           Column(
             children: [
-              InventoryItem(title: "title", quantity: quantity)
+              InventoryItem(title: "title", quantity: 0)
             ],
           )
         ],

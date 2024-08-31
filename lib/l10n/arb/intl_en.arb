@@ -53,8 +53,7 @@
     "decline" : "Decline",
     "review" : "Review",
     "available" : "Available",
-    "unavailable" : "Unavailable"
-    "review" : "Review"
+    "unavailable" : "Unavailable",
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
     "logout" : "Logout",
     "theItemHasBeenAddedSuccessfully":"The item has been added successfully",

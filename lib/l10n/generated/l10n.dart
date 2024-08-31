@@ -501,11 +501,6 @@ class AppLocalizations {
     return Intl.message(
       'inventory',
       name: 'inventory',
-  /// `Please enter your email and password`
-  String get pleaseEnterYourEmailAndPassword {
-    return Intl.message(
-      'Please enter your email and password',
-      name: 'pleaseEnterYourEmailAndPassword',
       desc: '',
       args: [],
     );
@@ -516,11 +511,6 @@ class AppLocalizations {
     return Intl.message(
       'Orders in progress',
       name: 'ordersInProgress',
-  /// `Logout`
-  String get logout {
-    return Intl.message(
-      'Logout',
-      name: 'logout',
       desc: '',
       args: [],
     );
@@ -531,11 +521,6 @@ class AppLocalizations {
     return Intl.message(
       'Join Requests',
       name: 'joinRequests',
-  /// `The item has been added successfully`
-  String get theItemHasBeenAddedSuccessfully {
-    return Intl.message(
-      'The item has been added successfully',
-      name: 'theItemHasBeenAddedSuccessfully',
       desc: '',
       args: [],
     );
@@ -546,11 +531,6 @@ class AppLocalizations {
     return Intl.message(
       'New post',
       name: 'newPost',
-  /// `Failed to login`
-  String get failedToLogin {
-    return Intl.message(
-      'Failed to login',
-      name: 'failedToLogin',
       desc: '',
       args: [],
     );
@@ -561,11 +541,6 @@ class AppLocalizations {
     return Intl.message(
       'Accept',
       name: 'accept',
-  /// `Comment`
-  String get comment {
-    return Intl.message(
-      'Comment',
-      name: 'comment',
       desc: '',
       args: [],
     );
@@ -576,6 +551,91 @@ class AppLocalizations {
     return Intl.message(
       'Decline',
       name: 'decline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Review`
+  String get review {
+    return Intl.message(
+      'Review',
+      name: 'review',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available`
+  String get available {
+    return Intl.message(
+      'Available',
+      name: 'available',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unavailable`
+  String get unavailable {
+    return Intl.message(
+      'Unavailable',
+      name: 'unavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email and password`
+  String get pleaseEnterYourEmailAndPassword {
+    return Intl.message(
+      'Please enter your email and password',
+      name: 'pleaseEnterYourEmailAndPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The item has been added successfully`
+  String get theItemHasBeenAddedSuccessfully {
+    return Intl.message(
+      'The item has been added successfully',
+      name: 'theItemHasBeenAddedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to login`
+  String get failedToLogin {
+    return Intl.message(
+      'Failed to login',
+      name: 'failedToLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comment`
+  String get comment {
+    return Intl.message(
+      'Comment',
+      name: 'comment',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The order has been created successfully`
   String get theOrderHasBeenCreatedSuccessfully {
     return Intl.message(
@@ -586,12 +646,6 @@ class AppLocalizations {
     );
   }
 
-
-  /// `Review`
-  String get review {
-    return Intl.message(
-      'Review',
-      name: 'review',
   /// `The order has failed`
   String get theOrderHasFailed {
     return Intl.message(
@@ -737,26 +791,6 @@ class AppLocalizations {
     return Intl.message(
       'This item has been added already',
       name: 'thisItemHasBeenAddedAlready',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Available`
-  String get available {
-    return Intl.message(
-      'Available',
-      name: 'available',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Unavailable`
-  String get unavailable {
-    return Intl.message(
-      'Unavailable',
-      name: 'unavailable',
       desc: '',
       args: [],
     );
