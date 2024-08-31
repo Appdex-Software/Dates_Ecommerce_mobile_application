@@ -40,6 +40,7 @@
     "greenDates" : "تمر خضري",
     "add" : "اضافة",
     "confirmOrder" : "تاكيد الطلب",
+    "failedToLogin":"فشل في تسجيل الدخول",
     "addMore" : "اضافة المزيد",
     "orders" : "الطلبات",
     "contactUs" : "تواصل معنا",
@@ -52,4 +53,30 @@
     "accept" : "قبول",
     "decline" : "رفض",
     "review" : "مراجعة"
+
+    "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
+    "logout" : "تسجيل الخروج",
+    "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح",
+    "comment" : "تعليق",
+    "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
+    "theOrderHasFailed" : "لقد فشل الطلب",
+    "confirm" : "تأكيد",
+    "yourOrderNumberIs" : "رقم طلبك هو",
+    "name":"الاسم",
+    "country":"الدولة",
+    "city":"المدينة",
+    "street":"شارع",
+    "zipCode":"الرمز البريدي",
+    "username" : "اسم المستخدم",
+    "youHaveBeenRegisteredSuccessfully": "لقد تم تسجيلك بنجاح",
+    "youHaveToErrorInOneOfTheFollowingFields" : "يجب عليك الخطأ في أحد الحقول التالية",
+    "phoneNumberIsRequired" : "رقم الهاتف مطلوب",
+    "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً",
+    "more": "المزيد",
+    "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل"
+
+
+
+    
+
 }

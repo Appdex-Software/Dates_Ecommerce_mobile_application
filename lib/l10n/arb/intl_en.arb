@@ -52,4 +52,28 @@
     "accept" : "Accept",
     "decline" : "Decline",
     "review" : "Review"
+    "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
+    "logout" : "Logout",
+    "theItemHasBeenAddedSuccessfully":"The item has been added successfully",
+    "failedToLogin":"Failed to login",
+    "comment" : "Comment",
+    "theOrderHasBeenCreatedSuccessfully" : "The order has been created successfully",
+    "theOrderHasFailed" : "The order has failed",
+    "confirm" : "Confirm",
+    "yourOrderNumberIs" : "Your order number is",
+    "name":"Name",
+    "country":"Country",
+    "city":"City",
+    "street":"Street",
+    "zipCode":"ZipCode",
+    "username" : "Username",
+    "youHaveBeenRegisteredSuccessfully":"You have been registered successfully",
+    "youHaveToErrorInOneOfTheFollowingFields" : "you have to error in one of the following fields",
+    "phoneNumberIsRequired" : "Phone number is required",
+    "emptyValidationError": "This field cannot be empty",
+    "more":"More",
+    "thisItemHasBeenAddedAlready":"This item has been added already"
+
+
+
 }

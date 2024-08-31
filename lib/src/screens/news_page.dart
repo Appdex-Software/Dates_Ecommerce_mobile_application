@@ -3,7 +3,6 @@ import 'package:date_farm/src/user_features/settings/presentation/pages/news_ui.
 import 'package:flutter/material.dart';
 
 import '../core/constants/adaptive.dart';
-import '../core/widgets/widgets.dart';
 
 @RoutePage()
 class NewsPage extends StatelessWidget {
@@ -13,9 +12,9 @@ class NewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: const TransparentAppBar(
-        color: Colors.transparent,
-      ),
+      // appBar: const TransparentAppBar(
+      //   color: Colors.transparent,
+      // ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(
         mobile: const NewsUi(),

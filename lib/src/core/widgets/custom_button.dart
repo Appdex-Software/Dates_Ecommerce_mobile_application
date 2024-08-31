@@ -54,7 +54,9 @@ class CustomButton extends StatelessWidget {
   final Color? splashColor;
 
   TextStyle get _titleStyle =>
-      titleStyle ?? const TextStyle(color: Colors.white, fontSize: 16,fontWeight: FontWeight.bold);
+      titleStyle ??
+      const TextStyle(
+          color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold);
 
   ShapeBorder get _shape =>
       shape ?? RoundedRectangleBorder(borderRadius: BorderRadius.circular(8));
@@ -74,9 +76,8 @@ class CustomButton extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       color: isDisabled ? theme.black : backgroundColor,
       shape: _shape,
-      elevation: elevation,
+      elevation: isDisabled ? 0 : elevation,
       shadowColor: theme.black,
-      
       child: InkWell(
         splashColor: _splashColor,
         onTap: isDisabled || loading ? null : onPressed,
@@ -85,7 +86,8 @@ class CustomButton extends StatelessWidget {
           child: Ink(
             decoration: ShapeDecoration(
               shape: _shape,
-              color: isDisabled ? theme.gray600 : backgroundColor,
+              color:
+                  isDisabled ? theme.white.withOpacity(0.7) : backgroundColor,
             ),
             child: loading
                 ? Center(

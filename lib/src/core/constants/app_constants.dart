@@ -3,14 +3,22 @@ import 'package:logger/web.dart';
 class AppConstants {
   const AppConstants._();
 
-  static const String apiBaseUrl = '';
+  static const String apiBaseUrl = 'https://waqfmohammedhail.org/api/v1';
 
   static const String refreshToken = 'refresh-token';
+  static const cartKey = 'cartKey';
+  static const String loginApiUrl = '/iam/login';
+  static const String registerApiUrl = '/iam/users';
+  static const String getProductUrl = '/products/products';
+  static const String createOrderUrl = '/orders/orders';
+  static const String getNewsUrl = '/products/news';
+  static const String getOrdersUrl = '/orders/orders';
   static const String expiryTime = 'expiry-time';
   static const String defaultLocale = 'default-locale';
   static const String userId = 'userId';
   static const String deviceToken = 'DeviceToken';
 }
+
 Logger logger = Logger(
   printer: HybridPrinter(
     PrettyPrinter(
@@ -40,3 +48,6 @@ Logger logger = Logger(
     ),
   ),
 );
+
+const userInfoBox = 'userInfoBox';
+const dateCartItemBox = 'dateCartItemBox';

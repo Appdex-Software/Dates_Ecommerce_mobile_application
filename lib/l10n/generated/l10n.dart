@@ -501,6 +501,11 @@ class AppLocalizations {
     return Intl.message(
       'inventory',
       name: 'inventory',
+  /// `Please enter your email and password`
+  String get pleaseEnterYourEmailAndPassword {
+    return Intl.message(
+      'Please enter your email and password',
+      name: 'pleaseEnterYourEmailAndPassword',
       desc: '',
       args: [],
     );
@@ -511,6 +516,11 @@ class AppLocalizations {
     return Intl.message(
       'Orders in progress',
       name: 'ordersInProgress',
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
       desc: '',
       args: [],
     );
@@ -521,6 +531,11 @@ class AppLocalizations {
     return Intl.message(
       'Join Requests',
       name: 'joinRequests',
+  /// `The item has been added successfully`
+  String get theItemHasBeenAddedSuccessfully {
+    return Intl.message(
+      'The item has been added successfully',
+      name: 'theItemHasBeenAddedSuccessfully',
       desc: '',
       args: [],
     );
@@ -531,6 +546,11 @@ class AppLocalizations {
     return Intl.message(
       'New post',
       name: 'newPost',
+  /// `Failed to login`
+  String get failedToLogin {
+    return Intl.message(
+      'Failed to login',
+      name: 'failedToLogin',
       desc: '',
       args: [],
     );
@@ -541,6 +561,11 @@ class AppLocalizations {
     return Intl.message(
       'Accept',
       name: 'accept',
+  /// `Comment`
+  String get comment {
+    return Intl.message(
+      'Comment',
+      name: 'comment',
       desc: '',
       args: [],
     );
@@ -551,16 +576,167 @@ class AppLocalizations {
     return Intl.message(
       'Decline',
       name: 'decline',
+  /// `The order has been created successfully`
+  String get theOrderHasBeenCreatedSuccessfully {
+    return Intl.message(
+      'The order has been created successfully',
+      name: 'theOrderHasBeenCreatedSuccessfully',
       desc: '',
       args: [],
     );
   }
+
 
   /// `Review`
   String get review {
     return Intl.message(
       'Review',
       name: 'review',
+  /// `The order has failed`
+  String get theOrderHasFailed {
+    return Intl.message(
+      'The order has failed',
+      name: 'theOrderHasFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your order number is`
+  String get yourOrderNumberIs {
+    return Intl.message(
+      'Your order number is',
+      name: 'yourOrderNumberIs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message(
+      'Country',
+      name: 'country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Street`
+  String get street {
+    return Intl.message(
+      'Street',
+      name: 'street',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ZipCode`
+  String get zipCode {
+    return Intl.message(
+      'ZipCode',
+      name: 'zipCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have been registered successfully`
+  String get youHaveBeenRegisteredSuccessfully {
+    return Intl.message(
+      'You have been registered successfully',
+      name: 'youHaveBeenRegisteredSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `you have to error in one of the following fields`
+  String get youHaveToErrorInOneOfTheFollowingFields {
+    return Intl.message(
+      'you have to error in one of the following fields',
+      name: 'youHaveToErrorInOneOfTheFollowingFields',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number is required`
+  String get phoneNumberIsRequired {
+    return Intl.message(
+      'Phone number is required',
+      name: 'phoneNumberIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field cannot be empty`
+  String get emptyValidationError {
+    return Intl.message(
+      'This field cannot be empty',
+      name: 'emptyValidationError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get more {
+    return Intl.message(
+      'More',
+      name: 'more',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This item has been added already`
+  String get thisItemHasBeenAddedAlready {
+    return Intl.message(
+      'This item has been added already',
+      name: 'thisItemHasBeenAddedAlready',
       desc: '',
       args: [],
     );

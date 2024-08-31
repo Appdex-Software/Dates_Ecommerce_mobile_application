@@ -1,3 +1,4 @@
+import 'package:date_farm/src/core/helpers/session_manager.dart';
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
@@ -6,6 +7,7 @@ class LoggerInterceptor extends Interceptor {
     // Customize the printer
     printer: PrettyPrinter(
       methodCount: 0,
+      printTime: false,
     ),
   );
 
@@ -26,9 +28,9 @@ class LoggerInterceptor extends Interceptor {
       options.headers.remove('Authorization'); //remove the auxiliary header
       return handler.next(options);
     }
+    final accessToken = await sessionManager.getAuthToken();
     final requestPath = '${options.baseUrl}${options.path}';
-    //TODO: Add dynamic token here
-    options.headers['Authorization'] = 'Bearer token';
+    options.headers['Authorization'] = 'Bearer $accessToken';
     //options.headers['app'] = 'fulfillment';
     options.headers['Accept'] = 'application/json';
     logger.i('${options.method} request => $requestPath'); // Info log
