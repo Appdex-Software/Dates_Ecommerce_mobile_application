@@ -16,7 +16,6 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  // final router = GetIt.instance<AppRouter>();
   final _appRouter = AppRouter();
 
   @override
@@ -34,6 +33,7 @@ class _AppState extends State<App> {
     SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
     );
+
     return ResponsiveApp(builder: (context) {
       return MaterialApp.router(
           title: 'Date-Farm-Ecommerce',
@@ -55,6 +55,7 @@ class _AppState extends State<App> {
                   return FlutterFlowTheme.of(context).whiteColor;
                 }
                 if (states.contains(WidgetState.hovered)) {
+
                   return FlutterFlowTheme.of(context).whiteColor;
                 }
                 return FlutterFlowTheme.of(context).whiteColor;

@@ -45,6 +45,13 @@
     "contactUs" : "Contact Us",
     "newDetails" : "New Details",
     "phone" : "Phone",
+    "inventory" : "inventory",
+    "ordersInProgress":"Orders in progress",
+    "joinRequests" : "Join Requests",
+    "newPost" : "New post",
+    "accept" : "Accept",
+    "decline" : "Decline",
+    "review" : "Review"
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
     "logout" : "Logout",
     "theItemHasBeenAddedSuccessfully":"The item has been added successfully",

@@ -12,6 +12,7 @@ export 'transparent_appbar.dart';
 export 'linear_gradient_container.dart';
 export 'app_startup_widget.dart';
 export 'custom_silver_app_bar.dart';
+export 'custom_drawer.dart';
 export 'error_message_widget.dart';
 export 'async_value_widget.dart';
 export 'alert_dialog.dart';

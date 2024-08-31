@@ -46,6 +46,7 @@ class _LoginUiState extends ConsumerState<LoginUi> {
               controller: emailController,
             ),
             gapH12,
+
             CustomTextField(
               keyboardType: TextInputType.name,
               hint: l10n.password,

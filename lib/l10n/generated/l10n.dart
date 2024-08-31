@@ -496,6 +496,11 @@ class AppLocalizations {
     );
   }
 
+  /// `inventory`
+  String get inventory {
+    return Intl.message(
+      'inventory',
+      name: 'inventory',
   /// `Please enter your email and password`
   String get pleaseEnterYourEmailAndPassword {
     return Intl.message(
@@ -506,6 +511,11 @@ class AppLocalizations {
     );
   }
 
+  /// `Orders in progress`
+  String get ordersInProgress {
+    return Intl.message(
+      'Orders in progress',
+      name: 'ordersInProgress',
   /// `Logout`
   String get logout {
     return Intl.message(
@@ -516,6 +526,11 @@ class AppLocalizations {
     );
   }
 
+  /// `Join Requests`
+  String get joinRequests {
+    return Intl.message(
+      'Join Requests',
+      name: 'joinRequests',
   /// `The item has been added successfully`
   String get theItemHasBeenAddedSuccessfully {
     return Intl.message(
@@ -526,6 +541,11 @@ class AppLocalizations {
     );
   }
 
+  /// `New post`
+  String get newPost {
+    return Intl.message(
+      'New post',
+      name: 'newPost',
   /// `Failed to login`
   String get failedToLogin {
     return Intl.message(
@@ -536,6 +556,11 @@ class AppLocalizations {
     );
   }
 
+  /// `Accept`
+  String get accept {
+    return Intl.message(
+      'Accept',
+      name: 'accept',
   /// `Comment`
   String get comment {
     return Intl.message(
@@ -546,6 +571,11 @@ class AppLocalizations {
     );
   }
 
+  /// `Decline`
+  String get decline {
+    return Intl.message(
+      'Decline',
+      name: 'decline',
   /// `The order has been created successfully`
   String get theOrderHasBeenCreatedSuccessfully {
     return Intl.message(
@@ -556,6 +586,12 @@ class AppLocalizations {
     );
   }
 
+
+  /// `Review`
+  String get review {
+    return Intl.message(
+      'Review',
+      name: 'review',
   /// `The order has failed`
   String get theOrderHasFailed {
     return Intl.message(
