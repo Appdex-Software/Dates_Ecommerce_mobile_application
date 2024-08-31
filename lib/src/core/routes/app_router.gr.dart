@@ -56,9 +56,11 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     HomeAdminRoute.name: (routeData) {
+      final args = routeData.argsAs<HomeAdminRouteArgs>(
+          orElse: () => const HomeAdminRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const HomeAdminPage(),
+        child: HomeAdminPage(key: args.key),
       );
     },
     HomeUserNavigationRoute.name: (routeData) {
@@ -73,10 +75,20 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomeUserPage(),
       );
     },
-    JoinRequestRoute.name: (routeData) {
+    InventoryAdminRoute.name: (routeData) {
+      final args = routeData.argsAs<InventoryAdminRouteArgs>(
+          orElse: () => const InventoryAdminRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const JoinRequestPage(),
+        child: InventoryAdminPage(key: args.key),
+      );
+    },
+    JoinRequestRoute.name: (routeData) {
+      final args = routeData.argsAs<JoinRequestRouteArgs>(
+          orElse: () => const JoinRequestRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: JoinRequestPage(key: args.key),
       );
     },
     LoginRoute.name: (routeData) {
@@ -251,16 +263,31 @@ class HomeAdminNavigationRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [HomeAdminPage]
-class HomeAdminRoute extends PageRouteInfo<void> {
-  const HomeAdminRoute({List<PageRouteInfo>? children})
-      : super(
+class HomeAdminRoute extends PageRouteInfo<HomeAdminRouteArgs> {
+  HomeAdminRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
           HomeAdminRoute.name,
+          args: HomeAdminRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'HomeAdminRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<HomeAdminRouteArgs> page =
+      PageInfo<HomeAdminRouteArgs>(name);
+}
+
+class HomeAdminRouteArgs {
+  const HomeAdminRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'HomeAdminRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
@@ -292,17 +319,61 @@ class HomeUserRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [InventoryAdminPage]
+class InventoryAdminRoute extends PageRouteInfo<InventoryAdminRouteArgs> {
+  InventoryAdminRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          InventoryAdminRoute.name,
+          args: InventoryAdminRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'InventoryAdminRoute';
+
+  static const PageInfo<InventoryAdminRouteArgs> page =
+      PageInfo<InventoryAdminRouteArgs>(name);
+}
+
+class InventoryAdminRouteArgs {
+  const InventoryAdminRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'InventoryAdminRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
 /// [JoinRequestPage]
-class JoinRequestRoute extends PageRouteInfo<void> {
-  const JoinRequestRoute({List<PageRouteInfo>? children})
-      : super(
+class JoinRequestRoute extends PageRouteInfo<JoinRequestRouteArgs> {
+  JoinRequestRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
           JoinRequestRoute.name,
+          args: JoinRequestRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'JoinRequestRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<JoinRequestRouteArgs> page =
+      PageInfo<JoinRequestRouteArgs>(name);
+}
+
+class JoinRequestRouteArgs {
+  const JoinRequestRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'JoinRequestRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

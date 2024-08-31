@@ -51,6 +51,9 @@
     "newPost" : "New post",
     "accept" : "Accept",
     "decline" : "Decline",
+    "review" : "Review",
+    "available" : "Available",
+    "unavailable" : "Unavailable"
     "review" : "Review"
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
     "logout" : "Logout",

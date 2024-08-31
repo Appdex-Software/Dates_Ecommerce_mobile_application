@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
+        "available": MessageLookupByLibrary.simpleMessage("Available"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "comment": MessageLookupByLibrary.simpleMessage("Comment"),
@@ -108,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),
+        "unavailable": MessageLookupByLibrary.simpleMessage("Unavailable"),
+
         "thisItemHasBeenAddedAlready": MessageLookupByLibrary.simpleMessage(
             "This item has been added already"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),

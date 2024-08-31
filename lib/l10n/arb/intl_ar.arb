@@ -52,6 +52,9 @@
     "newPost" : "منشور جديد",
     "accept" : "قبول",
     "decline" : "رفض",
+    "review" : "مراجعة",
+    "available" : "المتاح",
+    "unavailable" : "غير المتاح"
     "review" : "مراجعة"
 
     "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",

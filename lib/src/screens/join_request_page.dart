@@ -8,17 +8,21 @@ import '../core/widgets/widgets.dart';
 
 @RoutePage()
 class JoinRequestPage extends StatelessWidget {
-  const JoinRequestPage({super.key});
+  JoinRequestPage({super.key});
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     final (_, l10n) = appSettingsRecord(context);
-
     return Scaffold(
+      key: scaffoldKey,
+      drawer: const CustomDrawer(),
       appBar:  TransparentAppBar(
         color: Colors.transparent,
-        title: Text(l10n.contactUs),
-        centerTitle: true,
+        title: Text(l10n.joinRequests),
+        backButton: IconButton(onPressed: () {
+          scaffoldKey.currentState!.openDrawer();
+        }, icon: const Icon(Icons.menu)),
       ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(

@@ -17,7 +17,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.inventory),
               title:  Text(l10n.inventory),
-              onTap: () {},
+              onTap: () {
+                context.router.push(InventoryAdminRoute());
+              },
             ),
             ListTile(
               leading: const Icon(Icons.delivery_dining),
@@ -35,7 +37,7 @@ class CustomDrawer extends StatelessWidget {
               leading: const Icon(Icons.group_add),
               title:  Text(l10n.joinRequests),
               onTap: () {
-                context.router.push(const JoinRequestRoute());
+                context.router.push(JoinRequestRoute());
               },
             ),
             ListTile(
