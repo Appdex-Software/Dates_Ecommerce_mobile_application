@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/core/routes/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import '../src/core/constants/app_sizes.dart';
 
 import '../src/core/provider/app_startup_provider.dart';
@@ -54,14 +55,16 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
                     ?.popUntilRoot();
               },
               child: BottomAppBar(
-                height: 100,
-                color: theme.whiteColor,
+                height: 80,
+                color: theme.white,
                 surfaceTintColor: theme.primary,
                 elevation: 0.0,
+                padding: EdgeInsets.zero,
                 shadowColor: theme.dark600.withOpacity(0.8),
                 shape: const CircularNotchedRectangle(),
                 notchMargin: 10,
-                child: LinearGradientContainer(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw,),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,8 +94,8 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
                         },
                       ),
                       BottomBars(
-                        icon: Icons.settings,
-                        title: l10n.settings,
+                        icon: Icons.menu,
+                        title: l10n.more,
                         isActive: tabsRouter.activeIndex == 3,
                         onTap: () {
                           tabsRouter.setActiveIndex(3);

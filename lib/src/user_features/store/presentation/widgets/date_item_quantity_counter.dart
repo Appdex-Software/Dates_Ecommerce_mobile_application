@@ -47,6 +47,7 @@ class _DateItemQuantityCounterState
               didChangeCount: (value) {
                 if (value >= 1) {
                   if (counter - value == -1) {
+                    // if(widget.data.)
                     cartService.addToCart(widget.data ?? DateData());
                   } else {
                     cartService.decrementQuantity(widget.data ?? DateData());
