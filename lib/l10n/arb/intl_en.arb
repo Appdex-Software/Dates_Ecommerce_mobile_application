@@ -74,7 +74,15 @@
     "phoneNumberIsRequired" : "Phone number is required",
     "emptyValidationError": "This field cannot be empty",
     "more":"More",
-    "thisItemHasBeenAddedAlready":"This item has been added already"
+    "thisItemHasBeenAddedAlready":"This item has been added already",
+    "productImage":"Product Image",
+    "productName":"Product Name",
+    "productDescription":"Product Description",
+    "totalQuantity":"Total Quantity",
+    "family":"Family",
+    "charities":"Charities",
+    "fasting":"Fasting",
+    "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity"
 
 
 

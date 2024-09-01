@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "available": MessageLookupByLibrary.simpleMessage("Available"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "charities": MessageLookupByLibrary.simpleMessage("Charities"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "comment": MessageLookupByLibrary.simpleMessage("Comment"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
@@ -58,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
         "failedToLogin":
             MessageLookupByLibrary.simpleMessage("Failed to login"),
+        "family": MessageLookupByLibrary.simpleMessage("Family"),
+        "fasting": MessageLookupByLibrary.simpleMessage("Fasting"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
         "greenDates": MessageLookupByLibrary.simpleMessage("Green dates"),
@@ -91,6 +94,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "Please enter your email and password"),
+        "productDescription":
+            MessageLookupByLibrary.simpleMessage("Product Description"),
+        "productImage": MessageLookupByLibrary.simpleMessage("Product Image"),
+        "productName": MessageLookupByLibrary.simpleMessage("Product Name"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
@@ -106,11 +113,15 @@ class MessageLookup extends MessageLookupByLibrary {
                 "The order has been created successfully"),
         "theOrderHasFailed":
             MessageLookupByLibrary.simpleMessage("The order has failed"),
+        "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":
+            MessageLookupByLibrary.simpleMessage(
+                "The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),
         "thisItemHasBeenAddedAlready": MessageLookupByLibrary.simpleMessage(
             "This item has been added already"),
+        "totalQuantity": MessageLookupByLibrary.simpleMessage("Total Quantity"),
         "unavailable": MessageLookupByLibrary.simpleMessage("Unavailable"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "vision": MessageLookupByLibrary.simpleMessage("Vision"),

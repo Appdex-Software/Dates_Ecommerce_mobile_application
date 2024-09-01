@@ -10,7 +10,7 @@ class HomeAdminUi extends StatefulWidget {
 class _HomeAdminUiState extends State<HomeAdminUi> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
         children: [
           

@@ -212,17 +212,17 @@ class AuthUiService extends _$AuthUiService {
 
   logout() async {
     try {
-      var userBox = Hive.box(userInfoBox);
-    var cartBox = Hive.box(dateCartItemBox);
     sessionManager.setLogin(statue: false);
     sessionManager.setAdminLogin(statue: false);
     sessionManager.setAuthToken(tokenn: '');
     _userEntity = null;
+    ref.invalidateSelf();
+      var userBox = Hive.box(userInfoBox);
     userBox.clear();
     userBox.close();
+    var cartBox = Hive.box(dateCartItemBox);
     cartBox.clear();
     cartBox.close();
-    ref.invalidateSelf();
     state = const AsyncData(null);
     } on Exception catch (e) {
       throw e.toString();

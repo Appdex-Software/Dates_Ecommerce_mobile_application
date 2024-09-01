@@ -42,7 +42,10 @@ class AppRouter extends _$AppRouter {
           AutoRoute(page: OrdersAdminRoute.page,),
           AutoRoute(page: JoinRequestRoute.page,),
           AutoRoute(page: InventoryAdminRoute.page,),
+          AutoRoute(page: InventoryDetailsAdminRoute.page,),
+
         ]),
+
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {

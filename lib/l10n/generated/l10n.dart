@@ -795,6 +795,88 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Product Image`
+  String get productImage {
+    return Intl.message(
+      'Product Image',
+      name: 'productImage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Name`
+  String get productName {
+    return Intl.message(
+      'Product Name',
+      name: 'productName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Description`
+  String get productDescription {
+    return Intl.message(
+      'Product Description',
+      name: 'productDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Quantity`
+  String get totalQuantity {
+    return Intl.message(
+      'Total Quantity',
+      name: 'totalQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Family`
+  String get family {
+    return Intl.message(
+      'Family',
+      name: 'family',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Charities`
+  String get charities {
+    return Intl.message(
+      'Charities',
+      name: 'charities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fasting`
+  String get fasting {
+    return Intl.message(
+      'Fasting',
+      name: 'fasting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity`
+  String
+      get theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity {
+    return Intl.message(
+      'The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity',
+      name:
+          'theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

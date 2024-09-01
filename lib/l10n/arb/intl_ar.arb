@@ -75,7 +75,16 @@
     "phoneNumberIsRequired" : "رقم الهاتف مطلوب",
     "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً",
     "more": "المزيد",
-    "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل"
+    "thisItemHasBeenAddedAlready":"تمت إضافة هذا العنصر بالفعل",
+    "productImage":"صور المنتج",
+    "productName":"اسم المنتج",
+    "productDescription":"وصف المنتج",
+    "totalQuantity":"اجمالي الكمية",
+    "family":"العائلة",
+    "charities":"الجمعيات",
+    "fasting":"افطار صائم",
+    "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية"
+
 
 
 

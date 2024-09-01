@@ -83,6 +83,17 @@ abstract class _$AppRouter extends RootStackRouter {
         child: InventoryAdminPage(key: args.key),
       );
     },
+    InventoryDetailsAdminRoute.name: (routeData) {
+      final args = routeData.argsAs<InventoryDetailsAdminRouteArgs>(
+          orElse: () => const InventoryDetailsAdminRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: InventoryDetailsAdminPage(
+          key: args.key,
+          data: args.data,
+        ),
+      );
+    },
     JoinRequestRoute.name: (routeData) {
       final args = routeData.argsAs<JoinRequestRouteArgs>(
           orElse: () => const JoinRequestRouteArgs());
@@ -344,6 +355,45 @@ class InventoryAdminRouteArgs {
   @override
   String toString() {
     return 'InventoryAdminRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
+/// [InventoryDetailsAdminPage]
+class InventoryDetailsAdminRoute
+    extends PageRouteInfo<InventoryDetailsAdminRouteArgs> {
+  InventoryDetailsAdminRoute({
+    Key? key,
+    DateData? data,
+    List<PageRouteInfo>? children,
+  }) : super(
+          InventoryDetailsAdminRoute.name,
+          args: InventoryDetailsAdminRouteArgs(
+            key: key,
+            data: data,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'InventoryDetailsAdminRoute';
+
+  static const PageInfo<InventoryDetailsAdminRouteArgs> page =
+      PageInfo<InventoryDetailsAdminRouteArgs>(name);
+}
+
+class InventoryDetailsAdminRouteArgs {
+  const InventoryDetailsAdminRouteArgs({
+    this.key,
+    this.data,
+  });
+
+  final Key? key;
+
+  final DateData? data;
+
+  @override
+  String toString() {
+    return 'InventoryDetailsAdminRouteArgs{key: $key, data: $data}';
   }
 }
 
