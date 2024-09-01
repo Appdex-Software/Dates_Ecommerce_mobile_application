@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -19,10 +20,10 @@ class InventoryItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'تمر خضري',style: theme.bodyLarge,
+                        title,style: theme.bodyLarge,
                       ),
                       Text(
-                        quantity == 0 ? '${l10n.unavailable}' : '${l10n.available} $quantity',style: theme.bodySmall,
+                        quantity == 0 ? l10n.unavailable : '${l10n.available} $quantity',style: theme.bodySmall,
                       ),
                     ],
                   )

@@ -1,4 +1,5 @@
 import 'package:date_farm/src/user_features/store/data/models/create_order_body/create_order_body.dart';
+import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:date_farm/src/user_features/store/data/repositories_impl/store_repository_impl.dart';
 import 'package:date_farm/src/user_features/store/domain/entities/create_order_response_entity.dart';
 import 'package:date_farm/src/user_features/store/domain/entities/date_product_entity.dart';
@@ -26,6 +27,22 @@ class StoreRepository extends _$StoreRepository {
       return _dateProductEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get products', err: e, stackTrace: stack);
+    }
+  }
+  Future<int?> createProducts({DateData? data}) async {
+    try {
+      final statusCode = await storeSourceImpl.createProducts(data: data);
+      return statusCode;
+    } catch (e, stack) {
+      throw CustomError('Failed to create products', err: e, stackTrace: stack);
+    }
+  }
+  Future<int?> patchProducts({DateData? data}) async {
+    try {
+      final statusCode = await storeSourceImpl.patchProducts(data: data);
+      return statusCode;
+    } catch (e, stack) {
+      throw CustomError('Failed to update products', err: e, stackTrace: stack);
     }
   }
 

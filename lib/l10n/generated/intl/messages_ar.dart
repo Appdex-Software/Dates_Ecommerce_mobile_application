@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "available": MessageLookupByLibrary.simpleMessage("المتاح"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "charities": MessageLookupByLibrary.simpleMessage("الجمعيات"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "comment": MessageLookupByLibrary.simpleMessage("تعليق"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
@@ -58,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
         "failedToLogin":
             MessageLookupByLibrary.simpleMessage("فشل في تسجيل الدخول"),
+        "family": MessageLookupByLibrary.simpleMessage("العائلة"),
+        "fasting": MessageLookupByLibrary.simpleMessage("افطار صائم"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),
@@ -90,6 +93,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"),
+        "productDescription":
+            MessageLookupByLibrary.simpleMessage("وصف المنتج"),
+        "productImage": MessageLookupByLibrary.simpleMessage("صور المنتج"),
+        "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "review": MessageLookupByLibrary.simpleMessage("مراجعة"),
@@ -104,11 +111,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم إنشاء الطلب بنجاح"),
         "theOrderHasFailed":
             MessageLookupByLibrary.simpleMessage("لقد فشل الطلب"),
+        "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":
+            MessageLookupByLibrary.simpleMessage(
+                "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),
         "thisItemHasBeenAddedAlready":
             MessageLookupByLibrary.simpleMessage("تمت إضافة هذا العنصر بالفعل"),
+        "totalQuantity": MessageLookupByLibrary.simpleMessage("اجمالي الكمية"),
         "unavailable": MessageLookupByLibrary.simpleMessage("غير المتاح"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "vision": MessageLookupByLibrary.simpleMessage("الرؤية"),

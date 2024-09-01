@@ -79,6 +79,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         onTap: widget.onTap != null ? widget.onTap as Function() : null,
         readOnly: widget.readOnly ?? false,
         validator: widget.validator,
+        
         obscureText: widget.isPasswordField!
             ? _showPassword
                 ? true
@@ -98,7 +99,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 )
               : widget.suffix,
           prefixIcon: widget.prefix,
-          errorMaxLines: 1,
+          errorMaxLines: 3,
           errorBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: FlutterFlowTheme.of(context).redApple,
