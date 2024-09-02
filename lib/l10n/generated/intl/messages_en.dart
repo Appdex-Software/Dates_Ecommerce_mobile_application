@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "available": MessageLookupByLibrary.simpleMessage("Available"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "charities": MessageLookupByLibrary.simpleMessage("Charities"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "comment": MessageLookupByLibrary.simpleMessage("Comment"),

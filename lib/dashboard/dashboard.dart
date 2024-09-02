@@ -64,7 +64,10 @@ class _DashboardLayoutPageState extends State<DashboardLayoutPage> {
                 shape: const CircularNotchedRectangle(),
                 notchMargin: 10,
                 child: Padding(
-                  padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw,),
+                  padding: EdgeInsets.only(
+                    left: 5.1.sw,
+                    right: 5.1.sw,
+                  ),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

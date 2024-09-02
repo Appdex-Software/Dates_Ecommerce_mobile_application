@@ -36,6 +36,7 @@ class _SessionManager {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setBool(boardingVisit, statue!);
   }
+
   Future<void> setAdminLogin({bool? statue}) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setBool(boardingVisitAdmin, statue!);
@@ -47,6 +48,7 @@ class _SessionManager {
     state = pref.getBool(boardingVisit) ?? false;
     return state;
   }
+
   Future<bool> getAdminLogin() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     bool state;

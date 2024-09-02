@@ -21,12 +21,13 @@ class _OrdersAdminPageState extends State<OrdersAdminPage> {
     return Scaffold(
       key: scaffoldKey,
       drawer: const CustomDrawer(),
-      appBar:  TransparentAppBar(
+      appBar: TransparentAppBar(
         color: Colors.transparent,
-        
-        backButton: IconButton(onPressed: () {
-          scaffoldKey.currentState!.openDrawer();
-        }, icon: const Icon(Icons.menu)),
+        backButton: IconButton(
+            onPressed: () {
+              scaffoldKey.currentState!.openDrawer();
+            },
+            icon: const Icon(Icons.menu)),
       ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(

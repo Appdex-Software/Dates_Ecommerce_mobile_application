@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "available": MessageLookupByLibrary.simpleMessage("المتاح"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+        "categories": MessageLookupByLibrary.simpleMessage("فئات"),
         "charities": MessageLookupByLibrary.simpleMessage("الجمعيات"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "comment": MessageLookupByLibrary.simpleMessage("تعليق"),

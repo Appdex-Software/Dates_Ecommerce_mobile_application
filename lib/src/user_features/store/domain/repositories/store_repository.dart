@@ -1,6 +1,7 @@
 import 'package:date_farm/src/user_features/store/data/models/create_order_body/create_order_body.dart';
 import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:date_farm/src/user_features/store/data/repositories_impl/store_repository_impl.dart';
+import 'package:date_farm/src/user_features/store/domain/entities/categories_entity.dart';
 import 'package:date_farm/src/user_features/store/domain/entities/create_order_response_entity.dart';
 import 'package:date_farm/src/user_features/store/domain/entities/date_product_entity.dart';
 
@@ -20,6 +21,8 @@ class StoreRepository extends _$StoreRepository {
 
   DateProductEntity? _dateProductEntity;
   DateProductEntity? getDateProductEntity() => _dateProductEntity;
+  CategoriesEntity? _categoriesEntity;
+  CategoriesEntity? getCategoriesEntity() => _categoriesEntity;
 
   Future<DateProductEntity?> getProducts() async {
     try {
@@ -29,6 +32,15 @@ class StoreRepository extends _$StoreRepository {
       throw CustomError('Failed to get products', err: e, stackTrace: stack);
     }
   }
+  Future<CategoriesEntity?> getCategories() async {
+    try {
+      _categoriesEntity = await storeSourceImpl.getCategories();
+      return _categoriesEntity;
+    } catch (e, stack) {
+      throw CustomError('Failed to get categories', err: e, stackTrace: stack);
+    }
+  }
+
   Future<int?> createProducts({DateData? data}) async {
     try {
       final statusCode = await storeSourceImpl.createProducts(data: data);
@@ -37,6 +49,7 @@ class StoreRepository extends _$StoreRepository {
       throw CustomError('Failed to create products', err: e, stackTrace: stack);
     }
   }
+
   Future<int?> patchProducts({DateData? data}) async {
     try {
       final statusCode = await storeSourceImpl.patchProducts(data: data);

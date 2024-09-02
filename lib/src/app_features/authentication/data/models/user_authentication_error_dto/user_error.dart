@@ -14,5 +14,6 @@ class UserError with _$UserError {
     @JsonKey(name: 'phone_number') List<String>? phoneNumber,
   }) = _UserError;
 
-  factory UserError.fromJson(Map<String, dynamic> json) => _$UserErrorFromJson(json);
+  factory UserError.fromJson(Map<String, dynamic> json) =>
+      _$UserErrorFromJson(json);
 }

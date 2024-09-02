@@ -37,15 +37,21 @@ class AppRouter extends _$AppRouter {
           ),
         ]),
         AutoRoute(page: DateDetailsRoute.page),
-        AutoRoute(page: HomeAdminNavigationRoute.page,children: [
-          AutoRoute(page: HomeAdminRoute.page,initial: true),
-          AutoRoute(page: OrdersAdminRoute.page,),
-          AutoRoute(page: JoinRequestRoute.page,),
-          AutoRoute(page: InventoryAdminRoute.page,),
-          AutoRoute(page: InventoryDetailsAdminRoute.page,),
-
+        AutoRoute(page: HomeAdminNavigationRoute.page, children: [
+          AutoRoute(page: HomeAdminRoute.page, initial: true),
+          AutoRoute(
+            page: OrdersAdminRoute.page,
+          ),
+          AutoRoute(
+            page: JoinRequestRoute.page,
+          ),
+          AutoRoute(
+            page: InventoryAdminRoute.page,
+          ),
+          AutoRoute(
+            page: InventoryDetailsAdminRoute.page,
+          ),
         ]),
-
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
   Widget transition(context, animation, secondaryAnimation, child) {

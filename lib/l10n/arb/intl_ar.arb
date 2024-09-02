@@ -83,6 +83,7 @@
     "family":"العائلة",
     "charities":"الجمعيات",
     "fasting":"افطار صائم",
+    "categories" : "فئات",
     "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية"
 
 

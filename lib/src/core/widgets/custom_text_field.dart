@@ -79,7 +79,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
         onTap: widget.onTap != null ? widget.onTap as Function() : null,
         readOnly: widget.readOnly ?? false,
         validator: widget.validator,
-        
         obscureText: widget.isPasswordField!
             ? _showPassword
                 ? true

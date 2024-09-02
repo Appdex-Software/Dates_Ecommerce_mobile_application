@@ -18,12 +18,14 @@ class InventoryAdminPage extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       drawer: const CustomDrawer(),
-      appBar:  TransparentAppBar(
+      appBar: TransparentAppBar(
         color: Colors.transparent,
         title: Text(l10n.inventory),
-        backButton: IconButton(onPressed: () {
-          scaffoldKey.currentState!.openDrawer();
-        }, icon: const Icon(Icons.menu)),
+        backButton: IconButton(
+            onPressed: () {
+              scaffoldKey.currentState!.openDrawer();
+            },
+            icon: const Icon(Icons.menu)),
       ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(

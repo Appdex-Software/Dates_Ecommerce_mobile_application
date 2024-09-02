@@ -57,7 +57,7 @@ class _CartUiState extends ConsumerState<CartUi> {
                 }),
             Expanded(
               child: Padding(
-                padding:  EdgeInsets.only(bottom: 2.sh),
+                padding: EdgeInsets.only(bottom: 2.sh),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -93,11 +93,15 @@ class _CartUiState extends ConsumerState<CartUi> {
                                   201) {
                                 commentController.text = '';
                                 await storeService.getProducts();
-                                context.mounted ? showSuccessAlert(context,
-                                    "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}") : null;
+                                context.mounted
+                                    ? showSuccessAlert(context,
+                                        "${l10n.theOrderHasBeenCreatedSuccessfully}, ${l10n.yourOrderNumberIs} ${cartService.getCreateOrderResponseEntity()?.data?.orderNumber}")
+                                    : null;
                               } else {
-                                context.mounted ? AppToast.errorToast(
-                                    l10n.theOrderHasFailed, context) : null;
+                                context.mounted
+                                    ? AppToast.errorToast(
+                                        l10n.theOrderHasFailed, context)
+                                    : null;
                               }
                             },
                           );

@@ -13,54 +13,68 @@ class JoinRequestUi extends StatefulWidget {
 class _JoinRequestUiState extends State<JoinRequestUi> {
   @override
   Widget build(BuildContext context) {
-    final (theme,l10n) = appSettingsRecord(context);
+    final (theme, l10n) = appSettingsRecord(context);
     return SingleChildScrollView(
       padding: EdgeInsets.symmetric(horizontal: 4.1.sw),
       child: Column(
         children: [
           LinearGradientContainer(
-            child: Padding(
-              padding: EdgeInsets.all(2.sw),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("جمعية البر",style: theme.labelLarge,),
-                      Text("المدينة ",style: theme.labelLarge,),
-                    ],
-                  ),
-                  gapH12,
-                  Text("zeyad@gmail.com ",style: theme.labelLarge,),
-                  gapH12,
-                  Text("01097875582 ",style: theme.labelLarge,),
-                  gapH12,
-                  Text("نود الانضمام لمساعدة الاطفال ",style: theme.labelLarge,),
-                  gapH24,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      CustomButton(
+              child: Padding(
+            padding: EdgeInsets.all(2.sw),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "جمعية البر",
+                      style: theme.labelLarge,
+                    ),
+                    Text(
+                      "المدينة ",
+                      style: theme.labelLarge,
+                    ),
+                  ],
+                ),
+                gapH12,
+                Text(
+                  "zeyad@gmail.com ",
+                  style: theme.labelLarge,
+                ),
+                gapH12,
+                Text(
+                  "01097875582 ",
+                  style: theme.labelLarge,
+                ),
+                gapH12,
+                Text(
+                  "نود الانضمام لمساعدة الاطفال ",
+                  style: theme.labelLarge,
+                ),
+                gapH24,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    CustomButton(
                       title: l10n.accept,
                       width: 20.sw,
                     ),
-                      CustomButton(
+                    CustomButton(
                       title: l10n.review,
                       width: 20.sw,
                       backgroundColor: theme.accent3,
                     ),
-                      CustomButton(
+                    CustomButton(
                       title: l10n.accept,
                       width: 20.sw,
                       backgroundColor: theme.decline,
                     ),
-                    ],
-                  )
-                ],
-              ),
-            )
-          )
+                  ],
+                )
+              ],
+            ),
+          ))
         ],
       ),
     );
