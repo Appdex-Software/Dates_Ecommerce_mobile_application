@@ -125,6 +125,17 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const NewsPage(),
       );
     },
+    OrderDetailsAdminRoute.name: (routeData) {
+      final args = routeData.argsAs<OrderDetailsAdminRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: OrderDetailsAdminPage(
+          key: args.key,
+          data: args.data,
+          productDetailsIndex: args.productDetailsIndex,
+        ),
+      );
+    },
     OrdersAdminRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -490,6 +501,49 @@ class NewsRoute extends PageRouteInfo<void> {
   static const String name = 'NewsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [OrderDetailsAdminPage]
+class OrderDetailsAdminRoute extends PageRouteInfo<OrderDetailsAdminRouteArgs> {
+  OrderDetailsAdminRoute({
+    Key? key,
+    required OrderUserData? data,
+    required int productDetailsIndex,
+    List<PageRouteInfo>? children,
+  }) : super(
+          OrderDetailsAdminRoute.name,
+          args: OrderDetailsAdminRouteArgs(
+            key: key,
+            data: data,
+            productDetailsIndex: productDetailsIndex,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'OrderDetailsAdminRoute';
+
+  static const PageInfo<OrderDetailsAdminRouteArgs> page =
+      PageInfo<OrderDetailsAdminRouteArgs>(name);
+}
+
+class OrderDetailsAdminRouteArgs {
+  const OrderDetailsAdminRouteArgs({
+    this.key,
+    required this.data,
+    required this.productDetailsIndex,
+  });
+
+  final Key? key;
+
+  final OrderUserData? data;
+
+  final int productDetailsIndex;
+
+  @override
+  String toString() {
+    return 'OrderDetailsAdminRouteArgs{key: $key, data: $data, productDetailsIndex: $productDetailsIndex}';
+  }
 }
 
 /// generated route for

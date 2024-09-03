@@ -20,6 +20,17 @@ class AppConstants {
   static const String deviceToken = 'DeviceToken';
 }
 
+List<String> orderStatus = [
+  'pending approval',
+  'pending fulfilment',
+  'fulfilled',
+  'purtily fulfilled',
+  'shipped',
+  'delivered',
+  'canceled',
+];
+
+
 Logger logger = Logger(
   printer: HybridPrinter(
     PrettyPrinter(

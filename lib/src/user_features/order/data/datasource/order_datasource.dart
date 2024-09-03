@@ -32,4 +32,27 @@ class OrderSouceImpl implements OrderSouce {
       throw e.errMassage;
     }
   }
+
+  @override
+  Future<OrderUserDto> updateOrders({String? id}) async {
+    try {
+      final response = await DioClient().dio.get(
+            options: Options(
+              validateStatus: (status) {
+                return status! < 500;
+              },
+              followRedirects: false,
+            ),
+            "${AppConstants.getOrdersUrl}/$id",
+          );
+      logger.d('getOrdersresponse: ${response.data}');
+      if (response.statusCode == 200) {
+        return OrderUserDto.fromJson(response.data);
+      } else {
+        return OrderUserDto.fromJson(response.data);
+      }
+    } on CustomError catch (e) {
+      throw e.errMassage;
+    }
+  }
 }

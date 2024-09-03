@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+        "orderStatus": MessageLookupByLibrary.simpleMessage("حالة الطلب"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "ordersInProgress": MessageLookupByLibrary.simpleMessage("قيد التحضير"),
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),

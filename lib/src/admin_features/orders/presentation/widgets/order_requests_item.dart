@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import 'order_item_quantity_counter_admin.dart';
 
 class OrderRequestItem extends StatefulWidget {
   const OrderRequestItem({this.data,super.key, required this.index});
@@ -26,17 +25,15 @@ class _OrderRequestItemState extends State<OrderRequestItem> {
           padding: EdgeInsets.only(bottom: 1.sh,),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "الكمية المتاحة ${widget.data?[index].quantity}",
-                style: theme.labelSmall,
-              ),
-              gapW32,
-               OrderItemQuantityCounterAdmin(data: widget.data?[index],index: widget.index,productDetailsindex: index,),
-              gapW32,
               Text(
                 widget.data?[index].productName ?? '',
                 style: theme.labelLarge,
+              ),
+              Text(
+                "الكمية المتاحة ${widget.data?[index].quantity}",
+                style: theme.labelSmall,
               ),
             ],
           ),

@@ -887,6 +887,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Order status`
+  String get orderStatus {
+    return Intl.message(
+      'Order status',
+      name: 'orderStatus',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
