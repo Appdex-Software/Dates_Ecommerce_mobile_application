@@ -10,6 +10,7 @@ class AppConstants {
   static const String loginApiUrl = '/iam/login';
   static const String registerApiUrl = '/iam/users';
   static const String getProductUrl = '/products/products';
+  static const String getCategoriesUrl = '/products/categories';
   static const String createOrderUrl = '/orders/orders';
   static const String getNewsUrl = '/products/news';
   static const String getOrdersUrl = '/orders/orders';

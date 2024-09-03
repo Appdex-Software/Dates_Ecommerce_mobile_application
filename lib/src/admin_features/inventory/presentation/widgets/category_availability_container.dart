@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/admin_features/inventory/presentation/providers/inventory_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,7 +24,7 @@ class _CategoryAvailabilityContainerState
       children: [
         GestureDetector(
           onTap: () {
-            if(inventoryService.getIsAvailable() == null) {
+            if (inventoryService.getIsAvailable() == null) {
               inventoryService.setIsAvailable(true);
             } else {
               inventoryService.setIsAvailable(null);
@@ -48,7 +47,7 @@ class _CategoryAvailabilityContainerState
         ),
         GestureDetector(
           onTap: () {
-            if(inventoryService.getIsAvailable() == null) {
+            if (inventoryService.getIsAvailable() == null) {
               inventoryService.setIsAvailable(false);
             } else {
               inventoryService.setIsAvailable(null);

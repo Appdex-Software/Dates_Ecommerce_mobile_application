@@ -16,26 +16,28 @@ class BottomNavigationDateDetails extends ConsumerWidget {
     final cartService = ref.watch(cartServiceProvider.notifier);
 
     return AsyncValueWidget(
-      value: ref.watch(cartServiceProvider),
-      data: (_) {
-        return BottomAppBar(
-          color: theme.white,
-          child: SizedBox(
-            height: 20.sh,
-            child: CustomButton(
-              title: cartService.getCartList().contains(dateData) ? l10n.thisItemHasBeenAddedAlready : l10n.add,
-              isDisabled: cartService.getCartList().contains(dateData) ? true : false,
-              width: double.infinity,
-              onPressed: () {
-                ref.watch(cartServiceProvider.notifier).addToCart(dateData);
-                // context.router.maybePop();
-                AppToast.successToast(
-                    l10n.theItemHasBeenAddedSuccessfully, context);
-              },
+        value: ref.watch(cartServiceProvider),
+        data: (_) {
+          return BottomAppBar(
+            color: theme.white,
+            child: SizedBox(
+              height: 20.sh,
+              child: CustomButton(
+                title: cartService.getCartList().contains(dateData)
+                    ? l10n.thisItemHasBeenAddedAlready
+                    : l10n.add,
+                isDisabled:
+                    cartService.getCartList().contains(dateData) ? true : false,
+                width: double.infinity,
+                onPressed: () {
+                  ref.watch(cartServiceProvider.notifier).addToCart(dateData);
+                  // context.router.maybePop();
+                  AppToast.successToast(
+                      l10n.theItemHasBeenAddedSuccessfully, context);
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 }

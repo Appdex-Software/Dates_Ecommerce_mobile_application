@@ -75,9 +75,8 @@ class AuthUiService extends _$AuthUiService {
         var patientBox = Hive.box(userInfoBox);
         patientBox.add(_userEntity?.data);
         log((_userEntity?.data?.user?.role).toString());
-       
       }
-      
+
       _userData = _userEntity?.data;
       state = AsyncData(_userData);
       return _userEntity;
@@ -212,18 +211,18 @@ class AuthUiService extends _$AuthUiService {
 
   logout() async {
     try {
-    sessionManager.setLogin(statue: false);
-    sessionManager.setAdminLogin(statue: false);
-    sessionManager.setAuthToken(tokenn: '');
-    _userEntity = null;
-    ref.invalidateSelf();
+      sessionManager.setLogin(statue: false);
+      sessionManager.setAdminLogin(statue: false);
+      sessionManager.setAuthToken(tokenn: '');
+      _userEntity = null;
+      ref.invalidateSelf();
       var userBox = Hive.box(userInfoBox);
-    userBox.clear();
-    userBox.close();
-    var cartBox = Hive.box(dateCartItemBox);
-    cartBox.clear();
-    cartBox.close();
-    state = const AsyncData(null);
+      userBox.clear();
+      userBox.close();
+      var cartBox = Hive.box(dateCartItemBox);
+      cartBox.clear();
+      cartBox.close();
+      state = const AsyncData(null);
     } on Exception catch (e) {
       throw e.toString();
     }

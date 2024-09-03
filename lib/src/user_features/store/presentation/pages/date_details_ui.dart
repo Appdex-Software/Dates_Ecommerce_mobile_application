@@ -20,7 +20,7 @@ class _DateDetailsUiState extends ConsumerState<DateDetailsUi> {
   Widget build(BuildContext context) {
     final (theme, _) = appSettingsRecord(context);
     final cartService = ref.watch(cartServiceProvider.notifier);
-     
+
     return AsyncValueWidget(
       value: ref.watch(cartServiceProvider),
       data: (p0) {
@@ -28,7 +28,7 @@ class _DateDetailsUiState extends ConsumerState<DateDetailsUi> {
           borderRadius: BorderRadius.zero,
           listOfColors: [theme.greenChalk, theme.white],
           child: SingleChildScrollView(
-            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw,bottom: 3.sh),
+            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, bottom: 3.sh),
             child: Column(
               children: [
                 ProductImage(image: widget.data?.image ?? '', size: 40.sw),
@@ -43,7 +43,11 @@ class _DateDetailsUiState extends ConsumerState<DateDetailsUi> {
                   style: theme.bodySmall,
                 ),
                 gapH20,
-                cartService.getCartList().contains(widget.data) ? DateItemQuantityCounter(data: widget.data,) : const SizedBox()
+                cartService.getCartList().contains(widget.data)
+                    ? DateItemQuantityCounter(
+                        data: widget.data,
+                      )
+                    : const SizedBox()
               ],
             ),
           ),

@@ -21,6 +21,6 @@ class UserAuthenticationErrorDto with _$UserAuthenticationErrorDto {
 }
 
 extension UserAuthenticationErrorDtoX on UserAuthenticationErrorDto {
-  UserAuthenticationErrorEntity toEntity() =>
-      UserAuthenticationErrorEntity(error: error, message: message, statusCode: statusCode);
+  UserAuthenticationErrorEntity toEntity() => UserAuthenticationErrorEntity(
+      error: error, message: message, statusCode: statusCode);
 }

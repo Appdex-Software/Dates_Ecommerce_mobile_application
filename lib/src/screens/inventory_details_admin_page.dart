@@ -16,16 +16,22 @@ class InventoryDetailsAdminPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final (theme, l10n) = appSettingsRecord(context);
     return Scaffold(
-      appBar:  TransparentAppBar(
+      appBar: TransparentAppBar(
         title: Text(l10n.inventory),
-       elevation: 0,
-      color: theme.greenChalk,
+        elevation: 0,
+        color: theme.greenChalk,
       ),
       backgroundColor: Colors.transparent,
       body: CustomAdaptiveScreen.builder(
-        mobile: InventoryDetailsUi(date: data,),
-        tablet: InventoryDetailsUi(date: data,),
-        desktop: InventoryDetailsUi(date: data,),
+        mobile: InventoryDetailsUi(
+          date: data,
+        ),
+        tablet: InventoryDetailsUi(
+          date: data,
+        ),
+        desktop: InventoryDetailsUi(
+          date: data,
+        ),
       ),
     );
   }

@@ -4,7 +4,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../data/models/user_authentication_error_dto/user_error.dart';
 
-
 part 'user_authentication_error_entity.freezed.dart';
 part 'user_authentication_error_entity.g.dart';
 

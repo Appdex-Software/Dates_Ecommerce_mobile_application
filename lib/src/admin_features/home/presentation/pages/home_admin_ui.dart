@@ -12,9 +12,7 @@ class _HomeAdminUiState extends State<HomeAdminUi> {
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
       child: Column(
-        children: [
-          
-        ],
+        children: [],
       ),
     );
   }

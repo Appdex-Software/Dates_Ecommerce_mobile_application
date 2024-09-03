@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -14,20 +13,23 @@ class InventoryItem extends StatelessWidget {
     final (theme, l10n) = appSettingsRecord(context);
 
     return LinearGradientContainer(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 2.sw,right: 2.sw,bottom: 3.sh,top: 1.sh),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        title,style: theme.bodyLarge,
-                      ),
-                      Text(
-                        quantity == 0 ? l10n.unavailable : '${l10n.available} $quantity',style: theme.bodySmall,
-                      ),
-                    ],
-                  )
-                  )
-                );
+        child: Padding(
+            padding: EdgeInsets.only(
+                left: 2.sw, right: 2.sw, bottom: 3.sh, top: 1.sh),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: theme.bodyLarge,
+                ),
+                Text(
+                  quantity == 0
+                      ? l10n.unavailable
+                      : '${l10n.available} $quantity',
+                  style: theme.bodySmall,
+                ),
+              ],
+            )));
   }
 }

@@ -12,11 +12,28 @@ import 'package:responsive_builder/responsive_builder.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../user_features/store/data/models/date_product_dto/date_data.dart';
 
-class InventoryAdminUi extends ConsumerWidget {
+class InventoryAdminUi extends ConsumerStatefulWidget {
   const InventoryAdminUi({super.key});
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  ConsumerState<InventoryAdminUi> createState() => _InventoryAdminUiState();
+}
+
+class _InventoryAdminUiState extends ConsumerState<InventoryAdminUi> {
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      initFunction();
+    },);
+    super.initState();
+  }
+
+  initFunction() async {
+    await ref.watch(inventoryServiceProvider.notifier).getCategories();
+  }
+  @override
+  Widget build(BuildContext context) {
     final inventoryService = ref.watch(inventoryServiceProvider.notifier);
     final (_, l10n) = appSettingsRecord(context);
 

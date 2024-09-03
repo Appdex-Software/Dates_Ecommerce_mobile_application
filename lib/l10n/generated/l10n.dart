@@ -866,6 +866,16 @@ class AppLocalizations {
     );
   }
 
+  /// `Categories`
+  String get categories {
+    return Intl.message(
+      'Categories',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity`
   String
       get theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity {

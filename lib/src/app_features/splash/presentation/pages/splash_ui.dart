@@ -25,8 +25,8 @@ class _SplashUiState extends State<SplashUi> {
       final isAdminLogin = await sessionManager.getAdminLogin();
       if (isLogin) {
         context.router.replace(const HomeUserRoute());
-      } else if(isAdminLogin) {
-        context.router.replace( HomeAdminRoute());
+      } else if (isAdminLogin) {
+        context.router.replace(HomeAdminRoute());
       } else {
         context.router.replace(const LoginRoute());
       }

@@ -21,7 +21,7 @@ class OrderService extends _$OrderService {
 
     try {
       _orderUserEntity = await orderService.getOrders();
-    state = AsyncData(_orderUserEntity);
+      state = AsyncData(_orderUserEntity);
 
       return _orderUserEntity;
     } catch (e, stack) {
