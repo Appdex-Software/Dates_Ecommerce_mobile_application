@@ -20,7 +20,7 @@ class OrderSouceImpl implements OrderSouce {
               },
               followRedirects: false,
             ),
-            "${AppConstants.getOrdersUrl}?user_id=$id",
+            "${AppConstants.getOrdersUrl}${id == null ? '' : "?user_id=$id"}",
           );
       logger.d('getOrdersresponse: ${response.data}');
       if (response.statusCode == 200) {

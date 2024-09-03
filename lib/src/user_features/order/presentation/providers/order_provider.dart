@@ -1,3 +1,5 @@
+// ignore_for_file: unused_result
+
 import 'package:date_farm/src/user_features/order/domain/repositories/order_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/errors/custom_error.dart';
@@ -28,4 +30,19 @@ class OrderService extends _$OrderService {
       throw CustomError('Failed to get orders', err: e, stackTrace: stack);
     }
   }
+
+    incrementQuantity(int index,int productDetailsIndex) {
+    final quantity = (_orderUserEntity?.data?[index].productDetails?[productDetailsIndex].quantity ?? 0) + 1;
+    _orderUserEntity?.data?[index].productDetails?[productDetailsIndex].copyWith(quantity: quantity);
+    state = AsyncValue.data(_orderUserEntity);
+  }
+
+   decrementQuantity(int index,int productDetailsIndex) {
+    final quantity = (_orderUserEntity?.data?[index].productDetails?[productDetailsIndex].quantity ?? 0) - 1;
+    _orderUserEntity?.data?[index].productDetails?[productDetailsIndex].copyWith(quantity: quantity);
+    state = AsyncValue.data(_orderUserEntity);
+
+    state = AsyncData(_orderUserEntity);
+  }
+
 }
