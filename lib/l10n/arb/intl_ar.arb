@@ -61,6 +61,8 @@
     "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح",
     "comment" : "تعليق",
     "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
+    "theOrderHasBeenEditedSuccessfully" : "تم تعديل الطلب بنجاح",
+
     "theOrderHasFailed" : "لقد فشل الطلب",
     "confirm" : "تأكيد",
     "yourOrderNumberIs" : "رقم طلبك هو",

@@ -60,6 +60,7 @@
     "failedToLogin":"Failed to login",
     "comment" : "Comment",
     "theOrderHasBeenCreatedSuccessfully" : "The order has been created successfully",
+    "theOrderHasBeenEditedSuccessfully" : "The order has been edited successfully",
     "theOrderHasFailed" : "The order has failed",
     "confirm" : "Confirm",
     "yourOrderNumberIs" : "Your order number is",

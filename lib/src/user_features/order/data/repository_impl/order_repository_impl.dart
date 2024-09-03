@@ -3,9 +3,11 @@ import 'package:date_farm/src/user_features/order/data/models/order_user_dto/ord
 import 'package:date_farm/src/user_features/order/domain/entities/order_user_entity.dart';
 
 import '../../../../core/errors/custom_error.dart';
+import '../models/order_user_dto/order_user_data.dart';
 
 abstract class BaseOrderRepository {
-  Future<OrderUserEntity> getOrders();
+  Future<OrderUserEntity> getOrders({String? id});
+  Future<int?> updateOrders({OrderUserData? body});
 }
 
 class OrderRepositoryImpl implements BaseOrderRepository {
@@ -18,7 +20,17 @@ class OrderRepositoryImpl implements BaseOrderRepository {
         return value.toEntity();
       });
     } catch (e, stack) {
-      throw CustomError('Failed to news', err: e, stackTrace: stack);
+      throw CustomError('Failed to get order ', err: e, stackTrace: stack);
+    }
+  }
+  @override
+  Future<int?> updateOrders({OrderUserData? body}) async {
+    try {
+      return await dataSource.updateOrders(body: body).then((value) {
+        return value;
+      });
+    } catch (e, stack) {
+      throw CustomError('Failed to update order', err: e, stackTrace: stack);
     }
   }
 }

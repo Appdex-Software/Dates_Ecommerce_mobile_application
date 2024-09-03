@@ -111,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تمت إضافة العنصر بنجاح"),
         "theOrderHasBeenCreatedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم إنشاء الطلب بنجاح"),
+        "theOrderHasBeenEditedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تعديل الطلب بنجاح"),
         "theOrderHasFailed":
             MessageLookupByLibrary.simpleMessage("لقد فشل الطلب"),
         "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":

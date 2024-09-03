@@ -646,6 +646,16 @@ class AppLocalizations {
     );
   }
 
+  /// `The order has been edited successfully`
+  String get theOrderHasBeenEditedSuccessfully {
+    return Intl.message(
+      'The order has been edited successfully',
+      name: 'theOrderHasBeenEditedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The order has failed`
   String get theOrderHasFailed {
     return Intl.message(
