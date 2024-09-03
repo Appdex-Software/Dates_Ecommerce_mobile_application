@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable
 
-import 'dart:developer';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/core/constants/constants.dart';
@@ -113,7 +112,6 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                           return CustomButton(
                             title: l10n.submit,
                             onPressed: () async {
-                          log(orderService.getProductDetails().toString());
 
                               final OrderUserData orderBody = OrderUserData(
                                   comment: widget.data?.comment,
