@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "optional": MessageLookupByLibrary.simpleMessage("Optional"),
+        "orderStatus": MessageLookupByLibrary.simpleMessage("Order status"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "ordersInProgress":
             MessageLookupByLibrary.simpleMessage("Orders in progress"),
@@ -112,6 +113,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "theOrderHasBeenCreatedSuccessfully":
             MessageLookupByLibrary.simpleMessage(
                 "The order has been created successfully"),
+        "theOrderHasBeenEditedSuccessfully":
+            MessageLookupByLibrary.simpleMessage(
+                "The order has been edited successfully"),
         "theOrderHasFailed":
             MessageLookupByLibrary.simpleMessage("The order has failed"),
         "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":

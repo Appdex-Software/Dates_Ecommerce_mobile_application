@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+        "orderStatus": MessageLookupByLibrary.simpleMessage("حالة الطلب"),
         "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "ordersInProgress": MessageLookupByLibrary.simpleMessage("قيد التحضير"),
         "password": MessageLookupByLibrary.simpleMessage("الباسورد"),
@@ -110,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تمت إضافة العنصر بنجاح"),
         "theOrderHasBeenCreatedSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم إنشاء الطلب بنجاح"),
+        "theOrderHasBeenEditedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تعديل الطلب بنجاح"),
         "theOrderHasFailed":
             MessageLookupByLibrary.simpleMessage("لقد فشل الطلب"),
         "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":

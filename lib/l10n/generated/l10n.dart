@@ -646,6 +646,16 @@ class AppLocalizations {
     );
   }
 
+  /// `The order has been edited successfully`
+  String get theOrderHasBeenEditedSuccessfully {
+    return Intl.message(
+      'The order has been edited successfully',
+      name: 'theOrderHasBeenEditedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The order has failed`
   String get theOrderHasFailed {
     return Intl.message(
@@ -883,6 +893,16 @@ class AppLocalizations {
       'The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity',
       name:
           'theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order status`
+  String get orderStatus {
+    return Intl.message(
+      'Order status',
+      name: 'orderStatus',
       desc: '',
       args: [],
     );

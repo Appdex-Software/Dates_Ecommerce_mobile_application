@@ -1,11 +1,13 @@
+import 'package:date_farm/src/user_features/order/data/models/order_user_dto/product_detail.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../user_features/store/presentation/widgets/widgets.dart';
 
 class OrderRequestItem extends StatefulWidget {
-  const OrderRequestItem({super.key});
-
+  const OrderRequestItem({this.data,super.key, required this.index});
+  final List<ProductDetail>? data;
+  final int index;
   @override
   State<OrderRequestItem> createState() => _OrderRequestItemState();
 }
@@ -15,44 +17,28 @@ class _OrderRequestItemState extends State<OrderRequestItem> {
   Widget build(BuildContext context) {
     final (theme, _) = appSettingsRecord(context);
 
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Column(
-          children: [
-            Text(
-              "الكمية المتاحة 20",
-              style: theme.labelSmall,
-            ),
-            gapH30,
-            Text(
-              "الكمية المتاحة 20",
-              style: theme.labelSmall,
-            ),
-          ],
-        ),
-        const Column(
-          children: [
-            DateItemQuantityCounter(),
-            gapH16,
-            DateItemQuantityCounter(),
-          ],
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "تمر خضري",
-              style: theme.labelLarge,
-            ),
-            gapH26,
-            Text(
-              "صفاوي",
-              style: theme.labelLarge,
-            ),
-          ],
-        ),
-      ],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: List.generate(widget.data?.length ?? 0, (index) {
+        return Padding(
+          padding: EdgeInsets.only(bottom: 1.sh,),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                widget.data?[index].productName ?? '',
+                style: theme.labelLarge,
+              ),
+              Text(
+                "الكمية المتاحة ${widget.data?[index].quantity}",
+                style: theme.labelSmall,
+              ),
+            ],
+          ),
+        );
+      },),
     );
   }
 }

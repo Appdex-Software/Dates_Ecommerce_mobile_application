@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../screens/screens.dart';
 import '../../user_features/news/data/models/news_dto/news_data.dart';
+import '../../user_features/order/data/models/order_user_dto/order_user_data.dart';
 import '../../user_features/store/data/models/date_product_dto/date_data.dart';
 import '../constants/constants.dart';
 part 'app_router.gr.dart';
@@ -50,6 +51,9 @@ class AppRouter extends _$AppRouter {
           ),
           AutoRoute(
             page: InventoryDetailsAdminRoute.page,
+          ),
+          AutoRoute(
+            page: OrderDetailsAdminRoute.page,
           ),
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),

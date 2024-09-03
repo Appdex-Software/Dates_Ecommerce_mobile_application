@@ -61,6 +61,8 @@
     "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح",
     "comment" : "تعليق",
     "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
+    "theOrderHasBeenEditedSuccessfully" : "تم تعديل الطلب بنجاح",
+
     "theOrderHasFailed" : "لقد فشل الطلب",
     "confirm" : "تأكيد",
     "yourOrderNumberIs" : "رقم طلبك هو",
@@ -84,6 +86,7 @@
     "charities":"الجمعيات",
     "fasting":"افطار صائم",
     "categories" : "فئات",
+    "orderStatus" : "حالة الطلب",
     "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية"
 
 
