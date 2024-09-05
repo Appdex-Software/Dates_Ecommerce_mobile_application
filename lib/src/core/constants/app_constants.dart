@@ -13,6 +13,7 @@ class AppConstants {
   static const String getCategoriesUrl = '/products/categories';
   static const String createOrderUrl = '/orders/orders';
   static const String getNewsUrl = '/products/news';
+  static const String postNewsUrl = '/products/news';
   static const String getOrdersUrl = '/orders/orders';
   static const String expiryTime = 'expiry-time';
   static const String defaultLocale = 'default-locale';
@@ -29,7 +30,6 @@ List<String> orderStatus = [
   'delivered',
   'canceled',
 ];
-
 
 Logger logger = Logger(
   printer: HybridPrinter(

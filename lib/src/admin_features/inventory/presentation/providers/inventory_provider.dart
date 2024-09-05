@@ -39,6 +39,7 @@ class InventoryService extends _$InventoryService {
       throw CustomError('Failed to get products', err: e, stackTrace: stack);
     }
   }
+
   Future<CategoriesEntity?> getCategories() async {
     state = const AsyncLoading();
     final storeService = ref.watch(storeRepositoryProvider.notifier);

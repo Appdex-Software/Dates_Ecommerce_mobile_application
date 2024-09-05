@@ -19,3 +19,4 @@ export 'join_request_page.dart';
 export 'inventory_admin_page.dart';
 export 'inventory_details_admin_page.dart';
 export 'order_details_admin_page.dart';
+export 'admin_add_post_page.dart';

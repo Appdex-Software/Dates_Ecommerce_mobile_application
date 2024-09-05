@@ -9,7 +9,8 @@ import '../user_features/order/data/models/order_user_dto/order_user_data.dart';
 
 @RoutePage()
 class OrderDetailsAdminPage extends StatelessWidget {
-  const OrderDetailsAdminPage({super.key, required this.data, required this.productDetailsIndex});
+  const OrderDetailsAdminPage(
+      {super.key, required this.data, required this.productDetailsIndex});
   final OrderUserData? data;
   final int productDetailsIndex;
 
@@ -23,9 +24,18 @@ class OrderDetailsAdminPage extends StatelessWidget {
       ),
       backgroundColor: Colors.transparent,
       body: CustomAdaptiveScreen.builder(
-        mobile: OrderAdminDetailsUi(data: data,productDetailsIndex: productDetailsIndex,),
-        tablet: OrderAdminDetailsUi(data: data,productDetailsIndex: productDetailsIndex,),
-        desktop: OrderAdminDetailsUi(data: data,productDetailsIndex: productDetailsIndex,),
+        mobile: OrderAdminDetailsUi(
+          data: data,
+          productDetailsIndex: productDetailsIndex,
+        ),
+        tablet: OrderAdminDetailsUi(
+          data: data,
+          productDetailsIndex: productDetailsIndex,
+        ),
+        desktop: OrderAdminDetailsUi(
+          data: data,
+          productDetailsIndex: productDetailsIndex,
+        ),
       ),
     );
   }

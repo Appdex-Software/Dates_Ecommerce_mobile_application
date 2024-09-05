@@ -1,3 +1,4 @@
+import 'package:date_farm/src/user_features/news/data/models/add_news_body/add_news_body.dart';
 import 'package:date_farm/src/user_features/news/domain/entities/news_entity.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/errors/custom_error.dart';
@@ -23,6 +24,17 @@ class NewsService extends _$NewsService {
       return _newsEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get news', err: e, stackTrace: stack);
+    }
+  }
+  Future<int?> addNews({AddNewsBody? body}) async {
+    final newsService = ref.watch(newsRepositoryProvider.notifier);
+    state = const AsyncLoading();
+    try {
+      final statusCode = await newsService.addNews(body: body);
+      state = AsyncData(_newsEntity);
+      return statusCode;
+    } catch (e, stack) {
+      throw CustomError('Failed to add news', err: e, stackTrace: stack);
     }
   }
 }

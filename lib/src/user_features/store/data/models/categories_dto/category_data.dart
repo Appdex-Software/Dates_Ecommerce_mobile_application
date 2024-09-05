@@ -9,5 +9,6 @@ class CategoryData with _$CategoryData {
     String? name,
   }) = _CategoryData;
 
-  factory CategoryData.fromJson(Map<String, dynamic> json) => _$CategoryDataFromJson(json);
+  factory CategoryData.fromJson(Map<String, dynamic> json) =>
+      _$CategoryDataFromJson(json);
 }

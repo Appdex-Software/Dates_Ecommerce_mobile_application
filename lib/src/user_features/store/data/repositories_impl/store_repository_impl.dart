@@ -31,6 +31,7 @@ class StoreRepositoryImpl implements BaseStoreRepository {
       throw CustomError('Failed to products', err: e, stackTrace: stack);
     }
   }
+
   @override
   Future<CategoriesEntity> getCategories() async {
     try {

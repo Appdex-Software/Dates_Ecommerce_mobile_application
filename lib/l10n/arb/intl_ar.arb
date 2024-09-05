@@ -87,7 +87,11 @@
     "fasting":"افطار صائم",
     "categories" : "فئات",
     "orderStatus" : "حالة الطلب",
-    "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية"
+    "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية",
+    "newsImage" : "صور الخبر",
+    "newsTitle" : "عنوان الخبر",
+    "newsDetails" : "تفاصيل الخبر"
+
 
 
 

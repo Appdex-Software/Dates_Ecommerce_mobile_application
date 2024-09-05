@@ -1,6 +1,5 @@
 // ignore_for_file: unused_result
 
-
 import 'package:date_farm/src/user_features/order/domain/repositories/order_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/errors/custom_error.dart';
@@ -40,6 +39,7 @@ class OrderService extends _$OrderService {
       throw CustomError('Failed to get orders', err: e, stackTrace: stack);
     }
   }
+
   Future updateOrders({OrderUserData? body}) async {
     state = const AsyncLoading();
     final orderService = ref.watch(orderRepositoryProvider.notifier);
@@ -56,17 +56,18 @@ class OrderService extends _$OrderService {
     }
   }
 
-    incrementQuantity(int index) {
+  incrementQuantity(int index) {
     final quantity = (_productDetails[index].quantity?.toInt() ?? 0) + 1;
-     _productDetails[index] = _productDetails[index].copyWith(quantity: quantity );
+    _productDetails[index] =
+        _productDetails[index].copyWith(quantity: quantity);
     state = AsyncValue.data(_orderUserEntity);
   }
 
-   decrementQuantity(int index) {
+  decrementQuantity(int index) {
     final quantity = (_productDetails[index].quantity?.toInt() ?? 0) - 1;
-     _productDetails[index] = _productDetails[index].copyWith(quantity: quantity );
+    _productDetails[index] =
+        _productDetails[index].copyWith(quantity: quantity);
 
     state = AsyncData(_orderUserEntity);
   }
-
 }

@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable
 
-
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/core/constants/constants.dart';
 import 'package:date_farm/src/core/widgets/widgets.dart';
@@ -112,22 +111,31 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                           return CustomButton(
                             title: l10n.submit,
                             onPressed: () async {
-
                               final OrderUserData orderBody = OrderUserData(
                                   comment: widget.data?.comment,
                                   deliveryImage: widget.data?.deliveryImage,
                                   id: widget.data?.id,
                                   orderDate: widget.data?.orderDate,
                                   orderNumber: widget.data?.orderNumber,
-                                  productDetails: List.generate(orderService.getProductDetails().length, (index) {
-                                    return ProductDetail(
-                                      id: orderService.getProductDetails()[index].id,
-                                      product: orderService.getProductDetails()[index].product,
-                                      productName: orderService.getProductDetails()[index].productName,
-                                      quantity: orderService.getProductDetails()[index].quantity,
-                                    );
-                                  },) ,
-                                      
+                                  productDetails: List.generate(
+                                    orderService.getProductDetails().length,
+                                    (index) {
+                                      return ProductDetail(
+                                        id: orderService
+                                            .getProductDetails()[index]
+                                            .id,
+                                        product: orderService
+                                            .getProductDetails()[index]
+                                            .product,
+                                        productName: orderService
+                                            .getProductDetails()[index]
+                                            .productName,
+                                        quantity: orderService
+                                            .getProductDetails()[index]
+                                            .quantity,
+                                      );
+                                    },
+                                  ),
                                   status: currentState,
                                   user: widget.data?.user);
                               final statusCode = await orderService

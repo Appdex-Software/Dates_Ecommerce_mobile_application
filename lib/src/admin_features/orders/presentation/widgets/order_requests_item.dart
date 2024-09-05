@@ -5,7 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import '../../../../core/constants/app_sizes.dart';
 
 class OrderRequestItem extends StatefulWidget {
-  const OrderRequestItem({this.data,super.key, required this.index});
+  const OrderRequestItem({this.data, super.key, required this.index});
   final List<ProductDetail>? data;
   final int index;
   @override
@@ -20,25 +20,30 @@ class _OrderRequestItemState extends State<OrderRequestItem> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: List.generate(widget.data?.length ?? 0, (index) {
-        return Padding(
-          padding: EdgeInsets.only(bottom: 1.sh,),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                widget.data?[index].productName ?? '',
-                style: theme.labelLarge,
-              ),
-              Text(
-                "الكمية المتاحة ${widget.data?[index].quantity}",
-                style: theme.labelSmall,
-              ),
-            ],
-          ),
-        );
-      },),
+      children: List.generate(
+        widget.data?.length ?? 0,
+        (index) {
+          return Padding(
+            padding: EdgeInsets.only(
+              bottom: 1.sh,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  widget.data?[index].productName ?? '',
+                  style: theme.labelLarge,
+                ),
+                Text(
+                  "الكمية المتاحة ${widget.data?[index].quantity}",
+                  style: theme.labelSmall,
+                ),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }

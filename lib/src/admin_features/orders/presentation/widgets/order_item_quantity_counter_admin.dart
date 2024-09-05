@@ -8,7 +8,12 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../user_features/order/data/models/order_user_dto/product_detail.dart';
 
 class OrderItemQuantityCounterAdmin extends ConsumerStatefulWidget {
-  const OrderItemQuantityCounterAdmin( {super.key, this.buttonAspectRatio, this.data,required this.index,});
+  const OrderItemQuantityCounterAdmin({
+    super.key,
+    this.buttonAspectRatio,
+    this.data,
+    required this.index,
+  });
   final ProductDetail? data;
   final int index;
   final double? buttonAspectRatio;
@@ -20,11 +25,10 @@ class OrderItemQuantityCounterAdmin extends ConsumerStatefulWidget {
 class _DateItemQuantityCounterState
     extends ConsumerState<OrderItemQuantityCounterAdmin> {
   int counter = 1;
-  
 
   @override
   void initState() {
-    counter = int.parse(widget.data?.quantity.toString()?? '');
+    counter = int.parse(widget.data?.quantity.toString() ?? '');
     super.initState();
   }
 
@@ -53,7 +57,7 @@ class _DateItemQuantityCounterState
                   if (counter - value == -1) {
                     orderService.incrementQuantity(widget.index);
                   } else {
-                    if(value != 0){
+                    if (value != 0) {
                       orderService.decrementQuantity(widget.index);
                     }
                   }
