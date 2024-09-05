@@ -46,7 +46,9 @@ class CustomDrawer extends ConsumerWidget {
             ListTile(
               leading: const Icon(Icons.post_add),
               title: Text(l10n.newPost),
-              onTap: () {},
+              onTap: () {
+                context.router.push(AdminAddPostRoute());
+              },
             ),
             ListTile(
               leading: const Icon(Icons.logout),

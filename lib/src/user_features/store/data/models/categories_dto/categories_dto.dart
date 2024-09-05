@@ -24,9 +24,5 @@ class CategoriesDto with _$CategoriesDto {
 
 extension CategoriesDtoX on CategoriesDto {
   CategoriesEntity toEntity() => CategoriesEntity(
-        data: data,
-        message: message,
-        statusCode: statusCode,
-        meta: meta
-      );
+      data: data, message: message, statusCode: statusCode, meta: meta);
 }

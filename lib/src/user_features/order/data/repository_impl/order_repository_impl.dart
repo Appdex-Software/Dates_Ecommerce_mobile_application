@@ -23,6 +23,7 @@ class OrderRepositoryImpl implements BaseOrderRepository {
       throw CustomError('Failed to get order ', err: e, stackTrace: stack);
     }
   }
+
   @override
   Future<int?> updateOrders({OrderUserData? body}) async {
     try {

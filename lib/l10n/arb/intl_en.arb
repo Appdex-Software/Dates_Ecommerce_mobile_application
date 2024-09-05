@@ -85,7 +85,10 @@
     "fasting":"Fasting",
     "categories" : "Categories",
     "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity",
-    "orderStatus" : "Order status"
+    "orderStatus" : "Order status",
+    "newsImage" : "News Image",
+     "newsTitle" : "News Title",
+    "newsDetails" : "News Details"
 
 
 

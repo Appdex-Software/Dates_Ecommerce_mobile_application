@@ -31,6 +31,7 @@ class OrderRepository extends _$OrderRepository {
       throw CustomError('Failed to get Orders', err: e, stackTrace: stack);
     }
   }
+
   Future<int?> updateOrders({OrderUserData? body}) async {
     try {
       final statusCode = await orderSourceImpl.updateOrders(body: body);

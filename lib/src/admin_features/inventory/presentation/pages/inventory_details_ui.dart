@@ -1,4 +1,3 @@
-
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:date_farm/src/admin_features/inventory/presentation/providers/inventory_provider.dart';
@@ -226,24 +225,35 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                 },
               ),
               gapH16,
-
-              AsyncValueWidget(
-                value: ref.watch(inventoryServiceProvider),
-                data: (_) {
-                  return CustomDropDown(
-                    value: currentCategory,
-                    onChanged: (value) {
-                      currentCategory = value;
-                      setState(() {});
-                    },
-                    items: List.generate(inventoryService.getCategoriesEntity()?.data?.length ?? 0, (index) {
-                    return DropdownMenuItem(
-                      value: inventoryService.getCategoriesEntity()?.data?[index].name,
-                      child: Text(
-                      inventoryService.getCategoriesEntity()?.data?[index].name ?? '',style: theme.bodyMedium,));
-                  },), hint: l10n.categories);
-                }
-              ),
+             CustomDropDown(
+                        value: currentCategory,
+                        onChanged: (value) {
+                          currentCategory = value;
+                          setState(() {});
+                        },
+                        items: List.generate(
+                          inventoryService
+                                  .getCategoriesEntity()
+                                  ?.data
+                                  ?.length ??
+                              0,
+                          (index) {
+                            return DropdownMenuItem(
+                                value: inventoryService
+                                    .getCategoriesEntity()
+                                    ?.data?[index]
+                                    .name,
+                                child: Text(
+                                  inventoryService
+                                          .getCategoriesEntity()
+                                          ?.data?[index]
+                                          .name ??
+                                      '',
+                                  style: theme.bodyMedium,
+                                ));
+                          },
+                        ),
+                        hint: l10n.categories),
               gapH16,
               AsyncValueWidget(
                   value: ref.watch(inventoryServiceProvider),
@@ -255,20 +265,19 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                         onPressed: () async {
                           if (formKey.currentState?.validate() ?? false) {
                             final dateData = DateData(
-                              category: "عجوة",
-                              charitiesQuantity:
-                                  int.parse(charitiesQantityController.text),
-                              description: productDescriptionController.text,
-                              familiesQuantity:
-                                  int.parse(familyQuantityController.text),
-                              fastingQuantity:
-                                  int.parse(fastingQuantityController.text),
-                              image: imagePath,
-                              name: productNameController.text,
-                              totalQuantity:
-                                  int.parse(totalQuantityController.text),
-                                  id: widget.date?.id
-                            );
+                                category: "عجوة",
+                                charitiesQuantity:
+                                    int.parse(charitiesQantityController.text),
+                                description: productDescriptionController.text,
+                                familiesQuantity:
+                                    int.parse(familyQuantityController.text),
+                                fastingQuantity:
+                                    int.parse(fastingQuantityController.text),
+                                image: imagePath,
+                                name: productNameController.text,
+                                totalQuantity:
+                                    int.parse(totalQuantityController.text),
+                                id: widget.date?.id);
                             final productStatusCode = widget.date != null
                                 ? await inventoryService.patchProducts(
                                     data: dateData)

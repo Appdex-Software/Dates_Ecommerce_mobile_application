@@ -32,6 +32,7 @@ class StoreRepository extends _$StoreRepository {
       throw CustomError('Failed to get products', err: e, stackTrace: stack);
     }
   }
+
   Future<CategoriesEntity?> getCategories() async {
     try {
       _categoriesEntity = await storeSourceImpl.getCategories();

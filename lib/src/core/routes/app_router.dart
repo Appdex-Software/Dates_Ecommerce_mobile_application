@@ -55,6 +55,9 @@ class AppRouter extends _$AppRouter {
           AutoRoute(
             page: OrderDetailsAdminRoute.page,
           ),
+          AutoRoute(
+            page: AdminAddPostRoute.page,
+          ),
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];

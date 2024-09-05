@@ -907,6 +907,36 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `News Image`
+  String get newsImage {
+    return Intl.message(
+      'News Image',
+      name: 'newsImage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News Title`
+  String get newsTitle {
+    return Intl.message(
+      'News Title',
+      name: 'newsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News Details`
+  String get newsDetails {
+    return Intl.message(
+      'News Details',
+      name: 'newsDetails',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
