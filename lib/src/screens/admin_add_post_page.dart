@@ -8,8 +8,7 @@ import '../core/widgets/widgets.dart';
 
 @RoutePage()
 class AdminAddPostPage extends StatelessWidget {
-  AdminAddPostPage({super.key});
-
+  const AdminAddPostPage({super.key});
 
   @override
   Widget build(BuildContext context) {

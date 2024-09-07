@@ -10,11 +10,12 @@ class PhoneField extends StatelessWidget {
     super.key,
     this.onPhoneChanged,
     required this.controller,
-    this.title,
+    this.title, this.initialValue,
   });
   final Function(String?)? onPhoneChanged;
   final PhoneNumberInputController controller;
   final String? title;
+  final String? initialValue;
   @override
   Widget build(BuildContext context) {
     final (_, l10n) = appSettingsRecord(context);
@@ -24,6 +25,7 @@ class PhoneField extends StatelessWidget {
         PhoneNumberInput(
           initialCountry: 'SA',
           locale: 'ar',
+          initialValue: initialValue,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide(

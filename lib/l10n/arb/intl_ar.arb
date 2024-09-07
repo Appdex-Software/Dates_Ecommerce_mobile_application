@@ -59,8 +59,12 @@
     "pleaseEnterYourEmailAndPassword" : "الرجاء إدخال بريدك الإلكتروني وكلمة المرور",
     "logout" : "تسجيل الخروج",
     "theItemHasBeenAddedSuccessfully" : "تمت إضافة العنصر بنجاح",
+    "theUserHasBeenAddedSuccessfully":"لقد تمت إضافة المستخدم بنجاح",
+    "theUserDataHasBeenEditedSuccessfully":"تم تعديل بيانات المستخدم بنجاح",
+
     "comment" : "تعليق",
     "theOrderHasBeenCreatedSuccessfully" : "تم إنشاء الطلب بنجاح",
+    
     "theOrderHasBeenEditedSuccessfully" : "تم تعديل الطلب بنجاح",
 
     "theOrderHasFailed" : "لقد فشل الطلب",
@@ -90,7 +94,12 @@
     "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية",
     "newsImage" : "صور الخبر",
     "newsTitle" : "عنوان الخبر",
-    "newsDetails" : "تفاصيل الخبر"
+    "newsDetails" : "تفاصيل الخبر",
+    "userFirstName" : "الاسم الأول للمستخدم",
+    "userLastName" : "اسم المستخدم الأخير",
+    "role" : "وظيفة",
+    "customerType" : "نوع العميل" 
+
 
 
 

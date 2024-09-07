@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
+import '../../admin_features/user_modification/data/models/user_modification_dto/user_modification_data.dart';
 import '../../screens/screens.dart';
 import '../../user_features/news/data/models/news_dto/news_data.dart';
 import '../../user_features/order/data/models/order_user_dto/order_user_data.dart';
@@ -57,6 +58,9 @@ class AppRouter extends _$AppRouter {
           ),
           AutoRoute(
             page: AdminAddPostRoute.page,
+          ),
+          AutoRoute(
+            page: JoinRequestDetailsRoute.page,
           ),
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),

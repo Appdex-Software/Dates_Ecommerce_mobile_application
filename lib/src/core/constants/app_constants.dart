@@ -9,6 +9,7 @@ class AppConstants {
   static const cartKey = 'cartKey';
   static const String loginApiUrl = '/iam/login';
   static const String registerApiUrl = '/iam/users';
+  static const String getUserApiUrl = '/iam/users';
   static const String getProductUrl = '/products/products';
   static const String getCategoriesUrl = '/products/categories';
   static const String createOrderUrl = '/orders/orders';
@@ -29,6 +30,19 @@ List<String> orderStatus = [
   'shipped',
   'delivered',
   'canceled',
+];
+List<String> userRole = [
+  'super user',
+  'admin',
+  'preparer',
+  'tracker',
+  'shipped',
+  'customer',
+];
+List<String> customerType = [
+  'families',
+  'fasting',
+  'charities',
 ];
 
 Logger logger = Logger(

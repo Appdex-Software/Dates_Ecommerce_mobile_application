@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm order"),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "country": MessageLookupByLibrary.simpleMessage("Country"),
+        "customerType": MessageLookupByLibrary.simpleMessage("Customer Type"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
         "decline": MessageLookupByLibrary.simpleMessage("Decline"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
@@ -106,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
+        "role": MessageLookupByLibrary.simpleMessage("Role"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "store": MessageLookupByLibrary.simpleMessage("Store"),
@@ -124,6 +126,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":
             MessageLookupByLibrary.simpleMessage(
                 "The sum of families quantity, fasting quantity, and charities quantity must be less than or equal to total quantity"),
+        "theUserDataHasBeenEditedSuccessfully":
+            MessageLookupByLibrary.simpleMessage(
+                "The user data has been edited successfully"),
+        "theUserHasBeenAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "The user has been added successfully"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "30 new trees were planted in a new area."),
@@ -131,6 +138,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "This item has been added already"),
         "totalQuantity": MessageLookupByLibrary.simpleMessage("Total Quantity"),
         "unavailable": MessageLookupByLibrary.simpleMessage("Unavailable"),
+        "userFirstName":
+            MessageLookupByLibrary.simpleMessage("user first name"),
+        "userLastName": MessageLookupByLibrary.simpleMessage("user last name"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
         "vision": MessageLookupByLibrary.simpleMessage("Vision"),
         "visionAndMission":

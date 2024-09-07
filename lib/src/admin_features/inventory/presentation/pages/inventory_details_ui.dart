@@ -225,35 +225,31 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                 },
               ),
               gapH16,
-             CustomDropDown(
-                        value: currentCategory,
-                        onChanged: (value) {
-                          currentCategory = value;
-                          setState(() {});
-                        },
-                        items: List.generate(
-                          inventoryService
-                                  .getCategoriesEntity()
-                                  ?.data
-                                  ?.length ??
-                              0,
-                          (index) {
-                            return DropdownMenuItem(
-                                value: inventoryService
+              CustomDropDown(
+                  value: currentCategory,
+                  onChanged: (value) {
+                    currentCategory = value;
+                    setState(() {});
+                  },
+                  items: List.generate(
+                    inventoryService.getCategoriesEntity()?.data?.length ?? 0,
+                    (index) {
+                      return DropdownMenuItem(
+                          value: inventoryService
+                              .getCategoriesEntity()
+                              ?.data?[index]
+                              .name,
+                          child: Text(
+                            inventoryService
                                     .getCategoriesEntity()
                                     ?.data?[index]
-                                    .name,
-                                child: Text(
-                                  inventoryService
-                                          .getCategoriesEntity()
-                                          ?.data?[index]
-                                          .name ??
-                                      '',
-                                  style: theme.bodyMedium,
-                                ));
-                          },
-                        ),
-                        hint: l10n.categories),
+                                    .name ??
+                                '',
+                            style: theme.bodyMedium,
+                          ));
+                    },
+                  ),
+                  hint: l10n.categories),
               gapH16,
               AsyncValueWidget(
                   value: ref.watch(inventoryServiceProvider),
