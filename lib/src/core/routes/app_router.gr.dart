@@ -102,6 +102,17 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    JoinRequestDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<JoinRequestDetailsRouteArgs>(
+          orElse: () => const JoinRequestDetailsRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: JoinRequestDetailsPage(
+          key: args.key,
+          data: args.data,
+        ),
+      );
+    },
     JoinRequestRoute.name: (routeData) {
       final args = routeData.argsAs<JoinRequestRouteArgs>(
           orElse: () => const JoinRequestRouteArgs());
@@ -442,6 +453,45 @@ class InventoryDetailsAdminRouteArgs {
   @override
   String toString() {
     return 'InventoryDetailsAdminRouteArgs{key: $key, data: $data}';
+  }
+}
+
+/// generated route for
+/// [JoinRequestDetailsPage]
+class JoinRequestDetailsRoute
+    extends PageRouteInfo<JoinRequestDetailsRouteArgs> {
+  JoinRequestDetailsRoute({
+    Key? key,
+    UserModificationData? data,
+    List<PageRouteInfo>? children,
+  }) : super(
+          JoinRequestDetailsRoute.name,
+          args: JoinRequestDetailsRouteArgs(
+            key: key,
+            data: data,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'JoinRequestDetailsRoute';
+
+  static const PageInfo<JoinRequestDetailsRouteArgs> page =
+      PageInfo<JoinRequestDetailsRouteArgs>(name);
+}
+
+class JoinRequestDetailsRouteArgs {
+  const JoinRequestDetailsRouteArgs({
+    this.key,
+    this.data,
+  });
+
+  final Key? key;
+
+  final UserModificationData? data;
+
+  @override
+  String toString() {
+    return 'JoinRequestDetailsRouteArgs{key: $key, data: $data}';
   }
 }
 

@@ -616,6 +616,26 @@ class AppLocalizations {
     );
   }
 
+  /// `The user has been added successfully`
+  String get theUserHasBeenAddedSuccessfully {
+    return Intl.message(
+      'The user has been added successfully',
+      name: 'theUserHasBeenAddedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The user data has been edited successfully`
+  String get theUserDataHasBeenEditedSuccessfully {
+    return Intl.message(
+      'The user data has been edited successfully',
+      name: 'theUserDataHasBeenEditedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Failed to login`
   String get failedToLogin {
     return Intl.message(
@@ -933,6 +953,46 @@ class AppLocalizations {
     return Intl.message(
       'News Details',
       name: 'newsDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `user first name`
+  String get userFirstName {
+    return Intl.message(
+      'user first name',
+      name: 'userFirstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `user last name`
+  String get userLastName {
+    return Intl.message(
+      'user last name',
+      name: 'userLastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Role`
+  String get role {
+    return Intl.message(
+      'Role',
+      name: 'role',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Type`
+  String get customerType {
+    return Intl.message(
+      'Customer Type',
+      name: 'customerType',
       desc: '',
       args: [],
     );

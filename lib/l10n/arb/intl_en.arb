@@ -57,6 +57,8 @@
     "pleaseEnterYourEmailAndPassword" : "Please enter your email and password",
     "logout" : "Logout",
     "theItemHasBeenAddedSuccessfully":"The item has been added successfully",
+    "theUserHasBeenAddedSuccessfully":"The user has been added successfully",
+    "theUserDataHasBeenEditedSuccessfully":"The user data has been edited successfully",
     "failedToLogin":"Failed to login",
     "comment" : "Comment",
     "theOrderHasBeenCreatedSuccessfully" : "The order has been created successfully",
@@ -88,7 +90,11 @@
     "orderStatus" : "Order status",
     "newsImage" : "News Image",
      "newsTitle" : "News Title",
-    "newsDetails" : "News Details"
+    "newsDetails" : "News Details",
+    "userFirstName" : "user first name",
+    "userLastName" : "user last name",
+    "role" : "Role",
+    "customerType" : "Customer Type" 
 
 
 

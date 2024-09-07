@@ -23,6 +23,7 @@ class NewsRepositoryImpl implements BaseNewsRepository {
       throw CustomError('Failed to get news', err: e, stackTrace: stack);
     }
   }
+
   @override
   Future<int?> addNews({AddNewsBody? body}) async {
     try {

@@ -27,6 +27,7 @@ class NewsRepository extends _$NewsRepository {
       throw CustomError('Failed to get news', err: e, stackTrace: stack);
     }
   }
+
   Future<int?> addNews({AddNewsBody? body}) async {
     try {
       final statusCode = await newsSourceImpl.addNews(body: body);

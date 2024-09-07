@@ -1,31 +1,28 @@
 import 'package:date_farm/src/core/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 
-class CustomDropDown extends StatefulWidget {
+class CustomDropDown extends StatelessWidget {
   const CustomDropDown(
       {super.key,
       required this.items,
       required this.onChanged,
       this.onTap,
       this.value,
-      required this.hint});
+      required this.hint, this.validator});
   final List<DropdownMenuItem> items;
   final void Function(dynamic)? onChanged;
   final void Function()? onTap;
   final dynamic value;
   final String hint;
-  @override
-  State<CustomDropDown> createState() => _CustomDropDownState();
-}
-
-class _CustomDropDownState extends State<CustomDropDown> {
+  final String? Function(dynamic)? validator;
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
-      items: widget.items,
+      items: items,
+      validator: validator,
       decoration: InputDecoration(
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        hintText: widget.hint,
+        hintText: hint,
         errorMaxLines: 3,
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -58,11 +55,11 @@ class _CustomDropDownState extends State<CustomDropDown> {
           ),
         ),
       ),
-      onChanged: widget.onChanged,
+      onChanged: onChanged,
       hint: Text(
-        widget.hint,
+        hint,
       ),
-      value: widget.value,
+      value: value,
     );
   }
 }

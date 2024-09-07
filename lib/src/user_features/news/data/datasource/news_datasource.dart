@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/user_features/news/data/models/add_news_body/add_news_body.dart';
 import 'package:dio/dio.dart';
 
@@ -35,23 +34,25 @@ class NewsSourceImpl implements NewsSource {
       throw e.errMassage;
     }
   }
+
   @override
   Future<int?> addNews({AddNewsBody? body}) async {
     try {
       final response = await DioClient().dio.post(
-            options: Options(
-              validateStatus: (status) {
-                return status! < 500;
-              },
-              followRedirects: false,
-            ),
-            AppConstants.postNewsUrl,
-            data: FormData.fromMap({
-              'image' : body?.image !=null  ? await MultipartFile.fromFile(body?.image ?? '') : null,
-              'subject': body?.subject,
-              'body': body?.body,
-            })
-          );
+          options: Options(
+            validateStatus: (status) {
+              return status! < 500;
+            },
+            followRedirects: false,
+          ),
+          AppConstants.postNewsUrl,
+          data: FormData.fromMap({
+            'image': body?.image != null
+                ? await MultipartFile.fromFile(body?.image ?? '')
+                : null,
+            'subject': body?.subject,
+            'body': body?.body,
+          }));
       logger.d('getNews response: ${response.data}');
       return response.statusCode;
     } on CustomError catch (e) {

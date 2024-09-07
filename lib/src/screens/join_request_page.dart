@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:date_farm/src/admin_features/join_request/presentation/pages/join_request_ui.dart';
+import 'package:date_farm/src/admin_features/user_modification/presentation/pages/join_request_ui.dart';
 import 'package:flutter/material.dart';
 
 import '../core/constants/adaptive.dart';

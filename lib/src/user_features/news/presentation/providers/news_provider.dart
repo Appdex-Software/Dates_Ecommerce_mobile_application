@@ -26,6 +26,7 @@ class NewsService extends _$NewsService {
       throw CustomError('Failed to get news', err: e, stackTrace: stack);
     }
   }
+
   Future<int?> addNews({AddNewsBody? body}) async {
     final newsService = ref.watch(newsRepositoryProvider.notifier);
     state = const AsyncLoading();

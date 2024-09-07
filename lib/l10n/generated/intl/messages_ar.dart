@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmOrder": MessageLookupByLibrary.simpleMessage("تاكيد الطلب"),
         "contactUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "country": MessageLookupByLibrary.simpleMessage("الدولة"),
+        "customerType": MessageLookupByLibrary.simpleMessage("نوع العميل"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("منتجات التمور"),
         "decline": MessageLookupByLibrary.simpleMessage("رفض"),
         "doUWantToExitTheApp":
@@ -105,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "review": MessageLookupByLibrary.simpleMessage("مراجعة"),
+        "role": MessageLookupByLibrary.simpleMessage("وظيفة"),
         "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "store": MessageLookupByLibrary.simpleMessage("المتجر"),
@@ -121,6 +123,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity":
             MessageLookupByLibrary.simpleMessage(
                 "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية"),
+        "theUserDataHasBeenEditedSuccessfully":
+            MessageLookupByLibrary.simpleMessage(
+                "تم تعديل بيانات المستخدم بنجاح"),
+        "theUserHasBeenAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "لقد تمت إضافة المستخدم بنجاح"),
         "thirtyNewTreesWerePlantedInANewArea":
             MessageLookupByLibrary.simpleMessage(
                 "تم زراعة 30 شجرة جديدة في منطقة جديدة "),
@@ -128,6 +135,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تمت إضافة هذا العنصر بالفعل"),
         "totalQuantity": MessageLookupByLibrary.simpleMessage("اجمالي الكمية"),
         "unavailable": MessageLookupByLibrary.simpleMessage("غير المتاح"),
+        "userFirstName":
+            MessageLookupByLibrary.simpleMessage("الاسم الأول للمستخدم"),
+        "userLastName":
+            MessageLookupByLibrary.simpleMessage("اسم المستخدم الأخير"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "vision": MessageLookupByLibrary.simpleMessage("الرؤية"),
         "visionAndMission":
