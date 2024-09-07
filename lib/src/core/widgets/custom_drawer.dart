@@ -31,11 +31,11 @@ class CustomDrawer extends ConsumerWidget {
                 context.router.push(const OrdersAdminRoute());
               },
             ),
-            ListTile(
-              leading: const Icon(Icons.autorenew),
-              title: Text(l10n.ordersInProgress),
-              onTap: () {},
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.autorenew),
+            //   title: Text(l10n.ordersInProgress),
+            //   onTap: () {},
+            // ),
             ListTile(
               leading: const Icon(Icons.group_add),
               title: Text(l10n.joinRequests),

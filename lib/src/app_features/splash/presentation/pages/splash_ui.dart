@@ -26,7 +26,7 @@ class _SplashUiState extends State<SplashUi> {
       if (isLogin) {
         context.router.replace(const HomeUserRoute());
       } else if (isAdminLogin) {
-        context.router.replace(HomeAdminRoute());
+        context.router.replace(const OrdersAdminRoute());
       } else {
         context.router.replace(const LoginRoute());
       }
