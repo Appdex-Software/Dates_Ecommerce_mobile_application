@@ -14,10 +14,12 @@ class UserModificationRepository extends _$UserModificationRepository {
     return getUserModificationEntity();
   }
 
-  final UserModificationRepositoryImpl userModificationSourceImpl = UserModificationRepositoryImpl();
+  final UserModificationRepositoryImpl userModificationSourceImpl =
+      UserModificationRepositoryImpl();
 
   UserModificationEntity? _userModificationEntity;
-  UserModificationEntity? getUserModificationEntity() => _userModificationEntity;
+  UserModificationEntity? getUserModificationEntity() =>
+      _userModificationEntity;
 
   Future<UserModificationEntity?> getUsers() async {
     try {
@@ -36,9 +38,11 @@ class UserModificationRepository extends _$UserModificationRepository {
       throw CustomError('Failed to add user', err: e, stackTrace: stack);
     }
   }
+
   Future<int?> patchUser({UserModificationData? body}) async {
     try {
-      final statusCode = await userModificationSourceImpl.patchUsers(body: body);
+      final statusCode =
+          await userModificationSourceImpl.patchUsers(body: body);
       return statusCode;
     } catch (e, stack) {
       throw CustomError('Failed to patch user', err: e, stackTrace: stack);

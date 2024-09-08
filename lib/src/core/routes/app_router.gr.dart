@@ -16,11 +16,9 @@ abstract class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     AdminAddPostRoute.name: (routeData) {
-      final args = routeData.argsAs<AdminAddPostRouteArgs>(
-          orElse: () => const AdminAddPostRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: AdminAddPostPage(key: args.key),
+        child: const AdminAddPostPage(),
       );
     },
     CartRoute.name: (routeData) {
@@ -196,31 +194,16 @@ abstract class _$AppRouter extends RootStackRouter {
 
 /// generated route for
 /// [AdminAddPostPage]
-class AdminAddPostRoute extends PageRouteInfo<AdminAddPostRouteArgs> {
-  AdminAddPostRoute({
-    Key? key,
-    List<PageRouteInfo>? children,
-  }) : super(
+class AdminAddPostRoute extends PageRouteInfo<void> {
+  const AdminAddPostRoute({List<PageRouteInfo>? children})
+      : super(
           AdminAddPostRoute.name,
-          args: AdminAddPostRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'AdminAddPostRoute';
 
-  static const PageInfo<AdminAddPostRouteArgs> page =
-      PageInfo<AdminAddPostRouteArgs>(name);
-}
-
-class AdminAddPostRouteArgs {
-  const AdminAddPostRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'AdminAddPostRouteArgs{key: $key}';
-  }
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

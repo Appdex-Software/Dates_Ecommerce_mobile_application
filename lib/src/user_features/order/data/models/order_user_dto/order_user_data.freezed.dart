@@ -21,10 +21,10 @@ OrderUserData _$OrderUserDataFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$OrderUserData {
   String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'product_details')
-  List<ProductDetail>? get productDetails => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_date')
   DateTime? get orderDate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'user_name')
+  String? get userName => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_number')
   String? get orderNumber => throw _privateConstructorUsedError;
   String? get status => throw _privateConstructorUsedError;
@@ -32,6 +32,8 @@ mixin _$OrderUserData {
   dynamic get deliveryImage => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   String? get user => throw _privateConstructorUsedError;
+  @JsonKey(name: 'product_details')
+  List<ProductDetail>? get productDetails => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,13 +49,14 @@ abstract class $OrderUserDataCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'product_details') List<ProductDetail>? productDetails,
       @JsonKey(name: 'order_date') DateTime? orderDate,
+      @JsonKey(name: 'user_name') String? userName,
       @JsonKey(name: 'order_number') String? orderNumber,
       String? status,
       @JsonKey(name: 'delivery_image') dynamic deliveryImage,
       String? comment,
-      String? user});
+      String? user,
+      @JsonKey(name: 'product_details') List<ProductDetail>? productDetails});
 }
 
 /// @nodoc
@@ -70,27 +73,28 @@ class _$OrderUserDataCopyWithImpl<$Res, $Val extends OrderUserData>
   @override
   $Res call({
     Object? id = freezed,
-    Object? productDetails = freezed,
     Object? orderDate = freezed,
+    Object? userName = freezed,
     Object? orderNumber = freezed,
     Object? status = freezed,
     Object? deliveryImage = freezed,
     Object? comment = freezed,
     Object? user = freezed,
+    Object? productDetails = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      productDetails: freezed == productDetails
-          ? _value.productDetails
-          : productDetails // ignore: cast_nullable_to_non_nullable
-              as List<ProductDetail>?,
       orderDate: freezed == orderDate
           ? _value.orderDate
           : orderDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      userName: freezed == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String?,
       orderNumber: freezed == orderNumber
           ? _value.orderNumber
           : orderNumber // ignore: cast_nullable_to_non_nullable
@@ -111,6 +115,10 @@ class _$OrderUserDataCopyWithImpl<$Res, $Val extends OrderUserData>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as String?,
+      productDetails: freezed == productDetails
+          ? _value.productDetails
+          : productDetails // ignore: cast_nullable_to_non_nullable
+              as List<ProductDetail>?,
     ) as $Val);
   }
 }
@@ -125,13 +133,14 @@ abstract class _$$OrderUserDataImplCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'product_details') List<ProductDetail>? productDetails,
       @JsonKey(name: 'order_date') DateTime? orderDate,
+      @JsonKey(name: 'user_name') String? userName,
       @JsonKey(name: 'order_number') String? orderNumber,
       String? status,
       @JsonKey(name: 'delivery_image') dynamic deliveryImage,
       String? comment,
-      String? user});
+      String? user,
+      @JsonKey(name: 'product_details') List<ProductDetail>? productDetails});
 }
 
 /// @nodoc
@@ -146,27 +155,28 @@ class __$$OrderUserDataImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? productDetails = freezed,
     Object? orderDate = freezed,
+    Object? userName = freezed,
     Object? orderNumber = freezed,
     Object? status = freezed,
     Object? deliveryImage = freezed,
     Object? comment = freezed,
     Object? user = freezed,
+    Object? productDetails = freezed,
   }) {
     return _then(_$OrderUserDataImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      productDetails: freezed == productDetails
-          ? _value._productDetails
-          : productDetails // ignore: cast_nullable_to_non_nullable
-              as List<ProductDetail>?,
       orderDate: freezed == orderDate
           ? _value.orderDate
           : orderDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      userName: freezed == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String?,
       orderNumber: freezed == orderNumber
           ? _value.orderNumber
           : orderNumber // ignore: cast_nullable_to_non_nullable
@@ -187,6 +197,10 @@ class __$$OrderUserDataImplCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as String?,
+      productDetails: freezed == productDetails
+          ? _value._productDetails
+          : productDetails // ignore: cast_nullable_to_non_nullable
+              as List<ProductDetail>?,
     ));
   }
 }
@@ -196,14 +210,15 @@ class __$$OrderUserDataImplCopyWithImpl<$Res>
 class _$OrderUserDataImpl implements _OrderUserData {
   _$OrderUserDataImpl(
       {this.id,
-      @JsonKey(name: 'product_details')
-      final List<ProductDetail>? productDetails,
       @JsonKey(name: 'order_date') this.orderDate,
+      @JsonKey(name: 'user_name') this.userName,
       @JsonKey(name: 'order_number') this.orderNumber,
       this.status,
       @JsonKey(name: 'delivery_image') this.deliveryImage,
       this.comment,
-      this.user})
+      this.user,
+      @JsonKey(name: 'product_details')
+      final List<ProductDetail>? productDetails})
       : _productDetails = productDetails;
 
   factory _$OrderUserDataImpl.fromJson(Map<String, dynamic> json) =>
@@ -211,20 +226,12 @@ class _$OrderUserDataImpl implements _OrderUserData {
 
   @override
   final String? id;
-  final List<ProductDetail>? _productDetails;
-  @override
-  @JsonKey(name: 'product_details')
-  List<ProductDetail>? get productDetails {
-    final value = _productDetails;
-    if (value == null) return null;
-    if (_productDetails is EqualUnmodifiableListView) return _productDetails;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   @override
   @JsonKey(name: 'order_date')
   final DateTime? orderDate;
+  @override
+  @JsonKey(name: 'user_name')
+  final String? userName;
   @override
   @JsonKey(name: 'order_number')
   final String? orderNumber;
@@ -237,10 +244,20 @@ class _$OrderUserDataImpl implements _OrderUserData {
   final String? comment;
   @override
   final String? user;
+  final List<ProductDetail>? _productDetails;
+  @override
+  @JsonKey(name: 'product_details')
+  List<ProductDetail>? get productDetails {
+    final value = _productDetails;
+    if (value == null) return null;
+    if (_productDetails is EqualUnmodifiableListView) return _productDetails;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'OrderUserData(id: $id, productDetails: $productDetails, orderDate: $orderDate, orderNumber: $orderNumber, status: $status, deliveryImage: $deliveryImage, comment: $comment, user: $user)';
+    return 'OrderUserData(id: $id, orderDate: $orderDate, userName: $userName, orderNumber: $orderNumber, status: $status, deliveryImage: $deliveryImage, comment: $comment, user: $user, productDetails: $productDetails)';
   }
 
   @override
@@ -249,17 +266,19 @@ class _$OrderUserDataImpl implements _OrderUserData {
         (other.runtimeType == runtimeType &&
             other is _$OrderUserDataImpl &&
             (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._productDetails, _productDetails) &&
             (identical(other.orderDate, orderDate) ||
                 other.orderDate == orderDate) &&
+            (identical(other.userName, userName) ||
+                other.userName == userName) &&
             (identical(other.orderNumber, orderNumber) ||
                 other.orderNumber == orderNumber) &&
             (identical(other.status, status) || other.status == status) &&
             const DeepCollectionEquality()
                 .equals(other.deliveryImage, deliveryImage) &&
             (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.user, user) || other.user == user));
+            (identical(other.user, user) || other.user == user) &&
+            const DeepCollectionEquality()
+                .equals(other._productDetails, _productDetails));
   }
 
   @JsonKey(ignore: true)
@@ -267,13 +286,14 @@ class _$OrderUserDataImpl implements _OrderUserData {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_productDetails),
       orderDate,
+      userName,
       orderNumber,
       status,
       const DeepCollectionEquality().hash(deliveryImage),
       comment,
-      user);
+      user,
+      const DeepCollectionEquality().hash(_productDetails));
 
   @JsonKey(ignore: true)
   @override
@@ -292,14 +312,15 @@ class _$OrderUserDataImpl implements _OrderUserData {
 abstract class _OrderUserData implements OrderUserData {
   factory _OrderUserData(
       {final String? id,
-      @JsonKey(name: 'product_details')
-      final List<ProductDetail>? productDetails,
       @JsonKey(name: 'order_date') final DateTime? orderDate,
+      @JsonKey(name: 'user_name') final String? userName,
       @JsonKey(name: 'order_number') final String? orderNumber,
       final String? status,
       @JsonKey(name: 'delivery_image') final dynamic deliveryImage,
       final String? comment,
-      final String? user}) = _$OrderUserDataImpl;
+      final String? user,
+      @JsonKey(name: 'product_details')
+      final List<ProductDetail>? productDetails}) = _$OrderUserDataImpl;
 
   factory _OrderUserData.fromJson(Map<String, dynamic> json) =
       _$OrderUserDataImpl.fromJson;
@@ -307,11 +328,11 @@ abstract class _OrderUserData implements OrderUserData {
   @override
   String? get id;
   @override
-  @JsonKey(name: 'product_details')
-  List<ProductDetail>? get productDetails;
-  @override
   @JsonKey(name: 'order_date')
   DateTime? get orderDate;
+  @override
+  @JsonKey(name: 'user_name')
+  String? get userName;
   @override
   @JsonKey(name: 'order_number')
   String? get orderNumber;
@@ -324,6 +345,9 @@ abstract class _OrderUserData implements OrderUserData {
   String? get comment;
   @override
   String? get user;
+  @override
+  @JsonKey(name: 'product_details')
+  List<ProductDetail>? get productDetails;
   @override
   @JsonKey(ignore: true)
   _$$OrderUserDataImplCopyWith<_$OrderUserDataImpl> get copyWith =>

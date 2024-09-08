@@ -12,12 +12,14 @@ class AdminAddPostPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final (theme, _) = appSettingsRecord(context);
+    final (theme, l10n) = appSettingsRecord(context);
 
     return Scaffold(
       appBar: TransparentAppBar(
         elevation: 0,
         color: theme.greenChalk,
+        title: Text(l10n.newPost),
+        centerTitle: true,
       ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(

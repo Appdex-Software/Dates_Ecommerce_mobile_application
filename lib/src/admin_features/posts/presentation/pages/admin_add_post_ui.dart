@@ -48,33 +48,36 @@ class _AdminAddPostUiState extends ConsumerState<AdminAddPostUi> {
         child: Form(
           key: formKey,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 l10n.productImage,
                 style: theme.bodyMedium,
               ),
               gapH16,
-              GestureDetector(
-                onTap: () async {
-                  await pickImage();
-                },
-                child: UnconstrainedBox(
-                  child: Container(
-                    width: 50.sw,
-                    height: 50.sw,
-                    clipBehavior: Clip.hardEdge,
-                    decoration: BoxDecoration(
-                        color: theme.white.withOpacity(0.6),
-                        borderRadius: AppSizes.borderRadius8),
-                    child: imagePath != null
-                        ? Image.asset(
-                            imagePath ?? '',
-                            fit: BoxFit.cover,
-                          )
-                        : Icon(
-                            Icons.add,
-                            size: 20.sw,
-                          ),
+              Center(
+                child: GestureDetector(
+                  onTap: () async {
+                    await pickImage();
+                  },
+                  child: UnconstrainedBox(
+                    child: Container(
+                      width: 50.sw,
+                      height: 50.sw,
+                      clipBehavior: Clip.hardEdge,
+                      decoration: BoxDecoration(
+                          color: theme.white.withOpacity(0.6),
+                          borderRadius: AppSizes.borderRadius8),
+                      child: imagePath != null
+                          ? Image.asset(
+                              imagePath ?? '',
+                              fit: BoxFit.cover,
+                            )
+                          : Icon(
+                              Icons.add,
+                              size: 20.sw,
+                            ),
+                    ),
                   ),
                 ),
               ),

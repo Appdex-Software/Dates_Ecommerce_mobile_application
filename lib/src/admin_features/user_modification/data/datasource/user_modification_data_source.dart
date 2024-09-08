@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/admin_features/user_modification/data/models/user_modification_dto/user_modification_dto.dart';
 import 'package:dio/dio.dart';
 
@@ -36,38 +35,38 @@ class UserModificationSourceImpl implements UserModificationSource {
       throw e.errMassage;
     }
   }
+
   @override
   Future<int?> addUsers({UserModificationData? body}) async {
     try {
       final response = await DioClient().dio.post(
-            options: Options(
-              validateStatus: (status) {
-                return status! < 500;
-              },
-              followRedirects: false,
-            ),
-            AppConstants.getUserApiUrl,
-            data: body?.toJson()
-          );
+          options: Options(
+            validateStatus: (status) {
+              return status! < 500;
+            },
+            followRedirects: false,
+          ),
+          AppConstants.getUserApiUrl,
+          data: body?.toJson());
       logger.d('addNews response: ${response.data}');
       return response.statusCode;
     } on CustomError catch (e) {
       throw e.errMassage;
     }
   }
+
   @override
   Future<int?> patchUsers({UserModificationData? body}) async {
     try {
       final response = await DioClient().dio.patch(
-            options: Options(
-              validateStatus: (status) {
-                return status! < 500;
-              },
-              followRedirects: false,
-            ),
-            "${AppConstants.getUserApiUrl}/${body?.id}",
-            data: body?.toJson()
-          );
+          options: Options(
+            validateStatus: (status) {
+              return status! < 500;
+            },
+            followRedirects: false,
+          ),
+          "${AppConstants.getUserApiUrl}/${body?.id}",
+          data: body?.toJson());
       logger.d('addNews response: ${response.data}');
       return response.statusCode;
     } on CustomError catch (e) {

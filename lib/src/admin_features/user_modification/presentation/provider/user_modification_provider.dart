@@ -14,10 +14,12 @@ class UserModificationService extends _$UserModificationService {
   }
 
   UserModificationEntity? _userModificationEntity;
-  UserModificationEntity? getUserModificationEntity() => _userModificationEntity;
+  UserModificationEntity? getUserModificationEntity() =>
+      _userModificationEntity;
 
   Future<UserModificationEntity?> getUser() async {
-    final userModService = ref.watch(userModificationRepositoryProvider.notifier);
+    final userModService =
+        ref.watch(userModificationRepositoryProvider.notifier);
     state = const AsyncLoading();
 
     try {
@@ -31,7 +33,8 @@ class UserModificationService extends _$UserModificationService {
   }
 
   Future<int?> addUser({UserModificationData? body}) async {
-    final userModService = ref.watch(userModificationRepositoryProvider.notifier);
+    final userModService =
+        ref.watch(userModificationRepositoryProvider.notifier);
     state = const AsyncLoading();
     try {
       final statusCode = await userModService.addUser(body: body);
@@ -41,8 +44,10 @@ class UserModificationService extends _$UserModificationService {
       throw CustomError('Failed to add user', err: e, stackTrace: stack);
     }
   }
+
   Future<int?> patchUser({UserModificationData? body}) async {
-    final userModService = ref.watch(userModificationRepositoryProvider.notifier);
+    final userModService =
+        ref.watch(userModificationRepositoryProvider.notifier);
     state = const AsyncLoading();
     try {
       final statusCode = await userModService.patchUser(body: body);

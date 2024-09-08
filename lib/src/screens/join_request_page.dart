@@ -20,6 +20,7 @@ class JoinRequestPage extends StatelessWidget {
       appBar: TransparentAppBar(
         color: Colors.transparent,
         title: Text(l10n.joinRequests),
+        centerTitle: true,
         backButton: IconButton(
             onPressed: () {
               scaffoldKey.currentState!.openDrawer();
