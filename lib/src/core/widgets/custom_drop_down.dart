@@ -8,7 +8,8 @@ class CustomDropDown extends StatelessWidget {
       required this.onChanged,
       this.onTap,
       this.value,
-      required this.hint, this.validator});
+      required this.hint,
+      this.validator});
   final List<DropdownMenuItem> items;
   final void Function(dynamic)? onChanged;
   final void Function()? onTap;

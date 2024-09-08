@@ -32,7 +32,6 @@ class UserModificationData with _$UserModificationData {
     dynamic picture,
   }) = _UserModificationData;
 
-  factory UserModificationData.fromJson(Map<String, dynamic> json) => _$UserModificationDataFromJson(json);
+  factory UserModificationData.fromJson(Map<String, dynamic> json) =>
+      _$UserModificationDataFromJson(json);
 }
-
-

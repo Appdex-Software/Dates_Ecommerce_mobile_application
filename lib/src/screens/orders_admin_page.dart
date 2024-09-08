@@ -1,3 +1,4 @@
+import 'package:date_farm/src/core/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:auto_route/auto_route.dart';
@@ -18,11 +19,17 @@ class _OrdersAdminPageState extends State<OrdersAdminPage> {
 
   @override
   Widget build(BuildContext context) {
+    final (_, l10n) = appSettingsRecord(context);
+
     return Scaffold(
       key: scaffoldKey,
       drawer: const CustomDrawer(),
       appBar: TransparentAppBar(
         color: Colors.transparent,
+        title: Text(
+          l10n.orders
+        ),
+        centerTitle: true,
         backButton: IconButton(
             onPressed: () {
               scaffoldKey.currentState!.openDrawer();

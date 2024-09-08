@@ -10,7 +10,8 @@ class PhoneField extends StatelessWidget {
     super.key,
     this.onPhoneChanged,
     required this.controller,
-    this.title, this.initialValue,
+    this.title,
+    this.initialValue,
   });
   final Function(String?)? onPhoneChanged;
   final PhoneNumberInputController controller;

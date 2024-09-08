@@ -34,7 +34,8 @@ class _JoinRequestUiState extends ConsumerState<JoinRequestUi> {
                     final userData = userModEntity?.data?[index];
                     return GestureDetector(
                       onTap: () {
-                        context.router.push(JoinRequestDetailsRoute(data: userData));
+                        context.router
+                            .push(JoinRequestDetailsRoute(data: userData));
                       },
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 2.sh),

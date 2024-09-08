@@ -34,6 +34,7 @@ class UserModificationRepositoryImpl implements BaseUserModificationRepository {
       throw CustomError('Failed to add users', err: e, stackTrace: stack);
     }
   }
+
   @override
   Future<int?> patchUsers({UserModificationData? body}) async {
     try {

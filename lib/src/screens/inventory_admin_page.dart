@@ -21,6 +21,7 @@ class InventoryAdminPage extends StatelessWidget {
       appBar: TransparentAppBar(
         color: Colors.transparent,
         title: Text(l10n.inventory),
+        centerTitle: true,
         backButton: IconButton(
             onPressed: () {
               scaffoldKey.currentState!.openDrawer();

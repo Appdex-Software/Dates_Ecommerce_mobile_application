@@ -110,9 +110,7 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
                   AppLocalizations.of(context)
                       .theUserDataHasBeenEditedSuccessfully,
                   context);
-          setState(() {
-            
-          });
+          setState(() {});
         }
       } else {
         context.mounted
@@ -334,26 +332,31 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
                 AsyncValueWidget(
                     value: ref.watch(userModificationServiceProvider),
                     data: (_) {
-                      return widget.data?.id == null ? Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Expanded(
-                            child: CustomButton(
-                                title: l10n.accept, onPressed: (){
-                                  sendData("registered");
-                                }),
-                          ),
-                              gapW20,
-                              Expanded(
-                                child: CustomButton(
-                                backgroundColor: theme.redApple,
-                                title: l10n.decline, onPressed: (){
-                                  sendData("rejected");
-                                }),
-                              ),
-                        ],
-                      ) : CustomButton(
-                                title: l10n.confirm, onPressed: () => sendData("registered"));
+                      return widget.data?.id == null
+                          ? Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Expanded(
+                                  child: CustomButton(
+                                      title: l10n.accept,
+                                      onPressed: () {
+                                        sendData("registered");
+                                      }),
+                                ),
+                                gapW20,
+                                Expanded(
+                                  child: CustomButton(
+                                      backgroundColor: theme.redApple,
+                                      title: l10n.decline,
+                                      onPressed: () {
+                                        sendData("rejected");
+                                      }),
+                                ),
+                              ],
+                            )
+                          : CustomButton(
+                              title: l10n.confirm,
+                              onPressed: () => sendData("registered"));
                     }),
               ],
             ),

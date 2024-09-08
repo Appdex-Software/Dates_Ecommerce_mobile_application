@@ -3,8 +3,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../domain/entities/order_user_entity.dart';
-import 'order_user_data.dart';
 import 'meta.dart';
+import 'order_user_data.dart';
 import 'pagination.dart';
 
 part 'order_user_dto.freezed.dart';
