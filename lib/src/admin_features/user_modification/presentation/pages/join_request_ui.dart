@@ -81,9 +81,14 @@ class _JoinRequestUiState extends ConsumerState<JoinRequestUi> {
               );
             }),
         SafeArea(
-          child: CustomButton(
-            title: l10n.add,
-            onPressed: () {},
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 1.sh),
+            child: CustomButton(
+              title: l10n.add,
+              onPressed: () {
+                context.router.push(JoinRequestDetailsRoute());
+              },
+            ),
           ),
         )
       ],

@@ -63,7 +63,7 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  "الكمية المتاحة",
+                                  l10n.quantity,
                                   style: theme.labelLarge,
                                 ),
                                 gapW24,
@@ -108,52 +108,55 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                     AsyncValueWidget(
                         value: ref.watch(orderServiceProvider),
                         data: (_) {
-                          return CustomButton(
-                            title: l10n.submit,
-                            onPressed: () async {
-                              final OrderUserData orderBody = OrderUserData(
-                                  comment: widget.data?.comment,
-                                  deliveryImage: widget.data?.deliveryImage,
-                                  id: widget.data?.id,
-                                  orderDate: widget.data?.orderDate,
-                                  orderNumber: widget.data?.orderNumber,
-                                  productDetails: List.generate(
-                                    orderService.getProductDetails().length,
-                                    (index) {
-                                      return ProductDetail(
-                                        id: orderService
-                                            .getProductDetails()[index]
-                                            .id,
-                                        product: orderService
-                                            .getProductDetails()[index]
-                                            .product,
-                                        productName: orderService
-                                            .getProductDetails()[index]
-                                            .productName,
-                                        quantity: orderService
-                                            .getProductDetails()[index]
-                                            .quantity,
-                                      );
-                                    },
-                                  ),
-                                  status: currentState,
-                                  user: widget.data?.user);
-                              final statusCode = await orderService
-                                  .updateOrders(body: orderBody);
-                              if (statusCode == 200) {
-                                if (context.mounted) {
-                                  AppToast.successToast(
-                                      l10n.theOrderHasBeenEditedSuccessfully,
-                                      context);
-                                  context.maybePop();
+                          return Padding(
+                            padding:  EdgeInsets.only(bottom: 10.sh),
+                            child: CustomButton(
+                              title: l10n.submit,
+                              onPressed: () async {
+                                final OrderUserData orderBody = OrderUserData(
+                                    comment: widget.data?.comment,
+                                    deliveryImage: widget.data?.deliveryImage,
+                                    id: widget.data?.id,
+                                    orderDate: widget.data?.orderDate,
+                                    orderNumber: widget.data?.orderNumber,
+                                    productDetails: List.generate(
+                                      orderService.getProductDetails().length,
+                                      (index) {
+                                        return ProductDetail(
+                                          id: orderService
+                                              .getProductDetails()[index]
+                                              .id,
+                                          product: orderService
+                                              .getProductDetails()[index]
+                                              .product,
+                                          productName: orderService
+                                              .getProductDetails()[index]
+                                              .productName,
+                                          quantity: orderService
+                                              .getProductDetails()[index]
+                                              .quantity,
+                                        );
+                                      },
+                                    ),
+                                    status: currentState,
+                                    user: widget.data?.user);
+                                final statusCode = await orderService
+                                    .updateOrders(body: orderBody);
+                                if (statusCode == 200) {
+                                  if (context.mounted) {
+                                    AppToast.successToast(
+                                        l10n.theOrderHasBeenEditedSuccessfully,
+                                        context);
+                                    context.maybePop();
+                                  }
+                                } else {
+                                  context.mounted
+                                      ? AppToast.errorToast(
+                                          l10n.theOrderHasFailed, context)
+                                      : null;
                                 }
-                              } else {
-                                context.mounted
-                                    ? AppToast.errorToast(
-                                        l10n.theOrderHasFailed, context)
-                                    : null;
-                              }
-                            },
+                              },
+                            ),
                           );
                         })
                   ],

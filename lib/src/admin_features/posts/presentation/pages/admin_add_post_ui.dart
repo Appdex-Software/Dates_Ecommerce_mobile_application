@@ -119,31 +119,35 @@ class _AdminAddPostUiState extends ConsumerState<AdminAddPostUi> {
                 child: AsyncValueWidget(
                     value: ref.watch(newsServiceProvider),
                     data: (_) {
-                      return CustomButton(
-                        title: l10n.submit,
-                        onPressed: () async {
-                          if (formKey.currentState?.validate() ?? false) {
-                            final body = AddNewsBody(
-                                body: newsDetailsController.text,
-                                image: imagePath,
-                                subject: newsTitleController.text);
-                            final statusCode =
-                                await newsService.addNews(body: body);
-                            if (statusCode == 201) {
-                              if (context.mounted) {
-                                AppToast.successToast(
-                                    l10n.theOrderHasBeenEditedSuccessfully,
-                                    context);
-                                context.maybePop();
+                      return Padding(
+                        padding:  EdgeInsets.only(bottom: 5.sh),
+                        child: CustomButton(
+                          title: l10n.submit,
+                          width: double.infinity,
+                          onPressed: () async {
+                            if (formKey.currentState?.validate() ?? false) {
+                              final body = AddNewsBody(
+                                  body: newsDetailsController.text,
+                                  image: imagePath,
+                                  subject: newsTitleController.text);
+                              final statusCode =
+                                  await newsService.addNews(body: body);
+                              if (statusCode == 201) {
+                                if (context.mounted) {
+                                  AppToast.successToast(
+                                      l10n.theOrderHasBeenEditedSuccessfully,
+                                      context);
+                                  context.maybePop();
+                                }
+                              } else {
+                                context.mounted
+                                    ? AppToast.errorToast(
+                                        l10n.theOrderHasFailed, context)
+                                    : null;
                               }
-                            } else {
-                              context.mounted
-                                  ? AppToast.errorToast(
-                                      l10n.theOrderHasFailed, context)
-                                  : null;
                             }
-                          }
-                        },
+                          },
+                        ),
                       );
                     }),
               )
