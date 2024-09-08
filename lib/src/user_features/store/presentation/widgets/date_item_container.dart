@@ -64,6 +64,7 @@ class _DateItemContainerState extends ConsumerState<DateItemContainer> {
                             image: dateProductEntity?.data?[index].image ?? '',
                             size: 20.screenWidth,
                           ),
+                          // CachedNetworkImage(imageUrl: dateProductEntity?.data?[index].image ?? '',width: 20.screenWidth,),
                           gapH12,
                           Text(
                             dateProductEntity?.data?[index].name ?? '',
