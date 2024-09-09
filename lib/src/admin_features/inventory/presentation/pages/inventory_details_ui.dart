@@ -115,6 +115,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
               ),
               gapH16,
               CustomTextField(
+                label: l10n.productName,
                 keyboardType: TextInputType.name,
                 hint: l10n.productName,
                 controller: productNameController,
@@ -131,6 +132,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
               ),
               gapH16,
               CustomTextField(
+                label: l10n.productDescription,
                 maxLines: 8,
                 keyboardType: TextInputType.name,
                 hint: l10n.productDescription,
@@ -151,6 +153,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                 children: [
                   Expanded(
                       child: CustomTextField(
+                        label: l10n.family,
                     keyboardType: TextInputType.number,
                     hint: l10n.family,
                     controller: familyQuantityController,
@@ -168,6 +171,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                   gapW4,
                   Expanded(
                       child: CustomTextField(
+                        label: l10n.charities,
                     keyboardType: TextInputType.number,
                     hint: l10n.charities,
                     controller: charitiesQantityController,
@@ -185,6 +189,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                   gapW4,
                   Expanded(
                       child: CustomTextField(
+                        label: l10n.fasting,
                     keyboardType: TextInputType.number,
                     hint: l10n.fasting,
                     controller: fastingQuantityController,
@@ -203,6 +208,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
               ),
               gapH16,
               CustomTextField(
+                label: l10n.totalQuantity,
                 keyboardType: TextInputType.name,
                 hint: l10n.totalQuantity,
                 controller: totalQuantityController,

@@ -19,79 +19,63 @@ class JoinRequestUi extends ConsumerStatefulWidget {
 class _JoinRequestUiState extends ConsumerState<JoinRequestUi> {
   @override
   Widget build(BuildContext context) {
-    final (theme, l10n) = appSettingsRecord(context);
-    return Stack(
-      alignment: Alignment.bottomCenter,
-      children: [
-        AsyncValueWidget(
-            value: ref.watch(userModificationServiceProvider),
-            data: (UserModificationEntity? userModEntity) {
-              return ListView(
-                padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
-                children: List.generate(
-                  userModEntity?.data?.length ?? 0,
-                  (index) {
-                    final userData = userModEntity?.data?[index];
-                    return GestureDetector(
-                      onTap: () {
-                        context.router
-                            .push(JoinRequestDetailsRoute(data: userData));
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.only(bottom: 2.sh),
-                        child: LinearGradientContainer(
-                            border:
-                                Border.all(color: theme.black.withOpacity(0.2)),
-                            child: Padding(
-                              padding: EdgeInsets.all(2.sw),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+    final (theme, _) = appSettingsRecord(context);
+    return AsyncValueWidget(
+        value: ref.watch(userModificationServiceProvider),
+        data: (UserModificationEntity? userModEntity) {
+          return ListView(
+            padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
+            children: List.generate(
+              userModEntity?.data?.length ?? 0,
+              (index) {
+                final userData = userModEntity?.data?[index];
+                return GestureDetector(
+                  onTap: () {
+                    context.router
+                        .push(JoinRequestDetailsRoute(data: userData));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 2.sh),
+                    child: LinearGradientContainer(
+                        border:
+                            Border.all(color: theme.black.withOpacity(0.2)),
+                        child: Padding(
+                          padding: EdgeInsets.all(2.sw),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        userData?.name ?? '',
-                                        style: theme.labelLarge,
-                                      ),
-                                      Text(
-                                        userData?.city ?? '',
-                                        style: theme.labelLarge,
-                                      ),
-                                    ],
-                                  ),
-                                  gapH12,
                                   Text(
-                                    userData?.email ?? '',
+                                    userData?.name ?? '',
                                     style: theme.labelLarge,
                                   ),
-                                  gapH12,
                                   Text(
                                     userData?.city ?? '',
                                     style: theme.labelLarge,
                                   ),
                                 ],
                               ),
-                            )),
-                      ),
-                    );
-                  },
-                ),
-              );
-            }),
-        SafeArea(
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 1.sh),
-            child: CustomButton(
-              title: l10n.add,
-              onPressed: () {
-                context.router.push(JoinRequestDetailsRoute());
+                              gapH12,
+                              Text(
+                                userData?.email ?? '',
+                                style: theme.labelLarge,
+                              ),
+                              gapH12,
+                              Text(
+                                userData?.city ?? '',
+                                style: theme.labelLarge,
+                              ),
+                            ],
+                          ),
+                        )),
+                  ),
+                );
               },
             ),
-          ),
-        )
-      ],
-    );
+          );
+        });
   }
 }

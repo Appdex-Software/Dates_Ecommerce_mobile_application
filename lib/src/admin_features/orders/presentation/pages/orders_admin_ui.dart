@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../user_features/order/domain/entities/order_user_entity.dart';
+import '../../../inventory/presentation/providers/inventory_provider.dart';
 import '../widgets/widgets.dart';
 
 class OrdersAdminUi extends ConsumerStatefulWidget {
@@ -18,6 +19,18 @@ class OrdersAdminUi extends ConsumerStatefulWidget {
 }
 
 class _OrdersAdminUiState extends ConsumerState<OrdersAdminUi> {
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) async {
+                await ref.read(inventoryServiceProvider.notifier).getDateProducts();
+
+      },
+    );
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final (theme, _) = appSettingsRecord(context);
@@ -60,7 +73,13 @@ class _OrdersAdminUiState extends ConsumerState<OrdersAdminUi> {
                                 //         style: theme.labelLarge),
                                 //   ]),
                                 // ),
-                                Text(orderEntity?.data?[index].userName ?? '',style: theme.titleLarge),
+                                Row(
+                                  children: [
+                                    Expanded(child: Text(orderEntity?.data?[index].userName ?? '',overflow: TextOverflow.ellipsis,style: theme.titleLarge)),
+                                    gapW24,
+                                    Text(orderEntity?.data?[index].status ?? '',style: theme.titleSmall)
+                                  ],
+                                ),
                                 gapH16,
                                 OrderRequestItem(
                                   data:
