@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:date_farm/src/app_features/authentication/data/models/register_body/register_body.dart';
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_data.dart';
@@ -6,6 +5,7 @@ import 'package:date_farm/src/app_features/authentication/domain/entities/user_a
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_entity.dart';
 import 'package:date_farm/src/core/constants/app_constants.dart';
 import 'package:date_farm/src/core/helpers/session_manager.dart';
+import 'package:date_farm/src/user_features/cart/presentation/providers/cart_provider.dart';
 import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../domain/repositories/authentication_repository.dart';
@@ -74,7 +74,6 @@ class AuthUiService extends _$AuthUiService {
             tokenn: _userEntity?.data?.accessToken ?? '');
         var patientBox = Hive.box(userInfoBox);
         patientBox.add(_userEntity?.data);
-        log((_userEntity?.data?.user?.role).toString());
       }
 
       _userData = _userEntity?.data;
@@ -214,14 +213,15 @@ class AuthUiService extends _$AuthUiService {
       sessionManager.setLogin(statue: false);
       sessionManager.setAdminLogin(statue: false);
       sessionManager.setAuthToken(tokenn: '');
+      await Hive.openBox(dateCartItemBox);
+      await Hive.openBox(userInfoBox);
       _userEntity = null;
-      ref.invalidateSelf();
       var userBox = Hive.box(userInfoBox);
       userBox.clear();
       userBox.close();
-      var cartBox = Hive.box(dateCartItemBox);
-      cartBox.clear();
-      cartBox.close();
+      ref.watch(cartServiceProvider.notifier).clearCart();
+      ref.invalidateSelf();
+
       state = const AsyncData(null);
     } on Exception catch (e) {
       throw e.toString();

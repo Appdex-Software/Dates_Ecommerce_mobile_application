@@ -98,11 +98,11 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
         username: userNameController.text,
         zipCode: userZipCodeController.text,
       );
-      final statusCode = widget.data?.id == null
+       widget.data?.id == null
           ? await userModificationService.addUser(body: body)
           : await userModificationService.patchUser(
               body: body.copyWith(id: widget.data?.id));
-      if (statusCode == 201 || statusCode == 200) {
+      if (userModificationService.getUserAuthenticationErrorEntity()?.statusCode == 201 || userModificationService.getUserAuthenticationErrorEntity()?.statusCode == 200) {
         await userModificationService.getUser();
         if (context.mounted) {
           context.router.maybePop();
@@ -118,8 +118,7 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
         }
       } else {
         context.mounted
-            ? AppToast.errorToast(
-                AppLocalizations.of(context).theOrderHasFailed, context)
+            ? showErrorUserAlert(context,userModificationService.getUserAuthenticationErrorEntity())
             : null;
       }
     }
