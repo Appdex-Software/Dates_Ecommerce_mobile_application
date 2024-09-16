@@ -15,7 +15,7 @@ class OrderRequestItem extends StatefulWidget {
 class _OrderRequestItemState extends State<OrderRequestItem> {
   @override
   Widget build(BuildContext context) {
-    final (theme, _) = appSettingsRecord(context);
+    final (theme, l10n) = appSettingsRecord(context);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -36,7 +36,7 @@ class _OrderRequestItemState extends State<OrderRequestItem> {
                   style: theme.labelLarge,
                 ),
                 Text(
-                  "الكمية المتاحة ${widget.data?[index].quantity}",
+                  "${l10n.quantity} ${widget.data?[index].quantity}",
                   style: theme.labelSmall,
                 ),
               ],

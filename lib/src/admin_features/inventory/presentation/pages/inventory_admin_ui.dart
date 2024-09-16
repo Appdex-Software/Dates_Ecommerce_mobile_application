@@ -36,7 +36,6 @@ class _InventoryAdminUiState extends ConsumerState<InventoryAdminUi> {
   @override
   Widget build(BuildContext context) {
     final inventoryService = ref.watch(inventoryServiceProvider.notifier);
-    final (_, l10n) = appSettingsRecord(context);
 
     return AsyncValueWidget(
         value: ref.watch(inventoryServiceProvider),
@@ -55,48 +54,33 @@ class _InventoryAdminUiState extends ConsumerState<InventoryAdminUi> {
                           )
                           .toList()
                   : productEntity?.data;
-          return Stack(
-            children: [
-              SingleChildScrollView(
-                padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const CategoryAvailabilityContainer(),
-                    gapH20,
-                    Column(
-                      children: List.generate(
-                        productList?.length ?? 0,
-                        (index) {
-                          return GestureDetector(
-                              onTap: () {
-                                context.pushRoute(InventoryDetailsAdminRoute(
-                                    data: productList?[index]));
-                              },
-                              child: InventoryItem(
-                                  title: productList?[index].name ?? '',
-                                  quantity: int.parse(productList?[index]
-                                          .totalQuantity
-                                          .toString() ??
-                                      "0")));
-                        },
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              SafeArea(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: CustomButton(
-                    title: l10n.add,
-                    onPressed: () {
-                      context.pushRoute(InventoryDetailsAdminRoute());
+          return SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const CategoryAvailabilityContainer(),
+                gapH20,
+                Column(
+                  children: List.generate(
+                    productList?.length ?? 0,
+                    (index) {
+                      return GestureDetector(
+                          onTap: () {
+                            context.pushRoute(InventoryDetailsAdminRoute(
+                                data: productList?[index]));
+                          },
+                          child: InventoryItem(
+                              title: productList?[index].name ?? '',
+                              quantity: int.parse(productList?[index]
+                                      .totalQuantity
+                                      .toString() ??
+                                  "0")));
                     },
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           );
         });
   }

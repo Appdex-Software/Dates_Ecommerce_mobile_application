@@ -98,7 +98,9 @@
     "userFirstName" : "الاسم الأول للمستخدم",
     "userLastName" : "اسم المستخدم الأخير",
     "role" : "وظيفة",
-    "customerType" : "نوع العميل" 
+    "customerType" : "نوع العميل",
+    "quantity" : "الكمية"
+
 
 
 

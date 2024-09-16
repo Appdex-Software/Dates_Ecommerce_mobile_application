@@ -1,9 +1,12 @@
 // ignore_for_file: must_be_immutable
 
+
 import 'package:auto_route/auto_route.dart';
+import 'package:date_farm/src/admin_features/inventory/presentation/providers/inventory_provider.dart';
 import 'package:date_farm/src/core/constants/constants.dart';
 import 'package:date_farm/src/core/widgets/widgets.dart';
 import 'package:date_farm/src/user_features/order/data/models/order_user_dto/product_detail.dart';
+import 'package:date_farm/src/user_features/store/data/models/date_product_dto/date_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -29,7 +32,7 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
   void initState() {
     currentState = widget.data?.status;
     WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) {
+      (timeStamp) async {
         ref
             .read(orderServiceProvider.notifier)
             .setProductDetail(widget.data?.productDetails ?? []);
@@ -57,18 +60,34 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                       children: List.generate(
                         widget.data?.productDetails?.length ?? 0,
                         (index) {
+                          final productData = ref
+                              .watch(inventoryServiceProvider.notifier)
+                              .getDateProductEntity()
+                              ?.data
+                              ?.firstWhere(
+                            (element){
+                              return element.id ==
+                                widget.data?.productDetails?[index].product;
+                            },
+                                
+                            orElse: () {
+                              return DateData();
+                            },
+                          );
+                          
                           return Padding(
                             padding: EdgeInsets.only(bottom: 1.5.sh),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  "الكمية المتاحة",
+                                  l10n.quantity,
                                   style: theme.labelLarge,
                                 ),
                                 gapW24,
                                 OrderItemQuantityCounterAdmin(
                                   index: index,
+                                  limit: productData?.totalQuantity?.toInt() ?? 0,
                                   data: widget.data?.productDetails?[index],
                                 ),
                                 gapW24,
@@ -76,6 +95,11 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                                   widget.data?.productDetails?[index]
                                           .productName ??
                                       '',
+                                  style: theme.labelLarge,
+                                ),
+                                const Spacer(),
+                                Text(
+                                  (productData?.totalQuantity == null || productData?.totalQuantity == 0 ? l10n.unavailable : "${l10n.quantity}: ${productData?.totalQuantity.toString()}"),
                                   style: theme.labelLarge,
                                 ),
                               ],
@@ -108,52 +132,55 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                     AsyncValueWidget(
                         value: ref.watch(orderServiceProvider),
                         data: (_) {
-                          return CustomButton(
-                            title: l10n.submit,
-                            onPressed: () async {
-                              final OrderUserData orderBody = OrderUserData(
-                                  comment: widget.data?.comment,
-                                  deliveryImage: widget.data?.deliveryImage,
-                                  id: widget.data?.id,
-                                  orderDate: widget.data?.orderDate,
-                                  orderNumber: widget.data?.orderNumber,
-                                  productDetails: List.generate(
-                                    orderService.getProductDetails().length,
-                                    (index) {
-                                      return ProductDetail(
-                                        id: orderService
-                                            .getProductDetails()[index]
-                                            .id,
-                                        product: orderService
-                                            .getProductDetails()[index]
-                                            .product,
-                                        productName: orderService
-                                            .getProductDetails()[index]
-                                            .productName,
-                                        quantity: orderService
-                                            .getProductDetails()[index]
-                                            .quantity,
-                                      );
-                                    },
-                                  ),
-                                  status: currentState,
-                                  user: widget.data?.user);
-                              final statusCode = await orderService
-                                  .updateOrders(body: orderBody);
-                              if (statusCode == 200) {
-                                if (context.mounted) {
-                                  AppToast.successToast(
-                                      l10n.theOrderHasBeenEditedSuccessfully,
-                                      context);
-                                  context.maybePop();
+                          return Padding(
+                            padding: EdgeInsets.only(bottom: 10.sh),
+                            child: CustomButton(
+                              title: l10n.submit,
+                              onPressed: () async {
+                                final OrderUserData orderBody = OrderUserData(
+                                    comment: widget.data?.comment,
+                                    deliveryImage: widget.data?.deliveryImage,
+                                    id: widget.data?.id,
+                                    orderDate: widget.data?.orderDate,
+                                    orderNumber: widget.data?.orderNumber,
+                                    productDetails: List.generate(
+                                      orderService.getProductDetails().length,
+                                      (index) {
+                                        return ProductDetail(
+                                          id: orderService
+                                              .getProductDetails()[index]
+                                              .id,
+                                          product: orderService
+                                              .getProductDetails()[index]
+                                              .product,
+                                          productName: orderService
+                                              .getProductDetails()[index]
+                                              .productName,
+                                          quantity: orderService
+                                              .getProductDetails()[index]
+                                              .quantity,
+                                        );
+                                      },
+                                    ),
+                                    status: currentState,
+                                    user: widget.data?.user);
+                                final statusCode = await orderService
+                                    .updateOrders(body: orderBody);
+                                if (statusCode == 200) {
+                                  if (context.mounted) {
+                                    AppToast.successToast(
+                                        l10n.theOrderHasBeenEditedSuccessfully,
+                                        context);
+                                    context.maybePop();
+                                  }
+                                } else {
+                                  context.mounted
+                                      ? AppToast.errorToast(
+                                          l10n.theOrderHasFailed, context)
+                                      : null;
                                 }
-                              } else {
-                                context.mounted
-                                    ? AppToast.errorToast(
-                                        l10n.theOrderHasFailed, context)
-                                    : null;
-                              }
-                            },
+                              },
+                            ),
                           );
                         })
                   ],

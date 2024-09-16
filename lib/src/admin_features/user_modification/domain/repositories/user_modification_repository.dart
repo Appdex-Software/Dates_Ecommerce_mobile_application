@@ -1,3 +1,4 @@
+import '../../../../app_features/authentication/domain/entities/user_authentication_error_entity.dart';
 import '../../../../core/errors/custom_error.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -20,7 +21,9 @@ class UserModificationRepository extends _$UserModificationRepository {
   UserModificationEntity? _userModificationEntity;
   UserModificationEntity? getUserModificationEntity() =>
       _userModificationEntity;
-
+  UserAuthenticationErrorEntity? _userAuthenticationErrorEntity;
+  UserAuthenticationErrorEntity? getUserAuthenticationErrorEntity() =>
+      _userAuthenticationErrorEntity;
   Future<UserModificationEntity?> getUsers() async {
     try {
       _userModificationEntity = await userModificationSourceImpl.getUsers();
@@ -30,20 +33,20 @@ class UserModificationRepository extends _$UserModificationRepository {
     }
   }
 
-  Future<int?> addUser({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity?> addUser({UserModificationData? body}) async {
     try {
-      final statusCode = await userModificationSourceImpl.addUsers(body: body);
-      return statusCode;
+       _userAuthenticationErrorEntity = await userModificationSourceImpl.addUsers(body: body);
+      return _userAuthenticationErrorEntity;
     } catch (e, stack) {
       throw CustomError('Failed to add user', err: e, stackTrace: stack);
     }
   }
 
-  Future<int?> patchUser({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity?> patchUser({UserModificationData? body}) async {
     try {
-      final statusCode =
+       _userAuthenticationErrorEntity =
           await userModificationSourceImpl.patchUsers(body: body);
-      return statusCode;
+      return _userAuthenticationErrorEntity;
     } catch (e, stack) {
       throw CustomError('Failed to patch user', err: e, stackTrace: stack);
     }

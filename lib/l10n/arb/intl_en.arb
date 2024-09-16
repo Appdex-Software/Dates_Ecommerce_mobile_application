@@ -94,7 +94,8 @@
     "userFirstName" : "user first name",
     "userLastName" : "user last name",
     "role" : "Role",
-    "customerType" : "Customer Type" 
+    "customerType" : "Customer Type",
+    "quantity" : "Quantity"
 
 
 

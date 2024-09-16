@@ -6,7 +6,6 @@ class AuthorizationInterceptor extends Interceptor {
   @override
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
-    //TODO: Add dynamic token here
     options.headers['Authorization'] = 'Bearer token';
 
     super.onRequest(options, handler);

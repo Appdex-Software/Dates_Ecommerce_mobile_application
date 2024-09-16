@@ -1,4 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
+
+import 'dart:developer';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/admin_features/user_modification/data/models/user_modification_dto/user_modification_data.dart';
 import 'package:date_farm/src/admin_features/user_modification/presentation/provider/user_modification_provider.dart';
@@ -37,9 +40,10 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
   final formKey = GlobalKey<FormState>();
   @override
   void initState() {
+    log(widget.data?.registrationStatus?.toString() ?? '');
     newPhone = widget.data?.phoneNumber;
-    currentCustomType = widget.data?.customerType;
-    currentRole = widget.data?.role;
+    currentCustomType = widget.data?.customerType?.isEmpty ?? true ? null : widget.data?.customerType;    
+    currentRole = widget.data?.role?.isEmpty ?? true ? null : widget.data?.role;
     widget.data?.firstName != null
         ? (userFirstNameController.text = widget.data?.firstName ?? '')
         : null;
@@ -94,11 +98,11 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
         username: userNameController.text,
         zipCode: userZipCodeController.text,
       );
-      final statusCode = widget.data?.id == null
+       widget.data?.id == null
           ? await userModificationService.addUser(body: body)
           : await userModificationService.patchUser(
               body: body.copyWith(id: widget.data?.id));
-      if (statusCode == 201 || statusCode == 200) {
+      if (userModificationService.getUserAuthenticationErrorEntity()?.statusCode == 201 || userModificationService.getUserAuthenticationErrorEntity()?.statusCode == 200) {
         await userModificationService.getUser();
         if (context.mounted) {
           context.router.maybePop();
@@ -114,8 +118,7 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
         }
       } else {
         context.mounted
-            ? AppToast.errorToast(
-                AppLocalizations.of(context).theOrderHasFailed, context)
+            ? showErrorUserAlert(context,userModificationService.getUserAuthenticationErrorEntity())
             : null;
       }
     }
@@ -329,35 +332,38 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
                       )
                     : const SizedBox(),
                 gapH16,
-                AsyncValueWidget(
-                    value: ref.watch(userModificationServiceProvider),
-                    data: (_) {
-                      return widget.data?.id == null
-                          ? Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Expanded(
-                                  child: CustomButton(
-                                      title: l10n.accept,
-                                      onPressed: () {
-                                        sendData("registered");
-                                      }),
-                                ),
-                                gapW20,
-                                Expanded(
-                                  child: CustomButton(
-                                      backgroundColor: theme.redApple,
-                                      title: l10n.decline,
-                                      onPressed: () {
-                                        sendData("rejected");
-                                      }),
-                                ),
-                              ],
-                            )
-                          : CustomButton(
-                              title: l10n.confirm,
-                              onPressed: () => sendData("registered"));
-                    }),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 5.sh),
+                  child: AsyncValueWidget(
+                      value: ref.watch(userModificationServiceProvider),
+                      data: (_) {
+                        return widget.data?.registrationStatus == "not_registered"
+                            ? Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Expanded(
+                                    child: CustomButton(
+                                        title: l10n.accept,
+                                        onPressed: () {
+                                          sendData("registered");
+                                        }),
+                                  ),
+                                  gapW20,
+                                  Expanded(
+                                    child: CustomButton(
+                                        backgroundColor: theme.redApple,
+                                        title: l10n.decline,
+                                        onPressed: () {
+                                          sendData("rejected");
+                                        }),
+                                  ),
+                                ],
+                              )
+                            : CustomButton(
+                                title: l10n.confirm,
+                                onPressed: () => sendData("registered"));
+                      }),
+                ),
               ],
             ),
           )),

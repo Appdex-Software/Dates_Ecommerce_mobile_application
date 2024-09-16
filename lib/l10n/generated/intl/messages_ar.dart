@@ -103,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),
         "productImage": MessageLookupByLibrary.simpleMessage("صور المنتج"),
         "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "quantity": MessageLookupByLibrary.simpleMessage("الكمية"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "review": MessageLookupByLibrary.simpleMessage("مراجعة"),

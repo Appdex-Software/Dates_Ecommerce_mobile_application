@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:date_farm/src/app_features/authentication/data/models/user_authentication_error_dto/user_authentication_error_dto.dart';
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_dto.dart';
@@ -35,7 +34,6 @@ class AuthenticationRepositoryImpl implements BaseAuthenticationRepository {
       {RegisterBody? body}) async {
     try {
       return await dataSource.registerUser(body: body).then((value) {
-        log(value.toString());
         return value.toEntity();
       });
     } catch (e, stack) {
