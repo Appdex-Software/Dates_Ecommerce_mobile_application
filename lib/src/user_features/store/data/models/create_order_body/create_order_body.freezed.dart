@@ -24,6 +24,7 @@ mixin _$CreateOrderBody {
   String? get status => throw _privateConstructorUsedError;
   num? get quantity => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
+  @JsonKey(name: "product_details")
   List<Product>? get products => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,7 +44,7 @@ abstract class $CreateOrderBodyCopyWith<$Res> {
       String? status,
       num? quantity,
       String? comment,
-      List<Product>? products});
+      @JsonKey(name: "product_details") List<Product>? products});
 }
 
 /// @nodoc
@@ -103,7 +104,7 @@ abstract class _$$CreateOrderBodyImplCopyWith<$Res>
       String? status,
       num? quantity,
       String? comment,
-      List<Product>? products});
+      @JsonKey(name: "product_details") List<Product>? products});
 }
 
 /// @nodoc
@@ -156,7 +157,7 @@ class _$CreateOrderBodyImpl implements _CreateOrderBody {
       this.status,
       this.quantity,
       this.comment,
-      final List<Product>? products})
+      @JsonKey(name: "product_details") final List<Product>? products})
       : _products = products;
 
   factory _$CreateOrderBodyImpl.fromJson(Map<String, dynamic> json) =>
@@ -172,6 +173,7 @@ class _$CreateOrderBodyImpl implements _CreateOrderBody {
   final String? comment;
   final List<Product>? _products;
   @override
+  @JsonKey(name: "product_details")
   List<Product>? get products {
     final value = _products;
     if (value == null) return null;
@@ -220,11 +222,12 @@ class _$CreateOrderBodyImpl implements _CreateOrderBody {
 
 abstract class _CreateOrderBody implements CreateOrderBody {
   factory _CreateOrderBody(
-      {final String? user,
-      final String? status,
-      final num? quantity,
-      final String? comment,
-      final List<Product>? products}) = _$CreateOrderBodyImpl;
+          {final String? user,
+          final String? status,
+          final num? quantity,
+          final String? comment,
+          @JsonKey(name: "product_details") final List<Product>? products}) =
+      _$CreateOrderBodyImpl;
 
   factory _CreateOrderBody.fromJson(Map<String, dynamic> json) =
       _$CreateOrderBodyImpl.fromJson;
@@ -238,6 +241,7 @@ abstract class _CreateOrderBody implements CreateOrderBody {
   @override
   String? get comment;
   @override
+  @JsonKey(name: "product_details")
   List<Product>? get products;
   @override
   @JsonKey(ignore: true)

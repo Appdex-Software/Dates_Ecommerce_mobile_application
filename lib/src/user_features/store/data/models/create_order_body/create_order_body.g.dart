@@ -13,7 +13,7 @@ _$CreateOrderBodyImpl _$$CreateOrderBodyImplFromJson(
       status: json['status'] as String?,
       quantity: json['quantity'] as num?,
       comment: json['comment'] as String?,
-      products: (json['products'] as List<dynamic>?)
+      products: (json['product_details'] as List<dynamic>?)
           ?.map((e) => Product.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -25,5 +25,5 @@ Map<String, dynamic> _$$CreateOrderBodyImplToJson(
       'status': instance.status,
       'quantity': instance.quantity,
       'comment': instance.comment,
-      'products': instance.products,
+      'product_details': instance.products,
     };

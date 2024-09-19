@@ -7,7 +7,7 @@ part of 'user_modification_repository.dart';
 // **************************************************************************
 
 String _$userModificationRepositoryHash() =>
-    r'2969d48682e84a22f26cfde2dcd84be24d9ea4aa';
+    r'6b65afdc39d44050ac39844f6a46bb716451ebd0';
 
 /// See also [UserModificationRepository].
 @ProviderFor(UserModificationRepository)

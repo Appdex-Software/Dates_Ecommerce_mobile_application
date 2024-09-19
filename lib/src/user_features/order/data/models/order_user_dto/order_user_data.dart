@@ -16,6 +16,7 @@ class OrderUserData with _$OrderUserData {
     @JsonKey(name: 'order_number') String? orderNumber,
     String? status,
     @JsonKey(name: 'delivery_image') dynamic deliveryImage,
+    @JsonKey(name: 'customer_type') dynamic customerType,
     String? comment,
     String? user,
     @JsonKey(name: 'product_details') List<ProductDetail>? productDetails,
