@@ -1,6 +1,5 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'dart:developer';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/admin_features/user_modification/data/models/user_modification_dto/user_modification_data.dart';
@@ -40,7 +39,6 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
   final formKey = GlobalKey<FormState>();
   @override
   void initState() {
-    log(widget.data?.registrationStatus?.toString() ?? '');
     newPhone = widget.data?.phoneNumber;
     currentCustomType = widget.data?.customerType?.isEmpty ?? true ? null : widget.data?.customerType;    
     currentRole = widget.data?.role?.isEmpty ?? true ? null : widget.data?.role;
