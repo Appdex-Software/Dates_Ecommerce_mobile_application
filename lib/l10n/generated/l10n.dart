@@ -1007,6 +1007,36 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Invoice`
+  String get invoice {
+    return Intl.message(
+      'Invoice',
+      name: 'invoice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Print`
+  String get print {
+    return Intl.message(
+      'Print',
+      name: 'print',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Print all`
+  String get printAll {
+    return Intl.message(
+      'Print all',
+      name: 'printAll',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

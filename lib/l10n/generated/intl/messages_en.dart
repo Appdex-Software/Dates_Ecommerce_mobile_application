@@ -68,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "greenDates": MessageLookupByLibrary.simpleMessage("Green dates"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "inventory": MessageLookupByLibrary.simpleMessage("inventory"),
+        "invoice": MessageLookupByLibrary.simpleMessage("Invoice"),
         "joinRequests": MessageLookupByLibrary.simpleMessage("Join Requests"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "logIntoExistingAccount":
@@ -100,6 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "Please enter your email and password"),
+        "print": MessageLookupByLibrary.simpleMessage("Print"),
+        "printAll": MessageLookupByLibrary.simpleMessage("Print all"),
         "productDescription":
             MessageLookupByLibrary.simpleMessage("Product Description"),
         "productImage": MessageLookupByLibrary.simpleMessage("Product Image"),

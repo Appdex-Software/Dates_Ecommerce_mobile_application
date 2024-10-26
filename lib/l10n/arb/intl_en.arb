@@ -95,7 +95,10 @@
     "userLastName" : "user last name",
     "role" : "Role",
     "customerType" : "Customer Type",
-    "quantity" : "Quantity"
+    "quantity" : "Quantity",
+    "invoice" : "Invoice",
+    "print" : "Print",
+    "printAll" : "Print all"
 
 
 

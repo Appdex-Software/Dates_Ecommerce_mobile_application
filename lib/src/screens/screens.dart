@@ -21,3 +21,5 @@ export 'inventory_details_admin_page.dart';
 export 'order_details_admin_page.dart';
 export 'admin_add_post_page.dart';
 export 'join_request_details_page.dart';
+export 'invoices_page.dart';
+export 'pdf_viewer_page.dart';

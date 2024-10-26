@@ -16,6 +16,7 @@ dependencies:
 
   ###CORE PACKAGES##################
   flutter_riverpod: ^2.5.1
+  url_launcher: ^6.3.1
   riverpod_annotation: ^2.3.5
   hooks_riverpod: ^2.5.1
   shared_preferences: ^2.2.2
@@ -60,7 +61,6 @@ dependencies:
   flutter_native_splash: ^2.3.10
 ############HELPERS #################################
   file_picker: ^8.0.6
-  url_launcher: ^6.2.2
   faker: ^2.1.0
   crypto: ^3.0.3
   uuid: ^4.1.0

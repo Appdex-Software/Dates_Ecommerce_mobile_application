@@ -62,6 +62,12 @@ class AppRouter extends _$AppRouter {
           AutoRoute(
             page: JoinRequestDetailsRoute.page,
           ),
+          AutoRoute(
+            page: InvoicesRoute.page,
+          ),
+          AutoRoute(
+            page: PdfViewerRoute.page,
+          ),
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];

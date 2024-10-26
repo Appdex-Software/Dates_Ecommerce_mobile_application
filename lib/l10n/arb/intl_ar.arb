@@ -99,7 +99,12 @@
     "userLastName" : "اسم المستخدم الأخير",
     "role" : "وظيفة",
     "customerType" : "نوع العميل",
-    "quantity" : "الكمية"
+    "quantity" : "الكمية",
+    "invoice" : "فاتورة",
+    "print" : "طباعة",
+    "printAll" : "طباعة الكل"
+
+
 
 
 

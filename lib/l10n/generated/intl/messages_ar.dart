@@ -68,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "inventory": MessageLookupByLibrary.simpleMessage("المخزون"),
+        "invoice": MessageLookupByLibrary.simpleMessage("فاتورة"),
         "joinRequests": MessageLookupByLibrary.simpleMessage("طلب انضمام"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(
@@ -99,6 +100,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"),
+        "print": MessageLookupByLibrary.simpleMessage("طباعة"),
+        "printAll": MessageLookupByLibrary.simpleMessage("طباعة الكل"),
         "productDescription":
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),
         "productImage": MessageLookupByLibrary.simpleMessage("صور المنتج"),
