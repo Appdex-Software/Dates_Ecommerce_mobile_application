@@ -1,7 +1,9 @@
+import 'package:date_farm/src/admin_features/invoices/prensentation/providers/invoices_provider.dart';
 import 'package:date_farm/src/admin_features/invoices/prensentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/widgets.dart';
@@ -34,6 +36,7 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
   @override
   Widget build(BuildContext context) {
     final inventoryService = ref.watch(inventoryServiceProvider.notifier);
+    final invoiceServices = ref.watch(invoicesServiceProvider.notifier);
     final (_, l10n) = appSettingsRecord(context);
 
     return AsyncValueWidget(
@@ -73,6 +76,14 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                 gapH16,
                 CustomButton(
                   title: l10n.printAll,
+                  onPressed: () async {
+                    List<String> productIDList = [];
+                    for (var element in productList ?? <DateData>[]) {
+                      productIDList.add(element.id ?? '');
+                    }
+                    await invoiceServices.getInvoices(productIDList: productIDList);
+                    await launchUrl(Uri.parse(invoiceServices.invoiceReport));
+                  },
                 )
               ],
             ),
