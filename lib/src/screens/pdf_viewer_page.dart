@@ -1,6 +1,6 @@
-import 'dart:developer';
 
 import 'package:date_farm/src/admin_features/invoices/prensentation/pages/pdf_viewer_ui.dart';
+import 'package:date_farm/src/core/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 import 'package:auto_route/auto_route.dart';
@@ -15,18 +15,17 @@ class PdfViewerPage extends StatefulWidget {
 }
 
 class _PdfViewerPageState extends State<PdfViewerPage> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  @override
-  void initState() {
-    log(widget.pdfData);
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: const TransparentAppBar(
+        elevation: 0,
+        color: Colors.transparent,
+        
+      ),
       body: CustomAdaptiveScreen.builder(
         mobile: PDFViewerUi(pdfData: widget.pdfData,),
         tablet: PDFViewerUi(pdfData: widget.pdfData,),

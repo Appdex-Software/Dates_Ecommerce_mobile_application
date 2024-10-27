@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "available": MessageLookupByLibrary.simpleMessage("Available"),
+        "book": MessageLookupByLibrary.simpleMessage("Book"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "charities": MessageLookupByLibrary.simpleMessage("Charities"),

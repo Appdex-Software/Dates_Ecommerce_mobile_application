@@ -24,6 +24,7 @@ dependencies:
   permission_handler: ^11.0.1
   stack_trace: ^1.11.0
   logger: ^2.0.2+1
+  flutter_pdfview: ^1.3.4
   fluttertoast: ^8.2.2
   freezed_annotation: ^2.4.1
   connectivity_wrapper: ^1.1.4
@@ -96,6 +97,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svg/
+    - assets/books/
   #   - assets/svg/icons/
   #   - assets/svg/vectors/
   #   - assets/lottie/

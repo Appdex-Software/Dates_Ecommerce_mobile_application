@@ -98,7 +98,8 @@
     "quantity" : "Quantity",
     "invoice" : "Invoice",
     "print" : "Print",
-    "printAll" : "Print all"
+    "printAll" : "Print all",
+    "book" : "Book"
 
 
 

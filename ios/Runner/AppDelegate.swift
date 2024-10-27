@@ -1,5 +1,6 @@
 import Flutter
 import UIKit
+import flutter_pdfview
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
