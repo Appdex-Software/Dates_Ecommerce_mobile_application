@@ -1,11 +1,15 @@
 
+import 'dart:io';
+
 import 'package:date_farm/src/admin_features/invoices/prensentation/providers/invoices_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/widgets.dart';
+import 'package:open_filex/open_filex.dart';
 
 class InvoiceItem extends ConsumerWidget {
   const InvoiceItem({super.key, required this.title, required this.productID, });
@@ -29,7 +33,18 @@ class InvoiceItem extends ConsumerWidget {
                 CustomButton(
                   onPressed: () async {
                     await invoiceServices.getInvoices(productIDList: [productID]);
-                    await launchUrl(Uri.parse(invoiceServices.invoiceReport));
+                    
+                    final url = invoiceServices.invoiceReport;
+                    final filename = url.substring(url.lastIndexOf("/") + 1);
+                    var request = await HttpClient().getUrl(Uri.parse(url));
+                    var response = await request.close();
+                    var bytes = await consolidateHttpClientResponseBytes(response);
+                    var dir = await getApplicationDocumentsDirectory();
+                  
+                    File file = File("${dir.path}/$filename");
+
+                    await file.writeAsBytes(bytes, flush: true);
+                    await OpenFilex.open(file.path);
                     // print("wwwwwqweqweqweqweqweqweqwewdsfcsdcfsdfvadsfbvdfghdfyhjgh${invoiceServices.invoiceReport}");
                       // log("qwdq");
                       // context.router.push(PdfViewerRoute(pdfData: invoiceServices.invoiceReport));

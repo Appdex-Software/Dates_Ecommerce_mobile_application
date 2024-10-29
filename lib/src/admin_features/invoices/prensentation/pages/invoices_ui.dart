@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:date_farm/src/admin_features/invoices/prensentation/providers/invoices_provider.dart';
 import 'package:date_farm/src/admin_features/invoices/prensentation/widgets/widgets.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:open_filex/open_filex.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/widgets.dart';
@@ -57,7 +61,7 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                           .toList()
                   : productEntity?.data;
           return SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: 5.1.sw),
+            padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw,bottom: 2.sh),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -82,7 +86,17 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                       productIDList.add(element.id ?? '');
                     }
                     await invoiceServices.getInvoices(productIDList: productIDList);
-                    await launchUrl(Uri.parse(invoiceServices.invoiceReport));
+                    final url = invoiceServices.invoiceReport;
+                    final filename = url.substring(url.lastIndexOf("/") + 1);
+                    var request = await HttpClient().getUrl(Uri.parse(url));
+                    var response = await request.close();
+                    var bytes = await consolidateHttpClientResponseBytes(response);
+                    var dir = await getApplicationDocumentsDirectory();
+                  
+                    File file = File("${dir.path}/$filename");
+
+                    await file.writeAsBytes(bytes, flush: true);
+                    await OpenFilex.open(file.path);
                   },
                 )
               ],
