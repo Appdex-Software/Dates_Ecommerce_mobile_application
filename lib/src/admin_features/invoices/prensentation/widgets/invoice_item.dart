@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:sn_progress_dialog/progress_dialog.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/widgets.dart';
 import 'package:open_filex/open_filex.dart';
@@ -32,6 +33,15 @@ class InvoiceItem extends ConsumerWidget {
                 ),
                 CustomButton(
                   onPressed: () async {
+                    ProgressDialog pd = ProgressDialog(context: context);
+              pd.show(
+                msg: l10n.fileIsOpening,
+                backgroundColor: theme.white,
+                borderRadius: radius12,
+                msgColor: theme.black,
+                progressBgColor: theme.primary,
+                progressValueColor: theme.white,
+              );
                     await invoiceServices.getInvoices(productIDList: [productID]);
                     
                     final url = invoiceServices.invoiceReport;
@@ -40,10 +50,9 @@ class InvoiceItem extends ConsumerWidget {
                     var response = await request.close();
                     var bytes = await consolidateHttpClientResponseBytes(response);
                     var dir = await getApplicationDocumentsDirectory();
-                  
                     File file = File("${dir.path}/$filename");
-
                     await file.writeAsBytes(bytes, flush: true);
+                    pd.close();
                     await OpenFilex.open(file.path);
                     // print("wwwwwqweqweqweqweqweqweqwewdsfcsdcfsdfvadsfbvdfghdfyhjgh${invoiceServices.invoiceReport}");
                       // log("qwdq");

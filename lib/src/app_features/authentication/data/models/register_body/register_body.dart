@@ -16,6 +16,8 @@ class RegisterBody with _$RegisterBody {
     String? country,
     String? city,
     String? street,
+    @JsonKey(name: 'first_name') String? firstName,
+    @JsonKey(name: 'last_name') String? lastName,
     @JsonKey(name: 'zip_code') String? zipCode,
     @JsonKey(name: 'phone_number') String? phoneNumber,
     @JsonKey(name: 'is_active') String? isActive,

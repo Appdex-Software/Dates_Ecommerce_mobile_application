@@ -103,7 +103,8 @@
     "invoice" : "فاتورة",
     "print" : "طباعة",
     "printAll" : "طباعة الكل",
-    "book":"كتاب"
+    "book":"كتاب",
+    "fileIsOpening":"جاري فتح الملف"
 
 
 

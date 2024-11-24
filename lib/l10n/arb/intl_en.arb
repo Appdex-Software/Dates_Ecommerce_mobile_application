@@ -94,6 +94,7 @@
     "userFirstName" : "user first name",
     "userLastName" : "user last name",
     "role" : "Role",
+    "fileIsOpening":"File is opening",
     "customerType" : "Customer Type",
     "quantity" : "Quantity",
     "invoice" : "Invoice",

@@ -28,6 +28,10 @@ mixin _$RegisterBody {
   String? get country => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get street => throw _privateConstructorUsedError;
+  @JsonKey(name: 'first_name')
+  String? get firstName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'last_name')
+  String? get lastName => throw _privateConstructorUsedError;
   @JsonKey(name: 'zip_code')
   String? get zipCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'phone_number')
@@ -56,6 +60,8 @@ abstract class $RegisterBodyCopyWith<$Res> {
       String? country,
       String? city,
       String? street,
+      @JsonKey(name: 'first_name') String? firstName,
+      @JsonKey(name: 'last_name') String? lastName,
       @JsonKey(name: 'zip_code') String? zipCode,
       @JsonKey(name: 'phone_number') String? phoneNumber,
       @JsonKey(name: 'is_active') String? isActive});
@@ -82,6 +88,8 @@ class _$RegisterBodyCopyWithImpl<$Res, $Val extends RegisterBody>
     Object? country = freezed,
     Object? city = freezed,
     Object? street = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
     Object? zipCode = freezed,
     Object? phoneNumber = freezed,
     Object? isActive = freezed,
@@ -119,6 +127,14 @@ class _$RegisterBodyCopyWithImpl<$Res, $Val extends RegisterBody>
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
       zipCode: freezed == zipCode
           ? _value.zipCode
           : zipCode // ignore: cast_nullable_to_non_nullable
@@ -152,6 +168,8 @@ abstract class _$$RegisterBodyImplCopyWith<$Res>
       String? country,
       String? city,
       String? street,
+      @JsonKey(name: 'first_name') String? firstName,
+      @JsonKey(name: 'last_name') String? lastName,
       @JsonKey(name: 'zip_code') String? zipCode,
       @JsonKey(name: 'phone_number') String? phoneNumber,
       @JsonKey(name: 'is_active') String? isActive});
@@ -176,6 +194,8 @@ class __$$RegisterBodyImplCopyWithImpl<$Res>
     Object? country = freezed,
     Object? city = freezed,
     Object? street = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
     Object? zipCode = freezed,
     Object? phoneNumber = freezed,
     Object? isActive = freezed,
@@ -213,6 +233,14 @@ class __$$RegisterBodyImplCopyWithImpl<$Res>
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
       zipCode: freezed == zipCode
           ? _value.zipCode
           : zipCode // ignore: cast_nullable_to_non_nullable
@@ -241,6 +269,8 @@ class _$RegisterBodyImpl implements _RegisterBody {
       this.country,
       this.city,
       this.street,
+      @JsonKey(name: 'first_name') this.firstName,
+      @JsonKey(name: 'last_name') this.lastName,
       @JsonKey(name: 'zip_code') this.zipCode,
       @JsonKey(name: 'phone_number') this.phoneNumber,
       @JsonKey(name: 'is_active') this.isActive});
@@ -265,6 +295,12 @@ class _$RegisterBodyImpl implements _RegisterBody {
   @override
   final String? street;
   @override
+  @JsonKey(name: 'first_name')
+  final String? firstName;
+  @override
+  @JsonKey(name: 'last_name')
+  final String? lastName;
+  @override
   @JsonKey(name: 'zip_code')
   final String? zipCode;
   @override
@@ -276,7 +312,7 @@ class _$RegisterBodyImpl implements _RegisterBody {
 
   @override
   String toString() {
-    return 'RegisterBody(name: $name, username: $username, email: $email, role: $role, password: $password, country: $country, city: $city, street: $street, zipCode: $zipCode, phoneNumber: $phoneNumber, isActive: $isActive)';
+    return 'RegisterBody(name: $name, username: $username, email: $email, role: $role, password: $password, country: $country, city: $city, street: $street, firstName: $firstName, lastName: $lastName, zipCode: $zipCode, phoneNumber: $phoneNumber, isActive: $isActive)';
   }
 
   @override
@@ -294,6 +330,10 @@ class _$RegisterBodyImpl implements _RegisterBody {
             (identical(other.country, country) || other.country == country) &&
             (identical(other.city, city) || other.city == city) &&
             (identical(other.street, street) || other.street == street) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
             (identical(other.zipCode, zipCode) || other.zipCode == zipCode) &&
             (identical(other.phoneNumber, phoneNumber) ||
                 other.phoneNumber == phoneNumber) &&
@@ -303,8 +343,21 @@ class _$RegisterBodyImpl implements _RegisterBody {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, username, email, role,
-      password, country, city, street, zipCode, phoneNumber, isActive);
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      username,
+      email,
+      role,
+      password,
+      country,
+      city,
+      street,
+      firstName,
+      lastName,
+      zipCode,
+      phoneNumber,
+      isActive);
 
   @JsonKey(ignore: true)
   @override
@@ -330,6 +383,8 @@ abstract class _RegisterBody implements RegisterBody {
       final String? country,
       final String? city,
       final String? street,
+      @JsonKey(name: 'first_name') final String? firstName,
+      @JsonKey(name: 'last_name') final String? lastName,
       @JsonKey(name: 'zip_code') final String? zipCode,
       @JsonKey(name: 'phone_number') final String? phoneNumber,
       @JsonKey(name: 'is_active') final String? isActive}) = _$RegisterBodyImpl;
@@ -353,6 +408,12 @@ abstract class _RegisterBody implements RegisterBody {
   String? get city;
   @override
   String? get street;
+  @override
+  @JsonKey(name: 'first_name')
+  String? get firstName;
+  @override
+  @JsonKey(name: 'last_name')
+  String? get lastName;
   @override
   @JsonKey(name: 'zip_code')
   String? get zipCode;

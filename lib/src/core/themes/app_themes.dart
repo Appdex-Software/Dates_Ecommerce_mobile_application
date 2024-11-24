@@ -198,7 +198,7 @@ class LightModeTheme extends FlutterFlowTheme {
   Color get borderGreyColor => borderGrey;
 
   @override
-  final Color primary = const Color(0xff1A53A5);
+  final Color primary = const Color(0xf1bde18d);
   @override
   final Color whiteColor = const Color(0xFFFFFFFF);
 

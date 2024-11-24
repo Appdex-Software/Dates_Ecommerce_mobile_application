@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("فشل في تسجيل الدخول"),
         "family": MessageLookupByLibrary.simpleMessage("العائلة"),
         "fasting": MessageLookupByLibrary.simpleMessage("افطار صائم"),
+        "fileIsOpening": MessageLookupByLibrary.simpleMessage("جاري فتح الملف"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),

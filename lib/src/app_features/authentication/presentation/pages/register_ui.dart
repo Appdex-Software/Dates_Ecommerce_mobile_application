@@ -27,6 +27,8 @@ class _RegisterUiState extends ConsumerState<RegisterUi> {
   TextEditingController nameController = TextEditingController();
   TextEditingController streetController = TextEditingController();
   TextEditingController usernameController = TextEditingController();
+  TextEditingController userFirstNameController = TextEditingController();
+  TextEditingController userLastNameController = TextEditingController();
   PhoneNumberInputController? phoneController;
   final formKey = GlobalKey<FormState>();
 
@@ -86,6 +88,30 @@ class _RegisterUiState extends ConsumerState<RegisterUi> {
               },
               hint: l10n.username,
               controller: usernameController,
+            ),
+            gapH20,
+            CustomTextField(
+              keyboardType: TextInputType.name,
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return l10n.emptyValidationError;
+                }
+                return null;
+              },
+              hint: l10n.userFirstName,
+              controller: userFirstNameController,
+            ),
+            gapH20,
+            CustomTextField(
+              keyboardType: TextInputType.name,
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return l10n.emptyValidationError;
+                }
+                return null;
+              },
+              hint: l10n.userLastName,
+              controller: userLastNameController,
             ),
             gapH20,
             CustomTextField(
@@ -194,6 +220,8 @@ class _RegisterUiState extends ConsumerState<RegisterUi> {
                 } else {
                   if (formKey.currentState!.validate()) {
                     final registerBody = RegisterBody(
+                        firstName: userFirstNameController.text,
+                        lastName: userLastNameController.text,
                         city: cityController.text,
                         country: countryController.text,
                         email: emailController.text,

@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:open_filex/open_filex.dart';
+import 'package:sn_progress_dialog/progress_dialog.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/widgets.dart';
@@ -23,7 +24,7 @@ class InvoicesUi extends ConsumerStatefulWidget {
 }
 
 class _InvoicesUiState extends ConsumerState<InvoicesUi> {
-   @override
+  @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback(
       (_) {
@@ -41,7 +42,7 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
   Widget build(BuildContext context) {
     final inventoryService = ref.watch(inventoryServiceProvider.notifier);
     final invoiceServices = ref.watch(invoicesServiceProvider.notifier);
-    final (_, l10n) = appSettingsRecord(context);
+    final (theme, l10n) = appSettingsRecord(context);
 
     return AsyncValueWidget(
         value: ref.watch(inventoryServiceProvider),
@@ -61,7 +62,7 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                           .toList()
                   : productEntity?.data;
           return SingleChildScrollView(
-            padding: EdgeInsets.only(left: 5.1.sw,right: 5.1.sw,bottom: 2.sh),
+            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, bottom: 2.sh),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -71,34 +72,43 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                     productList?.length ?? 0,
                     (index) {
                       return InvoiceItem(
-                          productID: productList?[index].id ?? '',
-                          title: productList?[index].name ?? '',
-                          );
+                        productID: productList?[index].id ?? '',
+                        title: productList?[index].name ?? '',
+                      );
                     },
                   ),
                 ),
                 gapH16,
-                CustomButton(
-                  title: l10n.printAll,
-                  onPressed: () async {
-                    List<String> productIDList = [];
-                    for (var element in productList ?? <DateData>[]) {
-                      productIDList.add(element.id ?? '');
-                    }
-                    await invoiceServices.getInvoices(productIDList: productIDList);
-                    final url = invoiceServices.invoiceReport;
-                    final filename = url.substring(url.lastIndexOf("/") + 1);
-                    var request = await HttpClient().getUrl(Uri.parse(url));
-                    var response = await request.close();
-                    var bytes = await consolidateHttpClientResponseBytes(response);
-                    var dir = await getApplicationDocumentsDirectory();
-                  
-                    File file = File("${dir.path}/$filename");
-
-                    await file.writeAsBytes(bytes, flush: true);
-                    await OpenFilex.open(file.path);
-                  },
-                )
+                productList?.isEmpty ?? true
+                    ? Container()
+                    : CustomButton(
+                        title: l10n.printAll,
+                        onPressed: () async {
+                          ProgressDialog pd = ProgressDialog(context: context);
+                          pd.show(
+                            msg: l10n.fileIsOpening,
+                            backgroundColor: theme.white,
+                            borderRadius: radius12,
+                            msgColor: theme.black,
+                            progressBgColor: theme.primary,
+                            progressValueColor: theme.white,
+                          );
+                          await invoiceServices.getInvoices();
+                          final url = invoiceServices.invoiceReport;
+                          final filename =
+                              url.substring(url.lastIndexOf("/") + 1);
+                          var request =
+                              await HttpClient().getUrl(Uri.parse(url));
+                          var response = await request.close();
+                          var bytes = await consolidateHttpClientResponseBytes(
+                              response);
+                          var dir = await getApplicationDocumentsDirectory();
+                          File file = File("${dir.path}/$filename");
+                          await file.writeAsBytes(bytes, flush: true);
+                          pd.close();
+                          await OpenFilex.open(file.path);
+                        },
+                      )
               ],
             ),
           );

@@ -19,6 +19,7 @@ class InvoicesPage extends StatelessWidget {
 
     return Scaffold(
       key: scaffoldKey,
+      drawer: const CustomDrawer(),
       appBar: TransparentAppBar(
         elevation: 0,
         title: Text(l10n.invoice),

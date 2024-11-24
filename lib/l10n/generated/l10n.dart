@@ -988,6 +988,16 @@ class AppLocalizations {
     );
   }
 
+  /// `File is opening`
+  String get fileIsOpening {
+    return Intl.message(
+      'File is opening',
+      name: 'fileIsOpening',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Customer Type`
   String get customerType {
     return Intl.message(
