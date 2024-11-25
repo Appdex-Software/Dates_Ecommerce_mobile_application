@@ -44,74 +44,79 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
     final invoiceServices = ref.watch(invoicesServiceProvider.notifier);
     final (theme, l10n) = appSettingsRecord(context);
 
-    return AsyncValueWidget(
-        value: ref.watch(inventoryServiceProvider),
-        data: (DateProductEntity? productEntity) {
-          final List<DateData>? productList =
-              inventoryService.getIsAvailable() != null
-                  ? inventoryService.getIsAvailable() ?? false
-                      ? productEntity?.data
-                          ?.where(
-                            (element) => (element.totalQuantity ?? 0) > 1,
-                          )
-                          .toList()
-                      : productEntity?.data
-                          ?.where(
-                            (element) => element.totalQuantity == 0,
-                          )
-                          .toList()
-                  : productEntity?.data;
-          return SingleChildScrollView(
-            padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, bottom: 2.sh),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                gapH20,
-                Column(
-                  children: List.generate(
-                    productList?.length ?? 0,
-                    (index) {
-                      return InvoiceItem(
-                        productID: productList?[index].id ?? '',
-                        title: productList?[index].name ?? '',
-                      );
-                    },
+    return SafeArea(
+      child: AsyncValueWidget(
+          value: ref.watch(inventoryServiceProvider),
+          data: (DateProductEntity? productEntity) {
+            final List<DateData>? productList =
+                inventoryService.getIsAvailable() != null
+                    ? inventoryService.getIsAvailable() ?? false
+                        ? productEntity?.data
+                            ?.where(
+                              (element) => (element.totalQuantity ?? 0) > 1,
+                            )
+                            .toList()
+                        : productEntity?.data
+                            ?.where(
+                              (element) => element.totalQuantity == 0,
+                            )
+                            .toList()
+                    : productEntity?.data;
+            return SingleChildScrollView(
+              padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, bottom: 2.sh),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  gapH20,
+                  Column(
+                    children: List.generate(
+                      productList?.length ?? 0,
+                      (index) {
+                        return InvoiceItem(
+                          productID: productList?[index].id ?? '',
+                          title: productList?[index].name ?? '',
+                        );
+                      },
+                    ),
                   ),
-                ),
-                gapH16,
-                productList?.isEmpty ?? true
-                    ? Container()
-                    : CustomButton(
-                        title: l10n.printAll,
-                        onPressed: () async {
-                          ProgressDialog pd = ProgressDialog(context: context);
-                          pd.show(
-                            msg: l10n.fileIsOpening,
-                            backgroundColor: theme.white,
-                            borderRadius: radius12,
-                            msgColor: theme.black,
-                            progressBgColor: theme.primary,
-                            progressValueColor: theme.white,
-                          );
-                          await invoiceServices.getInvoices();
-                          final url = invoiceServices.invoiceReport;
-                          final filename =
-                              url.substring(url.lastIndexOf("/") + 1);
-                          var request =
-                              await HttpClient().getUrl(Uri.parse(url));
-                          var response = await request.close();
-                          var bytes = await consolidateHttpClientResponseBytes(
-                              response);
-                          var dir = await getApplicationDocumentsDirectory();
-                          File file = File("${dir.path}/$filename");
-                          await file.writeAsBytes(bytes, flush: true);
-                          pd.close();
-                          await OpenFilex.open(file.path);
-                        },
+                  gapH16,
+                  productList?.isEmpty ?? true
+                      ? Container()
+                      : Padding(
+                        padding: EdgeInsets.only(bottom: 5.sh),
+                        child: CustomButton(
+                            title: l10n.printAll,
+                            onPressed: () async {
+                              ProgressDialog pd = ProgressDialog(context: context);
+                              pd.show(
+                                msg: l10n.fileIsOpening,
+                                backgroundColor: theme.white,
+                                borderRadius: radius12,
+                                msgColor: theme.black,
+                                progressBgColor: theme.primary,
+                                progressValueColor: theme.white,
+                              );
+                              await invoiceServices.getInvoices();
+                              final url = invoiceServices.invoiceReport;
+                              final filename =
+                                  url.substring(url.lastIndexOf("/") + 1);
+                              var request =
+                                  await HttpClient().getUrl(Uri.parse(url));
+                              var response = await request.close();
+                              var bytes = await consolidateHttpClientResponseBytes(
+                                  response);
+                              var dir = await getApplicationDocumentsDirectory();
+                              File file = File("${dir.path}/$filename");
+                              await file.writeAsBytes(bytes, flush: true);
+                              pd.close();
+                              await OpenFilex.open(file.path);
+                            },
+                          ),
                       )
-              ],
-            ),
-          );
-        });
+                ],
+              ),
+            );
+          }),
+    );
   }
 }
