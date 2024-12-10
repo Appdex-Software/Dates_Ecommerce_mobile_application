@@ -30,6 +30,8 @@ mixin _$OrderUserData {
   String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'delivery_image')
   dynamic get deliveryImage => throw _privateConstructorUsedError;
+  @JsonKey(name: 'customer_type')
+  dynamic get customerType => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   String? get user => throw _privateConstructorUsedError;
   @JsonKey(name: 'product_details')
@@ -54,6 +56,7 @@ abstract class $OrderUserDataCopyWith<$Res> {
       @JsonKey(name: 'order_number') String? orderNumber,
       String? status,
       @JsonKey(name: 'delivery_image') dynamic deliveryImage,
+      @JsonKey(name: 'customer_type') dynamic customerType,
       String? comment,
       String? user,
       @JsonKey(name: 'product_details') List<ProductDetail>? productDetails});
@@ -78,6 +81,7 @@ class _$OrderUserDataCopyWithImpl<$Res, $Val extends OrderUserData>
     Object? orderNumber = freezed,
     Object? status = freezed,
     Object? deliveryImage = freezed,
+    Object? customerType = freezed,
     Object? comment = freezed,
     Object? user = freezed,
     Object? productDetails = freezed,
@@ -106,6 +110,10 @@ class _$OrderUserDataCopyWithImpl<$Res, $Val extends OrderUserData>
       deliveryImage: freezed == deliveryImage
           ? _value.deliveryImage
           : deliveryImage // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      customerType: freezed == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
               as dynamic,
       comment: freezed == comment
           ? _value.comment
@@ -138,6 +146,7 @@ abstract class _$$OrderUserDataImplCopyWith<$Res>
       @JsonKey(name: 'order_number') String? orderNumber,
       String? status,
       @JsonKey(name: 'delivery_image') dynamic deliveryImage,
+      @JsonKey(name: 'customer_type') dynamic customerType,
       String? comment,
       String? user,
       @JsonKey(name: 'product_details') List<ProductDetail>? productDetails});
@@ -160,6 +169,7 @@ class __$$OrderUserDataImplCopyWithImpl<$Res>
     Object? orderNumber = freezed,
     Object? status = freezed,
     Object? deliveryImage = freezed,
+    Object? customerType = freezed,
     Object? comment = freezed,
     Object? user = freezed,
     Object? productDetails = freezed,
@@ -189,6 +199,10 @@ class __$$OrderUserDataImplCopyWithImpl<$Res>
           ? _value.deliveryImage
           : deliveryImage // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      customerType: freezed == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -215,6 +229,7 @@ class _$OrderUserDataImpl implements _OrderUserData {
       @JsonKey(name: 'order_number') this.orderNumber,
       this.status,
       @JsonKey(name: 'delivery_image') this.deliveryImage,
+      @JsonKey(name: 'customer_type') this.customerType,
       this.comment,
       this.user,
       @JsonKey(name: 'product_details')
@@ -241,6 +256,9 @@ class _$OrderUserDataImpl implements _OrderUserData {
   @JsonKey(name: 'delivery_image')
   final dynamic deliveryImage;
   @override
+  @JsonKey(name: 'customer_type')
+  final dynamic customerType;
+  @override
   final String? comment;
   @override
   final String? user;
@@ -257,7 +275,7 @@ class _$OrderUserDataImpl implements _OrderUserData {
 
   @override
   String toString() {
-    return 'OrderUserData(id: $id, orderDate: $orderDate, userName: $userName, orderNumber: $orderNumber, status: $status, deliveryImage: $deliveryImage, comment: $comment, user: $user, productDetails: $productDetails)';
+    return 'OrderUserData(id: $id, orderDate: $orderDate, userName: $userName, orderNumber: $orderNumber, status: $status, deliveryImage: $deliveryImage, customerType: $customerType, comment: $comment, user: $user, productDetails: $productDetails)';
   }
 
   @override
@@ -275,6 +293,8 @@ class _$OrderUserDataImpl implements _OrderUserData {
             (identical(other.status, status) || other.status == status) &&
             const DeepCollectionEquality()
                 .equals(other.deliveryImage, deliveryImage) &&
+            const DeepCollectionEquality()
+                .equals(other.customerType, customerType) &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.user, user) || other.user == user) &&
             const DeepCollectionEquality()
@@ -291,6 +311,7 @@ class _$OrderUserDataImpl implements _OrderUserData {
       orderNumber,
       status,
       const DeepCollectionEquality().hash(deliveryImage),
+      const DeepCollectionEquality().hash(customerType),
       comment,
       user,
       const DeepCollectionEquality().hash(_productDetails));
@@ -317,6 +338,7 @@ abstract class _OrderUserData implements OrderUserData {
       @JsonKey(name: 'order_number') final String? orderNumber,
       final String? status,
       @JsonKey(name: 'delivery_image') final dynamic deliveryImage,
+      @JsonKey(name: 'customer_type') final dynamic customerType,
       final String? comment,
       final String? user,
       @JsonKey(name: 'product_details')
@@ -341,6 +363,9 @@ abstract class _OrderUserData implements OrderUserData {
   @override
   @JsonKey(name: 'delivery_image')
   dynamic get deliveryImage;
+  @override
+  @JsonKey(name: 'customer_type')
+  dynamic get customerType;
   @override
   String? get comment;
   @override

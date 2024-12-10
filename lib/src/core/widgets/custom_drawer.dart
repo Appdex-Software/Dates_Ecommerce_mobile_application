@@ -51,6 +51,13 @@ class CustomDrawer extends ConsumerWidget {
               },
             ),
             ListTile(
+              leading: const Icon(Icons.receipt_long),
+              title: Text(l10n.invoice),
+              onTap: () {
+                context.router.push(InvoicesRoute());
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.logout),
               title: Text(l10n.logout),
               onTap: () {

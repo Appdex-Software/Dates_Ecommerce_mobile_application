@@ -15,6 +15,8 @@ class CategoryAvailabilityContainer extends ConsumerStatefulWidget {
 
 class _CategoryAvailabilityContainerState
     extends ConsumerState<CategoryAvailabilityContainer> {
+      bool isAvailable = false;
+      bool isNotAvailable = false;
   @override
   Widget build(BuildContext context) {
     final (theme, l10n) = appSettingsRecord(context);
@@ -24,9 +26,14 @@ class _CategoryAvailabilityContainerState
       children: [
         GestureDetector(
           onTap: () {
-            if (inventoryService.getIsAvailable() == null) {
-              inventoryService.setIsAvailable(true);
+            inventoryService.setIsAvailable(true);
+            
+            if (isAvailable == false) {
+              isAvailable = true;
+              isNotAvailable = false;
+
             } else {
+              isAvailable = false;
               inventoryService.setIsAvailable(null);
             }
             setState(() {});
@@ -47,9 +54,14 @@ class _CategoryAvailabilityContainerState
         ),
         GestureDetector(
           onTap: () {
-            if (inventoryService.getIsAvailable() == null) {
               inventoryService.setIsAvailable(false);
+
+            if (isNotAvailable == false) {
+              isAvailable = false;
+              isNotAvailable = true;
+
             } else {
+              isNotAvailable = false;
               inventoryService.setIsAvailable(null);
             }
             setState(() {});

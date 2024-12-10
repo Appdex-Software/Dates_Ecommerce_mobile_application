@@ -988,6 +988,16 @@ class AppLocalizations {
     );
   }
 
+  /// `File is opening`
+  String get fileIsOpening {
+    return Intl.message(
+      'File is opening',
+      name: 'fileIsOpening',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Customer Type`
   String get customerType {
     return Intl.message(
@@ -1003,6 +1013,46 @@ class AppLocalizations {
     return Intl.message(
       'Quantity',
       name: 'quantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invoice`
+  String get invoice {
+    return Intl.message(
+      'Invoice',
+      name: 'invoice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Print`
+  String get print {
+    return Intl.message(
+      'Print',
+      name: 'print',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Print all`
+  String get printAll {
+    return Intl.message(
+      'Print all',
+      name: 'printAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book`
+  String get book {
+    return Intl.message(
+      'Book',
+      name: 'book',
       desc: '',
       args: [],
     );

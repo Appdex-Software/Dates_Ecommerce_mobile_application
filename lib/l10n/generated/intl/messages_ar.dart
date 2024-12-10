@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "تم الاتفاق مع الجهات الحكومية لتوزيع التمر علي الموظيفين طوال ايام شهر رمضان 2025"),
         "ar": MessageLookupByLibrary.simpleMessage("عربي"),
         "available": MessageLookupByLibrary.simpleMessage("المتاح"),
+        "book": MessageLookupByLibrary.simpleMessage("كتاب"),
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "categories": MessageLookupByLibrary.simpleMessage("فئات"),
         "charities": MessageLookupByLibrary.simpleMessage("الجمعيات"),
@@ -63,11 +64,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("فشل في تسجيل الدخول"),
         "family": MessageLookupByLibrary.simpleMessage("العائلة"),
         "fasting": MessageLookupByLibrary.simpleMessage("افطار صائم"),
+        "fileIsOpening": MessageLookupByLibrary.simpleMessage("جاري فتح الملف"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "greenDates": MessageLookupByLibrary.simpleMessage("تمر خضري"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "inventory": MessageLookupByLibrary.simpleMessage("المخزون"),
+        "invoice": MessageLookupByLibrary.simpleMessage("فاتورة"),
         "joinRequests": MessageLookupByLibrary.simpleMessage("طلب انضمام"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "logIntoExistingAccount": MessageLookupByLibrary.simpleMessage(
@@ -99,6 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال بريدك الإلكتروني وكلمة المرور"),
+        "print": MessageLookupByLibrary.simpleMessage("طباعة"),
+        "printAll": MessageLookupByLibrary.simpleMessage("طباعة الكل"),
         "productDescription":
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),
         "productImage": MessageLookupByLibrary.simpleMessage("صور المنتج"),

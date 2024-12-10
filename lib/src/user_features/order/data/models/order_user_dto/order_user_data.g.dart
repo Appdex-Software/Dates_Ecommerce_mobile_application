@@ -16,6 +16,7 @@ _$OrderUserDataImpl _$$OrderUserDataImplFromJson(Map<String, dynamic> json) =>
       orderNumber: json['order_number'] as String?,
       status: json['status'] as String?,
       deliveryImage: json['delivery_image'],
+      customerType: json['customer_type'],
       comment: json['comment'] as String?,
       user: json['user'] as String?,
       productDetails: (json['product_details'] as List<dynamic>?)
@@ -31,6 +32,7 @@ Map<String, dynamic> _$$OrderUserDataImplToJson(_$OrderUserDataImpl instance) =>
       'order_number': instance.orderNumber,
       'status': instance.status,
       'delivery_image': instance.deliveryImage,
+      'customer_type': instance.customerType,
       'comment': instance.comment,
       'user': instance.user,
       'product_details': instance.productDetails,

@@ -6,4 +6,5 @@ class AssetsHelper {
   static const String farmDataBackground =
       'assets/images/date_farm_background.png';
   static const String date = 'assets/images/date.png';
+  static const String bookPDF = 'assets/books/كتاب-01-1.pdf';
 }

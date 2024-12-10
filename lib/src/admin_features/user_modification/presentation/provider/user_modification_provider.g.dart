@@ -7,7 +7,7 @@ part of 'user_modification_provider.dart';
 // **************************************************************************
 
 String _$userModificationServiceHash() =>
-    r'765e7938734a26665fdcf04c12c9e75828549a7e';
+    r'e43c88a1788fa64bbb212661ae31cb5765619510';
 
 /// See also [UserModificationService].
 @ProviderFor(UserModificationService)

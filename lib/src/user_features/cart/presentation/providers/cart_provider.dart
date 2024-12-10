@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:date_farm/src/app_features/authentication/presentation/providers/auth_ui_service.dart';
 import 'package:date_farm/src/user_features/store/data/models/create_order_body/create_order_body.dart';
 import 'package:date_farm/src/user_features/store/data/models/create_order_body/product.dart';
@@ -134,6 +136,7 @@ class CartService extends _$CartService {
   Future<CreateOrderResponseEntity?> createOrder() async {
     final storeService = ref.watch(storeRepositoryProvider.notifier);
     try {
+      log(_createOrderBody.toString());
       _createOrderResponseEntity =
           await storeService.createOrder(orderBody: _createOrderBody);
       if (_createOrderResponseEntity?.statusCode == 201) {

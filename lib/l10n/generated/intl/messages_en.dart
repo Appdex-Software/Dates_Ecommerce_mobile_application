@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "available": MessageLookupByLibrary.simpleMessage("Available"),
+        "book": MessageLookupByLibrary.simpleMessage("Book"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "charities": MessageLookupByLibrary.simpleMessage("Charities"),
@@ -63,11 +64,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Failed to login"),
         "family": MessageLookupByLibrary.simpleMessage("Family"),
         "fasting": MessageLookupByLibrary.simpleMessage("Fasting"),
+        "fileIsOpening":
+            MessageLookupByLibrary.simpleMessage("File is opening"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
         "greenDates": MessageLookupByLibrary.simpleMessage("Green dates"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "inventory": MessageLookupByLibrary.simpleMessage("inventory"),
+        "invoice": MessageLookupByLibrary.simpleMessage("Invoice"),
         "joinRequests": MessageLookupByLibrary.simpleMessage("Join Requests"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "logIntoExistingAccount":
@@ -100,6 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
         "pleaseEnterYourEmailAndPassword": MessageLookupByLibrary.simpleMessage(
             "Please enter your email and password"),
+        "print": MessageLookupByLibrary.simpleMessage("Print"),
+        "printAll": MessageLookupByLibrary.simpleMessage("Print all"),
         "productDescription":
             MessageLookupByLibrary.simpleMessage("Product Description"),
         "productImage": MessageLookupByLibrary.simpleMessage("Product Image"),

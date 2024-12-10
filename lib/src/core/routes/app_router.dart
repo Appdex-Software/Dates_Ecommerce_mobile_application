@@ -31,6 +31,7 @@ class AppRouter extends _$AppRouter {
             AutoRoute(page: NewsRoute.page, maintainState: true),
             AutoRoute(page: NewsDetailsRoute.page, maintainState: true),
             AutoRoute(page: ContactUsRoute.page, maintainState: true),
+            
           ]),
           AutoRoute(page: DateStoreRoute.page),
           AutoRoute(page: CartRoute.page),
@@ -38,6 +39,9 @@ class AppRouter extends _$AppRouter {
             page: UserOrderRoute.page,
           ),
         ]),
+        AutoRoute(
+            page: PdfViewerRoute.page,
+          ),
         AutoRoute(page: DateDetailsRoute.page),
         AutoRoute(page: HomeAdminNavigationRoute.page, children: [
           AutoRoute(page: HomeAdminRoute.page, initial: true),
@@ -62,6 +66,10 @@ class AppRouter extends _$AppRouter {
           AutoRoute(
             page: JoinRequestDetailsRoute.page,
           ),
+          AutoRoute(
+            page: InvoicesRoute.page,
+          ),
+          
         ]),
         RedirectRoute(path: '*', redirectTo: '/'),
       ];

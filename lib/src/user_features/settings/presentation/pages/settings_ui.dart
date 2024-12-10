@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/app_features/authentication/presentation/providers/auth_ui_service.dart';
+import 'package:date_farm/src/core/helpers/helpers.dart';
 import 'package:date_farm/src/core/routes/app_router.dart';
 import 'package:date_farm/src/core/widgets/widgets.dart';
 import 'package:date_farm/src/user_features/settings/presentation/widgets/widgets.dart';
@@ -42,6 +43,14 @@ class SettingsUi extends ConsumerWidget {
               title: l10n.orders,
               onTap: () {
                 context.router.push(const UserOrderRoute());
+              },
+            ),
+            SettingsItemContainer(
+              icon: Icons.book,
+              title: l10n.book,
+              onTap: ()  {
+              context.router.push(PdfViewerRoute(pdfData: AssetsHelper.bookPDF));
+
               },
             ),
             SettingsItemContainer(

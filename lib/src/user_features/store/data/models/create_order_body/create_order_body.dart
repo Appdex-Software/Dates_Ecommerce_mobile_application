@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'product.dart';
@@ -12,7 +14,7 @@ class CreateOrderBody with _$CreateOrderBody {
     String? status,
     num? quantity,
     String? comment,
-    List<Product>? products,
+    @JsonKey(name: "product_details") List<Product>? products,
   }) = _CreateOrderBody;
 
   factory CreateOrderBody.fromJson(Map<String, dynamic> json) =>

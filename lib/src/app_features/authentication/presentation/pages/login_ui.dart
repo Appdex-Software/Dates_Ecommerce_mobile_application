@@ -60,10 +60,10 @@ class _LoginUiState extends ConsumerState<LoginUi> {
                 },
               ),
             ),
-            gapH16,
-            GestureDetector(
-                child:
-                    Text(l10n.forgotYourPassword, style: theme.displayButton)),
+            // gapH16,
+            // GestureDetector(
+            //     child:
+            //         Text(l10n.forgotYourPassword, style: theme.displayButton)),
             gapH8,
             GestureDetector(
                 onTap: () {

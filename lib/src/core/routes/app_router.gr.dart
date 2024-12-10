@@ -100,6 +100,14 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    InvoicesRoute.name: (routeData) {
+      final args = routeData.argsAs<InvoicesRouteArgs>(
+          orElse: () => const InvoicesRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: InvoicesPage(key: args.key),
+      );
+    },
     JoinRequestDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<JoinRequestDetailsRouteArgs>(
           orElse: () => const JoinRequestDetailsRouteArgs());
@@ -157,6 +165,16 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const OrdersAdminPage(),
+      );
+    },
+    PdfViewerRoute.name: (routeData) {
+      final args = routeData.argsAs<PdfViewerRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: PdfViewerPage(
+          key: args.key,
+          pdfData: args.pdfData,
+        ),
       );
     },
     RegisterRoute.name: (routeData) {
@@ -440,6 +458,35 @@ class InventoryDetailsAdminRouteArgs {
 }
 
 /// generated route for
+/// [InvoicesPage]
+class InvoicesRoute extends PageRouteInfo<InvoicesRouteArgs> {
+  InvoicesRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          InvoicesRoute.name,
+          args: InvoicesRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'InvoicesRoute';
+
+  static const PageInfo<InvoicesRouteArgs> page =
+      PageInfo<InvoicesRouteArgs>(name);
+}
+
+class InvoicesRouteArgs {
+  const InvoicesRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'InvoicesRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
 /// [JoinRequestDetailsPage]
 class JoinRequestDetailsRoute
     extends PageRouteInfo<JoinRequestDetailsRouteArgs> {
@@ -628,6 +675,44 @@ class OrdersAdminRoute extends PageRouteInfo<void> {
   static const String name = 'OrdersAdminRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PdfViewerPage]
+class PdfViewerRoute extends PageRouteInfo<PdfViewerRouteArgs> {
+  PdfViewerRoute({
+    Key? key,
+    required dynamic pdfData,
+    List<PageRouteInfo>? children,
+  }) : super(
+          PdfViewerRoute.name,
+          args: PdfViewerRouteArgs(
+            key: key,
+            pdfData: pdfData,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'PdfViewerRoute';
+
+  static const PageInfo<PdfViewerRouteArgs> page =
+      PageInfo<PdfViewerRouteArgs>(name);
+}
+
+class PdfViewerRouteArgs {
+  const PdfViewerRouteArgs({
+    this.key,
+    required this.pdfData,
+  });
+
+  final Key? key;
+
+  final dynamic pdfData;
+
+  @override
+  String toString() {
+    return 'PdfViewerRouteArgs{key: $key, pdfData: $pdfData}';
+  }
 }
 
 /// generated route for
