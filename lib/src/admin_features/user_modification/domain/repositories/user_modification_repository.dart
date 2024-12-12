@@ -24,27 +24,30 @@ class UserModificationRepository extends _$UserModificationRepository {
   UserAuthenticationErrorEntity? _userAuthenticationErrorEntity;
   UserAuthenticationErrorEntity? getUserAuthenticationErrorEntity() =>
       _userAuthenticationErrorEntity;
-  Future<UserModificationEntity?> getUsers() async {
+  Future<UserModificationEntity?> getUsers({String? queryParameter}) async {
     try {
-      _userModificationEntity = await userModificationSourceImpl.getUsers();
+      _userModificationEntity = await userModificationSourceImpl.getUsers(queryParameter: queryParameter);
       return _userModificationEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get user', err: e, stackTrace: stack);
     }
   }
 
-  Future<UserAuthenticationErrorEntity?> addUser({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity?> addUser(
+      {UserModificationData? body}) async {
     try {
-       _userAuthenticationErrorEntity = await userModificationSourceImpl.addUsers(body: body);
+      _userAuthenticationErrorEntity =
+          await userModificationSourceImpl.addUsers(body: body);
       return _userAuthenticationErrorEntity;
     } catch (e, stack) {
       throw CustomError('Failed to add user', err: e, stackTrace: stack);
     }
   }
 
-  Future<UserAuthenticationErrorEntity?> patchUser({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity?> patchUser(
+      {UserModificationData? body}) async {
     try {
-       _userAuthenticationErrorEntity =
+      _userAuthenticationErrorEntity =
           await userModificationSourceImpl.patchUsers(body: body);
       return _userAuthenticationErrorEntity;
     } catch (e, stack) {

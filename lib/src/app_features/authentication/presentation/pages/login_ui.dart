@@ -101,7 +101,8 @@ class _LoginUiState extends ConsumerState<LoginUi> {
                             } else {
                               await sessionManager.setAdminLogin(statue: true);
                               context.mounted
-                                  ? context.router.replace(const OrdersAdminRoute())
+                                  ? context.router
+                                      .replace(const OrdersAdminRoute())
                                   : null;
                             }
                           } else {

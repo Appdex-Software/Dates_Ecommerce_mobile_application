@@ -19,13 +19,11 @@ class OrdersAdminUi extends ConsumerStatefulWidget {
 }
 
 class _OrdersAdminUiState extends ConsumerState<OrdersAdminUi> {
-
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback(
       (timeStamp) async {
-                await ref.read(inventoryServiceProvider.notifier).getDateProducts();
-
+        await ref.read(inventoryServiceProvider.notifier).getDateProducts();
       },
     );
     super.initState();
@@ -35,7 +33,7 @@ class _OrdersAdminUiState extends ConsumerState<OrdersAdminUi> {
   Widget build(BuildContext context) {
     final (theme, _) = appSettingsRecord(context);
     return RefreshIndicator(
-          color: theme.greenChalk,
+      color: theme.greenChalk,
       onRefresh: () async {
         await ref.watch(orderServiceProvider.notifier).getOrders();
       },
@@ -80,15 +78,24 @@ class _OrdersAdminUiState extends ConsumerState<OrdersAdminUi> {
                                   // ),
                                   Row(
                                     children: [
-                                      Expanded(child: Text(orderEntity?.data?[index].userName ?? '',overflow: TextOverflow.ellipsis,style: theme.titleLarge)),
+                                      Expanded(
+                                          child: Text(
+                                              orderEntity?.data?[index].user
+                                                      ?.username ??
+                                                  '',
+                                              overflow: TextOverflow.ellipsis,
+                                              style: theme.titleLarge)),
                                       gapW24,
-                                      Text(orderEntity?.data?[index].status ?? '',style: theme.titleSmall)
+                                      Text(
+                                          orderEntity?.data?[index].status ??
+                                              '',
+                                          style: theme.titleSmall)
                                     ],
                                   ),
                                   gapH16,
                                   OrderRequestItem(
-                                    data:
-                                        orderEntity?.data?[index].productDetails,
+                                    data: orderEntity
+                                        ?.data?[index].productDetails,
                                     index: index,
                                   ),
                                 ],

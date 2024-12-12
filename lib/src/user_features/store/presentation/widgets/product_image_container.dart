@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-
 class ProductImage extends StatelessWidget {
   const ProductImage({super.key, required this.image, required this.size});
   final String image;

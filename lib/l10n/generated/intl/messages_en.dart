@@ -40,7 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An agreement has been reached with government agencies to distribute dates to employees throughout the month of Ramadan 2025."),
         "ar": MessageLookupByLibrary.simpleMessage("AR"),
         "available": MessageLookupByLibrary.simpleMessage("Available"),
+        "beginDate": MessageLookupByLibrary.simpleMessage("Begin Date"),
         "book": MessageLookupByLibrary.simpleMessage("Book"),
+        "canceled": MessageLookupByLibrary.simpleMessage("Canceled"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "charities": MessageLookupByLibrary.simpleMessage("Charities"),
@@ -51,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "country": MessageLookupByLibrary.simpleMessage("Country"),
         "customerType": MessageLookupByLibrary.simpleMessage("Customer Type"),
+        "dataNotFound": MessageLookupByLibrary.simpleMessage("Data not found"),
         "datesProducts": MessageLookupByLibrary.simpleMessage("Dates Products"),
         "decline": MessageLookupByLibrary.simpleMessage("Decline"),
         "doUWantToExitTheApp": MessageLookupByLibrary.simpleMessage(
@@ -59,15 +62,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "emptyValidationError":
             MessageLookupByLibrary.simpleMessage("This field cannot be empty"),
         "en": MessageLookupByLibrary.simpleMessage("EN"),
+        "endDate": MessageLookupByLibrary.simpleMessage("End Date"),
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
         "failedToLogin":
             MessageLookupByLibrary.simpleMessage("Failed to login"),
+        "failedToUpdateTheStatusOfTheOrder":
+            MessageLookupByLibrary.simpleMessage(
+                "failed to update the status of the order"),
         "family": MessageLookupByLibrary.simpleMessage("Family"),
         "fasting": MessageLookupByLibrary.simpleMessage("Fasting"),
         "fileIsOpening":
             MessageLookupByLibrary.simpleMessage("File is opening"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
+        "fulfilment": MessageLookupByLibrary.simpleMessage("Fulfilment"),
         "greenDates": MessageLookupByLibrary.simpleMessage("Green dates"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "inventory": MessageLookupByLibrary.simpleMessage("inventory"),
@@ -80,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mission": MessageLookupByLibrary.simpleMessage("Message"),
         "missionBody": MessageLookupByLibrary.simpleMessage(
             "nThrough the distribution of dates to pilgrims and charities, we seek to provide a distinguished service that meets the needs of the guests of God and needy groups, and reflects the values ​​of giving and goodness that characterize our Kingdom, while adhering to the highest standards of quality and transparency."),
+        "month": MessageLookupByLibrary.simpleMessage("Month"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nameAssociationName":
@@ -92,11 +101,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "newsTitle": MessageLookupByLibrary.simpleMessage("News Title"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
+        "notFulfilment": MessageLookupByLibrary.simpleMessage("Not Fulfilment"),
         "optional": MessageLookupByLibrary.simpleMessage("Optional"),
         "orderStatus": MessageLookupByLibrary.simpleMessage("Order status"),
+        "orderStatusHasBeenChanged": MessageLookupByLibrary.simpleMessage(
+            "order status has been changed"),
         "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "ordersInProgress":
             MessageLookupByLibrary.simpleMessage("Orders in progress"),
+        "ordersReport": MessageLookupByLibrary.simpleMessage("Orders Reports"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
@@ -110,12 +123,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Product Description"),
         "productImage": MessageLookupByLibrary.simpleMessage("Product Image"),
         "productName": MessageLookupByLibrary.simpleMessage("Product Name"),
+        "productsReport":
+            MessageLookupByLibrary.simpleMessage("Products Reports"),
         "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
+        "received": MessageLookupByLibrary.simpleMessage("Received"),
         "registerNewAccount":
             MessageLookupByLibrary.simpleMessage("Register new account"),
+        "report": MessageLookupByLibrary.simpleMessage("Report"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
         "role": MessageLookupByLibrary.simpleMessage("Role"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shipped": MessageLookupByLibrary.simpleMessage("Shipped"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "store": MessageLookupByLibrary.simpleMessage("Store"),
         "street": MessageLookupByLibrary.simpleMessage("Street"),
@@ -145,6 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "This item has been added already"),
         "totalQuantity": MessageLookupByLibrary.simpleMessage("Total Quantity"),
         "unavailable": MessageLookupByLibrary.simpleMessage("Unavailable"),
+        "userEmail": MessageLookupByLibrary.simpleMessage("User\'s email"),
         "userFirstName":
             MessageLookupByLibrary.simpleMessage("user first name"),
         "userLastName": MessageLookupByLibrary.simpleMessage("user last name"),
@@ -154,13 +173,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vision And Mission"),
         "visionBody": MessageLookupByLibrary.simpleMessage(
             "To be the pioneers in providing high-quality dates to pilgrims and charities in the Kingdom of Saudi Arabia, and to promote the spirit of giving and social solidarity."),
+        "year": MessageLookupByLibrary.simpleMessage("Year"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes"),
         "youHaveBeenRegisteredSuccessfully":
             MessageLookupByLibrary.simpleMessage(
                 "You have been registered successfully"),
         "youHaveToErrorInOneOfTheFollowingFields":
             MessageLookupByLibrary.simpleMessage(
-                "you have to error in one of the following fields"),
+                "you have error in one of the following fields"),
         "yourOrderNumberIs":
             MessageLookupByLibrary.simpleMessage("Your order number is"),
         "zipCode": MessageLookupByLibrary.simpleMessage("ZipCode")

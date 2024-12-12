@@ -27,8 +27,11 @@ class AsyncValueWidget<T> extends StatelessWidget {
           (e, st) {
             return Center(child: ErrorMessageWidget(e.toString()));
           },
-      loading:
-          loading ?? () => Center(child: CircularProgressIndicator(color: theme.primary,)),
+      loading: loading ??
+          () => Center(
+                  child: CircularProgressIndicator(
+                color: theme.primary,
+              )),
     );
   }
 }

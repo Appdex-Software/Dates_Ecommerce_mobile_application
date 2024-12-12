@@ -120,7 +120,7 @@ class _AdminAddPostUiState extends ConsumerState<AdminAddPostUi> {
                     value: ref.watch(newsServiceProvider),
                     data: (_) {
                       return Padding(
-                        padding:  EdgeInsets.only(bottom: 5.sh),
+                        padding: EdgeInsets.only(bottom: 5.sh),
                         child: CustomButton(
                           title: l10n.submit,
                           width: double.infinity,

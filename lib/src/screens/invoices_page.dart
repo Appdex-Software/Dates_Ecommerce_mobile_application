@@ -12,7 +12,6 @@ class InvoicesPage extends StatelessWidget {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-
   @override
   Widget build(BuildContext context) {
     final (_, l10n) = appSettingsRecord(context);

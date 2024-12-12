@@ -1,10 +1,10 @@
 // ignore_for_file: invalid_annotation_target
 
+import 'package:date_farm/src/user_features/order/domain/entities/order_user_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/entities/order_user_entity.dart';
-import 'meta.dart';
 import 'order_user_data.dart';
+import 'meta.dart';
 import 'pagination.dart';
 
 part 'order_user_dto.freezed.dart';
@@ -24,11 +24,12 @@ class OrderUserDto with _$OrderUserDto {
       _$OrderUserDtoFromJson(json);
 }
 
-extension OrderUserDtoX on OrderUserDto {
+extension OrderUserDtox on OrderUserDto {
   OrderUserEntity toEntity() => OrderUserEntity(
-      data: data,
-      message: message,
-      statusCode: statusCode,
-      meta: meta,
-      pagination: pagination);
+        message: message,
+        statusCode: statusCode,
+        meta: meta,
+        pagination: pagination,
+        data: data,
+      );
 }

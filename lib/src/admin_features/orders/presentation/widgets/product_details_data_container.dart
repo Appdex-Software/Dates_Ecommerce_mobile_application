@@ -52,9 +52,9 @@ class _ProductDetailsDataContainerState
                 ),
                 OrderItemQuantityCounterAdmin(
                   index: index,
-                  limit: widget.data?.customerType == "families"
+                  limit: widget.data?.user?.customerType == "families"
                       ? productData?.familiesQuantity?.toInt() ?? 0
-                      : widget.data?.customerType == "fasting"
+                      : widget.data?.user?.customerType == "fasting"
                           ? productData?.fastingQuantity?.toInt() ?? 0
                           : productData?.charitiesQuantity?.toInt() ?? 0,
                   data: widget.data?.productDetails?[index],
@@ -74,9 +74,9 @@ class _ProductDetailsDataContainerState
                   (productData?.totalQuantity == null ||
                           productData?.totalQuantity == 0
                       ? l10n.unavailable
-                      : widget.data?.customerType == "families"
+                      : widget.data?.user?.customerType == "families"
                           ? "${l10n.family}: ${productData?.familiesQuantity.toString()}"
-                          : widget.data?.customerType == "fasting"
+                          : widget.data?.user?.customerType == "fasting"
                               ? "${l10n.fasting}: ${productData?.fastingQuantity.toString()}"
                               : "${l10n.charities}: ${productData?.charitiesQuantity.toString()}"),
                   style: theme.labelLarge,

@@ -73,7 +73,7 @@
     "zipCode":"ZipCode",
     "username" : "Username",
     "youHaveBeenRegisteredSuccessfully":"You have been registered successfully",
-    "youHaveToErrorInOneOfTheFollowingFields" : "you have to error in one of the following fields",
+    "youHaveToErrorInOneOfTheFollowingFields" : "you have error in one of the following fields",
     "phoneNumberIsRequired" : "Phone number is required",
     "emptyValidationError": "This field cannot be empty",
     "more":"More",
@@ -100,7 +100,23 @@
     "invoice" : "Invoice",
     "print" : "Print",
     "printAll" : "Print all",
-    "book" : "Book"
+    "book" : "Book",
+    "canceled" : "Canceled",
+    "fulfilment" : "Fulfilment",
+    "shipped" : "Shipped",
+    "orderStatusHasBeenChanged" : "order status has been changed",
+    "received" : "Received",
+    "failedToUpdateTheStatusOfTheOrder" : "failed to update the status of the order",
+    "report" : "Report",
+    "ordersReport" : "Orders Reports",
+    "productsReport" : "Products Reports",
+    "beginDate" : "Begin Date",
+    "endDate" : "End Date",
+    "year" : "Year",
+    "month" : "Month",
+    "userEmail" : "User's email",
+    "dataNotFound" : "Data not found",
+    "notFulfilment" : "Not Fulfilment"
 
 
 

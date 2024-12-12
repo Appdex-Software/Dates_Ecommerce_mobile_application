@@ -776,10 +776,10 @@ class AppLocalizations {
     );
   }
 
-  /// `you have to error in one of the following fields`
+  /// `you have error in one of the following fields`
   String get youHaveToErrorInOneOfTheFollowingFields {
     return Intl.message(
-      'you have to error in one of the following fields',
+      'you have error in one of the following fields',
       name: 'youHaveToErrorInOneOfTheFollowingFields',
       desc: '',
       args: [],
@@ -1053,6 +1053,166 @@ class AppLocalizations {
     return Intl.message(
       'Book',
       name: 'book',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Canceled`
+  String get canceled {
+    return Intl.message(
+      'Canceled',
+      name: 'canceled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fulfilment`
+  String get fulfilment {
+    return Intl.message(
+      'Fulfilment',
+      name: 'fulfilment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipped`
+  String get shipped {
+    return Intl.message(
+      'Shipped',
+      name: 'shipped',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `order status has been changed`
+  String get orderStatusHasBeenChanged {
+    return Intl.message(
+      'order status has been changed',
+      name: 'orderStatusHasBeenChanged',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Received`
+  String get received {
+    return Intl.message(
+      'Received',
+      name: 'received',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `failed to update the status of the order`
+  String get failedToUpdateTheStatusOfTheOrder {
+    return Intl.message(
+      'failed to update the status of the order',
+      name: 'failedToUpdateTheStatusOfTheOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Report`
+  String get report {
+    return Intl.message(
+      'Report',
+      name: 'report',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders Reports`
+  String get ordersReport {
+    return Intl.message(
+      'Orders Reports',
+      name: 'ordersReport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products Reports`
+  String get productsReport {
+    return Intl.message(
+      'Products Reports',
+      name: 'productsReport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Begin Date`
+  String get beginDate {
+    return Intl.message(
+      'Begin Date',
+      name: 'beginDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date`
+  String get endDate {
+    return Intl.message(
+      'End Date',
+      name: 'endDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Year`
+  String get year {
+    return Intl.message(
+      'Year',
+      name: 'year',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Month`
+  String get month {
+    return Intl.message(
+      'Month',
+      name: 'month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User's email`
+  String get userEmail {
+    return Intl.message(
+      'User\'s email',
+      name: 'userEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Data not found`
+  String get dataNotFound {
+    return Intl.message(
+      'Data not found',
+      name: 'dataNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not Fulfilment`
+  String get notFulfilment {
+    return Intl.message(
+      'Not Fulfilment',
+      name: 'notFulfilment',
       desc: '',
       args: [],
     );

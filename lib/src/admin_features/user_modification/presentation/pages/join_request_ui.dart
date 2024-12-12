@@ -37,8 +37,7 @@ class _JoinRequestUiState extends ConsumerState<JoinRequestUi> {
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 2.sh),
                     child: LinearGradientContainer(
-                        border:
-                            Border.all(color: theme.black.withOpacity(0.2)),
+                        border: Border.all(color: theme.black.withOpacity(0.2)),
                         child: Padding(
                           padding: EdgeInsets.all(2.sw),
                           child: Column(

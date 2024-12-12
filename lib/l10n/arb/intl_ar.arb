@@ -77,7 +77,7 @@
     "zipCode":"الرمز البريدي",
     "username" : "اسم المستخدم",
     "youHaveBeenRegisteredSuccessfully": "لقد تم تسجيلك بنجاح",
-    "youHaveToErrorInOneOfTheFollowingFields" : "يجب عليك الخطأ في أحد الحقول التالية",
+    "youHaveToErrorInOneOfTheFollowingFields" : "لديك خطأ في أحد الحقول التالية",
     "phoneNumberIsRequired" : "رقم الهاتف مطلوب",
     "emptyValidationError": "هذا الحقل لا يمكن أن يكون فارغاً",
     "more": "المزيد",
@@ -91,6 +91,7 @@
     "fasting":"افطار صائم",
     "categories" : "فئات",
     "orderStatus" : "حالة الطلب",
+    "failedToUpdateTheStatusOfTheOrder" : "فشل في تحديث حالة الطلب",
     "theSumOfFamiliesQuantityFastingQuantityAndCharitiesQuantityMustBeLessThanOrEqualToTotalQuantity" : "يجب أن يكون مجموع كمية الأسرة وكمية الصيام وكمية الصدقات أقل من أو يساوي الكمية الإجمالية",
     "newsImage" : "صور الخبر",
     "newsTitle" : "عنوان الخبر",
@@ -104,7 +105,24 @@
     "print" : "طباعة",
     "printAll" : "طباعة الكل",
     "book":"كتاب",
-    "fileIsOpening":"جاري فتح الملف"
+    "fileIsOpening":"جاري فتح الملف",
+    "Canceled":"ملغي",
+    "fulfilment" : "تم التعبئة",
+    "shipped" : "تم الشحن",
+    "received" : "تم الاستلام",
+    "orderStatusHasBeenChanged" : "تم تغيير حالة الطلب",
+    "report" : "تقرير",
+    "ordersReport" : "تقارير الطلبات",
+    "productsReport" : "تقارير المنتجات",
+    "beginDate" : "تاريخ البدء",
+    "endDate" : "تاريخ النهاية",
+    "year" : "سنة",
+    "month" : "شهر",
+    "userEmail" : "البريد الإلكتروني للمستخدم",
+    "dataNotFound" : "لم يتم العثور على البيانات",
+
+    "notFulfilment" : "غير معبئة"
+
 
 
 

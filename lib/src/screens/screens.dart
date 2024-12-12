@@ -23,3 +23,7 @@ export 'admin_add_post_page.dart';
 export 'join_request_details_page.dart';
 export 'invoices_page.dart';
 export 'pdf_viewer_page.dart';
+export 'order_progress_page.dart';
+export 'order_report_page.dart';
+export 'product_report_page.dart';
+export 'report_main_page.dart';

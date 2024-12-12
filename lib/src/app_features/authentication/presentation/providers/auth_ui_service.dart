@@ -1,4 +1,3 @@
-
 import 'package:date_farm/src/app_features/authentication/data/models/register_body/register_body.dart';
 import 'package:date_farm/src/app_features/authentication/data/models/user_dto/user_data.dart';
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_authentication_error_entity.dart';

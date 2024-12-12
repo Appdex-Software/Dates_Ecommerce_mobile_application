@@ -161,6 +161,20 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    OrderProgressRoute.name: (routeData) {
+      final args = routeData.argsAs<OrderProgressRouteArgs>(
+          orElse: () => const OrderProgressRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: OrderProgressPage(key: args.key),
+      );
+    },
+    OrderReportRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const OrderReportPage(),
+      );
+    },
     OrdersAdminRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -177,10 +191,24 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    ProductReportRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProductReportPage(),
+      );
+    },
     RegisterRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const RegisterPage(),
+      );
+    },
+    ReportMainRoute.name: (routeData) {
+      final args = routeData.argsAs<ReportMainRouteArgs>(
+          orElse: () => const ReportMainRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: ReportMainPage(key: args.key),
       );
     },
     SettingUserNavigationRoute.name: (routeData) {
@@ -664,6 +692,49 @@ class OrderDetailsAdminRouteArgs {
 }
 
 /// generated route for
+/// [OrderProgressPage]
+class OrderProgressRoute extends PageRouteInfo<OrderProgressRouteArgs> {
+  OrderProgressRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          OrderProgressRoute.name,
+          args: OrderProgressRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'OrderProgressRoute';
+
+  static const PageInfo<OrderProgressRouteArgs> page =
+      PageInfo<OrderProgressRouteArgs>(name);
+}
+
+class OrderProgressRouteArgs {
+  const OrderProgressRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'OrderProgressRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
+/// [OrderReportPage]
+class OrderReportRoute extends PageRouteInfo<void> {
+  const OrderReportRoute({List<PageRouteInfo>? children})
+      : super(
+          OrderReportRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'OrderReportRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [OrdersAdminPage]
 class OrdersAdminRoute extends PageRouteInfo<void> {
   const OrdersAdminRoute({List<PageRouteInfo>? children})
@@ -716,6 +787,20 @@ class PdfViewerRouteArgs {
 }
 
 /// generated route for
+/// [ProductReportPage]
+class ProductReportRoute extends PageRouteInfo<void> {
+  const ProductReportRoute({List<PageRouteInfo>? children})
+      : super(
+          ProductReportRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProductReportRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [RegisterPage]
 class RegisterRoute extends PageRouteInfo<void> {
   const RegisterRoute({List<PageRouteInfo>? children})
@@ -727,6 +812,35 @@ class RegisterRoute extends PageRouteInfo<void> {
   static const String name = 'RegisterRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ReportMainPage]
+class ReportMainRoute extends PageRouteInfo<ReportMainRouteArgs> {
+  ReportMainRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          ReportMainRoute.name,
+          args: ReportMainRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'ReportMainRoute';
+
+  static const PageInfo<ReportMainRouteArgs> page =
+      PageInfo<ReportMainRouteArgs>(name);
+}
+
+class ReportMainRouteArgs {
+  const ReportMainRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'ReportMainRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

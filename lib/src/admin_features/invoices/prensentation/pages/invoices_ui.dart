@@ -63,7 +63,8 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                             .toList()
                     : productEntity?.data;
             return SingleChildScrollView(
-              padding: EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, bottom: 2.sh),
+              padding:
+                  EdgeInsets.only(left: 5.1.sw, right: 5.1.sw, bottom: 2.sh),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -83,11 +84,12 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                   productList?.isEmpty ?? true
                       ? Container()
                       : Padding(
-                        padding: EdgeInsets.only(bottom: 5.sh),
-                        child: CustomButton(
+                          padding: EdgeInsets.only(bottom: 5.sh),
+                          child: CustomButton(
                             title: l10n.printAll,
                             onPressed: () async {
-                              ProgressDialog pd = ProgressDialog(context: context);
+                              ProgressDialog pd =
+                                  ProgressDialog(context: context);
                               pd.show(
                                 msg: l10n.fileIsOpening,
                                 backgroundColor: theme.white,
@@ -103,16 +105,18 @@ class _InvoicesUiState extends ConsumerState<InvoicesUi> {
                               var request =
                                   await HttpClient().getUrl(Uri.parse(url));
                               var response = await request.close();
-                              var bytes = await consolidateHttpClientResponseBytes(
-                                  response);
-                              var dir = await getApplicationDocumentsDirectory();
+                              var bytes =
+                                  await consolidateHttpClientResponseBytes(
+                                      response);
+                              var dir =
+                                  await getApplicationDocumentsDirectory();
                               File file = File("${dir.path}/$filename");
                               await file.writeAsBytes(bytes, flush: true);
                               pd.close();
                               await OpenFilex.open(file.path);
                             },
                           ),
-                      )
+                        )
                 ],
               ),
             );

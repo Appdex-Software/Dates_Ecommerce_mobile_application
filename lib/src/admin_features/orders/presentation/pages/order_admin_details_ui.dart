@@ -108,8 +108,8 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
                               ),
                               status: currentState,
                               user: widget.data?.user);
-                          final statusCode =
-                              await orderService.updateOrders(body: orderBody);
+                          final statusCode = await orderService.updateOrders(
+                              body: orderBody.toJson());
 
                           if (statusCode == 200) {
                             if (context.mounted) {
@@ -133,4 +133,3 @@ class _OrderAdminDetailsUiState extends ConsumerState<OrderAdminDetailsUi> {
             }));
   }
 }
-

@@ -70,38 +70,43 @@ class _HomeUserUiState extends ConsumerState<HomeUserUi> {
                       style: theme.bodyMedium,
                     ),
                     AsyncValueWidget(
-                      value: ref.watch(newsServiceProvider),
-                      data: (NewsEntity? newEntity) {
-                        return LinearGradientContainer(
-                            child: Padding(
-                          padding: EdgeInsets.only(
-                              left: 5.1.sw,right: 5.1.sw, top: 5.1.sw,bottom: 9.sw),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: List.generate(1, (index) {
-                              return Text(
-                                newEntity?.data?[index].body ?? '',
-                                style: theme.bodySmall,
-                              );
-                            },)
-                            // [
-                            //   Text(
-                            //     l10n.anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason,
-                            //     style: theme.bodySmall,
-                            //   ),
-                            //   Text(
-                            //     "\n${l10n.thirtyNewTreesWerePlantedInANewArea}",
-                            //     style: theme.bodySmall,
-                            //   ),
-                            //   Text(
-                            //     "\n${l10n.anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan}",
-                            //     style: theme.bodySmall,
-                            //   ),
-                            // ],
-                          ),
-                        ));
-                      }
-                    ),
+                        value: ref.watch(newsServiceProvider),
+                        data: (NewsEntity? newEntity) {
+                          return LinearGradientContainer(
+                              child: Padding(
+                            padding: EdgeInsets.only(
+                                left: 5.1.sw,
+                                right: 5.1.sw,
+                                top: 5.1.sw,
+                                bottom: 9.sw),
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: List.generate(
+                                  1,
+                                  (index) {
+                                    return Text(
+                                      newEntity?.data?[index].body ?? '',
+                                      style: theme.bodySmall,
+                                    );
+                                  },
+                                )
+                                // [
+                                //   Text(
+                                //     l10n.anAgreementHasBeenEstablishedWithTheAlBirAssociationToDistributeDatesToPilgrimsForTheSeason,
+                                //     style: theme.bodySmall,
+                                //   ),
+                                //   Text(
+                                //     "\n${l10n.thirtyNewTreesWerePlantedInANewArea}",
+                                //     style: theme.bodySmall,
+                                //   ),
+                                //   Text(
+                                //     "\n${l10n.anAgreementHasBeenReachedWithGovernmentAgenciesToDistributeDatesToEmployeesThroughoutTheMonthOfRamadan}",
+                                //     style: theme.bodySmall,
+                                //   ),
+                                // ],
+                                ),
+                          ));
+                        }),
                   ],
                 ),
               ))

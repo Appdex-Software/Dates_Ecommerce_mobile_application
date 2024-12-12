@@ -42,7 +42,9 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
   void initState() {
     log(widget.data?.registrationStatus?.toString() ?? '');
     newPhone = widget.data?.phoneNumber;
-    currentCustomType = widget.data?.customerType?.isEmpty ?? true ? null : widget.data?.customerType;    
+    currentCustomType = widget.data?.customerType?.isEmpty ?? true
+        ? null
+        : widget.data?.customerType;
     currentRole = widget.data?.role?.isEmpty ?? true ? null : widget.data?.role;
     widget.data?.firstName != null
         ? (userFirstNameController.text = widget.data?.firstName ?? '')
@@ -98,11 +100,18 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
         username: userNameController.text,
         zipCode: userZipCodeController.text,
       );
-       widget.data?.id == null
+      widget.data?.id == null
           ? await userModificationService.addUser(body: body)
           : await userModificationService.patchUser(
               body: body.copyWith(id: widget.data?.id));
-      if (userModificationService.getUserAuthenticationErrorEntity()?.statusCode == 201 || userModificationService.getUserAuthenticationErrorEntity()?.statusCode == 200) {
+      if (userModificationService
+                  .getUserAuthenticationErrorEntity()
+                  ?.statusCode ==
+              201 ||
+          userModificationService
+                  .getUserAuthenticationErrorEntity()
+                  ?.statusCode ==
+              200) {
         await userModificationService.getUser();
         if (context.mounted) {
           context.router.maybePop();
@@ -118,7 +127,8 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
         }
       } else {
         context.mounted
-            ? showErrorUserAlert(context,userModificationService.getUserAuthenticationErrorEntity())
+            ? showErrorUserAlert(context,
+                userModificationService.getUserAuthenticationErrorEntity())
             : null;
       }
     }
@@ -337,9 +347,11 @@ class _JoinRequestDetailsUiState extends ConsumerState<JoinRequestDetailsUi> {
                   child: AsyncValueWidget(
                       value: ref.watch(userModificationServiceProvider),
                       data: (_) {
-                        return widget.data?.registrationStatus == "not_registered"
+                        return widget.data?.registrationStatus ==
+                                "not_registered"
                             ? Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   Expanded(
                                     child: CustomButton(

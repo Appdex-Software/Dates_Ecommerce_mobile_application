@@ -30,16 +30,16 @@ class JoinRequestPage extends StatelessWidget {
             icon: const Icon(Icons.menu)),
       ),
       bottomNavigationBar: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.all(4.sw),
-            child: CustomButton(
-              title: l10n.add,
-              onPressed: () {
-                context.router.push(JoinRequestDetailsRoute());
-              },
-            ),
+        child: Padding(
+          padding: EdgeInsets.all(4.sw),
+          child: CustomButton(
+            title: l10n.add,
+            onPressed: () {
+              context.router.push(JoinRequestDetailsRoute());
+            },
           ),
         ),
+      ),
       backgroundColor: Colors.white,
       body: CustomAdaptiveScreen.builder(
         mobile: const JoinRequestUi(),

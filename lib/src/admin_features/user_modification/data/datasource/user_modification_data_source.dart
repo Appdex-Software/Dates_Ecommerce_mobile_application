@@ -8,14 +8,14 @@ import '../../../../core/errors/custom_error.dart';
 import '../models/user_modification_dto/user_modification_data.dart';
 
 abstract class UserModificationSource {
-  Future<UserModificationDto> getUsers();
+  Future<UserModificationDto> getUsers({String? queryParameter});
   Future<UserAuthenticationErrorDto?> addUsers({UserModificationData? body});
   Future<UserAuthenticationErrorDto?> patchUsers({UserModificationData? body});
 }
 
 class UserModificationSourceImpl implements UserModificationSource {
   @override
-  Future<UserModificationDto> getUsers() async {
+  Future<UserModificationDto> getUsers({String? queryParameter}) async {
     try {
       final response = await DioClient().dio.get(
             options: Options(
@@ -24,7 +24,7 @@ class UserModificationSourceImpl implements UserModificationSource {
               },
               followRedirects: false,
             ),
-            AppConstants.getUserApiUrl,
+            "${AppConstants.getUserApiUrl}$queryParameter",
           );
       logger.d('get Users response: ${response.data}');
       if (response.statusCode == 200) {
@@ -38,7 +38,8 @@ class UserModificationSourceImpl implements UserModificationSource {
   }
 
   @override
-  Future<UserAuthenticationErrorDto> addUsers({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorDto> addUsers(
+      {UserModificationData? body}) async {
     try {
       final response = await DioClient().dio.post(
           options: Options(
@@ -57,7 +58,8 @@ class UserModificationSourceImpl implements UserModificationSource {
   }
 
   @override
-  Future<UserAuthenticationErrorDto> patchUsers({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorDto> patchUsers(
+      {UserModificationData? body}) async {
     try {
       final response = await DioClient().dio.patch(
           options: Options(

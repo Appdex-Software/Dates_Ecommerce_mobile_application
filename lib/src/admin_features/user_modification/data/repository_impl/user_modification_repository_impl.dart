@@ -7,18 +7,19 @@ import '../datasource/user_modification_data_source.dart';
 import '../models/user_modification_dto/user_modification_data.dart';
 
 abstract class BaseUserModificationRepository {
-  Future<UserModificationEntity> getUsers();
+  Future<UserModificationEntity> getUsers({String? queryParameter});
   Future<UserAuthenticationErrorEntity> addUsers({UserModificationData? body});
-  Future<UserAuthenticationErrorEntity> patchUsers({UserModificationData? body});
+  Future<UserAuthenticationErrorEntity> patchUsers(
+      {UserModificationData? body});
 }
 
 class UserModificationRepositoryImpl implements BaseUserModificationRepository {
   final UserModificationSourceImpl dataSource = UserModificationSourceImpl();
 
   @override
-  Future<UserModificationEntity> getUsers() async {
+  Future<UserModificationEntity> getUsers({String? queryParameter}) async {
     try {
-      return await dataSource.getUsers().then((value) {
+      return await dataSource.getUsers(queryParameter: queryParameter).then((value) {
         return value.toEntity();
       });
     } catch (e, stack) {
@@ -27,7 +28,8 @@ class UserModificationRepositoryImpl implements BaseUserModificationRepository {
   }
 
   @override
-  Future<UserAuthenticationErrorEntity> addUsers({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity> addUsers(
+      {UserModificationData? body}) async {
     try {
       return await dataSource.addUsers(body: body).then((value) {
         return value.toEntity();
@@ -38,7 +40,8 @@ class UserModificationRepositoryImpl implements BaseUserModificationRepository {
   }
 
   @override
-  Future<UserAuthenticationErrorEntity> patchUsers({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity> patchUsers(
+      {UserModificationData? body}) async {
     try {
       return await dataSource.patchUsers(body: body).then((value) {
         return value.toEntity();

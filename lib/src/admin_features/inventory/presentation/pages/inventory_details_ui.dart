@@ -153,7 +153,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                 children: [
                   Expanded(
                       child: CustomTextField(
-                        label: l10n.family,
+                    label: l10n.family,
                     keyboardType: TextInputType.number,
                     hint: l10n.family,
                     controller: familyQuantityController,
@@ -171,7 +171,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                   gapW4,
                   Expanded(
                       child: CustomTextField(
-                        label: l10n.charities,
+                    label: l10n.charities,
                     keyboardType: TextInputType.number,
                     hint: l10n.charities,
                     controller: charitiesQantityController,
@@ -189,7 +189,7 @@ class _InventoryDetailsUiState extends ConsumerState<InventoryDetailsUi> {
                   gapW4,
                   Expanded(
                       child: CustomTextField(
-                        label: l10n.fasting,
+                    label: l10n.fasting,
                     keyboardType: TextInputType.number,
                     hint: l10n.fasting,
                     controller: fastingQuantityController,

@@ -1,9 +1,9 @@
 // ignore_for_file: unused_result
 
+import 'package:date_farm/src/user_features/order/data/models/order_pdf_model/order_pdf_model.dart';
 import 'package:date_farm/src/user_features/order/domain/repositories/order_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../core/errors/custom_error.dart';
-import '../../data/models/order_user_dto/order_user_data.dart';
 import '../../data/models/order_user_dto/product_detail.dart';
 import '../../domain/entities/order_user_entity.dart';
 
@@ -40,7 +40,7 @@ class OrderService extends _$OrderService {
     }
   }
 
-  Future updateOrders({OrderUserData? body}) async {
+  Future updateOrders({Map<dynamic, dynamic>? body}) async {
     state = const AsyncLoading();
     final orderService = ref.watch(orderRepositoryProvider.notifier);
 
@@ -53,6 +53,20 @@ class OrderService extends _$OrderService {
       return statusCode;
     } catch (e, stack) {
       throw CustomError('Failed to update orders', err: e, stackTrace: stack);
+    }
+  }
+
+  Future getPdfOrders({OrderPdfModel? body}) async {
+    state = const AsyncLoading();
+    final orderService = ref.watch(orderRepositoryProvider.notifier);
+
+    try {
+      final result = await orderService.getPdfOrders(body: body);
+      
+      state = AsyncData(_orderUserEntity);
+      return result;
+    } catch (e, stack) {
+      throw CustomError('Failed to get pdf orders', err: e, stackTrace: stack);
     }
   }
 

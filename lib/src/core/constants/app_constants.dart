@@ -18,6 +18,7 @@ class AppConstants {
   static const String getNewsUrl = '/products/news';
   static const String postNewsUrl = '/products/news';
   static const String getOrdersUrl = '/orders/orders';
+  static const String getPdfOrdersUrl = '/orders/reports';
   static const String expiryTime = 'expiry-time';
   static const String defaultLocale = 'default-locale';
   static const String userId = 'userId';

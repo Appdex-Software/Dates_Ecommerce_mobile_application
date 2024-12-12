@@ -12,42 +12,15 @@ class CustomDrawer extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final (_, l10n) = appSettingsRecord(context);
-    return Drawer(
-      child: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            ListTile(
-              leading: const Icon(Icons.inventory),
-              title: Text(l10n.inventory),
-              onTap: () {
-                context.router.push(InventoryAdminRoute());
-              },
-            ),
+    final userRole =
+        ref.watch(authUiServiceProvider.notifier).getUserData()?.user?.role;
+    final List<Widget> drawerList = userRole == "tracker"
+        ? [
             ListTile(
               leading: const Icon(Icons.delivery_dining),
               title: Text(l10n.orders),
               onTap: () {
                 context.router.push(const OrdersAdminRoute());
-              },
-            ),
-            // ListTile(
-            //   leading: const Icon(Icons.autorenew),
-            //   title: Text(l10n.ordersInProgress),
-            //   onTap: () {},
-            // ),
-            ListTile(
-              leading: const Icon(Icons.group_add),
-              title: Text(l10n.joinRequests),
-              onTap: () {
-                context.router.push(JoinRequestRoute());
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.post_add),
-              title: Text(l10n.newPost),
-              onTap: () {
-                context.router.push(const AdminAddPostRoute());
               },
             ),
             ListTile(
@@ -65,7 +38,71 @@ class CustomDrawer extends ConsumerWidget {
                 context.router.replace(const LoginRoute());
               },
             ),
-          ],
+          ]
+        : [
+            ListTile(
+              leading: const Icon(Icons.inventory),
+              title: Text(l10n.inventory),
+              onTap: () {
+                context.router.push(InventoryAdminRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.delivery_dining),
+              title: Text(l10n.orders),
+              onTap: () {
+                context.router.push(const OrdersAdminRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.autorenew),
+              title: Text(l10n.ordersInProgress),
+              onTap: () {
+                context.router.push(OrderProgressRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.group_add),
+              title: Text(l10n.joinRequests),
+              onTap: () {
+                context.router.push(JoinRequestRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.post_add),
+              title: Text(l10n.newPost),
+              onTap: () {
+                context.router.push(const AdminAddPostRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.receipt_outlined),
+              title: Text(l10n.report),
+              onTap: () {
+                context.router.push(ReportMainRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.receipt_long),
+              title: Text(l10n.invoice),
+              onTap: () {
+                context.router.push(InvoicesRoute());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: Text(l10n.logout),
+              onTap: () {
+                ref.watch(authUiServiceProvider.notifier).logout();
+                context.router.replace(const LoginRoute());
+              },
+            ),
+          ];
+    return Drawer(
+      child: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: drawerList,
         ),
       ),
     );

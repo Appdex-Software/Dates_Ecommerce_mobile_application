@@ -26,9 +26,7 @@ class _OrdersAdminPageState extends State<OrdersAdminPage> {
       drawer: const CustomDrawer(),
       appBar: TransparentAppBar(
         color: Colors.transparent,
-        title: Text(
-          l10n.orders
-        ),
+        title: Text(l10n.orders),
         centerTitle: true,
         backButton: IconButton(
             onPressed: () {

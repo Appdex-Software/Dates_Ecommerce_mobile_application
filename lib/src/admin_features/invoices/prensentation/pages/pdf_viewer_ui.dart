@@ -30,13 +30,14 @@ class _PDFViewerUiState extends State<PDFViewerUi> {
       localPath = tempFile.path;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return localPath.isNotEmpty
-          ? PDFView(
-              filePath: localPath,
-              enableSwipe: true,
-            )
-          : const Center(child: CircularProgressIndicator());
+        ? PDFView(
+            filePath: localPath,
+            enableSwipe: true,
+          )
+        : const Center(child: CircularProgressIndicator());
   }
 }

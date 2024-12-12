@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:date_farm/src/app_features/authentication/domain/entities/user_authentication_error_entity.dart';
@@ -62,7 +61,6 @@ showErrorUserAlert(
     barrierDismissible: true,
     builder: (BuildContext context) {
       final (theme, l10n) = appSettingsRecord(context);
-      log((userError?.error?.phoneNumber?.isNotEmpty).toString());
       return AlertDialog(
         backgroundColor: theme.whiteColor,
         scrollable: true,

@@ -11,7 +11,7 @@ part 'user_modification_provider.g.dart';
 class UserModificationService extends _$UserModificationService {
   @override
   FutureOr<UserModificationEntity?> build() async {
-    return getUser();
+    return getUserModificationEntity();
   }
 
   UserModificationEntity? _userModificationEntity;
@@ -20,13 +20,13 @@ class UserModificationService extends _$UserModificationService {
   UserAuthenticationErrorEntity? _userAuthenticationErrorEntity;
   UserAuthenticationErrorEntity? getUserAuthenticationErrorEntity() =>
       _userAuthenticationErrorEntity;
-  Future<UserModificationEntity?> getUser() async {
+  Future<UserModificationEntity?> getUser({String? queryParameter}) async {
     final userModService =
         ref.watch(userModificationRepositoryProvider.notifier);
     state = const AsyncLoading();
 
     try {
-      _userModificationEntity = await userModService.getUsers();
+      _userModificationEntity = await userModService.getUsers(queryParameter: queryParameter);
       state = AsyncData(_userModificationEntity);
 
       return _userModificationEntity;
@@ -35,7 +35,8 @@ class UserModificationService extends _$UserModificationService {
     }
   }
 
-  Future<UserAuthenticationErrorEntity?> addUser({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity?> addUser(
+      {UserModificationData? body}) async {
     final userModService =
         ref.watch(userModificationRepositoryProvider.notifier);
     state = const AsyncLoading();
@@ -48,12 +49,14 @@ class UserModificationService extends _$UserModificationService {
     }
   }
 
-  Future<UserAuthenticationErrorEntity?> patchUser({UserModificationData? body}) async {
+  Future<UserAuthenticationErrorEntity?> patchUser(
+      {UserModificationData? body}) async {
     final userModService =
         ref.watch(userModificationRepositoryProvider.notifier);
     state = const AsyncLoading();
     try {
-      _userAuthenticationErrorEntity = await userModService.patchUser(body: body);
+      _userAuthenticationErrorEntity =
+          await userModService.patchUser(body: body);
       state = AsyncData(_userModificationEntity);
       return _userAuthenticationErrorEntity;
     } catch (e, stack) {

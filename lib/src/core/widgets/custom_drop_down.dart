@@ -1,6 +1,8 @@
 import 'package:date_farm/src/core/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/app_sizes.dart';
+
 class CustomDropDown extends StatelessWidget {
   const CustomDropDown(
       {super.key,
@@ -18,11 +20,13 @@ class CustomDropDown extends StatelessWidget {
   final String? Function(dynamic)? validator;
   @override
   Widget build(BuildContext context) {
+    final (theme, _) = appSettingsRecord(context);
+
     return DropdownButtonFormField(
       items: items,
       validator: validator,
       decoration: InputDecoration(
-        label: Text(hint),
+        label: Text(hint,style: theme.bodyMedium,),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         hintText: hint,
         errorMaxLines: 3,

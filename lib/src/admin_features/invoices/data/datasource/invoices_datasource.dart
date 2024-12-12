@@ -1,4 +1,3 @@
-
 import 'package:dio/dio.dart';
 
 import '../../../../core/api/apis.dart';
@@ -6,14 +5,17 @@ import '../../../../core/constants/constants.dart';
 import '../../../../core/errors/custom_error.dart';
 
 abstract class InvoiceSource {
-  Future<String> getInvoices({List<String>? productIDList,String? year,String? month});
+  Future<String> getInvoices(
+      {List<String>? productIDList, String? year, String? month});
 }
 
 class InvoiceSourceImpl implements InvoiceSource {
   @override
-  Future<String> getInvoices({List<String>? productIDList,String? year,String? month}) async {
+  Future<String> getInvoices(
+      {List<String>? productIDList, String? year, String? month}) async {
     try {
-      String invoiceFullUrl = "${AppConstants.getInvoicesApiUrl}?${year == null ? '' : "year=$year&"}${month == null ? '' : "month=$month&"}";
+      String invoiceFullUrl =
+          "${AppConstants.getInvoicesApiUrl}?${year == null ? '' : "year=$year&"}${month == null ? '' : "month=$month&"}";
       for (var element in productIDList ?? []) {
         invoiceFullUrl = "${invoiceFullUrl}product_id=$element&";
       }
@@ -37,5 +39,4 @@ class InvoiceSourceImpl implements InvoiceSource {
       throw e.errMassage;
     }
   }
-
 }

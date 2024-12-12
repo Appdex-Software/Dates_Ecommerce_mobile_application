@@ -48,9 +48,9 @@ class SettingsUi extends ConsumerWidget {
             SettingsItemContainer(
               icon: Icons.book,
               title: l10n.book,
-              onTap: ()  {
-              context.router.push(PdfViewerRoute(pdfData: AssetsHelper.bookPDF));
-
+              onTap: () {
+                context.router
+                    .push(PdfViewerRoute(pdfData: AssetsHelper.bookPDF));
               },
             ),
             SettingsItemContainer(
