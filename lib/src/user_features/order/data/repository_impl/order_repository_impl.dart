@@ -6,7 +6,7 @@ import '../../../../core/errors/custom_error.dart';
 import '../models/order_pdf_model/order_pdf_model.dart';
 
 abstract class BaseOrderRepository {
-  Future<OrderUserEntity> getOrders({String? id});
+  Future<OrderUserEntity> getOrders({String? id,int page = 1});
   Future<int?> updateOrders({Map<dynamic, dynamic>? body});
   Future<String?> getPdfOrders({OrderPdfModel? body});
 }
@@ -15,9 +15,9 @@ class OrderRepositoryImpl implements BaseOrderRepository {
   final OrderSouceImpl dataSource = OrderSouceImpl();
 
   @override
-  Future<OrderUserEntity> getOrders({String? id}) async {
+  Future<OrderUserEntity> getOrders({String? id,int page = 1}) async {
     try {
-      return await dataSource.getOrders(id: id).then((value) {
+      return await dataSource.getOrders(id: id,page: page).then((value) {
         return value.toEntity();
       });
     } catch (e, stack) {

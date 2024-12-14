@@ -1,20 +1,21 @@
 import '../../../../core/errors/custom_error.dart';
+import '../../../../user_features/order/data/models/order_pdf_model/order_pdf_model.dart';
 import '../datasource/invoices_datasource.dart';
 
 abstract class BaseInvoiceRepository {
-  Future<String> getInvoices(
-      {List<String>? productIDList, String? year, String? month});
+  Future<String?> getInvoices(
+      {OrderPdfModel? body});
 }
 
 class InvoiceRepositoryImpl implements BaseInvoiceRepository {
   final InvoiceSourceImpl dataSource = InvoiceSourceImpl();
 
   @override
-  Future<String> getInvoices(
-      {List<String>? productIDList, String? year, String? month}) async {
+  Future<String?> getInvoices(
+      {OrderPdfModel? body}) async {
     try {
       return await dataSource
-          .getInvoices(month: month, year: year, productIDList: productIDList)
+          .getInvoices(body: body)
           .then((value) {
         return value;
       });

@@ -191,24 +191,22 @@ class _OrderReportUiState extends ConsumerState<OrderReportUi> {
                             customerEmail:
                                 userEmailController.dropDownValue?.value,
                             customerType: currentCustomType));
-                    if(url == null) {
-                     
-                    pd.close();
-                    AppToast.errorToast(l10n.dataNotFound,context);
+                    if (url == null) {
+                      pd.close();
+                      AppToast.errorToast(l10n.dataNotFound, context);
                     } else {
- final filename = url.substring(url.lastIndexOf("/") + 1);
-                    var request = await HttpClient()
-                        .getUrl(Uri.parse("${AppConstants.apiUrl}/$url"));
-                    var response = await request.close();
-                    var bytes =
-                        await consolidateHttpClientResponseBytes(response);
-                    var dir = await getApplicationDocumentsDirectory();
-                    File file = File("${dir.path}/$filename");
-                    await file.writeAsBytes(bytes, flush: true);
-                    pd.close();
-                    await OpenFilex.open(file.path);
+                      final filename = url.substring(url.lastIndexOf("/") + 1);
+                      var request = await HttpClient()
+                          .getUrl(Uri.parse("${AppConstants.apiUrl}/$url"));
+                      var response = await request.close();
+                      var bytes =
+                          await consolidateHttpClientResponseBytes(response);
+                      var dir = await getApplicationDocumentsDirectory();
+                      File file = File("${dir.path}/$filename");
+                      await file.writeAsBytes(bytes, flush: true);
+                      pd.close();
+                      await OpenFilex.open(file.path);
                     }
-                   
                   },
                 )
               ],

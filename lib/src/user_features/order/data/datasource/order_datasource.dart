@@ -8,14 +8,14 @@ import '../../../../core/constants/constants.dart';
 import '../../../../core/errors/custom_error.dart';
 
 abstract class OrderSouce {
-  Future<OrderUserDto> getOrders({String? id});
+  Future<OrderUserDto> getOrders({String? id,int page = 1});
   Future<int?> updateOrders({Map<dynamic,dynamic>? body});
   Future<String?> getPdfOrders({OrderPdfModel? body});
 }
 
 class OrderSouceImpl implements OrderSouce {
   @override
-  Future<OrderUserDto> getOrders({String? id}) async {
+  Future<OrderUserDto> getOrders({String? id,int page = 1}) async {
     try {
       final response = await DioClient().dio.get(
             options: Options(
@@ -24,7 +24,7 @@ class OrderSouceImpl implements OrderSouce {
               },
               followRedirects: false,
             ),
-            "${AppConstants.getOrdersUrl}${id == null ? '' : "?user_id=$id"}",
+            "${AppConstants.getOrdersUrl}?page=$page${id == null ? '' : "&user_id=$id"}",
           );
       logger.d('getOrdersresponse: ${response.data}');
       if (response.statusCode == 200) {

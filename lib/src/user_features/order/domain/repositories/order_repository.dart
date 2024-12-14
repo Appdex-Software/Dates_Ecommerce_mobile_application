@@ -21,11 +21,11 @@ class OrderRepository extends _$OrderRepository {
   OrderUserEntity? _orderEntity;
   OrderUserEntity? getOrderEntity() => _orderEntity;
 
-  Future<OrderUserEntity?> getOrders() async {
+  Future<OrderUserEntity?> getOrders({int page = 1}) async {
     try {
       final id =
           ref.watch(authUiServiceProvider.notifier).getUserData()?.user?.id;
-      _orderEntity = await orderSourceImpl.getOrders(id: id);
+      _orderEntity = await orderSourceImpl.getOrders(id: id,page: page);
       return _orderEntity;
     } catch (e, stack) {
       throw CustomError('Failed to get Orders', err: e, stackTrace: stack);

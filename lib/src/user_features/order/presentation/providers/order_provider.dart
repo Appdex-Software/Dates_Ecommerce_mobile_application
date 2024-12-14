@@ -26,12 +26,12 @@ class OrderService extends _$OrderService {
   OrderUserEntity? _orderUserEntity;
   OrderUserEntity? getOrderUserEntity() => _orderUserEntity;
 
-  Future<OrderUserEntity?> getOrders() async {
+  Future<OrderUserEntity?> getOrders({int page = 1}) async {
     state = const AsyncLoading();
     final orderService = ref.watch(orderRepositoryProvider.notifier);
 
     try {
-      _orderUserEntity = await orderService.getOrders();
+      _orderUserEntity = await orderService.getOrders(page: page);
       state = AsyncData(_orderUserEntity);
 
       return _orderUserEntity;
