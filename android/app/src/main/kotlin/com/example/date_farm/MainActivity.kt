@@ -1,4 +1,4 @@
-package com.example.datefarm
+package com.waqfmohammedhail.datefarm
 
 import io.flutter.embedding.android.FlutterActivity
 
